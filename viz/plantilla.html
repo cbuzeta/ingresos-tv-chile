@@ -57,7 +57,14 @@ h2 { font-size: 22px; font-weight: 700; }
 h3 { font-size: 17px; font-weight: 700; }
 p { margin: 0; max-width: 68ch; }
 .eyebrow { font: 500 11.5px/1 var(--f-data); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
-header { display: grid; gap: 10px; }
+header { display: grid; grid-template-columns: minmax(0, 1fr) minmax(260px, 340px); gap: 24px 48px; align-items: end; }
+header .intro { display: grid; gap: 10px; }
+@media (max-width: 860px) { header { grid-template-columns: 1fr; } }
+.cifras { margin: 0; display: grid; gap: 14px; padding: 16px 18px; border-left: 3px solid var(--accent); background: var(--surface); }
+.cifras div { display: grid; gap: 2px; }
+.cifras dt { font: 500 11px/1.3 var(--f-data); letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+.cifras dd { margin: 0; font-family: var(--f-display); font-stretch: 85%; font-weight: 700; font-size: 26px; line-height: 1.1; }
+.cifras dd small { font: 400 12.5px/1.4 var(--f-body); color: var(--ink-2); display: block; margin-top: 2px; }
 header .lede { color: var(--ink-2); font-size: 16px; }
 .src { font: 12px/1.5 var(--f-data); color: var(--muted); }
 .src a { color: var(--accent); text-underline-offset: 2px; }
@@ -78,7 +85,7 @@ header .lede { color: var(--ink-2); font-size: 16px; }
 .figure { background: var(--surface); border: 1px solid var(--rule); border-radius: 8px; padding: 18px 18px 14px;
   display: grid; gap: 10px; }
 .figure .head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 16px; align-items: baseline; }
-.figure .sub { color: var(--ink-2); font-size: 13.5px; }
+.figure .sub { color: var(--ink-2); font-size: 13.5px; max-width: 120ch; }
 .legend { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 13px; color: var(--ink-2); }
 .legend i { display: inline-block; width: 12px; height: 12px; border-radius: 3px; vertical-align: -1px; margin-right: 6px; }
 .legend i.line { height: 3px; border-radius: 2px; vertical-align: 3px; }
@@ -130,10 +137,13 @@ table.data td { font-family: var(--f-data); font-variant-numeric: tabular-nums; 
 
 <div class="wrap">
   <header>
+    <div class="intro">
     <span class="eyebrow">TV abierta · Chile · 2016–2026 · EEFF CMF</span>
     <h1>Audiencias en venta</h1>
     <p class="lede">Qué parte de los ingresos de la TV abierta chilena viene de vender audiencias a los anunciantes y qué parte de vender contenidos. Seis canales que informan a la CMF (TVN, Canal 13, Mega, Chilevisión, La Red y TV+), leídos desde la nota «Ingresos de actividades ordinarias» de cada estado financiero. Marco: Napoli (2003), <i>Audience Economics</i>, tabla 1.1.</p>
     <p class="src"><span id="gen"></span> · <a href="https://github.com/cbuzeta/ingresos-tv-chile">Código, datos y método</a></p>
+    </div>
+    <dl class="cifras" id="cifras" aria-label="Resumen del último año completo"></dl>
   </header>
 
   <div class="console" role="toolbar" aria-label="Opciones de visualización">
@@ -464,9 +474,24 @@ function drawTable() {
   document.getElementById("tbl").innerHTML = h + `</tbody></table><p class="src" style="margin-top:8px">Publicidad / total. R = reclasificado entre EEFF.</p>`;
 }
 
+function drawCifras() {
+  // último año completo con el agregado de industria; los textos se derivan de los datos, no están fijos
+  const anuales = DATA.agregados.filter(r => r.tipo_periodo === "anual");
+  const ind = anuales.filter(r => r.canal === "6 canales CMF").sort((a, b) => a.fin.localeCompare(b.fin));
+  if (!ind.length) return;
+  const ult = ind[ind.length - 1], pri = ind[0], anio = ult.fin.slice(0, 4);
+  const sh = r => r.n1_publicidad / r.total;
+  const can = CANALES.map(c => anuales.find(r => r.canal === c && r.fin === ult.fin)).filter(Boolean).sort((a, b) => sh(a) - sh(b));
+  const bil = v => (v / 1e6).toLocaleString("es-CL", { maximumFractionDigits: 1, minimumFractionDigits: 1 });
+  document.getElementById("cifras").innerHTML = `
+    <div><dt>Publicidad / ingresos, industria ${anio}</dt><dd>${pct(sh(ult))}<small>${pct(sh(pri))} en ${pri.fin.slice(0, 4)}</small></dd></div>
+    <div><dt>Ingresos de los seis canales, ${anio}</dt><dd>$${bil(ult.total)} mil millones<small>pesos nominales</small></dd></div>
+    <div><dt>Rango entre canales, ${anio}</dt><dd>${pct(sh(can[0]))} – ${pct(sh(can[can.length - 1]))}<small>${esc(can[0].canal)} a ${esc(can[can.length - 1].canal)}</small></dd></div>`;
+}
 function render() { drawComp(); drawPanels(); drawTable(); }
 function init() {
   document.getElementById("gen").textContent = `Datos generados ${DATA.generado} desde salidas/viz_data.json · ${DATA.lineas.length} montos de nota en la serie principal`;
+  drawCifras();
   document.getElementById("evts").innerHTML = DATA.eventos.map(e => `<li>${esc(e.texto)}</li>`).join("");
   for (const [id, key] of [["c-clas", "clas"], ["c-freq", "freq"], ["c-unit", "unit"], ["c-per", "per"]]) {
     const g = document.getElementById(id);
