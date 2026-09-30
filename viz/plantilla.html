@@ -139,8 +139,7 @@ table.data td { font-family: var(--f-data); font-variant-numeric: tabular-nums; 
   <div class="console" role="toolbar" aria-label="Opciones de visualización">
     <div class="sw"><span>Clasificación</span><div class="seg" id="c-clas">
       <button id="clas-n1" data-v="n1" aria-pressed="true">Nivel 1</button>
-      <button id="clas-n2" data-v="n2" aria-pressed="false">Nivel 2</button>
-      <button id="clas-np" data-v="np" aria-pressed="false">Napoli (rangos)</button></div></div>
+      <button id="clas-n2" data-v="n2" aria-pressed="false">Nivel 2</button></div></div>
     <div class="sw"><span>Frecuencia</span><div class="seg" id="c-freq">
       <button id="freq-a" data-v="a" aria-pressed="true">Anual</button>
       <button id="freq-s" data-v="s" aria-pressed="false">Semestral</button></div></div>
@@ -179,9 +178,7 @@ table.data td { font-family: var(--f-data); font-variant-numeric: tabular-nums; 
 
   <div class="notes">
     <section><h3>Eventos marcados</h3><ol id="evts"></ol></section>
-    <section><h3>Cómo leer los rangos y agregados</h3><ul>
-      <li><b>Punto</b>: cada línea de la nota va entera a su código principal (Audiencias, Contenidos o Fuera de Napoli).</li>
-      <li><b>Piso</b>: solo las líneas puras de la categoría. <b>Techo</b>: todas las líneas que podrían contenerla. La banda va del piso al techo de Audiencias.</li>
+    <section><h3>Cómo leer los agregados</h3><ul>
       <li><b>4 grandes</b> y <b>6 canales CMF</b> suman los canales solo en los períodos en que todos informan. No incluyen canales que no reportan a la CMF (Telecanal, regionales).</li>
       <li>«Solo TV» resta la publicidad radial y de cable de Mega.</li>
       <li>Referencias de Napoli: 100% (broadcast, EE.UU. c. 2001) y 60% (cable networks).</li></ul></section>
@@ -189,7 +186,7 @@ table.data td { font-family: var(--f-data); font-variant-numeric: tabular-nums; 
       <li>Montos de los EEFF en miles de pesos (M$). Cada cifra lleva documento y página.</li>
       <li>$ de 2025: IPC del Banco Central (variación mensual oficial, encadenada; promedio 2025 = 100). UF y US$: promedio del período de la UF diaria y del dólar observado (Banco Central).</li>
       <li>H2 = año completo − primer semestre. Si los documentos clasifican distinto, H2 puede salir negativo en alguna categoría.</li>
-      <li>C13: la venta de activos que la nota informa (2018 y 2020) se separa como Fuera de Napoli. Q1 y Q2 de 2020 la incluyen sin desglose.</li>
+      <li>C13: «Otros ingresos» incluye venta de activos en 2018 (M$6.430.098) y 2020 (M$13.771.539), según la nota.</li>
       <li>TVN 2025: la tabla del EEFF tiene fuente corrupta; cifras del piloto validado, coinciden con la lectura OCR.</li>
       <li>Los EEFF escaneados se leyeron con OCR y cuadran línea a línea con el total.</li>
     </ul></section>
@@ -225,7 +222,6 @@ const CATS = {
   n1: [{ k: "n1_publicidad", l: "Publicidad", c: "--cat-1" }, { k: "n1_otros", l: "Otros ingresos", c: "--cat-2" }],
   n2: [{ k: "n2_publicidad", l: "Publicidad", c: "--cat-1" }, { k: "n2_otros_operacionales", l: "Otros operacionales", c: "--cat-2" },
        { k: "n2_transferencias", l: "Transferencias del Estado", c: "--cat-3" }],
-  np: [{ k: "A_punto", l: "Audiencias", c: "--cat-1" }, { k: "C_punto", l: "Contenidos", c: "--cat-2" }, { k: "F_punto", l: "Fuera de Napoli", c: "--cat-3" }],
 };
 
 // valor de un campo según perímetro (Mega solo TV; los agregados traen su propia columna tvp_)
@@ -263,7 +259,6 @@ function convTip(r, v) {
 }
 function share(r) {
   const tot = val(r, "total");
-  if (S.clas === "np") return { p: val(r, "A_punto") / tot, lo: val(r, "A_piso") / tot, hi: val(r, "A_techo") / tot };
   return { p: val(r, "n1_publicidad") / tot };
 }
 const reclas = (ent, per) => DATA.reclasificaciones.find(x => x.canal === ent && x.periodo === per);
@@ -357,7 +352,7 @@ function drawComp() {
   const w = Math.max(320, box.clientWidth), h = w < 520 ? 300 : 340, m = { t: 26, r: w < 520 ? 84 : 118, b: 28, l: 40 };
   const svg = el("svg", { viewBox: `0 0 ${w} ${h}`, role: "img", "aria-label": "Participación en el tiempo" }, box);
   // eje ajustado a los datos (una línea no necesita partir en cero), siempre con la referencia de 60% a la vista
-  const vals = ents.flatMap(c => rows(c).flatMap(r => { const s = share(r); return S.clas === "np" && !MENORES.includes(c) ? [s.p, s.lo] : [s.p]; }));
+  const vals = ents.flatMap(c => rows(c).map(r => share(r).p));
   const ymin = Math.max(0, Math.floor((Math.min(0.6, ...vals) - 0.04) * 10) / 10);
   const { sx, sy } = axes(svg, w, h, m, 1, v => Math.round(v * 100) + "%", ymin);
   for (const [v, t] of [[1, "100% broadcast EE.UU."], [0.6, "60% cable networks"]]) {
@@ -366,11 +361,6 @@ function drawComp() {
   }
   eventos(svg, sx, m.t - 6, h - m.b, e => !e.canal, m.t - 10);
   const series = ents.map(c => ({ c, rs: rows(c).map(r => ({ r, s: share(r), x: sx(xOf(r)) })) })).filter(s => s.rs.length);
-  if (S.clas === "np") for (const { c, rs } of series) {
-    if (MENORES.includes(c)) continue;
-    const up = rs.map(p => [p.x, sy(p.s.hi)]), dn = rs.map(p => [p.x, sy(p.s.lo)]).reverse();
-    el("path", { d: pathLine(up) + pathLine(dn).replace("M", "L") + "Z", fill: css(EST[c].c), "fill-opacity": css("--band-op") }, svg);
-  }
   const labels = [];
   for (const { c, rs } of series) {
     const e = EST[c], col = css(e.c);
@@ -398,17 +388,15 @@ function drawComp() {
     const pts = series.map(s => ({ c: s.c, p: s.rs.find(p => p.x === x) })).filter(o => o.p).sort((a, b) => b.p.s.p - a.p.s.p);
     const per = pts[0].p.r.periodo;
     showTip(`<b>${esc(per)}</b><table>${pts.map(o => `<tr><td><i class="sw-dot" style="background:${css(EST[o.c].c)}"></i>${esc(EST[o.c].nombre || o.c)}${reclas(o.c, per) ? ' <span class="flag">reclasificado</span>' : ""}</td>
-      <td class="n">${pct(o.p.s.p)}${S.clas === "np" ? ` <span class="doc">[${pct(o.p.s.lo)}–${pct(o.p.s.hi)}]</span>` : ""}</td></tr>`).join("")}</table>
+      <td class="n">${pct(o.p.s.p)}</td></tr>`).join("")}</table>
       <div class="doc">Industria = suma de los seis canales (ponderada por tamaño). Las líneas de la nota están en los paneles de cada canal.</div>`, ev);
   });
   hit.addEventListener("mouseleave", () => { hair.setAttribute("visibility", "hidden"); hideTip(); });
 
-  const que = S.clas === "np" ? "Audiencias según Napoli: línea = punto; banda = piso a techo." : "Publicidad sobre ingresos de actividades ordinarias.";
-  document.getElementById("s-comp").textContent = que + " Industria = suma de los seis canales, desde 2017. Círculo hueco = período reclasificado entre EEFF."
-    + (S.clas === "np" ? " La Red y TV+ sin banda." : "");
+  const que = "Publicidad sobre ingresos de actividades ordinarias.";
+  document.getElementById("s-comp").textContent = que + " Industria = suma de los seis canales, desde 2017. Círculo hueco = período reclasificado entre EEFF.";
   document.getElementById("lg-comp").innerHTML = ents.map(c => { const e = EST[c];
     return `<span><svg width="22" height="8" style="display:inline-block;vertical-align:1px;margin-right:6px;overflow:visible"><line x1="0" x2="22" y1="4" y2="4" stroke="${css(e.c)}" stroke-width="3" stroke-dasharray="${e.dash || "none"}"/></svg>${e.nombre || c}</span>`; }).join("")
-    + (S.clas === "np" ? `<span><i class="band" style="background:${css("--muted")}"></i>Rango piso–techo</span>` : "")
     + `<span><i class="dash"></i>Referencia Napoli</span>`;
 }
 
@@ -437,9 +425,6 @@ function drawPanels() {
       el("path", { d: pathLine(up) + pathLine(dn).replace("M", "L") + "Z", fill: css(cat.c), "fill-opacity": .82, stroke: css("--surface"), "stroke-width": 1.5, "stroke-linejoin": "round" }, svg);
       acc = top;
     });
-    if (S.clas === "np") for (const k of ["A_piso", "A_techo"]) {
-      el("path", { d: pathLine(rs.map(r => [sx(xOf(r)), sy(norm(r, val(r, k)))])), fill: "none", stroke: css("--ink"), "stroke-width": 1.3, "stroke-dasharray": k === "A_piso" ? "2 3" : "6 3" }, svg);
-    }
     eventos(svg, sx, m.t, h - m.b, e => e.canal === ent, m.t + 9);
     const hair = el("line", { class: "hair", y1: m.t, y2: h - m.b, visibility: "hidden" }, svg);
     const hit = el("rect", { x: m.l, y: m.t, width: w - m.l - m.r, height: h - m.t - m.b, fill: "transparent" }, svg);
@@ -450,18 +435,16 @@ function drawPanels() {
       const T = val(r, "total"), u = S.unit === "pct" ? "M$" : UNI[S.unit].tip;
       const cv = v => S.unit === "pct" ? fmt(v) : convTip(r, v);
       const filas = cats.map(c => { const v = val(r, c.k); return v || c.k === "n1_otros" ? `<tr><td><i class="sw-dot" style="background:${css(c.c)}"></i>${c.l}</td><td class="n">${pct(v / T)}</td><td class="n">${cv(v)}</td></tr>` : ""; }).join("");
-      const rng = S.clas === "np" ? `<tr><td>Audiencias piso–techo</td><td class="n" colspan="2">${pct(val(r, "A_piso") / T)} – ${pct(val(r, "A_techo") / T)}</td></tr>` : "";
       const neg = cats.some(c => val(r, c.k) < 0) ? `<div class="warn">Valor negativo en una categoría: el EEFF anual y el semestral clasifican distinto.</div>` : "";
       const inc = (S.unit === "real" && !r.ipc_completo) || (S.unit === "uf" && !r.uf_completo) || (S.unit === "usd" && !r.dolar_completo)
         ? `<div class="doc">Serie del Banco Central incompleta para este período: se usa lo publicado.</div>` : "";
-      showTip(`<b>${esc(ent)} · ${esc(r.periodo)}</b><table>${filas}${rng}<tr><td>Total</td><td></td><td class="n">${cv(T)}</td></tr></table><div class="doc">Montos en ${u}</div>${inc}${neg}${reclasHtml(r)}${linesHtml(r)}`, ev);
+      showTip(`<b>${esc(ent)} · ${esc(r.periodo)}</b><table>${filas}<tr><td>Total</td><td></td><td class="n">${cv(T)}</td></tr></table><div class="doc">Montos en ${u}</div>${inc}${neg}${reclasHtml(r)}${linesHtml(r)}`, ev);
     });
     hit.addEventListener("mouseleave", () => { hair.setAttribute("visibility", "hidden"); hideTip(); });
   }
   document.getElementById("s-pan").textContent = (S.unit === "pct" ? "Porcentaje del total de ingresos de actividades ordinarias." : UNI[S.unit].eje + " Escala propia por panel.")
     + (S.freq === "s" ? " H1 = enero–junio; H2 = anual − H1." : "") + " Pase el cursor para ver las líneas de la nota y su documento.";
-  document.getElementById("lg-pan").innerHTML = cats.map(c => `<span><i style="background:${css(c.c)}"></i>${c.l}</span>`).join("")
-    + (S.clas === "np" ? `<span><i class="dash" style="border-top-style:dotted;border-color:${css("--ink")}"></i>Piso Audiencias</span><span><i class="dash" style="border-color:${css("--ink")}"></i>Techo Audiencias</span>` : "");
+  document.getElementById("lg-pan").innerHTML = cats.map(c => `<span><i style="background:${css(c.c)}"></i>${c.l}</span>`).join("");
 }
 
 // ---------- tabla ----------
@@ -475,10 +458,10 @@ function drawTable() {
     h += `<tr><td>${p}</td>` + ents.map(c => {
       const r = rows(c).find(x => x.periodo === p); if (!r) return "<td>—</td>";
       const s = share(r);
-      return `<td>${pct(s.p)}${S.clas === "np" ? ` [${pct(s.lo)}–${pct(s.hi)}]` : ""}${reclas(c, p) ? ' <span class="flag">R</span>' : ""}</td>`;
+      return `<td>${pct(s.p)}${reclas(c, p) ? ' <span class="flag">R</span>' : ""}</td>`;
     }).join("") + "</tr>";
   }
-  document.getElementById("tbl").innerHTML = h + `</tbody></table><p class="src" style="margin-top:8px">${S.clas === "np" ? "Audiencias: punto [piso–techo]" : "Publicidad / total"}. R = reclasificado entre EEFF.</p>`;
+  document.getElementById("tbl").innerHTML = h + `</tbody></table><p class="src" style="margin-top:8px">Publicidad / total. R = reclasificado entre EEFF.</p>`;
 }
 
 function render() { drawComp(); drawPanels(); drawTable(); }
