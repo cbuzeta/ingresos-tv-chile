@@ -462,7 +462,12 @@ def main(solo=None):
 
 if __name__ == "__main__":
     filtro = None
-    if len(sys.argv) > 1:
+    if sys.argv[1:] == ["--nuevos"]:
+        # solo los EEFF que aún no están en el log (actualización trimestral)
+        with open(ROOT / "data" / "extraccion_log.csv", encoding="utf-8") as fh:
+            hechos = {r["documento"] for r in csv.DictReader(fh)}
+        filtro = lambda d: d["pdf"] not in hechos  # noqa: E731
+    elif len(sys.argv) > 1:
         c, f = sys.argv[1], sys.argv[2] if len(sys.argv) > 2 else ""
         filtro = lambda d: d["canal"] == c and d["fecha_cierre"].startswith(f)  # noqa: E731
     main(filtro)

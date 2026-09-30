@@ -300,8 +300,11 @@ python src/04_extraer_nota.py "Canal 13" 2026-06   # corrida parcial: reemplaza 
 python src/04b_mega_geografia.py # Mega nota 7 b: ventas nacionales / al extranjero
 python src/05_mapear.py          # data/ingresos.sqlite; se detiene si hay líneas sin mapeo
 python src/validar_semilla.py    # debe dar 48/48
-python src/06_exportar.py        # salidas/ + viz/ingresos_tv.html
+python src/06_exportar.py        # salidas/ + viz/ingresos_tv.html + docs/ (Pages, español e inglés)
+python -m pytest tests            # consistencia; también corre en GitHub Actions en cada push
+python src/actualizar.py          # todo lo anterior + busca y baja EEFF nuevos de la CMF (00_novedades.py)
 ```
+Páginas de la CMF por canal (property value): C13 46330, La Red 46331, Mega 46333, CHV 46334, TV+ 46336 (también informan Canal Dos/Telecanal 46329, RDT 46332 y TBN Enlace 46335, fuera de la muestra). Los artículos están en `/portal/estadisticas/626/w4-article-N.html`. TVN: ficha de entidad por trimestre; el PDF de la CMF no es idéntico byte a byte al del sitio de TVN, pero trae las mismas cifras.
 Herramientas: pdftotext/pdftoppm (poppler), pdfplumber, Tesseract en `C:\Program Files\Tesseract-OCR` con `tools/tessdata/spa.traineddata`, Node portátil en `tools/node/`.
 
 **Método de extracción.** Para cada página con el encabezado de la nota se prueban pdfplumber, pdftotext -layout, pdftotext -raw, OCR 300 dpi y OCR 400 dpi (psm 4). Solo se acepta una tabla cuyas líneas sumen el total en todas las columnas (tolerancia ±M$2 por redondeo de la fuente, que se registra en el log), cuyos rótulos sean de ingresos (sin costo/gasto/ganancia) y cuyo total (actual o comparativo) aparezca en el estado de resultados. Las columnas se interpretan por las fechas del encabezado.

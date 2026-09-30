@@ -1,0 +1,32 @@
+name: novedades-cmf
+# Revisa una vez al mes si la CMF publicó EEFF nuevos de los seis canales y abre un aviso (issue).
+on:
+  schedule:
+    - cron: "0 12 5 * *"
+  workflow_dispatch:
+permissions:
+  contents: read
+  issues: write
+jobs:
+  revisar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install requests
+      - id: revisar
+        run: |
+          set +e
+          python src/00_novedades.py | tee salida.txt
+          echo "codigo=$?" >> "$GITHUB_OUTPUT"
+      - if: steps.revisar.outputs.codigo == '10'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          titulo="EEFF nuevos en la CMF ($(date +%Y-%m))"
+          if ! gh issue list --state open --search "$titulo in:title" --json number -q '.[].number' | grep -q .; then
+            printf 'La revisión mensual encontró estados financieros nuevos:\n\n```\n%s\n```\n\nPara actualizar: `python src/actualizar.py` en la copia local.\n' "$(cat salida.txt)" > cuerpo.md
+            gh issue create --title "$titulo" --body-file cuerpo.md
+          fi

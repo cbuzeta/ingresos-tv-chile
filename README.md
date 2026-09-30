@@ -41,6 +41,10 @@ Cada decisión de clasificación está en `mapeo/lineas_mapeo.csv`, con su justi
 
 $ nominales; $ de 2025 (IPC del Banco Central, variación mensual encadenada); UF y US$ (promedio del período de la UF diaria y del dólar observado, Banco Central). Series en `data/externos/`.
 
+## Actualización trimestral
+
+`python src/actualizar.py` busca en la CMF los EEFF nuevos de los seis canales, los descarga (con pausas) y rehace la base, la planilla y la visualización; termina corriendo las pruebas. Si aparece una línea de nota nueva, se detiene hasta que se clasifique en `mapeo/lineas_mapeo.csv`. Además, un aviso automático de GitHub (`.github/workflows/novedades.yml`) revisa la CMF el día 5 de cada mes y abre un *issue* cuando hay estados financieros nuevos.
+
 ## Cómo reproducir
 
 Los PDF originales no están en el repositorio. `data/manifest.csv` lista cada archivo con su número de artículo de la CMF y su hash SHA-256. Para reconstruir la base, bajarlos en `data/{canal}/` y correr:

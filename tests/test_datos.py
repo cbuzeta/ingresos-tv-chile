@@ -34,13 +34,15 @@ def test_semilla_48_de_48():
 
 
 def test_extraccion_igual_a_referencia():
-    """Ningún monto extraído cambia sin que se actualice la referencia a propósito."""
+    """Ningún monto ya extraído cambia o desaparece sin que se actualice la referencia a propósito."""
     ref = pd.read_csv(ROOT / "tests" / "referencia_extraccion.csv")
     x = pd.read_csv(ROOT / "data" / "lineas_extraidas.csv")
     clave = ["canal", "fecha_cierre", "documento", "tipo_periodo", "fin", "orden"]
     m = ref.merge(x[clave + ["linea_original", "monto"]], on=clave, how="outer", suffixes=("_ref", ""), indicator=True)
-    faltan = m[m._merge != "both"]
-    assert faltan.empty, f"{len(faltan)} montos aparecen o desaparecen:\n{faltan[clave + ['_merge']].head(20)}"
+    # los EEFF nuevos agregan montos (permitido); ningún monto de la referencia puede desaparecer o cambiar
+    faltan = m[m._merge == "left_only"]
+    assert faltan.empty, f"{len(faltan)} montos de la referencia desaparecieron:\n{faltan[clave].head(20)}"
+    m = m[m._merge == "both"]
     distintos = m[(m.monto_ref != m.monto) | (m.linea_original_ref != m.linea_original)]
     assert distintos.empty, f"{len(distintos)} montos cambiaron:\n{distintos.head(20)}"
 

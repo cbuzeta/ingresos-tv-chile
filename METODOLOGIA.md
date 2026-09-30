@@ -61,7 +61,7 @@ Un período se marca como **reclasificado** cuando dos documentos informan disti
 
 - **Anual** (enero–diciembre) es la serie núcleo.
 - **Primer semestre (H1)** se toma tal como viene en los EEFF de junio.
-- **Segundo semestre (H2)** se deriva como anual − H1. Si el EEFF anual y el semestral clasifican distinto, alguna categoría de H2 puede salir negativa (ocurre en Canal 13 2019, Chilevisión 2023 y TV+ 2019); se muestra en la visualización con una advertencia.
+- **Segundo semestre (H2)** se deriva como anual − H1. Si el EEFF anual y el semestral clasifican distinto, alguna categoría de H2 puede salir negativa (ocurre en Canal 13 2019, Chilevisión 2023 y TV+ 2019; y en Nivel 4 en Canal 13 2020, porque el EEFF de junio 2021 informa para el primer semestre de 2020 más publicidad digital, M$4.393.823, que el de diciembre 2021 para todo el año, M$2.956.968). Se muestra en la visualización con una advertencia.
 - Los trimestres y el acumulado a septiembre se extraen y quedan en la base, pero no son foco del análisis.
 
 ## 6. Clasificación
@@ -125,7 +125,7 @@ En Nivel 4 la categoría «Otros sin desglose» (Canal 13, Chilevisión, TVN y T
 - **4 grandes**: TVN, Canal 13, Mega y Chilevisión (desde 2016).
 - **6 canales CMF** («Industria» en la visualización): los anteriores más La Red y TV+ (desde 2017).
 
-Un agregado se calcula solo en los períodos en que todos sus canales informan (panel balanceado) y suma montos, así que la participación de publicidad está ponderada por el tamaño de cada canal. No incluye canales que no reportan a la CMF (por ejemplo, Telecanal o canales regionales), por lo que es un agregado de los canales informantes y no del mercado completo. En 2025 los 4 grandes son el 98,5% de los ingresos de los seis.
+Un agregado se calcula solo en los períodos en que todos sus canales informan (panel balanceado) y suma montos, así que la participación de publicidad está ponderada por el tamaño de cada canal. No incluye a otras tres concesionarias que también informan a la CMF (Canal Dos S.A., que opera Telecanal; RDT S.A.; y TBN Enlace Chile S.A.) ni a los canales regionales y locales que no informan, por lo que es un agregado de los seis canales de la muestra y no del mercado completo. En 2025 los 4 grandes son el 98,5% de los ingresos de los seis.
 
 ## 9. Unidades monetarias
 
