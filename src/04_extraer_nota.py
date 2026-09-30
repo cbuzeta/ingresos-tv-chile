@@ -27,6 +27,12 @@ CANALES = {"TVN", "Canal 13", "Mega", "Chilevisión", "La Red", "TV+"}
 HEAD = re.compile(r"ingresos (?:de|por) (?:las )?actividades ordinarias|ingresos ordinarios|ingresos de explotacion"
                   r"|ingresos operacionales")
 NOTA_HEAD = re.compile(r"^\s*(?:nota|note)?\s*n?[°º]?\s*\d{1,2}[\.\-–:)\s]+.*?(" + HEAD.pattern + ")")
+# Qué rótulos debe tener (RE_OK) y no puede tener (RE_NO) una tabla para ser la nota buscada.
+# 04c_extraer_costos.py reutiliza este módulo cambiando HEAD, NOTA_HEAD, estos filtros y las salidas.
+RE_OK = r"ingres|publicid|\bventas?\b|subvenc"
+RE_NO = r"costo|gasto|ganancia|perdida|margen"
+ENCABEZADO_NOTA = r"(ingresos? (de|por) actividades ordinarias|ingresos ordinarios|ingresos de explotacion)( \(.\))?"
+SALIDA_LINEAS, SALIDA_LOG = "lineas_extraidas.csv", "extraccion_log.csv"
 AMT = re.compile(r"(?<![\d/\-])\(?-?\d{1,3}(?:\.\d{3})+\)?(?![\d/\-])|(?<![\w\d/\-.,])\(?\d{1,3}\)?(?![\w\d/\-.,%])"
                  r"|(?<=\s)-(?=\s|$)")
 FECHA = re.compile(r"(\d{2})[-/](\d{2})[-/](\d{4})")
@@ -47,6 +53,8 @@ def split_line(line):
         partes = [x.strip() for x in line.split("¦")]
         lab = re.sub(r"\s+", " ", partes[0]).strip(" .:$")
         return lab, [amount(x) for x in partes[1:]]
+    # referencias a otras notas dentro del rótulo ("Depreciación (Nota 13) 293.221"): no son montos
+    line = re.sub(r"\(\s*[Nn]ota\s*N?[°º]?\s*\d{1,2}[a-z]?\s*\)|\b[Nn]ota\s*N?[°º]?\s*\d{1,2}\b(?=\D*\d{1,3}\.\d{3})", " ", line)
     toks = list(AMT.finditer(line))
     # descartar montos pequeños sin puntos que sean referencias de nota "(1)" pegadas al rótulo
     nums, cut = [], None
@@ -82,8 +90,7 @@ def es_encabezado(label_n, label=""):
         return True
     if label and label.isupper() and not re.search(r"total|ingres", label_n):  # continuación del título
         return True
-    if re.fullmatch(r"(ingresos? (de|por) actividades ordinarias|ingresos ordinarios|ingresos de explotacion)"
-                    r"( \(.\))?", label_n):
+    if re.fullmatch(ENCABEZADO_NOTA, label_n):
         return True
     if HEADER_LABEL.match(label_n):
         return True
@@ -106,11 +113,14 @@ def buscar_tabla(lines, ks=(1, 2, 4)):
     ks=None: filas con todas las columnas de la página (fuente por coordenadas); se descartan las columnas
     que la tabla no usa y recién entonces se exige 1, 2 o 4 columnas.
     """
-    for tol in (0, 2):
-        filas, parsed = _buscar_tabla(lines, tol, ks)
-        if filas:
-            return filas, parsed
-    return None, parsed
+    # Primero la tabla exacta; si no hay, con tolerancia. Pero solo se acepta la exacta si no hay antes otra tabla
+    # que cuadra con tolerancia: así no se salta una tabla de la nota (p. ej. TV+ marzo 2022, descuadre de M$1)
+    # para quedarse con otra más abajo que cuadra exacto (la de costos) y que luego se rechaza.
+    exacta, parsed = _buscar_tabla(lines, 0, ks)
+    tolerada, _ = _buscar_tabla(lines, 2, ks)
+    if exacta and tolerada and tolerada[0][0] < exacta[0][0]:
+        return tolerada, parsed
+    return (exacta or tolerada), parsed
 
 
 def _buscar_tabla(lines, tol, ks=(1, 2, 4)):
@@ -133,7 +143,8 @@ def _buscar_tabla(lines, tol, ks=(1, 2, 4)):
             filas = [r[2] for r in num[a:b]]
             if any(len(f) != k for f in filas):
                 break
-            if all(abs(sum(f[c] for f in filas) - num[b][2][c]) <= tol for c in range(k)) and max(num[b][2]) > 1000:
+            if all(abs(sum(f[c] for f in filas) - num[b][2][c]) <= tol for c in range(k)) \
+                    and max(abs(v) for v in num[b][2]) > 1000:  # abs: los costos vienen negativos
                 bloque = num[a:b + 1]
                 if ks is None:
                     usadas = [c for c in range(k) if any(r[2][c] for r in bloque)]
@@ -288,27 +299,32 @@ def extraer_doc(doc):
             head_idx = next((i for i, l in enumerate(lines) if NOTA_HEAD.search(norm(l))), None)
             if head_idx is None:
                 head_idx = next((i for i, l in enumerate(lines) if HEAD.search(norm(l))), 0)
-            filas, parsed = buscar_tabla(lines[head_idx:head_idx + 70],
-                                         None if nombre == "pdfplumber-columnas" else (1, 2, 4))
-            if not filas:
-                intentos.append((p, nombre, "sin tabla que sume"))
-                continue
-            if filas[0][0] > 35:  # la tabla debe estar cerca del encabezado de la nota
-                intentos.append((p, nombre, "tabla lejos del encabezado"))
-                continue
-            labs = rotulos(parsed, filas, 0)
-            asign = asignar(filas, labs)
-            if not asign:
-                intentos.append((p, nombre, f"{len(filas)} filas vs {len(labs)} rótulos: "
-                                 + " | ".join(l for _, l in labs)))
-                continue
-            if not any(re.search(r"ingres|publicid|\bventas?\b|subvenc", norm(l)) for l in asign[:-1]) \
-                    or any(re.search(r"costo|gasto|ganancia|perdida|margen", norm(l)) for l in asign):
-                # p. ej. el propio estado de resultados: ingresos - costo de ventas = ganancia bruta
-                intentos.append((p, nombre, "tabla que suma pero no es de ingresos: " + " | ".join(asign)))
-                continue
-            return {"pagina": p, "fuente": nombre, "filas": [(lab, f[2]) for lab, f in zip(asign, filas)],
-                    "encabezado": "\n".join(lines[head_idx:filas[0][0] + head_idx])}, intentos
+            ventana = lines[head_idx:head_idx + 70]
+            ks = None if nombre == "pdfplumber-columnas" else (1, 2, 4)
+            desde = 0  # si una tabla que suma no es la buscada (p. ej. TVN: ingresos antes que costos), se sigue buscando
+            while desde < len(ventana):
+                filas, parsed = buscar_tabla(ventana[desde:], ks)
+                if not filas:
+                    intentos.append((p, nombre, "sin tabla que sume"))
+                    break
+                if filas[0][0] + desde > 35:  # la tabla debe estar cerca del encabezado de la nota
+                    intentos.append((p, nombre, "tabla lejos del encabezado"))
+                    break
+                labs = rotulos(parsed, filas, 0)
+                asign = asignar(filas, labs)
+                if not asign:
+                    intentos.append((p, nombre, f"{len(filas)} filas vs {len(labs)} rótulos: "
+                                     + " | ".join(l for _, l in labs)))
+                    break
+                if not any(re.search(RE_OK, norm(l)) for l in asign[:-1]) \
+                        or any(re.search(RE_NO, norm(l)) for l in asign):
+                    # p. ej. el propio estado de resultados: ingresos - costo de ventas = ganancia bruta
+                    intentos.append((p, nombre, "tabla que suma pero no es la nota buscada: " + " | ".join(asign)))
+                    desde += filas[-1][0] + 1
+                    continue
+                inicio = head_idx + desde
+                return {"pagina": p, "fuente": nombre, "filas": [(lab, f[2]) for lab, f in zip(asign, filas)],
+                        "encabezado": "\n".join(lines[inicio:filas[0][0] + inicio])}, intentos
     return None, intentos
 
 
@@ -443,7 +459,7 @@ def main(solo=None):
         print(estado, d["canal"], d["fecha_cierre"], f"p{res['pagina']}", res["fuente"], k, "cols",
               [lab for lab, _ in res["filas"]], detalle)
 
-    for name, rows in (("lineas_extraidas.csv", salida), ("extraccion_log.csv", log)):
+    for name, rows in ((SALIDA_LINEAS, salida), (SALIDA_LOG, log)):
         if solo and (ROOT / "data" / name).exists():
             # corrida parcial: se reemplazan solo los documentos procesados
             hechos = {d["pdf"] for d in docs}
@@ -464,7 +480,7 @@ if __name__ == "__main__":
     filtro = None
     if sys.argv[1:] == ["--nuevos"]:
         # solo los EEFF que aún no están en el log (actualización trimestral)
-        with open(ROOT / "data" / "extraccion_log.csv", encoding="utf-8") as fh:
+        with open(ROOT / "data" / SALIDA_LOG, encoding="utf-8") as fh:
             hechos = {r["documento"] for r in csv.DictReader(fh)}
         filtro = lambda d: d["pdf"] not in hechos  # noqa: E731
     elif len(sys.argv) > 1:
