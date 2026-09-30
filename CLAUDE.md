@@ -157,7 +157,7 @@ Anidados en el Nivel 2 (la suma de cada nivel es igual al total). Columnas `nive
 - **Nivel 4** (13): Publicidad TV abierta · Publicidad digital · Publicidad TV + digital (sin desglose) · Canje (publicidad en especie) · Publicidad radio y cable · Comisión publicidad TV paga · Arriendo de pantalla · Contenidos y señales · Eventos · Arriendos y servicios · Otros sin desglose · Venta de activos · Transferencias del Estado.
 - «Sin desglose» deja explícito lo que el canal no informa; nunca se reparte por supuesto.
 - CHV «Ingresos por publicidad» = Publicidad TV abierta; desde 2023 incluye la comisión por TV paga (antes línea TILA): quiebre marcado.
-- Pendiente: desagregación nacional/extranjero de Mega (nota 7 b, desde 2018) como detalle de «Contenidos y señales».
+- Contenidos y señales se divide en Nivel 4 en (nacional), (extranjero) y (sin desglose geográfico). Mega informa la división en la nota 7 b desde 2018 (`src/04b_mega_geografia.py`, `data/mega_geografia.csv`): cada par nacional + extranjero se valida contra el monto de la nota 7 a. El resto de los canales y Mega 2016–2017 quedan sin desglose geográfico. Con esto el Nivel 4 tiene 15 categorías.
 
 ### 5.3 Codificación estilo Napoli (con rangos)
 Cada línea recibe:
@@ -297,6 +297,7 @@ python src/01_inventario.py      # inventario + hash + descompresión (los ZIP y
 python src/03_identificar.py     # data/documentos.csv; casos a revision/identificacion.csv
 python src/04_extraer_nota.py    # data/lineas_extraidas.csv + data/extraccion_log.csv (~20 min la primera vez por OCR; luego usa caché)
 python src/04_extraer_nota.py "Canal 13" 2026-06   # corrida parcial: reemplaza solo esos documentos
+python src/04b_mega_geografia.py # Mega nota 7 b: ventas nacionales / al extranjero
 python src/05_mapear.py          # data/ingresos.sqlite; se detiene si hay líneas sin mapeo
 python src/validar_semilla.py    # debe dar 48/48
 python src/06_exportar.py        # salidas/ + viz/ingresos_tv.html

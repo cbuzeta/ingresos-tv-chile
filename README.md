@@ -23,6 +23,7 @@ Fuentes: sección de concesionarias de TV de la CMF y ficha de TVN. Montos en mi
 
 - **Nivel 1:** Publicidad / Otros ingresos.
 - **Nivel 2:** Publicidad / Otros ingresos operacionales / Transferencias del Estado (subvención NTV).
+- **Nivel 3** (7 grupos) y **Nivel 4** (15 categorías): desglose más fino, anidado en el Nivel 2. Lo que un canal no informa queda como «sin desglose»; no se reparte por supuesto.
 - **Napoli con rangos:** cada línea se codifica como Audiencias, Contenidos o Fuera de Napoli, pura o mixta. Por canal y período se calcula un **piso** (líneas puras), un **techo** (líneas que pueden contener la categoría) y un **punto** (código principal).
 
 Cada decisión de clasificación está en `mapeo/lineas_mapeo.csv`, con su justificación y fecha. Los desgloses tomados de las notas (por ejemplo, la venta de activos de Canal 13 en 2018 y 2020) están en `mapeo/desgloses_nota.csv`, con documento y página.
@@ -47,6 +48,7 @@ python src/00_externos.py      # series del Banco Central
 python src/01_inventario.py    # inventario y descompresión
 python src/03_identificar.py   # identifica el PDF de EEFF en cada paquete
 python src/04_extraer_nota.py  # extrae la nota de ingresos (OCR para los escaneados)
+python src/04b_mega_geografia.py  # Mega: ventas nacionales / al extranjero (nota 7 b)
 python src/05_mapear.py        # aplica el mapeo; se detiene si hay líneas nuevas sin clasificar
 python src/validar_semilla.py  # debe dar 48/48
 python src/06_exportar.py      # salidas/ y viz/

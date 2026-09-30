@@ -25,8 +25,8 @@ AGREGADOS = {"4 grandes": CANALES[:4], "6 canales CMF": CANALES}
 NIVEL3 = ["Publicidad TV y digital", "Publicidad en otros medios", "Arriendo de pantalla", "Contenidos y señales",
           "Otros ingresos", "Venta de activos", "Transferencias del Estado"]
 NIVEL4 = ["Publicidad TV abierta", "Publicidad digital", "Publicidad TV + digital (sin desglose)", "Canje (publicidad en especie)",
-          "Publicidad radio y cable", "Comisión publicidad TV paga", "Arriendo de pantalla", "Contenidos y señales",
-          "Eventos", "Arriendos y servicios", "Otros sin desglose", "Venta de activos", "Transferencias del Estado"]
+          "Publicidad radio y cable", "Comisión publicidad TV paga", "Arriendo de pantalla", "Contenidos y señales (nacional)",
+          "Contenidos y señales (extranjero)", "Contenidos y señales (sin desglose geográfico)", "Eventos", "Arriendos y servicios", "Otros sin desglose", "Venta de activos", "Transferencias del Estado"]
 
 
 def slug(t):
@@ -45,7 +45,7 @@ EVENTOS = [
     {"corto": "Venta activos", "fecha": "2020-12-31", "canal": "Canal 13", "texto": "C13: venta de activos 2020 por M$13.771.539, incluida en «Otros ingresos»"},
     {"corto": "Megamedia", "fecha": "2020-01-01", "canal": "Mega", "texto": "Mega: la sociedad informante pasa de Red Televisiva Megavisión a Megamedia; el 2019 informado por ambas coincide"},
     {"corto": "Paramount", "fecha": "2021-01-01", "canal": "Chilevisión", "texto": "CHV: controlador pasa a Paramount/ViacomCBS"},
-    {"corto": "TILA → publicidad", "fecha": "2023-01-01", "canal": "Chilevisión", "texto": "CHV: la comisión TILA (TV paga) se integra a 'Ingresos por publicidad'"},
+    {"corto": "Quiebre: TV paga", "fecha": "2023-01-01", "canal": "Chilevisión", "texto": "CHV: desde 2023 la comisión por publicidad en TV paga (antes línea TILA) se informa dentro de «Ingresos por publicidad»; en Nivel 4 queda en Publicidad TV abierta. Quiebre de serie."},
     {"corto": "Subvención NTV", "fecha": "2025-01-01", "canal": "TVN", "texto": "TVN: inicia subvención NTV (Ley 19.132 art. 37)"},
     {"corto": "Vytal", "fecha": "2026-01-01", "canal": "Chilevisión", "texto": "CHV: controlador pasa a Vytal Group"},
 ]

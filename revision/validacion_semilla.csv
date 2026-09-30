@@ -12,10 +12,10 @@ Canal 13,H1 2026,2026-06-30,Ingresos de Publicidad Pantalla abierta,26162497,261
 Canal 13,H1 2026,2026-06-30,Ingresos de Publicidad Otras plataformas,1044544,1044544,Ingresos de PublicidadOtras plataformas,extraccion,True
 Canal 13,H1 2026,2026-06-30,Otros ingresos de explotación,11182930,11182930,Otros ingresos de explotación(a),extraccion,True
 Mega,FY2024,2025-12-31,Ingresos por publicidad de televisión e internet,70257656,70257656,Ingresos por publicidad de televisión e internet (1),extraccion,True
-Mega,FY2024,2025-12-31,Ingresos por ventas en plataformas y contenidos,25014746,25014746,Ingresos por ventas en plataformas y contenidos (2),extraccion,True
+Mega,FY2024,2025-12-31,Ingresos por ventas en plataformas y contenidos,25014746,25014746,Ingresos por ventas en plataformas y contenidos (2) — ventas nacionales | Ingresos por ventas en plataformas y contenidos (2) — ventas al extranjero,extraccion + nota 7 b (p. 39),True
 Mega,FY2024,2025-12-31,Ingresos por publicidad radial y cable,7647449,7647449,Ingresos por publicidad radial y cable (3),extraccion,True
 Mega,FY2025,2025-12-31,Ingresos por publicidad de televisión e internet,75154259,75154259,Ingresos por publicidad de televisión e internet (1),extraccion,True
-Mega,FY2025,2025-12-31,Ingresos por ventas en plataformas y contenidos,22126761,22126761,Ingresos por ventas en plataformas y contenidos (2),extraccion,True
+Mega,FY2025,2025-12-31,Ingresos por ventas en plataformas y contenidos,22126761,22126761,Ingresos por ventas en plataformas y contenidos (2) — ventas nacionales | Ingresos por ventas en plataformas y contenidos (2) — ventas al extranjero,extraccion + nota 7 b (p. 39),True
 Mega,FY2025,2025-12-31,Ingresos por publicidad radial y cable,7559044,7559044,Ingresos por publicidad radial y cable (3),extraccion,True
 Chilevisión,FY2024,2025-12-31,Ingresos por publicidad,66752603,66752603,Ingresos por publicidad (1),extraccion,True
 Chilevisión,FY2024,2025-12-31,Ingresos nuevos negocios,6564923,6564923,Ingresos nuevos negocios (2),extraccion,True
@@ -33,13 +33,13 @@ TVN,H1 2026,2026-06-30,Ingresos por publicidad en televisión abierta,12596474,1
 TVN,H1 2026,2026-06-30,Otros ingresos,7990951,7990951,Otros ingresos (1),extraccion,True
 TVN,H1 2026,2026-06-30,Subvención NTV,1703714,1703714,Subvencion NTV (2),extraccion,True
 Mega,H1 2025,2026-06-30,Ingresos por publicidad de televisión e internet,36244158,36244158,Ingresos por publicidad de televisión e internet (1),extraccion,True
-Mega,H1 2025,2026-06-30,Ingresos por ventas en plataformas y contenidos,14954549,14954549,Ingresos por ventas en plataformas y contenidos (2),extraccion,True
+Mega,H1 2025,2026-06-30,Ingresos por ventas en plataformas y contenidos,14954549,14954549,Ingresos por ventas en plataformas y contenidos (2) — ventas nacionales | Ingresos por ventas en plataformas y contenidos (2) — ventas al extranjero,extraccion + nota 7 b (p. 39),True
 Mega,H1 2025,2026-06-30,Ingresos por publicidad radial y cable,3350704,3350704,Ingresos por publicidad radial y cable (3),extraccion,True
 Mega,Q1 2026,2026-03-31,Ingresos por publicidad de televisión e internet,22647735,22647735,Ingresos por publicidad de televisión e internet (1),extraccion,True
-Mega,Q1 2026,2026-03-31,Ingresos por ventas en plataformas y contenidos,5509634,5509634,Ingresos por ventas en plataformas y contenidos (2),extraccion,True
+Mega,Q1 2026,2026-03-31,Ingresos por ventas en plataformas y contenidos,5509634,5509634,Ingresos por ventas en plataformas y contenidos (2) — ventas nacionales | Ingresos por ventas en plataformas y contenidos (2) — ventas al extranjero,extraccion + nota 7 b (p. 37),True
 Mega,Q1 2026,2026-03-31,Ingresos por publicidad radial y cable,2197367,2197367,Ingresos por publicidad radial y cable (3),extraccion,True
 Mega,H1 2026,2026-06-30,Ingresos por publicidad de televisión e internet,42107628,42107628,Ingresos por publicidad de televisión e internet (1),extraccion,True
-Mega,H1 2026,2026-06-30,Ingresos por ventas en plataformas y contenidos,10103933,10103933,Ingresos por ventas en plataformas y contenidos (2),extraccion,True
+Mega,H1 2026,2026-06-30,Ingresos por ventas en plataformas y contenidos,10103933,10103933,Ingresos por ventas en plataformas y contenidos (2) — ventas nacionales | Ingresos por ventas en plataformas y contenidos (2) — ventas al extranjero,extraccion + nota 7 b (p. 39),True
 Mega,H1 2026,2026-06-30,Ingresos por publicidad radial y cable,4223409,4223409,Ingresos por publicidad radial y cable (3),extraccion,True
 Chilevisión,H1 2025,2026-06-30,Ingresos por publicidad,33494199,33494199,Ingresos por publicidad (1),extraccion,True
 Chilevisión,H1 2025,2026-06-30,Ingresos nuevos negocios,1732348,1732348,Ingresos nuevos negocios (2),extraccion,True

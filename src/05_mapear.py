@@ -108,6 +108,33 @@ def main():
         print(out.to_string())
         sys.exit(1)
 
+    # Nivel 4 de contenidos: Mega informa ventas nacionales / al extranjero (nota 7 b, paso 4b).
+    # Donde el documento las trae, la línea se divide; en los demás casos queda "sin desglose geográfico".
+    geo_f = ROOT / "data" / "mega_geografia.csv"
+    es_con = y["nivel4"] == "Contenidos y señales"
+    y.loc[es_con, "nivel4"] = "Contenidos y señales (sin desglose geográfico)"
+    if geo_f.exists():
+        geo = pd.read_csv(geo_f, dtype=str)
+        clave = ["documento", "linea_original", "tipo_periodo", "rol", "fin"]
+        geo = geo.set_index(clave)
+        nuevas, quitar = [], []
+        for i in y.index[es_con & (y.canal == "Mega")]:
+            k = tuple(y.loc[i, clave])
+            if k not in geo.index:
+                continue
+            n, e = int(geo.loc[k, "nacional"]), int(geo.loc[k, "extranjero"])
+            if n + e != y.at[i, "monto"]:
+                sys.exit(f"ALTO: nota 7 b no cuadra con 7 a en {k}")
+            for sufijo, monto, n4 in ((" — ventas nacionales", n, "Contenidos y señales (nacional)"),
+                                      (" — ventas al extranjero", e, "Contenidos y señales (extranjero)")):
+                r = y.loc[i].copy()
+                r["linea_original"] = r["linea_original"] + sufijo
+                r["monto"], r["nivel4"] = monto, n4
+                r["origen_cifra"] = f"{r['origen_cifra']} + nota 7 b (p. {geo.loc[k, 'pagina']})"
+                nuevas.append(r)
+            quitar.append(i)
+        y = pd.concat([y.drop(index=quitar), pd.DataFrame(nuevas)], ignore_index=True)
+
     y["periodo"] = y.apply(etiqueta, axis=1)
     # versión: el documento que informa la cifra; la más reciente es la principal
     y = y.sort_values(["canal", "periodo", "fecha_cierre"])

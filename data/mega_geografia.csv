@@ -1,0 +1,163 @@
+documento,fecha_cierre,linea_original,tipo_periodo,rol,fin,nacional,extranjero,pagina,fuente_texto
+data/raw/pdf/Mega/101641/Estados financieros.pdf,2025-09-30,Ingresos por publicidad de televisión e internet (1),acumulado9m,actual,2025-09-30,53381086,244282,37,pdfplumber
+data/raw/pdf/Mega/101641/Estados financieros.pdf,2025-09-30,Ingresos por publicidad de televisión e internet (1),acumulado9m,comparativo,2024-09-30,50015539,55639,37,pdfplumber
+data/raw/pdf/Mega/101641/Estados financieros.pdf,2025-09-30,Ingresos por otros negocios (2),acumulado9m,actual,2025-09-30,18002419,1982737,37,pdfplumber
+data/raw/pdf/Mega/101641/Estados financieros.pdf,2025-09-30,Ingresos por otros negocios (2),acumulado9m,comparativo,2024-09-30,13526024,6251326,37,pdfplumber
+data/raw/pdf/Mega/101641/Estados financieros.pdf,2025-09-30,Ingresos por publicidad propios de subsidiarias (3),acumulado9m,actual,2025-09-30,5248100,0,37,pdfplumber
+data/raw/pdf/Mega/101641/Estados financieros.pdf,2025-09-30,Ingresos por publicidad propios de subsidiarias (3),acumulado9m,comparativo,2024-09-30,5377866,0,37,pdfplumber
+data/raw/pdf/Mega/109207/2026030222620_1.pdf,2025-12-31,Ingresos por publicidad de televisión e internet (1),anual,actual,2025-12-31,74790356,363903,39,pdfplumber
+data/raw/pdf/Mega/109207/2026030222620_1.pdf,2025-12-31,Ingresos por publicidad de televisión e internet (1),anual,comparativo,2024-12-31,70188326,69330,39,pdfplumber
+data/raw/pdf/Mega/109207/2026030222620_1.pdf,2025-12-31,Ingresos por ventas en plataformas y contenidos (2),anual,actual,2025-12-31,19690425,2436336,39,pdfplumber
+data/raw/pdf/Mega/109207/2026030222620_1.pdf,2025-12-31,Ingresos por ventas en plataformas y contenidos (2),anual,comparativo,2024-12-31,17950021,7064725,39,pdfplumber
+data/raw/pdf/Mega/109207/2026030222620_1.pdf,2025-12-31,Ingresos por publicidad radial y cable (3),anual,actual,2025-12-31,7559044,0,39,pdfplumber
+data/raw/pdf/Mega/109207/2026030222620_1.pdf,2025-12-31,Ingresos por publicidad radial y cable (3),anual,comparativo,2024-12-31,7647449,0,39,pdfplumber
+data/raw/pdf/Mega/111125/2026050359100_1.pdf,2026-03-31,Ingresos por publicidad de televisión e internet (1),trimestre,actual,2026-03-31,22520494,127241,37,pdfplumber
+data/raw/pdf/Mega/111125/2026050359100_1.pdf,2026-03-31,Ingresos por publicidad de televisión e internet (1),trimestre,comparativo,2025-03-31,18793091,1387,37,pdfplumber
+data/raw/pdf/Mega/111125/2026050359100_1.pdf,2026-03-31,Ingresos por ventas en plataformas y contenidos (2),trimestre,actual,2026-03-31,4862252,647382,37,pdfplumber
+data/raw/pdf/Mega/111125/2026050359100_1.pdf,2026-03-31,Ingresos por ventas en plataformas y contenidos (2),trimestre,comparativo,2025-03-31,8109501,88810,37,pdfplumber
+data/raw/pdf/Mega/111125/2026050359100_1.pdf,2026-03-31,Ingresos por publicidad radial y cable (3),trimestre,actual,2026-03-31,2197367,0,37,pdfplumber
+data/raw/pdf/Mega/111125/2026050359100_1.pdf,2026-03-31,Ingresos por publicidad radial y cable (3),trimestre,comparativo,2025-03-31,1722261,0,37,pdfplumber
+data/raw/pdf/Mega/113710/2026090594478-1.pdf,2026-06-30,Ingresos por publicidad de televisión e internet (1),semestre,actual,2026-06-30,41882454,225174,39,pdftotext-layout
+data/raw/pdf/Mega/113710/2026090594478-1.pdf,2026-06-30,Ingresos por publicidad de televisión e internet (1),semestre,comparativo,2025-06-30,36242935,1223,39,pdftotext-layout
+data/raw/pdf/Mega/113710/2026090594478-1.pdf,2026-06-30,Ingresos por ventas en plataformas y contenidos (2),semestre,actual,2026-06-30,9203721,900212,39,pdftotext-layout
+data/raw/pdf/Mega/113710/2026090594478-1.pdf,2026-06-30,Ingresos por ventas en plataformas y contenidos (2),semestre,comparativo,2025-06-30,13136632,1817917,39,pdftotext-layout
+data/raw/pdf/Mega/113710/2026090594478-1.pdf,2026-06-30,Ingresos por publicidad radial y cable (3),semestre,actual,2026-06-30,4223409,0,39,pdftotext-layout
+data/raw/pdf/Mega/113710/2026090594478-1.pdf,2026-06-30,Ingresos por publicidad radial y cable (3),semestre,comparativo,2025-06-30,3350704,0,39,pdftotext-layout
+data/raw/pdf/Mega/28606/archivo_3.pdf,2019-12-31,Ingresos por publicidad de televisión e internet,anual,actual,2019-12-31,68205963,183924,40,pdfplumber
+data/raw/pdf/Mega/28606/archivo_3.pdf,2019-12-31,Ingresos por publicidad de televisión e internet,anual,comparativo,2018-12-31,78547673,148847,40,pdfplumber
+data/raw/pdf/Mega/28606/archivo_3.pdf,2019-12-31,Ingresos por otros negocios,anual,actual,2019-12-31,8135738,4229527,40,pdfplumber
+data/raw/pdf/Mega/28606/archivo_3.pdf,2019-12-31,Ingresos por otros negocios,anual,comparativo,2018-12-31,10464611,179284,40,pdfplumber
+data/raw/pdf/Mega/28606/archivo_3.pdf,2019-12-31,Ingresos propios de filiales,anual,actual,2019-12-31,5857253,0,40,pdfplumber
+data/raw/pdf/Mega/28606/archivo_3.pdf,2019-12-31,Ingresos propios de filiales,anual,comparativo,2018-12-31,6393720,0,40,pdfplumber
+data/raw/pdf/Mega/29051/2020050177471_2.pdf,2020-03-31,Ingresos por publicidad de televisión e internet,trimestre,actual,2020-03-31,13205418,26438,37,pdfplumber
+data/raw/pdf/Mega/29051/2020050177471_2.pdf,2020-03-31,Ingresos por publicidad de televisión e internet,trimestre,comparativo,2019-03-31,16426440,66538,37,pdfplumber
+data/raw/pdf/Mega/29051/2020050177471_2.pdf,2020-03-31,Ingresos por otros negocios,trimestre,actual,2020-03-31,1738009,2445,37,pdfplumber
+data/raw/pdf/Mega/29051/2020050177471_2.pdf,2020-03-31,Ingresos por otros negocios,trimestre,comparativo,2019-03-31,1804801,728056,37,pdfplumber
+data/raw/pdf/Mega/29051/2020050177471_2.pdf,2020-03-31,Ingresos propios de filiales,trimestre,actual,2020-03-31,1348991,0,37,pdfplumber
+data/raw/pdf/Mega/29051/2020050177471_2.pdf,2020-03-31,Ingresos propios de filiales,trimestre,comparativo,2019-03-31,1458683,0,37,pdfplumber
+data/raw/pdf/Mega/29822/3.pdf,2020-06-30,Ingresos por publicidad de televisión e internet,semestre,actual,2020-06-30,25615267,62075,38,pdfplumber
+data/raw/pdf/Mega/29822/3.pdf,2020-06-30,Ingresos por publicidad de televisión e internet,semestre,comparativo,2019-06-30,36370602,120241,38,pdfplumber
+data/raw/pdf/Mega/29822/3.pdf,2020-06-30,Ingresos por otros negocios,semestre,actual,2020-06-30,2387863,167083,38,pdfplumber
+data/raw/pdf/Mega/29822/3.pdf,2020-06-30,Ingresos por otros negocios,semestre,comparativo,2019-06-30,4009616,3103695,38,pdfplumber
+data/raw/pdf/Mega/29822/3.pdf,2020-06-30,Ingresos propios de subsidiarias,semestre,actual,2020-06-30,2169806,0,38,pdfplumber
+data/raw/pdf/Mega/29822/3.pdf,2020-06-30,Ingresos propios de subsidiarias,semestre,comparativo,2019-06-30,2875469,0,38,pdfplumber
+data/raw/pdf/Mega/38819/2020110485843_2.pdf,2020-09-30,Ingresos por publicidad de televisión e internet,acumulado9m,actual,2020-09-30,38398875,122050,36,pdfplumber
+data/raw/pdf/Mega/38819/2020110485843_2.pdf,2020-09-30,Ingresos por publicidad de televisión e internet,acumulado9m,comparativo,2019-09-30,54317220,161621,36,pdfplumber
+data/raw/pdf/Mega/38819/2020110485843_2.pdf,2020-09-30,Ingresos por otros negocios,acumulado9m,actual,2020-09-30,4934521,297337,36,pdfplumber
+data/raw/pdf/Mega/38819/2020110485843_2.pdf,2020-09-30,Ingresos por otros negocios,acumulado9m,comparativo,2019-09-30,6231854,4026313,36,pdfplumber
+data/raw/pdf/Mega/38819/2020110485843_2.pdf,2020-09-30,Ingresos propios de subsidiarias,acumulado9m,actual,2020-09-30,3099079,0,36,pdfplumber
+data/raw/pdf/Mega/38819/2020110485843_2.pdf,2020-09-30,Ingresos propios de subsidiarias,acumulado9m,comparativo,2019-09-30,4345672,0,36,pdfplumber
+data/raw/pdf/Mega/47352/2021030123006_1.pdf,2020-12-31,Ingresos por publicidad de televisión e internet,anual,actual,2020-12-31,56850488,211587,41,pdfplumber
+data/raw/pdf/Mega/47352/2021030123006_1.pdf,2020-12-31,Ingresos por publicidad de televisión e internet,anual,comparativo,2019-12-31,68205963,183924,41,pdfplumber
+data/raw/pdf/Mega/47352/2021030123006_1.pdf,2020-12-31,Ingresos por otros negocios,anual,actual,2020-12-31,8233925,351293,41,pdfplumber
+data/raw/pdf/Mega/47352/2021030123006_1.pdf,2020-12-31,Ingresos por otros negocios,anual,comparativo,2019-12-31,8135738,4229527,41,pdfplumber
+data/raw/pdf/Mega/47352/2021030123006_1.pdf,2020-12-31,Ingresos propios de subsidiarias,anual,actual,2020-12-31,4573305,0,41,pdfplumber
+data/raw/pdf/Mega/47352/2021030123006_1.pdf,2020-12-31,Ingresos propios de subsidiarias,anual,comparativo,2019-12-31,5857253,0,41,pdfplumber
+data/raw/pdf/Mega/47717/2021050208939_1.pdf,2021-03-31,Ingresos por publicidad de televisión e internet,trimestre,actual,2021-03-31,13655551,89955,38,pdfplumber
+data/raw/pdf/Mega/47717/2021050208939_1.pdf,2021-03-31,Ingresos por publicidad de televisión e internet,trimestre,comparativo,2020-03-31,13205418,26438,38,pdfplumber
+data/raw/pdf/Mega/47717/2021050208939_1.pdf,2021-03-31,Ingresos por otros negocios,trimestre,actual,2021-03-31,2005289,0,38,pdfplumber
+data/raw/pdf/Mega/47717/2021050208939_1.pdf,2021-03-31,Ingresos por otros negocios,trimestre,comparativo,2020-03-31,1738009,2445,38,pdfplumber
+data/raw/pdf/Mega/47717/2021050208939_1.pdf,2021-03-31,Ingresos propios de subsidiarias,trimestre,actual,2021-03-31,1301522,0,38,pdfplumber
+data/raw/pdf/Mega/47717/2021050208939_1.pdf,2021-03-31,Ingresos propios de subsidiarias,trimestre,comparativo,2020-03-31,1348991,0,38,pdfplumber
+data/raw/pdf/Mega/49403/2021090374840_0 (1).pdf,2021-06-30,Ingresos por publicidad de televisión e internet,semestre,actual,2021-06-30,31932425,209610,41,pdfplumber
+data/raw/pdf/Mega/49403/2021090374840_0 (1).pdf,2021-06-30,Ingresos por publicidad de televisión e internet,semestre,comparativo,2020-06-30,25615267,62075,41,pdfplumber
+data/raw/pdf/Mega/49403/2021090374840_0 (1).pdf,2021-06-30,Ingresos por otros negocios,semestre,actual,2021-06-30,4465438,512579,41,pdfplumber
+data/raw/pdf/Mega/49403/2021090374840_0 (1).pdf,2021-06-30,Ingresos por otros negocios,semestre,comparativo,2020-06-30,2387863,167083,41,pdfplumber
+data/raw/pdf/Mega/49403/2021090374840_0 (1).pdf,2021-06-30,Ingresos propios de subsidiarias,semestre,actual,2021-06-30,2576926,0,41,pdfplumber
+data/raw/pdf/Mega/49403/2021090374840_0 (1).pdf,2021-06-30,Ingresos propios de subsidiarias,semestre,comparativo,2020-06-30,2169806,0,41,pdfplumber
+data/raw/pdf/Mega/49907/2021110471982_1.pdf,2021-09-30,Ingresos por publicidad de televisión e internet,acumulado9m,actual,2021-09-30,53979477,340329,38,pdfplumber
+data/raw/pdf/Mega/49907/2021110471982_1.pdf,2021-09-30,Ingresos por publicidad de televisión e internet,acumulado9m,comparativo,2020-09-30,38398875,122050,38,pdfplumber
+data/raw/pdf/Mega/49907/2021110471982_1.pdf,2021-09-30,Ingresos por otros negocios,acumulado9m,actual,2021-09-30,6433275,743639,38,pdfplumber
+data/raw/pdf/Mega/49907/2021110471982_1.pdf,2021-09-30,Ingresos por otros negocios,acumulado9m,comparativo,2020-09-30,4934521,297337,38,pdfplumber
+data/raw/pdf/Mega/49907/2021110471982_1.pdf,2021-09-30,Ingresos propios de subsidiarias,acumulado9m,actual,2021-09-30,3945502,0,38,pdfplumber
+data/raw/pdf/Mega/49907/2021110471982_1.pdf,2021-09-30,Ingresos propios de subsidiarias,acumulado9m,comparativo,2020-09-30,3099079,0,38,pdfplumber
+data/raw/pdf/Mega/50699/EEFF.pdf,2021-12-31,Ingresos por publicidad de televisión e internet,anual,actual,2021-12-31,78418749,427844,41,ocr400
+data/raw/pdf/Mega/50699/EEFF.pdf,2021-12-31,Ingresos por publicidad de televisión e internet,anual,comparativo,2020-12-31,56850488,211587,41,ocr400
+data/raw/pdf/Mega/50699/EEFF.pdf,2021-12-31,Ingresos por otros negocios,anual,actual,2021-12-31,12100874,1430512,41,ocr400
+data/raw/pdf/Mega/50699/EEFF.pdf,2021-12-31,Ingresos por otros negocios,anual,comparativo,2020-12-31,8233925,351293,41,ocr400
+data/raw/pdf/Mega/50699/EEFF.pdf,2021-12-31,Ingresos propios de subsidiarias,anual,actual,2021-12-31,6080692,0,41,ocr400
+data/raw/pdf/Mega/50699/EEFF.pdf,2021-12-31,Ingresos propios de subsidiarias,anual,comparativo,2020-12-31,4573305,0,41,ocr400
+data/raw/pdf/Mega/51272/Ficha y Notas Megamedia S.A. 31.03.2022.pdf,2022-03-31,Ingresos por publicidad de televisión e internet,trimestre,actual,2022-03-31,18357989,192595,37,pdfplumber
+data/raw/pdf/Mega/51272/Ficha y Notas Megamedia S.A. 31.03.2022.pdf,2022-03-31,Ingresos por publicidad de televisión e internet,trimestre,comparativo,2021-03-31,13655551,89955,37,pdfplumber
+data/raw/pdf/Mega/51272/Ficha y Notas Megamedia S.A. 31.03.2022.pdf,2022-03-31,Ingresos por otros negocios,trimestre,actual,2022-03-31,2946287,285734,37,pdfplumber
+data/raw/pdf/Mega/51272/Ficha y Notas Megamedia S.A. 31.03.2022.pdf,2022-03-31,Ingresos por otros negocios,trimestre,comparativo,2021-03-31,2005289,0,37,pdfplumber
+data/raw/pdf/Mega/51272/Ficha y Notas Megamedia S.A. 31.03.2022.pdf,2022-03-31,Ingresos propios de subsidiarias,trimestre,actual,2022-03-31,1623557,0,37,pdfplumber
+data/raw/pdf/Mega/51272/Ficha y Notas Megamedia S.A. 31.03.2022.pdf,2022-03-31,Ingresos propios de subsidiarias,trimestre,comparativo,2021-03-31,1301522,0,37,pdfplumber
+data/raw/pdf/Mega/53293/2022090356584_1.pdf,2022-06-30,Ingresos por publicidad de televisión e internet,semestre,actual,2022-06-30,39339674,353436,40,pdfplumber
+data/raw/pdf/Mega/53293/2022090356584_1.pdf,2022-06-30,Ingresos por publicidad de televisión e internet,semestre,comparativo,2021-06-30,31932425,209610,40,pdfplumber
+data/raw/pdf/Mega/53293/2022090356584_1.pdf,2022-06-30,Ingresos por otros negocios,semestre,actual,2022-06-30,6084083,563515,40,pdfplumber
+data/raw/pdf/Mega/53293/2022090356584_1.pdf,2022-06-30,Ingresos por otros negocios,semestre,comparativo,2021-06-30,4465438,512579,40,pdfplumber
+data/raw/pdf/Mega/53293/2022090356584_1.pdf,2022-06-30,Ingresos propios de subsidiarias,semestre,actual,2022-06-30,3245582,0,40,pdfplumber
+data/raw/pdf/Mega/53293/2022090356584_1.pdf,2022-06-30,Ingresos propios de subsidiarias,semestre,comparativo,2021-06-30,2576926,0,40,pdfplumber
+data/raw/pdf/Mega/57125/2022110448272_0.pdf,2022-09-30,Ingresos por publicidad de televisión e internet,acumulado9m,actual,2022-09-30,59156931,406521,37,pdfplumber
+data/raw/pdf/Mega/57125/2022110448272_0.pdf,2022-09-30,Ingresos por publicidad de televisión e internet,acumulado9m,comparativo,2021-09-30,53979477,340329,37,pdfplumber
+data/raw/pdf/Mega/57125/2022110448272_0.pdf,2022-09-30,Ingresos por otros negocios,acumulado9m,actual,2022-09-30,9065385,810403,37,pdfplumber
+data/raw/pdf/Mega/57125/2022110448272_0.pdf,2022-09-30,Ingresos por otros negocios,acumulado9m,comparativo,2021-09-30,6433275,743639,37,pdfplumber
+data/raw/pdf/Mega/57125/2022110448272_0.pdf,2022-09-30,Ingresos propios de subsidiarias,acumulado9m,actual,2022-09-30,5005768,0,37,pdfplumber
+data/raw/pdf/Mega/57125/2022110448272_0.pdf,2022-09-30,Ingresos propios de subsidiarias,acumulado9m,comparativo,2021-09-30,3945502,0,37,pdfplumber
+data/raw/pdf/Mega/68984/2023030137794_1.pdf,2022-12-31,Ingresos por publicidad de televisión e internet,anual,actual,2022-12-31,81966560,443158,40,pdfplumber
+data/raw/pdf/Mega/68984/2023030137794_1.pdf,2022-12-31,Ingresos por publicidad de televisión e internet,anual,comparativo,2021-12-31,78418749,427844,40,pdfplumber
+data/raw/pdf/Mega/68984/2023030137794_1.pdf,2022-12-31,Ingresos por otros negocios,anual,actual,2022-12-31,11315106,1435945,40,pdfplumber
+data/raw/pdf/Mega/68984/2023030137794_1.pdf,2022-12-31,Ingresos por otros negocios,anual,comparativo,2021-12-31,12100874,1430512,40,pdfplumber
+data/raw/pdf/Mega/68984/2023030137794_1.pdf,2022-12-31,Ingresos propios de subsidiarias,anual,actual,2022-12-31,7404888,0,40,pdfplumber
+data/raw/pdf/Mega/68984/2023030137794_1.pdf,2022-12-31,Ingresos propios de subsidiarias,anual,comparativo,2021-12-31,6080692,0,40,pdfplumber
+data/raw/pdf/Mega/70646/2023050231873_1.pdf,2023-03-31,Ingresos por publicidad de televisión e internet,trimestre,actual,2023-03-31,15496111,23845,37,pdfplumber
+data/raw/pdf/Mega/70646/2023050231873_1.pdf,2023-03-31,Ingresos por publicidad de televisión e internet,trimestre,comparativo,2022-03-31,18357989,192595,37,pdfplumber
+data/raw/pdf/Mega/70646/2023050231873_1.pdf,2023-03-31,Ingresos por otros negocios,trimestre,actual,2023-03-31,3165960,194923,37,pdfplumber
+data/raw/pdf/Mega/70646/2023050231873_1.pdf,2023-03-31,Ingresos por otros negocios,trimestre,comparativo,2022-03-31,2946287,285734,37,pdfplumber
+data/raw/pdf/Mega/70646/2023050231873_1.pdf,2023-03-31,Ingresos propios de subsidiarias,trimestre,actual,2023-03-31,1597597,0,37,pdfplumber
+data/raw/pdf/Mega/70646/2023050231873_1.pdf,2023-03-31,Ingresos propios de subsidiarias,trimestre,comparativo,2022-03-31,1623557,0,37,pdfplumber
+data/raw/pdf/Mega/73702/2023090392195-2 Megamedia S.A. Ficha y notas al 30.06.2023.pdf,2023-06-30,Ingresos por publicidad de televisión e internet,semestre,actual,2023-06-30,34564538,64295,39,pdfplumber
+data/raw/pdf/Mega/73702/2023090392195-2 Megamedia S.A. Ficha y notas al 30.06.2023.pdf,2023-06-30,Ingresos por publicidad de televisión e internet,semestre,comparativo,2022-06-30,39339674,353436,39,pdfplumber
+data/raw/pdf/Mega/73702/2023090392195-2 Megamedia S.A. Ficha y notas al 30.06.2023.pdf,2023-06-30,Ingresos por otros negocios,semestre,actual,2023-06-30,7110175,263117,39,pdfplumber
+data/raw/pdf/Mega/73702/2023090392195-2 Megamedia S.A. Ficha y notas al 30.06.2023.pdf,2023-06-30,Ingresos por otros negocios,semestre,comparativo,2022-06-30,6084083,563515,39,pdfplumber
+data/raw/pdf/Mega/73702/2023090392195-2 Megamedia S.A. Ficha y notas al 30.06.2023.pdf,2023-06-30,Ingresos propios de subsidiarias,semestre,actual,2023-06-30,3271658,0,39,pdfplumber
+data/raw/pdf/Mega/73702/2023090392195-2 Megamedia S.A. Ficha y notas al 30.06.2023.pdf,2023-06-30,Ingresos propios de subsidiarias,semestre,comparativo,2022-06-30,3245582,0,39,pdfplumber
+data/raw/pdf/Mega/75893/2023110516283_2.pdf,2023-09-30,Ingresos por publicidad de televisión e internet,acumulado9m,actual,2023-09-30,52273952,104988,37,pdfplumber
+data/raw/pdf/Mega/75893/2023110516283_2.pdf,2023-09-30,Ingresos por publicidad de televisión e internet,acumulado9m,comparativo,2022-09-30,59156931,406521,37,pdfplumber
+data/raw/pdf/Mega/75893/2023110516283_2.pdf,2023-09-30,Ingresos por otros negocios,acumulado9m,actual,2023-09-30,11414319,1264192,37,pdfplumber
+data/raw/pdf/Mega/75893/2023110516283_2.pdf,2023-09-30,Ingresos por otros negocios,acumulado9m,comparativo,2022-09-30,9065385,810403,37,pdfplumber
+data/raw/pdf/Mega/75893/2023110516283_2.pdf,2023-09-30,Ingresos propios de subsidiarias,acumulado9m,actual,2023-09-30,4966379,0,37,pdfplumber
+data/raw/pdf/Mega/75893/2023110516283_2.pdf,2023-09-30,Ingresos propios de subsidiarias,acumulado9m,comparativo,2022-09-30,5005768,0,37,pdfplumber
+data/raw/pdf/Mega/75893/2023110516283_3.pdf,2023-09-30,Ingresos por publicidad de televisión e internet,acumulado9m,actual,2023-09-30,52273952,104988,37,pdfplumber
+data/raw/pdf/Mega/75893/2023110516283_3.pdf,2023-09-30,Ingresos por publicidad de televisión e internet,acumulado9m,comparativo,2022-09-30,59156931,406521,37,pdfplumber
+data/raw/pdf/Mega/75893/2023110516283_3.pdf,2023-09-30,Ingresos por otros negocios,acumulado9m,actual,2023-09-30,11414319,1264192,37,pdfplumber
+data/raw/pdf/Mega/75893/2023110516283_3.pdf,2023-09-30,Ingresos por otros negocios,acumulado9m,comparativo,2022-09-30,9065385,810403,37,pdfplumber
+data/raw/pdf/Mega/75893/2023110516283_3.pdf,2023-09-30,Ingresos propios de subsidiarias,acumulado9m,actual,2023-09-30,4966379,0,37,pdfplumber
+data/raw/pdf/Mega/75893/2023110516283_3.pdf,2023-09-30,Ingresos propios de subsidiarias,acumulado9m,comparativo,2022-09-30,5005768,0,37,pdfplumber
+data/raw/pdf/Mega/79942/2024030188005_2.pdf,2023-12-31,Ingresos por publicidad de televisión e internet,anual,actual,2023-12-31,73131778,129749,42,pdfplumber
+data/raw/pdf/Mega/79942/2024030188005_2.pdf,2023-12-31,Ingresos por publicidad de televisión e internet,anual,comparativo,2022-12-31,81966560,443158,42,pdfplumber
+data/raw/pdf/Mega/79942/2024030188005_2.pdf,2023-12-31,Ingresos por otros negocios,anual,actual,2023-12-31,15739588,1699754,42,pdfplumber
+data/raw/pdf/Mega/79942/2024030188005_2.pdf,2023-12-31,Ingresos por otros negocios,anual,comparativo,2022-12-31,11315106,1435945,42,pdfplumber
+data/raw/pdf/Mega/79942/2024030188005_2.pdf,2023-12-31,Ingresos propios de subsidiarias,anual,actual,2023-12-31,7116952,0,42,pdfplumber
+data/raw/pdf/Mega/79942/2024030188005_2.pdf,2023-12-31,Ingresos propios de subsidiarias,anual,comparativo,2022-12-31,7404888,0,42,pdfplumber
+data/raw/pdf/Mega/85360/2024090483478_2.pdf,2024-06-30,Ingresos por publicidad de televisión e internet,semestre,actual,2024-06-30,33668420,42766,42,pdfplumber
+data/raw/pdf/Mega/85360/2024090483478_2.pdf,2024-06-30,Ingresos por publicidad de televisión e internet,semestre,comparativo,2023-06-30,34564538,64295,42,pdfplumber
+data/raw/pdf/Mega/85360/2024090483478_2.pdf,2024-06-30,Ingresos por otros negocios,semestre,actual,2024-06-30,8871113,3811663,42,pdfplumber
+data/raw/pdf/Mega/85360/2024090483478_2.pdf,2024-06-30,Ingresos por otros negocios,semestre,comparativo,2023-06-30,7110175,263117,42,pdfplumber
+data/raw/pdf/Mega/85360/2024090483478_2.pdf,2024-06-30,Ingresos propios de subsidiarias,semestre,actual,2024-06-30,3583170,0,42,pdfplumber
+data/raw/pdf/Mega/85360/2024090483478_2.pdf,2024-06-30,Ingresos propios de subsidiarias,semestre,comparativo,2023-06-30,3271658,0,42,pdfplumber
+data/raw/pdf/Mega/88269/2024110652109_2.pdf,2024-09-30,Ingresos por publicidad de televisión e internet,acumulado9m,actual,2024-09-30,50015539,55639,39,pdfplumber
+data/raw/pdf/Mega/88269/2024110652109_2.pdf,2024-09-30,Ingresos por publicidad de televisión e internet,acumulado9m,comparativo,2023-09-30,52273952,104988,39,pdfplumber
+data/raw/pdf/Mega/88269/2024110652109_2.pdf,2024-09-30,Ingresos por otros negocios,acumulado9m,actual,2024-09-30,13526024,6251326,39,pdfplumber
+data/raw/pdf/Mega/88269/2024110652109_2.pdf,2024-09-30,Ingresos por otros negocios,acumulado9m,comparativo,2023-09-30,11414319,1264192,39,pdfplumber
+data/raw/pdf/Mega/88269/2024110652109_2.pdf,2024-09-30,Ingresos propios de subsidiarias,acumulado9m,actual,2024-09-30,5377866,0,39,pdfplumber
+data/raw/pdf/Mega/88269/2024110652109_2.pdf,2024-09-30,Ingresos propios de subsidiarias,acumulado9m,comparativo,2023-09-30,4966379,0,39,pdfplumber
+data/raw/pdf/Mega/93019/ESTADOS FINANCIEROS.pdf,2024-12-31,Ingresos por publicidad de televisión e internet,anual,actual,2024-12-31,70188326,69330,41,pdfplumber
+data/raw/pdf/Mega/93019/ESTADOS FINANCIEROS.pdf,2024-12-31,Ingresos por publicidad de televisión e internet,anual,comparativo,2023-12-31,73131778,129749,41,pdfplumber
+data/raw/pdf/Mega/93019/ESTADOS FINANCIEROS.pdf,2024-12-31,Ingresos por otros negocios,anual,actual,2024-12-31,17950021,7064725,41,pdfplumber
+data/raw/pdf/Mega/93019/ESTADOS FINANCIEROS.pdf,2024-12-31,Ingresos por otros negocios,anual,comparativo,2023-12-31,15739588,1699754,41,pdfplumber
+data/raw/pdf/Mega/93019/ESTADOS FINANCIEROS.pdf,2024-12-31,Ingresos propios de subsidiarias,anual,actual,2024-12-31,7647449,0,41,pdfplumber
+data/raw/pdf/Mega/93019/ESTADOS FINANCIEROS.pdf,2024-12-31,Ingresos propios de subsidiarias,anual,comparativo,2023-12-31,7116952,0,41,pdfplumber
+data/raw/pdf/Mega/95052/2025050382210_1 (1).pdf,2025-03-31,Ingresos por publicidad de televisión e internet,trimestre,actual,2025-03-31,18793091,1387,38,pdfplumber
+data/raw/pdf/Mega/95052/2025050382210_1 (1).pdf,2025-03-31,Ingresos por publicidad de televisión e internet,trimestre,comparativo,2024-03-31,15097171,21395,38,pdfplumber
+data/raw/pdf/Mega/95052/2025050382210_1 (1).pdf,2025-03-31,Ingresos por otros negocios,trimestre,actual,2025-03-31,8109501,88810,38,pdfplumber
+data/raw/pdf/Mega/95052/2025050382210_1 (1).pdf,2025-03-31,Ingresos por otros negocios,trimestre,comparativo,2024-03-31,4305056,96832,38,pdfplumber
+data/raw/pdf/Mega/95052/2025050382210_1 (1).pdf,2025-03-31,Ingresos propios de subsidiarias,trimestre,actual,2025-03-31,1722261,0,38,pdfplumber
+data/raw/pdf/Mega/95052/2025050382210_1 (1).pdf,2025-03-31,Ingresos propios de subsidiarias,trimestre,comparativo,2024-03-31,1718005,0,38,pdfplumber
+data/raw/pdf/Mega/98823/2025090625950_1.pdf,2025-06-30,Ingresos por publicidad de televisión e internet,semestre,actual,2025-06-30,36242935,1223,38,pdfplumber
+data/raw/pdf/Mega/98823/2025090625950_1.pdf,2025-06-30,Ingresos por publicidad de televisión e internet,semestre,comparativo,2024-06-30,33668420,42766,38,pdfplumber
+data/raw/pdf/Mega/98823/2025090625950_1.pdf,2025-06-30,Ingresos por otros negocios,semestre,actual,2025-06-30,13136632,1817917,38,pdfplumber
+data/raw/pdf/Mega/98823/2025090625950_1.pdf,2025-06-30,Ingresos por otros negocios,semestre,comparativo,2024-06-30,8871113,3811663,38,pdfplumber
+data/raw/pdf/Mega/98823/2025090625950_1.pdf,2025-06-30,Ingresos por publicidad propios de subsidiarias,semestre,actual,2025-06-30,3350704,0,38,pdfplumber
+data/raw/pdf/Mega/98823/2025090625950_1.pdf,2025-06-30,Ingresos por publicidad propios de subsidiarias,semestre,comparativo,2024-06-30,3583170,0,38,pdfplumber
