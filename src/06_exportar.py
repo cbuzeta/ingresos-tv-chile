@@ -24,15 +24,15 @@ CATS = {"A": "Audiencias", "C": "Contenidos", "F": "Fuera de Napoli"}
 FLAG = {"A": "puede_audiencias", "C": "puede_contenidos", "F": "puede_fuera"}
 
 EVENTOS = [
-    {"fecha": "2018-01-01", "canal": None, "texto": "IFRS 15 entra en vigencia (posible quiebre 2017→2018)"},
-    {"fecha": "2018-12-31", "canal": "Canal 13", "texto": "C13: venta de activos 2018 (Secuoya M$5.376.862; torres M$1.053.236), separada como Fuera de Napoli"},
-    {"fecha": "2020-03-15", "canal": None, "texto": "Pandemia COVID-19"},
-    {"fecha": "2020-12-31", "canal": "Canal 13", "texto": "C13: venta de activos 2020 por M$13.771.539, separada como Fuera de Napoli (Q1 y Q2 2020 sin desglose)"},
-    {"fecha": "2020-01-01", "canal": "Mega", "texto": "Mega: la sociedad informante pasa de Red Televisiva Megavisión a Megamedia; el 2019 informado por ambas coincide"},
-    {"fecha": "2021-01-01", "canal": "Chilevisión", "texto": "CHV: controlador pasa a Paramount/ViacomCBS"},
-    {"fecha": "2023-01-01", "canal": "Chilevisión", "texto": "CHV: la comisión TILA (TV paga) se integra a 'Ingresos por publicidad'"},
-    {"fecha": "2025-01-01", "canal": "TVN", "texto": "TVN: inicia subvención NTV (Ley 19.132 art. 37)"},
-    {"fecha": "2026-01-01", "canal": "Chilevisión", "texto": "CHV: controlador pasa a Vytal Group"},
+    {"corto": "IFRS 15", "fecha": "2018-01-01", "canal": None, "texto": "IFRS 15 entra en vigencia (posible quiebre 2017→2018)"},
+    {"corto": "Venta activos", "fecha": "2018-12-31", "canal": "Canal 13", "texto": "C13: venta de activos 2018 (Secuoya M$5.376.862; torres M$1.053.236), separada como Fuera de Napoli"},
+    {"corto": "COVID-19", "fecha": "2020-03-15", "canal": None, "texto": "Pandemia COVID-19"},
+    {"corto": "Venta activos", "fecha": "2020-12-31", "canal": "Canal 13", "texto": "C13: venta de activos 2020 por M$13.771.539, separada como Fuera de Napoli (Q1 y Q2 2020 sin desglose)"},
+    {"corto": "Megamedia", "fecha": "2020-01-01", "canal": "Mega", "texto": "Mega: la sociedad informante pasa de Red Televisiva Megavisión a Megamedia; el 2019 informado por ambas coincide"},
+    {"corto": "Paramount", "fecha": "2021-01-01", "canal": "Chilevisión", "texto": "CHV: controlador pasa a Paramount/ViacomCBS"},
+    {"corto": "TILA → publicidad", "fecha": "2023-01-01", "canal": "Chilevisión", "texto": "CHV: la comisión TILA (TV paga) se integra a 'Ingresos por publicidad'"},
+    {"corto": "Subvención NTV", "fecha": "2025-01-01", "canal": "TVN", "texto": "TVN: inicia subvención NTV (Ley 19.132 art. 37)"},
+    {"corto": "Vytal", "fecha": "2026-01-01", "canal": "Chilevisión", "texto": "CHV: controlador pasa a Vytal Group"},
 ]
 
 
