@@ -1,0 +1,153 @@
+# Metodología
+
+Este documento explica cómo se construye la serie de ingresos de la TV abierta chilena, qué decisiones se tomaron y por qué, y qué límites tienen los datos. Las cifras de cobertura y control que aparecen aquí corresponden a la versión de datos del 30 de septiembre de 2026.
+
+Contenido: [1. Pregunta y marco](#1-pregunta-y-marco) · [2. Fuentes y cobertura](#2-fuentes-y-cobertura) · [3. Extracción y controles](#3-extracción-y-controles) · [4. Versiones y reclasificaciones](#4-versiones-y-reclasificaciones) · [5. Períodos](#5-períodos) · [6. Clasificación](#6-clasificación) · [7. Decisiones por canal](#7-decisiones-por-canal) · [8. Agregados de industria](#8-agregados-de-industria) · [9. Unidades monetarias](#9-unidades-monetarias) · [10. Limitaciones](#10-limitaciones) · [11. Trazabilidad y reproducción](#11-trazabilidad-y-reproducción)
+
+---
+
+## 1. Pregunta y marco
+
+¿Qué parte de los ingresos de los canales de TV abierta viene de vender audiencias a los anunciantes y qué parte de vender contenidos? La referencia es la Tabla 1.1 de Napoli (2003), *Audience Economics: Media Institutions and the Audience Marketplace* (Columbia University Press), que ubica a la TV abierta estadounidense de c. 2001 cerca del 100% de ingresos por audiencias y a las cadenas de cable en torno al 60%. Esas dos cifras se usan como referencia en la visualización.
+
+La medida principal es la **participación de la publicidad** en los ingresos de actividades ordinarias. Se mide con la información que los propios canales publican; no se estima nada que las notas no informen.
+
+## 2. Fuentes y cobertura
+
+**Documentos.** Estados financieros (EEFF) anuales e intermedios, bajo IFRS, publicados en la Comisión para el Mercado Financiero (CMF): sección de concesionarias de TV para los canales privados y ficha de entidad para TVN. De cada paquete se usa solo el PDF de estados financieros; el análisis razonado, las cartas y los hechos esenciales no se usan (una revisión de los análisis razonados de 2020 y 2025 no encontró desglose de ingresos adicional al de las notas).
+
+| Canal | Sociedad informante | Años | Semestres | Documentos |
+|---|---|---|---|---|
+| TVN | Televisión Nacional de Chile | 2016–2025 | desde 2016 | 38 EEFF trimestrales |
+| Canal 13 | Canal 13 SpA | 2016–2025 | desde 2019 | 28 |
+| Mega | Megamedia S.A., consolidado (Red Televisiva Megavisión S.A. en los EEFF 2017 y 2019) | 2016–2025 | desde 2019 | 28 |
+| Chilevisión | Red de Televisión Chilevisión S.A. | 2016–2025 | desde 2019 | 28 |
+| La Red | Compañía Chilena de Televisión S.A. | 2016–2025 | desde 2019 | 28 |
+| TV+ | TVMAS SpA (UCVTV SpA en 2017) | 2017–2025 | desde 2019 | 28 |
+
+Se incluye además el primer semestre de 2026. Para los privados, la CMF publica el EEFF de diciembre de 2017 (que trae 2016 como comparativo), el de diciembre de 2019 (que trae 2018) y todos los trimestres desde marzo de 2020. Por eso los años 2016 y 2018 salen de comparativos y los semestres parten en 2019. TVN publica todos los trimestres desde 2017.
+
+**Perímetro.** Mega se mide consolidado (incluye radios y cable); la visualización ofrece además la variante «solo TV», que resta la publicidad radial y de cable. Los estados individuales de Megamedia (anexos del Oficio Circular 498) no traen desglose de ingresos y no se usan.
+
+**Moneda de origen.** Miles de pesos chilenos nominales (M$), tal como vienen en los EEFF.
+
+## 3. Extracción y controles
+
+**Identificación del documento.** Los nombres de archivo de la CMF no identifican el contenido. Cada PDF se clasifica leyendo sus primeras páginas: sociedad, fecha de cierre (la más reciente de fin de trimestre que aparece en la portada) y tipo de documento. Se exige exactamente un EEFF por canal y fecha. Dos paquetes traían dos copias del EEFF (Canal 13 junio 2022 y Mega septiembre 2023); se verificó que informan cifras idénticas y se usa una.
+
+**Extracción de la nota.** Se busca la nota «Ingresos de actividades ordinarias» (su número cambia según canal y año) y se lee con varias fuentes de texto, en este orden, hasta que una pasa los controles: texto del PDF por filas (pdfplumber), pdftotext con diagramación, pdftotext sin diagramación, lectura por coordenadas (para tablas con celdas vacías) y reconocimiento óptico de caracteres (OCR, Tesseract en español, a 300 y a 400 ppp) para los EEFF escaneados o con fuentes ilegibles.
+
+**Controles obligatorios.** Una tabla solo se acepta si:
+1. En **cada columna**, la suma de las líneas es igual a la fila de total (autocontrol aritmético). Se acepta una diferencia de hasta M$2 solo cuando está en la fuente; ocurrió en 4 documentos (Chilevisión septiembre 2021 y junio 2023; TV+ marzo 2022 y marzo 2023) y queda registrada en el log.
+2. Sus rótulos son de ingresos (se descartan tablas con costos, gastos o márgenes, como el propio estado de resultados).
+3. El total (actual o comparativo) aparece como número completo en el estado de resultados.
+4. Las columnas se asignan a períodos según las fechas del encabezado cuando están; si no, según el tipo de EEFF (anual, trimestral).
+
+Además, la serie reproduce exactamente los **48 montos validados a mano** en el piloto (`piloto/semilla_lineas_validadas.csv`), y al agregar fuentes de lectura nuevas se comparó la extracción completa contra la anterior (ninguna diferencia en los cuatro canales grandes).
+
+**Resultado.** De 178 EEFF distintos por canal y fecha, 177 se extrajeron con todos los controles. Casos especiales:
+- **Mega, marzo 2024**: la nota tiene una errata (las líneas suman 21.238.409 y el total, igual al del estado de resultados, es 21.238.459). No se corrige; el primer trimestre de 2024 se toma del comparativo del EEFF de marzo 2025.
+- **Chilevisión, diciembre 2021**: la tabla cuadra, pero el estado de resultados está escaneado y el total no se pudo leer ahí. El total 2021 se confirma con el comparativo del EEFF de diciembre 2022.
+- **TVN, diciembre 2025**: la tabla de la nota tiene la fuente corrupta. Las cifras vienen del piloto validado a mano (reconstruidas con el análisis razonado y los comparativos) y están en `revision/manual_lineas.csv`; la lectura por OCR coincide.
+- 17 documentos se leyeron con OCR. Que las líneas sumen el total en todas las columnas es el principal resguardo contra errores de lectura.
+
+## 4. Versiones y reclasificaciones
+
+Cada período aparece en al menos dos documentos: el EEFF del período y el del año siguiente, como comparativo. Se guardan **todas las versiones**, con su documento de origen. La **serie principal usa la versión más reciente** de cada período, porque incorpora reclasificaciones y reexpresiones posteriores; las versiones originales quedan en la base para análisis de sensibilidad.
+
+Un período se marca como **reclasificado** cuando dos documentos informan distintos totales por categoría. Un simple cambio de rótulo, o una apertura más fina de la misma categoría, no cuenta. Hay 42 canal-períodos reclasificados (Canal 13: 15, Chilevisión: 14, TVN: 8, TV+: 5). En la visualización aparecen con un círculo hueco y se detallan en la hoja «versiones» de la planilla. Ejemplo documentado: el primer semestre de 2025 de Chilevisión se informa como publicidad 31.256.166 y nuevos negocios 3.970.381 en el EEFF de septiembre 2025, y como 33.494.199 y 1.732.348 en el de junio 2026, con el mismo total.
+
+## 5. Períodos
+
+- **Anual** (enero–diciembre) es la serie núcleo.
+- **Primer semestre (H1)** se toma tal como viene en los EEFF de junio.
+- **Segundo semestre (H2)** se deriva como anual − H1. Si el EEFF anual y el semestral clasifican distinto, alguna categoría de H2 puede salir negativa (ocurre en Canal 13 2019, Chilevisión 2023 y TV+ 2019); se muestra en la visualización con una advertencia.
+- Los trimestres y el acumulado a septiembre se extraen y quedan en la base, pero no son foco del análisis.
+
+## 6. Clasificación
+
+La clasificación es jerárquica: cada nivel está anidado en el anterior y, en cada canal y período, la suma de las categorías de cualquier nivel es igual al total de ingresos. Cada línea de nota se clasifica una sola vez en `mapeo/lineas_mapeo.csv`, con su justificación y fecha de aprobación. El proceso se detiene si aparece una línea sin clasificar; nunca se asigna una categoría por similitud. El listado completo está en el [anexo de mapeo](METODOLOGIA_anexo_mapeo.md).
+
+**Principio.** Lo que un canal no informa queda como «sin desglose». No se reparte con supuestos, aunque haya información cualitativa (por ejemplo, que «otros ingresos» de TVN son «principalmente» venta de señal internacional).
+
+| Nivel | Categorías | Criterio |
+|---|---|---|
+| 1 | Publicidad · Otros ingresos | Publicidad = toda línea que vende espacio publicitario. Cuando el rótulo no dice «publicidad», se usa la política contable del canal (La Red, TV+) |
+| 2 | Publicidad · Otros ingresos operacionales · Transferencias del Estado | Separa la subvención NTV de TVN (desde 2025) |
+| 3 | Publicidad TV y digital · Publicidad en otros medios · Arriendo de pantalla · Contenidos y señales · Otros ingresos · Venta de activos · Transferencias del Estado | Agrupa por tipo de negocio |
+| 4 | Publicidad TV abierta · Publicidad digital · Publicidad TV + digital (sin desglose) · Canje (publicidad en especie) · Publicidad radio y cable · Comisión publicidad TV paga · Arriendo de pantalla · Contenidos y señales (nacional / extranjero / sin desglose geográfico) · Eventos · Arriendos y servicios · Otros sin desglose · Venta de activos · Transferencias del Estado | Máximo detalle que permiten las notas |
+
+En Nivel 4 la categoría «Otros sin desglose» (Canal 13, Chilevisión, TVN y TV+) representa el 14,1% de los ingresos de los seis canales en 2025. Es la parte de la industria que las notas no permiten clasificar.
+
+**Codificación Napoli con rangos.** La base conserva además una codificación de cada línea como Audiencias, Contenidos o Fuera de Napoli, pura o mixta, con piso y techo por período (columnas `A_*`, `C_*`, `F_*` en `salidas/agregados.csv` y hoja «Napoli» de la planilla). No se usa en la visualización porque, con el nivel de desglose disponible, los rangos resultan demasiado amplios para ser informativos.
+
+## 7. Decisiones por canal
+
+**TVN**
+- Hasta marzo 2018 informa «Publicidad en televisión abierta e internet» (Nivel 4: TV + digital sin desglose); desde entonces, «Publicidad en televisión abierta».
+- «Otros ingresos» es, según la nota, principalmente venta de señal internacional a operadores de TV pagada y otros servicios: se clasifica como Otros sin desglose.
+- La subvención estatal para NTV (Ley 19.132, art. 37) se registra siempre como línea propia (Transferencias del Estado), aunque el EEFF de diciembre 2025 la incluye dentro de «Otros ingresos» (M$2.000.000).
+
+**Canal 13**
+- Hasta 2018 informa una sola línea de publicidad (Nivel 4: TV + digital sin desglose); desde 2019 separa pantalla abierta y otras plataformas (digital).
+- «Otros ingresos de explotación» incluye, según la nota, cableoperadores, digital no publicitario, nuevas señales, venta de contenidos, venta de activos y arriendos: Otros sin desglose.
+- **Venta de activos.** Cuando la nota informa el monto, se separa como línea propia (Nivel 3 y 4: Venta de activos): 2018, M$6.430.098 (equipos a Secuoya Chile SpA, M$5.376.862, y 11 torres a Torres Unidas, M$1.053.236); 2020, M$13.771.539 (propiedades, planta y equipo). En Niveles 1 y 2 sigue dentro de otros ingresos. El primer y el segundo trimestre de 2020 no se ajustan porque la nota no informa en qué trimestre ocurrió la venta. Detalle, documento y página en `mapeo/desgloses_nota.csv`.
+
+**Mega**
+- Los EEFF de diciembre 2017 y diciembre 2019 los emite Red Televisiva Megavisión S.A. y subsidiarias; en 2020 la sociedad informante pasa a ser Megamedia S.A. El año 2019 informado en ambos casos (EEFF de diciembre 2019 y comparativo del de diciembre 2020) coincide en todas las categorías, por lo que la serie se trata como continua.
+- Cambio de rótulos en 2025: «Ingresos por otros negocios» pasa a «ventas en plataformas y contenidos» y «propios de subsidiarias» a «publicidad radial y cable»; los montos de 2024 coinciden en ambas versiones.
+- «Ingresos por publicidad de televisión e internet» no separa TV de internet: Nivel 4 TV + digital sin desglose.
+- 2016–2017: «Ingresos radiales y otros» se clasifica como publicidad en radio y cable.
+- **Ventas nacionales y al extranjero.** La nota 7 b (desde 2018) divide cada línea por mercado geográfico. Como su diagramación cambia entre años, no se lee por posición: para cada monto de la nota 7 a se busca el único par (nacional, extranjero) de la nota 7 b que lo suma exactamente, y se verifica contra la columna de total. Así se obtienen las ventas de contenidos al extranjero (Nivel 4).
+
+**Chilevisión**
+- «Ingresos por publicidad» incluye, según la nota, TV abierta y comisión por TV pagada.
+- 2019–2022 informa aparte la «Comisión Publicidad TV (TILA)», una comisión fija sobre las ventas de publicidad de Turner International Latin America en TV pagada (Nivel 4: Comisión publicidad TV paga). **Desde 2023 esa comisión va dentro de «Ingresos por publicidad»**, que en Nivel 4 es Publicidad TV abierta: hay un quiebre de serie, marcado en la visualización.
+- «Ingresos nuevos negocios» mezcla, según la política contable, publicidad por internet, venta de señales y licencias, fee de administración y concursos: Otros sin desglose.
+- «Eventos y espectáculos» (hasta septiembre 2024): Otros ingresos, Eventos.
+- Cambios de controlador (Paramount/ViacomCBS en 2021, Vytal Group en 2026) coinciden con reclasificaciones; se marcan como eventos.
+
+**La Red**
+- Ningún rótulo dice «publicidad». La política contable define los ingresos como «venta de publicidad exhibida y de material envasado», y la nota identifica la línea «Otros ingresos de operación» como venta de material envasado. Por eso «Ingresos de operación» se clasifica como Publicidad TV abierta, el «canje» como publicidad en especie y el material envasado como Contenidos y señales (sin desglose geográfico: la nota dice «dentro y fuera del país» sin montos).
+
+**TV+**
+- 2017 corresponde a UCVTV SpA, que inició operaciones en el tercer trimestre de ese año (una sola línea, «Ventas Televisión»).
+- La política contable define el ingreso como «el importe total de la publicidad exhibida». «Ventas de publicidad», «Ventas de TV» y sus variantes: Publicidad TV abierta.
+- **Arriendo de pantalla.** «Venta/arriendo de infomerciales» y «espacio de transmisión» son venta de bloques de pantalla a terceros. Los EEFF anuales los informan juntos, así que llevan el mismo código: Otros ingresos (Nivel 1 y 2), Arriendo de pantalla (Nivel 3 y 4). Fueron cerca de la mitad de los ingresos de TV+ en 2018–2019 (lo que explica su baja participación de publicidad esos años) y entre 21% y 30% desde 2020.
+- «Canje» y las ventas con VTR (el balance registra «Canje VTR por facturar»): publicidad en especie.
+- «Arriendo de estudios» y «servicios de administración»: Arriendos y servicios. «Otros negocios», sin definición en las notas: Otros sin desglose.
+- Varios rótulos aparecen con errores de tipeo en los EEFF («Ventasdepublicidad», «Espaciodetransmisión»); cada variante se clasifica explícitamente en el mapeo.
+
+**Norma contable.** IFRS 15 (2018) pudo cambiar el tratamiento de comisiones de agencia y canjes; 2017→2018 se marca como posible quiebre. IFRS 16 (2019) no afecta los ingresos.
+
+## 8. Agregados de industria
+
+- **4 grandes**: TVN, Canal 13, Mega y Chilevisión (desde 2016).
+- **6 canales CMF** («Industria» en la visualización): los anteriores más La Red y TV+ (desde 2017).
+
+Un agregado se calcula solo en los períodos en que todos sus canales informan (panel balanceado) y suma montos, así que la participación de publicidad está ponderada por el tamaño de cada canal. No incluye canales que no reportan a la CMF (por ejemplo, Telecanal o canales regionales), por lo que es un agregado de los canales informantes y no del mercado completo. En 2025 los 4 grandes son el 98,5% de los ingresos de los seis.
+
+## 9. Unidades monetarias
+
+Todas las series del Banco Central de Chile (Base de Datos Estadísticos, «Indicadores diarios»), descargadas con `src/00_externos.py`:
+- **$ nominales**: montos de los EEFF.
+- **$ de 2025**: IPC general. El Banco Central publica la variación mensual con un decimal; esas variaciones se encadenan en un índice con promedio 2025 = 100, y cada período se deflacta con el promedio del índice en sus meses. El redondeo a un decimal introduce un error acumulado pequeño.
+- **UF**: promedio de la UF diaria del período.
+- **US$**: promedio del dólar observado diario del período.
+
+Los porcentajes no dependen de la unidad.
+
+## 10. Limitaciones
+
+- **Ingresos netos, no inversión bruta.** Los canales informan ingresos netos de comisiones de agencia; no son comparables directamente con la inversión publicitaria que mide la industria (por ejemplo, la AAM).
+- **El desglose depende de cada canal.** La digital solo se puede separar en Canal 13 desde 2019; en Mega queda mezclada con TV. Una parte relevante de los ingresos (14,1% en 2025) no se puede clasificar más allá de «otros».
+- **Reclasificaciones sin nota explicativa.** Varios canales mueven montos entre líneas de un documento a otro sin explicarlo. La serie principal usa la versión más reciente, pero la historia de cada canal puede no ser homogénea en su interior.
+- **Quiebres de serie.** Cambios de rótulo (Mega 2025), de sociedad informante (Mega 2020), de perímetro de líneas (Chilevisión 2023) y de norma (IFRS 15, 2018).
+- **Canje.** Solo La Red y TV+ informan el canje por separado; en los demás canales, si existe, va dentro de publicidad.
+- **Cobertura.** 2016 y 2018 provienen de comparativos; los privados no tienen semestres antes de 2019.
+
+## 11. Trazabilidad y reproducción
+
+Cada monto de la base (`salidas/lineas_larga.csv`, `data/ingresos.sqlite`) registra el documento de origen, la página, la fuente de lectura (texto u OCR) y si es extraído, manual o desglose de nota. Los PDF originales no están en el repositorio; `data/manifest.csv` lista cada paquete con su número de artículo en la CMF y su hash SHA-256. Los pasos para reconstruir la base están en el [README](README.md).
+
+Registro de decisiones: `CLAUDE.md` (sección 6) y la columna de justificación de `mapeo/lineas_mapeo.csv`.

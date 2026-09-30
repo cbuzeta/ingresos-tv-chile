@@ -104,6 +104,34 @@ def agregar(g):
     return pd.Series(r)
 
 
+def anexo_mapeo():
+    """METODOLOGIA_anexo_mapeo.md: la tabla de clasificación tal como está en mapeo/, para que no se desfase."""
+    m = pd.read_csv(ROOT / "mapeo" / "lineas_mapeo.csv").fillna("")
+    d = pd.read_csv(ROOT / "mapeo" / "desgloses_nota.csv").fillna("")
+    esc = lambda t: str(t).replace("|", "\\|").replace("\n", " ")  # noqa: E731
+    out = ["# Anexo: clasificación de cada línea de nota", "",
+           "Generado por `src/06_exportar.py` desde `mapeo/lineas_mapeo.csv` y `mapeo/desgloses_nota.csv`. "
+           "No editar a mano. Ver [METODOLOGIA.md](METODOLOGIA.md).", "",
+           "En Nivel 4, «Contenidos y señales» se divide además en nacional / extranjero cuando el EEFF lo informa "
+           "(Mega, nota 7 b, desde 2018) y queda «sin desglose geográfico» en los demás casos.", ""]
+    for canal in CANALES:
+        g = m[m.canal == canal].sort_values(["nivel2", "nivel4", "linea_original"])
+        if g.empty:
+            continue
+        out += [f"## {canal}", "", "| Línea en la nota | Nivel 1 | Nivel 2 | Nivel 3 | Nivel 4 | Justificación | Decisión |",
+                "|---|---|---|---|---|---|---|"]
+        for r in g.itertuples():
+            out.append(f"| {esc(r.linea_original)} | {esc(r.nivel1)} | {esc(r.nivel2)} | {esc(r.nivel3)} | {esc(r.nivel4)} "
+                       f"| {esc(r.justificacion)} | {esc(r.fuente_decision)}, {esc(r.fecha)} |")
+        out.append("")
+    out += ["## Desgloses tomados del texto de las notas", "",
+            "| Canal | Período | Línea madre | Nueva línea | Monto (M$) | Documento y página | Cita |", "|---|---|---|---|---|---|---|"]
+    for r in d.itertuples():
+        out.append(f"| {esc(r.canal)} | {esc(r.periodo)} | {esc(r.linea_padre_norm)} | {esc(r.linea_nueva)} | "
+                   f"{int(r.monto):,}".replace(",", ".") + f" | {esc(r.documento_fuente.replace('data/raw/pdf/', ''))}, p. {esc(r.pagina_fuente)} | {esc(r.cita)} |")
+    (ROOT / "METODOLOGIA_anexo_mapeo.md").write_text("\n".join(out) + "\n", encoding="utf-8")
+
+
 def main():
     SAL.mkdir(exist_ok=True)
     y = pd.read_csv(ROOT / "data" / "lineas_mapeadas.csv", dtype={"monto": "int64"})
@@ -225,6 +253,7 @@ def main():
                   + cabeza + "\n</head>\n<body>\n" + cuerpo + "\n</body>\n</html>\n")
         (ROOT / "docs" / "index.html").write_text(pagina, encoding="utf-8")
         (ROOT / "docs" / ".nojekyll").write_text("", encoding="utf-8")
+    anexo_mapeo()
     print(f"{len(agg)} filas agregadas ({len(h2)} H2 derivados); planilla y viz_data.json en salidas/")
 
 

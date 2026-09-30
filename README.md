@@ -6,6 +6,8 @@ Investigador responsable: Cristian Buzeta (Universidad de los Andes, Chile).
 
 **Visualización:** `viz/ingresos_tv.html` (autocontenida; se abre en cualquier navegador).
 
+**Metodología:** [METODOLOGIA.md](METODOLOGIA.md) documenta fuentes, controles, decisiones de clasificación por canal y limitaciones; el [anexo](METODOLOGIA_anexo_mapeo.md) lista la clasificación de cada línea de nota.
+
 ## Cobertura
 
 | Canal | Sociedad informante | Período |
