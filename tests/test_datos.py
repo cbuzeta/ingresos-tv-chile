@@ -92,3 +92,11 @@ def test_serie_anual_completa(agregados):
         anios = set(agregados[(agregados.canal == c) & (agregados.tipo_periodo == "anual")].periodo)
         desde = 2017 if c == "TV+" else 2016
         assert {f"FY{a}" for a in range(desde, 2026)} <= anios, c
+
+
+def test_controles_externos_sep():
+    """Los ingresos de TVN publicados por el SEP coinciden con alguna versión de la serie."""
+    c = pd.read_csv(ROOT / "salidas" / "controles_externos.csv")
+    sep = c[c.fuente == "SEP"]
+    assert len(sep) > 0
+    assert (sep.estado == "coincide").all(), sep[sep.estado != "coincide"]

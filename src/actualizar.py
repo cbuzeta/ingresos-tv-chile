@@ -21,6 +21,7 @@ PASOS = [
     ["src/05_mapear.py"],
     ["src/validar_semilla.py"],
     ["src/06_exportar.py"],
+    ["src/07_controles_externos.py"],
     ["-m", "pytest", "tests", "-q"],
 ]
 

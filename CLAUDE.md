@@ -330,4 +330,6 @@ Herramientas: pdftotext/pdftoppm (poppler), pdfplumber, Tesseract en `C:\Program
 - TV+: «Arriendo espacio de transmisión» e «infomerciales» se informan juntos en los EEFF anuales; codificados igual (Otros / Audiencias mixta A-F).
 - La Red: ingresos cayeron de ~M$6,7 millones (2016) a ~M$1,0 millón (2025).
 
+**Corrección (30-sep-2026).** La sección 3.3 dice que la AAM mide inversión bruta: sus informes indican «No incluye Comisión Agencia e IVA», es decir, inversión neta. La diferencia con los ingresos de los canales viene del perímetro (la AAM cubre todos los canales de TV abierta y solo TV abierta; la publicidad de los canales incluye digital, radio/cable y comisión TV paga). Controles externos en `src/07_controles_externos.py`: SEP 31/31 coincidencias para TVN; AAM 2024–2025 como contexto (104,7% y 105,4%).
+
 **Publicación (30-sep-2026).** Repositorio público https://github.com/cbuzeta/ingresos-tv-chile (todos los derechos reservados, ver `LICENSE`). La visualización se publica en GitHub Pages: https://cbuzeta.github.io/ingresos-tv-chile/ (rama `main`, carpeta `/docs`). Para actualizarla: correr `src/06_exportar.py` (regenera `docs/index.html`), hacer commit y `git push`; Pages se reconstruye solo. Si no se reconstruye, forzar con `gh api -X POST repos/cbuzeta/ingresos-tv-chile/pages/builds`.

@@ -43,6 +43,10 @@ Se incluye además el primer semestre de 2026. Para los privados, la CMF publica
 3. El total (actual o comparativo) aparece como número completo en el estado de resultados.
 4. Las columnas se asignan a períodos según las fechas del encabezado cuando están; si no, según el tipo de EEFF (anual, trimestral).
 
+**Controles externos** (`src/07_controles_externos.py`, resultado en `salidas/controles_externos.csv`):
+- **SEP.** El Sistema de Empresas Públicas publica los ingresos de actividades ordinarias de TVN (anual 2018–2024 y trimestral acumulado hasta septiembre 2025). Los 31 valores coinciden exactamente con la serie.
+- **AAM (contexto).** La inversión publicitaria neta en TV abierta según la Asociación de Agencias de Medios (sin comisión de agencia ni IVA, todos los canales) fue de MM$228.097 en 2024 y MM$229.782 en 2025 (informe de diciembre 2025, pp. 19 y 18). La publicidad que informan los seis canales equivale al 104,7% y al 105,4% de esas cifras. No se espera que coincidan: la publicidad de los canales incluye digital (Canal 13), radio y cable (Mega) y la comisión por TV pagada (Chilevisión), y la AAM cubre a todos los canales de TV abierta. Solo se usan años leídos directamente de un informe de la AAM (`data/externos/aam_tv_abierta.csv`).
+
 Además, la serie reproduce exactamente los **48 montos validados a mano** en el piloto (`piloto/semilla_lineas_validadas.csv`), y al agregar fuentes de lectura nuevas se comparó la extracción completa contra la anterior (ninguna diferencia en los cuatro canales grandes).
 
 **Resultado.** De 178 EEFF distintos por canal y fecha, 177 se extrajeron con todos los controles. Casos especiales:
@@ -139,7 +143,7 @@ Los porcentajes no dependen de la unidad.
 
 ## 10. Limitaciones
 
-- **Ingresos netos, no inversión bruta.** Los canales informan ingresos netos de comisiones de agencia; no son comparables directamente con la inversión publicitaria que mide la industria (por ejemplo, la AAM).
+- **Ingresos de los canales frente a inversión del mercado.** Los canales informan ingresos netos de comisiones de agencia; la AAM también mide inversión neta (sin comisión ni IVA), pero de todos los canales y solo de TV abierta, así que sirve como orden de magnitud y no como control (ver sección 3).
 - **El desglose depende de cada canal.** La digital solo se puede separar en Canal 13 desde 2019; en Mega queda mezclada con TV. Una parte relevante de los ingresos (14,1% en 2025) no se puede clasificar más allá de «otros».
 - **Reclasificaciones sin nota explicativa.** Varios canales mueven montos entre líneas de un documento a otro sin explicarlo. La serie principal usa la versión más reciente, pero la historia de cada canal puede no ser homogénea en su interior.
 - **Quiebres de serie.** Cambios de rótulo (Mega 2025), de sociedad informante (Mega 2020), de perímetro de líneas (Chilevisión 2023) y de norma (IFRS 15, 2018).
