@@ -9,6 +9,7 @@ Salidas (salidas/):
 """
 import glob
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -20,6 +21,20 @@ BASE_IPC = 2025  # CLAUDE.md 6.4: año base por definir; provisional
 
 CANALES = ["TVN", "Canal 13", "Mega", "Chilevisión", "La Red", "TV+"]
 AGREGADOS = {"4 grandes": CANALES[:4], "6 canales CMF": CANALES}
+# Niveles 3 y 4 (anidados en el Nivel 2), en el orden de apilamiento de la visualización
+NIVEL3 = ["Publicidad TV y digital", "Publicidad en otros medios", "Arriendo de pantalla", "Contenidos y señales",
+          "Otros ingresos", "Venta de activos", "Transferencias del Estado"]
+NIVEL4 = ["Publicidad TV abierta", "Publicidad digital", "Publicidad TV + digital (sin desglose)", "Canje (publicidad en especie)",
+          "Publicidad radio y cable", "Comisión publicidad TV paga", "Arriendo de pantalla", "Contenidos y señales",
+          "Eventos", "Arriendos y servicios", "Otros sin desglose", "Venta de activos", "Transferencias del Estado"]
+
+
+def slug(t):
+    import unicodedata
+    t = unicodedata.normalize("NFKD", t).encode("ascii", "ignore").decode().lower()
+    return re.sub(r"[^a-z0-9]+", "_", t).strip("_")
+
+
 CATS = {"A": "Audiencias", "C": "Contenidos", "F": "Fuera de Napoli"}
 FLAG = {"A": "puede_audiencias", "C": "puede_contenidos", "F": "puede_fuera"}
 
@@ -75,6 +90,9 @@ def agregar(g):
         r[f"{c}_punto"] = g.loc[es, "monto"].sum()
         r[f"{c}_piso"] = g.loc[es & (g.pureza == "Pura"), "monto"].sum()
         r[f"{c}_techo"] = g.loc[g[FLAG[c]] == "S", "monto"].sum()
+    for nivel, cats in (("n3", NIVEL3), ("n4", NIVEL4)):
+        for c in cats:
+            r[f"{nivel}_{slug(c)}"] = g.loc[g[f"nivel{nivel[1]}"] == c, "monto"].sum()
     tv = g[g.medio != "Radio/cable"]
     r["tvp_total"] = tv["monto"].sum()
     r["tvp_n1_publicidad"] = tv.loc[tv.nivel1 == "Publicidad", "monto"].sum()
@@ -161,7 +179,9 @@ def main():
             "H2 = anual − H1 (derivado).",
         ]}).to_excel(xw, sheet_name="LEEME", index=False)
         for nombre, cols in (("N1", ["n1_publicidad", "n1_otros", "total"]),
-                             ("N2", ["n2_publicidad", "n2_otros_operacionales", "n2_transferencias", "total"])):
+                             ("N2", ["n2_publicidad", "n2_otros_operacionales", "n2_transferencias", "total"]),
+                             ("N3", [f"n3_{slug(c)}" for c in NIVEL3] + ["total"]),
+                             ("N4", [f"n4_{slug(c)}" for c in NIVEL4] + ["total"])):
             w = anual.pivot_table(index="periodo", columns="canal", values=cols, aggfunc="sum")
             w.to_excel(xw, sheet_name=f"{nombre}_anual")
         napoli = agg[["canal", "periodo", "total"] + [f"{c}_{m}" for c in CATS for m in ("piso", "punto", "techo")]].copy()
@@ -177,7 +197,7 @@ def main():
         pd.read_csv(ROOT / "data" / "extraccion_log.csv").to_excel(xw, sheet_name="log_extraccion", index=False)
 
     # datos para la visualización
-    lineas = p[["canal", "periodo", "linea_original", "monto", "nivel1", "nivel2", "napoli_principal", "pureza",
+    lineas = p[["canal", "periodo", "linea_original", "monto", "nivel1", "nivel2", "nivel3", "nivel4", "napoli_principal", "pureza",
                 "medio", "documento", "pagina", "fuente_texto", "origen_cifra"]].copy()
     lineas["documento"] = lineas["documento"].str.replace("data/raw/pdf/", "", regex=False)
     agg_v = agg.copy()

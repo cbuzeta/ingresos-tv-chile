@@ -24,6 +24,10 @@
   --ch-2: #008300;
   --ch-3: #4a3aa7;
   --ch-4: #e34948;
+  --n3-4: #eda100;
+  --n3-5: #e87ba4;
+  --n3-6: #008300;
+  --n3-7: #4a3aa7;
   --band-op: .13;
   --f-display: "Archivo", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
   --f-body: "Public Sans", "Segoe UI", system-ui, sans-serif;
@@ -36,6 +40,7 @@
     --rule: #262c38; --axis: #3a4252; --accent: #9db6ea; --accent-wash: #1d2638;
     --cat-1: #3987e5; --cat-2: #d95926; --cat-3: #199e70;
     --ch-1: #d55181; --ch-2: #008300; --ch-3: #9085e9; --ch-4: #e66767; --band-op: .2;
+    --n3-4: #c98500; --n3-5: #d55181; --n3-6: #008300; --n3-7: #9085e9;
     color-scheme: dark;
   }
 }
@@ -44,6 +49,7 @@
   --rule: #262c38; --axis: #3a4252; --accent: #9db6ea; --accent-wash: #1d2638;
   --cat-1: #3987e5; --cat-2: #d95926; --cat-3: #199e70;
   --ch-1: #d55181; --ch-2: #008300; --ch-3: #9085e9; --ch-4: #e66767; --band-op: .2;
+    --n3-4: #c98500; --n3-5: #d55181; --n3-6: #008300; --n3-7: #9085e9;
   color-scheme: dark;
 }
 
@@ -149,7 +155,9 @@ table.data td { font-family: var(--f-data); font-variant-numeric: tabular-nums; 
   <div class="console" role="toolbar" aria-label="Opciones de visualización">
     <div class="sw"><span>Clasificación</span><div class="seg" id="c-clas">
       <button id="clas-n1" data-v="n1" aria-pressed="true">Nivel 1</button>
-      <button id="clas-n2" data-v="n2" aria-pressed="false">Nivel 2</button></div></div>
+      <button id="clas-n2" data-v="n2" aria-pressed="false">Nivel 2</button>
+      <button id="clas-n3" data-v="n3" aria-pressed="false">Nivel 3</button>
+      <button id="clas-n4" data-v="n4" aria-pressed="false">Nivel 4</button></div></div>
     <div class="sw"><span>Frecuencia</span><div class="seg" id="c-freq">
       <button id="freq-a" data-v="a" aria-pressed="true">Anual</button>
       <button id="freq-s" data-v="s" aria-pressed="false">Semestral</button></div></div>
@@ -228,10 +236,32 @@ const UNI = {
   usd: { eje: "Millones de US$ (dólar observado promedio del período).", tip: "US$" },
 };
 
+// Nivel 3: siete grupos con la paleta de referencia en su orden validado. Nivel 4: tonos del color de su grupo.
+const N3C = { tvd: "--cat-1", otm: "--cat-2", pan: "--cat-3", con: "--n3-4", otr: "--n3-5", act: "--n3-6", tra: "--n3-7" };
 const CATS = {
   n1: [{ k: "n1_publicidad", l: "Publicidad", c: "--cat-1" }, { k: "n1_otros", l: "Otros ingresos", c: "--cat-2" }],
   n2: [{ k: "n2_publicidad", l: "Publicidad", c: "--cat-1" }, { k: "n2_otros_operacionales", l: "Otros operacionales", c: "--cat-2" },
        { k: "n2_transferencias", l: "Transferencias del Estado", c: "--cat-3" }],
+  n3: [{ k: "n3_publicidad_tv_y_digital", l: "Publicidad TV y digital", c: N3C.tvd },
+       { k: "n3_publicidad_en_otros_medios", l: "Publicidad en otros medios", c: N3C.otm },
+       { k: "n3_arriendo_de_pantalla", l: "Arriendo de pantalla", c: N3C.pan },
+       { k: "n3_contenidos_y_senales", l: "Contenidos y señales", c: N3C.con },
+       { k: "n3_otros_ingresos", l: "Otros ingresos", c: N3C.otr },
+       { k: "n3_venta_de_activos", l: "Venta de activos", c: N3C.act },
+       { k: "n3_transferencias_del_estado", l: "Transferencias del Estado", c: N3C.tra }],
+  n4: [{ k: "n4_publicidad_tv_abierta", l: "Publicidad TV abierta", c: N3C.tvd, op: 1 },
+       { k: "n4_publicidad_digital", l: "Publicidad digital", c: N3C.tvd, op: .72 },
+       { k: "n4_publicidad_tv_digital_sin_desglose", l: "Publicidad TV + digital (sin desglose)", c: N3C.tvd, op: .5 },
+       { k: "n4_canje_publicidad_en_especie", l: "Canje (publicidad en especie)", c: N3C.tvd, op: .3 },
+       { k: "n4_publicidad_radio_y_cable", l: "Publicidad radio y cable", c: N3C.otm, op: 1 },
+       { k: "n4_comision_publicidad_tv_paga", l: "Comisión publicidad TV paga", c: N3C.otm, op: .55 },
+       { k: "n4_arriendo_de_pantalla", l: "Arriendo de pantalla", c: N3C.pan, op: 1 },
+       { k: "n4_contenidos_y_senales", l: "Contenidos y señales", c: N3C.con, op: 1 },
+       { k: "n4_eventos", l: "Eventos", c: N3C.otr, op: 1 },
+       { k: "n4_arriendos_y_servicios", l: "Arriendos y servicios", c: N3C.otr, op: .65 },
+       { k: "n4_otros_sin_desglose", l: "Otros sin desglose", c: N3C.otr, op: .4 },
+       { k: "n4_venta_de_activos", l: "Venta de activos", c: N3C.act, op: 1 },
+       { k: "n4_transferencias_del_estado", l: "Transferencias del Estado", c: N3C.tra, op: 1 }],
 };
 
 // valor de un campo según perímetro (Mega solo TV; los agregados traen su propia columna tvp_)
@@ -242,6 +272,7 @@ function val(r, k) {
     if (k === "n1_otros") return r.tvp_total - r.tvp_n1_publicidad;
     if (k === "n2_otros_operacionales") return r.tvp_total - r.tvp_n1_publicidad - r.n2_transferencias;
     if (/^[ACF]_/.test(k)) return r["tvp_" + k];
+    if (k === "n3_publicidad_en_otros_medios" || k === "n4_publicidad_radio_y_cable") return r[k] - (r.total - r.tvp_total);
   }
   return r[k];
 }
@@ -332,6 +363,8 @@ function hideTip() { tip.hidden = true; }
 function catOfLine(l) {
   if (S.clas === "n1") return l.nivel1 === "Publicidad" ? "Publicidad" : "Otros ingresos";
   if (S.clas === "n2") return l.nivel2 === "Otros ingresos operacionales" ? "Otros operacionales" : l.nivel2;
+  if (S.clas === "n3") return l.nivel3;
+  if (S.clas === "n4") return l.nivel4;
   return l.napoli_principal + " · " + l.pureza.toLowerCase();
 }
 function linesHtml(r) {
@@ -427,14 +460,21 @@ function drawPanels() {
     const ymax = S.unit === "pct" ? 1 : niceMax(Math.max(...rs.map(r => norm(r, val(r, "total")))));
     const svg = el("svg", { viewBox: `0 0 ${w} ${h}`, role: "img", "aria-label": "Composición de ingresos de " + ent }, div);
     const { sx, sy } = axes(svg, w, h, m, ymax, S.unit === "pct" ? v => Math.round(v * 100) + "%" : yLabel);
-    let acc = rs.map(() => 0);
-    cats.forEach(cat => {
-      const top = rs.map((r, i) => acc[i] + Math.max(0, norm(r, val(r, cat.k))));
-      if (top.every((v, i) => v === acc[i])) return;
-      const up = rs.map((r, i) => [sx(xOf(r)), sy(top[i])]), dn = rs.map((r, i) => [sx(xOf(r)), sy(acc[i])]).reverse();
-      el("path", { d: pathLine(up) + pathLine(dn).replace("M", "L") + "Z", fill: css(cat.c), "fill-opacity": .82, stroke: css("--surface"), "stroke-width": 1.5, "stroke-linejoin": "round" }, svg);
-      acc = top;
-    });
+    // columnas apiladas: un cambio en cómo informa un canal se ve como salto, no como tendencia
+    const ancho = (sx(X0 + 1) - sx(X0)) * (S.freq === "a" ? 0.64 : 0.34);
+    for (const r of rs) {
+      const x = sx(xOf(r)) - ancho / 2;
+      let acc = 0;
+      for (const cat of cats) {
+        const v = Math.max(0, norm(r, val(r, cat.k)));  // negativos derivados: se informan en el tooltip
+        if (!v) continue;
+        const y0 = sy(acc), y1 = sy(acc + v);
+        // separación de 2 px entre segmentos (borde del color de la superficie)
+        el("rect", { x, y: y1, width: ancho, height: Math.max(0, y0 - y1), fill: css(cat.c), "fill-opacity": cat.op ?? .82,
+          stroke: css("--surface"), "stroke-width": 1 }, svg);
+        acc += v;
+      }
+    }
     eventos(svg, sx, m.t, h - m.b, e => e.canal === ent, m.t + 9);
     const hair = el("line", { class: "hair", y1: m.t, y2: h - m.b, visibility: "hidden" }, svg);
     const hit = el("rect", { x: m.l, y: m.t, width: w - m.l - m.r, height: h - m.t - m.b, fill: "transparent" }, svg);
@@ -444,7 +484,7 @@ function drawPanels() {
       const x = sx(xOf(r)); hair.setAttribute("x1", x); hair.setAttribute("x2", x); hair.setAttribute("visibility", "visible");
       const T = val(r, "total"), u = S.unit === "pct" ? "M$" : UNI[S.unit].tip;
       const cv = v => S.unit === "pct" ? fmt(v) : convTip(r, v);
-      const filas = cats.map(c => { const v = val(r, c.k); return v || c.k === "n1_otros" ? `<tr><td><i class="sw-dot" style="background:${css(c.c)}"></i>${c.l}</td><td class="n">${pct(v / T)}</td><td class="n">${cv(v)}</td></tr>` : ""; }).join("");
+      const filas = cats.map(c => { const v = val(r, c.k); return v || c.k === "n1_otros" ? `<tr><td><i class="sw-dot" style="background:${css(c.c)};opacity:${c.op ?? .82}"></i>${c.l}</td><td class="n">${pct(v / T)}</td><td class="n">${cv(v)}</td></tr>` : ""; }).join("");
       const neg = cats.some(c => val(r, c.k) < 0) ? `<div class="warn">Valor negativo en una categoría: el EEFF anual y el semestral clasifican distinto.</div>` : "";
       const inc = (S.unit === "real" && !r.ipc_completo) || (S.unit === "uf" && !r.uf_completo) || (S.unit === "usd" && !r.dolar_completo)
         ? `<div class="doc">Serie del Banco Central incompleta para este período: se usa lo publicado.</div>` : "";
@@ -454,7 +494,7 @@ function drawPanels() {
   }
   document.getElementById("s-pan").textContent = (S.unit === "pct" ? "Porcentaje del total de ingresos de actividades ordinarias." : UNI[S.unit].eje + " Escala propia por panel.")
     + (S.freq === "s" ? " H1 = enero–junio; H2 = anual − H1." : "") + " Pase el cursor para ver las líneas de la nota y su documento.";
-  document.getElementById("lg-pan").innerHTML = cats.map(c => `<span><i style="background:${css(c.c)}"></i>${c.l}</span>`).join("");
+  document.getElementById("lg-pan").innerHTML = cats.map(c => `<span><i style="background:${css(c.c)};opacity:${c.op ?? .82}"></i>${c.l}</span>`).join("");
 }
 
 // ---------- tabla ----------
@@ -491,6 +531,12 @@ function drawCifras() {
 function render() { drawComp(); drawPanels(); drawTable(); }
 function init() {
   document.getElementById("gen").textContent = `Datos generados ${DATA.generado} desde salidas/viz_data.json · ${DATA.lineas.length} montos de nota en la serie principal`;
+  // #n1…#n4 en la URL abre la página en ese nivel (enlaces directos)
+  const nivel = (location.hash.match(/^#(n[1-4])$/) || [])[1];
+  if (nivel) {
+    S.clas = nivel;
+    document.querySelectorAll("#c-clas button").forEach(b => b.setAttribute("aria-pressed", b.dataset.v === nivel));
+  }
   drawCifras();
   document.getElementById("evts").innerHTML = DATA.eventos.map(e => `<li>${esc(e.texto)}</li>`).join("");
   for (const [id, key] of [["c-clas", "clas"], ["c-freq", "freq"], ["c-unit", "unit"], ["c-per", "per"]]) {

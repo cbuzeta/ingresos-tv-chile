@@ -151,6 +151,14 @@ Registrar por cada monto: `canal, fecha_cierre, tipo_periodo (anual|semestre|tri
 
 No se puede desagregar más de forma común: solo C13 separa la publicidad digital, solo Mega separa radio y cable, y solo Mega tiene una línea pura de contenidos.
 
+### 5.2b Niveles 3 y 4 (aprobados 30-sep-2026)
+Anidados en el Nivel 2 (la suma de cada nivel es igual al total). Columnas `nivel3` y `nivel4` de `mapeo/lineas_mapeo.csv`.
+- **Nivel 3** (7): Publicidad TV y digital · Publicidad en otros medios · Arriendo de pantalla · Contenidos y señales · Otros ingresos · Venta de activos · Transferencias del Estado.
+- **Nivel 4** (13): Publicidad TV abierta · Publicidad digital · Publicidad TV + digital (sin desglose) · Canje (publicidad en especie) · Publicidad radio y cable · Comisión publicidad TV paga · Arriendo de pantalla · Contenidos y señales · Eventos · Arriendos y servicios · Otros sin desglose · Venta de activos · Transferencias del Estado.
+- «Sin desglose» deja explícito lo que el canal no informa; nunca se reparte por supuesto.
+- CHV «Ingresos por publicidad» = Publicidad TV abierta; desde 2023 incluye la comisión por TV paga (antes línea TILA): quiebre marcado.
+- Pendiente: desagregación nacional/extranjero de Mega (nota 7 b, desde 2018) como detalle de «Contenidos y señales».
+
 ### 5.3 Codificación estilo Napoli (con rangos)
 Cada línea recibe:
 - Código principal: `Audiencias`, `Contenidos` o `Fuera de Napoli`.
