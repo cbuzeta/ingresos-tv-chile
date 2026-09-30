@@ -60,3 +60,7 @@ Requisitos: Python 3.12 (pandas, pdfplumber, openpyxl, requests), poppler (`pdft
 - `salidas/agregados.csv`: serie por canal, agregado de industria y período.
 - `salidas/lineas_larga.csv`: una fila por línea de nota, período y documento.
 - `data/ingresos.sqlite`: la misma base en SQLite.
+
+## Licencia
+
+Todos los derechos reservados. El repositorio es público solo para consulta; ver `LICENSE`.
