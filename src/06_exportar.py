@@ -39,15 +39,15 @@ CATS = {"A": "Audiencias", "C": "Contenidos", "F": "Fuera de Napoli"}
 FLAG = {"A": "puede_audiencias", "C": "puede_contenidos", "F": "puede_fuera"}
 
 EVENTOS = [
-    {"corto": "IFRS 15", "fecha": "2018-01-01", "canal": None, "texto": "IFRS 15 entra en vigencia (posible quiebre 2017→2018)"},
-    {"corto": "Venta activos", "fecha": "2018-12-31", "canal": "Canal 13", "texto": "C13: venta de activos 2018 (Secuoya M$5.376.862; torres M$1.053.236), incluida en «Otros ingresos»"},
-    {"corto": "COVID-19", "fecha": "2020-03-15", "canal": None, "texto": "Pandemia COVID-19"},
-    {"corto": "Venta activos", "fecha": "2020-12-31", "canal": "Canal 13", "texto": "C13: venta de activos 2020 por M$13.771.539, incluida en «Otros ingresos»"},
-    {"corto": "Megamedia", "fecha": "2020-01-01", "canal": "Mega", "texto": "Mega: la sociedad informante pasa de Red Televisiva Megavisión a Megamedia; el 2019 informado por ambas coincide"},
-    {"corto": "Paramount", "fecha": "2021-01-01", "canal": "Chilevisión", "texto": "CHV: controlador pasa a Paramount/ViacomCBS"},
-    {"corto": "Quiebre: TV paga", "fecha": "2023-01-01", "canal": "Chilevisión", "texto": "CHV: desde 2023 la comisión por publicidad en TV paga (antes línea TILA) se informa dentro de «Ingresos por publicidad»; en Nivel 4 queda en Publicidad TV abierta. Quiebre de serie."},
-    {"corto": "Subvención NTV", "fecha": "2025-01-01", "canal": "TVN", "texto": "TVN: inicia subvención NTV (Ley 19.132 art. 37)"},
-    {"corto": "Vytal", "fecha": "2026-01-01", "canal": "Chilevisión", "texto": "CHV: controlador pasa a Vytal Group"},
+    {"corto": "IFRS 15", "fecha": "2018-01-01", "canal": None, "texto": "IFRS 15 entra en vigencia (posible quiebre 2017→2018)", "corto_en": "IFRS 15", "texto_en": "IFRS 15 takes effect (possible break 2017→2018)"},
+    {"corto": "Venta activos", "fecha": "2018-12-31", "canal": "Canal 13", "texto": "C13: venta de activos 2018 (Secuoya M$5.376.862; torres M$1.053.236), incluida en «Otros ingresos»", "corto_en": "Asset sale", "texto_en": "C13: 2018 asset sale (Secuoya M$5,376,862; towers M$1,053,236), included in “Other revenue”"},
+    {"corto": "COVID-19", "fecha": "2020-03-15", "canal": None, "texto": "Pandemia COVID-19", "corto_en": "COVID-19", "texto_en": "COVID-19 pandemic"},
+    {"corto": "Venta activos", "fecha": "2020-12-31", "canal": "Canal 13", "texto": "C13: venta de activos 2020 por M$13.771.539, incluida en «Otros ingresos»", "corto_en": "Asset sale", "texto_en": "C13: 2020 asset sale of M$13,771,539, included in “Other revenue”"},
+    {"corto": "Megamedia", "fecha": "2020-01-01", "canal": "Mega", "texto": "Mega: la sociedad informante pasa de Red Televisiva Megavisión a Megamedia; el 2019 informado por ambas coincide", "corto_en": "Megamedia", "texto_en": "Mega: reporting company changes from Red Televisiva Megavisión to Megamedia; 2019 as reported by both matches"},
+    {"corto": "Paramount", "fecha": "2021-01-01", "canal": "Chilevisión", "texto": "CHV: controlador pasa a Paramount/ViacomCBS", "corto_en": "Paramount", "texto_en": "CHV: controlling owner becomes Paramount/ViacomCBS"},
+    {"corto": "Quiebre: TV paga", "fecha": "2023-01-01", "canal": "Chilevisión", "texto": "CHV: desde 2023 la comisión por publicidad en TV paga (antes línea TILA) se informa dentro de «Ingresos por publicidad»; en Nivel 4 queda en Publicidad TV abierta. Quiebre de serie.", "corto_en": "Break: pay TV", "texto_en": "CHV: from 2023 the pay-TV advertising commission (formerly the TILA line) is reported within “Advertising revenue”; in Level 4 it falls under Free-to-air TV advertising. Series break."},
+    {"corto": "Subvención NTV", "fecha": "2025-01-01", "canal": "TVN", "texto": "TVN: inicia subvención NTV (Ley 19.132 art. 37)", "corto_en": "NTV subsidy", "texto_en": "TVN: state subsidy for NTV begins (Law 19,132 art. 37)"},
+    {"corto": "Vytal", "fecha": "2026-01-01", "canal": "Chilevisión", "texto": "CHV: controlador pasa a Vytal Group", "corto_en": "Vytal", "texto_en": "CHV: controlling owner becomes Vytal Group"},
 ]
 
 
@@ -241,17 +241,26 @@ def main():
     if plantilla.exists():
         html = plantilla.read_text(encoding="utf-8").replace("/*__DATA__*/null", json.dumps(data, ensure_ascii=False))
         (ROOT / "viz" / "ingresos_tv.html").write_text(html, encoding="utf-8")
-        # GitHub Pages (https://cbuzeta.github.io/ingresos-tv-chile): la misma página como documento HTML completo
-        (ROOT / "docs").mkdir(exist_ok=True)
-        corte = html.index("</style>") + len("</style>")  # título, fuentes y estilos van al <head>
-        cabeza, cuerpo = html[:corte], html[corte:]
-        pagina = ("<!doctype html>\n<html lang=\"es\">\n<head>\n<meta charset=\"utf-8\">\n"
-                  "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1, viewport-fit=cover\">\n"
-                  "<meta name=\"description\" content=\"Ingresos de la TV abierta chilena 2016-2026: venta de audiencias "
-                  "y de contenidos según las notas de los estados financieros (marco Napoli 2003).\">\n"
-                  "<style>[hidden]{display:none!important} img{max-width:100%}</style>\n"
-                  + cabeza + "\n</head>\n<body>\n" + cuerpo + "\n</body>\n</html>\n")
-        (ROOT / "docs" / "index.html").write_text(pagina, encoding="utf-8")
+        # GitHub Pages (https://cbuzeta.github.io/ingresos-tv-chile): páginas completas en español (docs/) e inglés (docs/en/)
+        from traduccion import a_ingles
+        datos = json.dumps(data, ensure_ascii=False)
+        versiones = [("es", plantilla.read_text(encoding="utf-8"), ROOT / "docs",
+                      "Ingresos de la TV abierta chilena 2016-2026: venta de audiencias y de contenidos según las notas de "
+                      "los estados financieros (marco Napoli 2003)."),
+                     ("en", a_ingles(plantilla.read_text(encoding="utf-8")), ROOT / "docs" / "en",
+                      "Revenue of Chilean free-to-air TV 2016-2026: selling audiences vs. selling content, from the "
+                      "financial statements' notes (Napoli 2003 framework).")]
+        for lang, plantilla_txt, carpeta, desc in versiones:
+            html_v = plantilla_txt.replace("/*__DATA__*/null", datos)
+            carpeta.mkdir(parents=True, exist_ok=True)
+            corte = html_v.index("</style>") + len("</style>")  # título, fuentes y estilos van al <head>
+            cabeza, cuerpo = html_v[:corte], html_v[corte:]
+            pagina = (f"<!doctype html>\n<html lang=\"{lang}\">\n<head>\n<meta charset=\"utf-8\">\n"
+                      "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1, viewport-fit=cover\">\n"
+                      f"<meta name=\"description\" content=\"{desc}\">\n"
+                      "<style>[hidden]{display:none!important} img{max-width:100%}</style>\n"
+                      + cabeza + "\n</head>\n<body>\n" + cuerpo + "\n</body>\n</html>\n")
+            (carpeta / "index.html").write_text(pagina, encoding="utf-8")
         (ROOT / "docs" / ".nojekyll").write_text("", encoding="utf-8")
     anexo_mapeo()
     print(f"{len(agg)} filas agregadas ({len(h2)} H2 derivados); planilla y viz_data.json en salidas/")

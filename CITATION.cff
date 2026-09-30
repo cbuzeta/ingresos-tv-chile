@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "Si usa estos datos o esta herramienta, cítelos así. / If you use this data or tool, please cite it as below."
+title: "Audiencias en venta: ingresos de la TV abierta chilena, 2016–2026"
+type: dataset
+authors:
+  - family-names: Buzeta
+    given-names: Cristian
+    affiliation: "Universidad de los Andes, Chile"
+repository-code: "https://github.com/cbuzeta/ingresos-tv-chile"
+url: "https://cbuzeta.github.io/ingresos-tv-chile/"
+date-released: 2026-09-30
+keywords:
+  - audience economics
+  - television
+  - Chile
+  - advertising revenue
+  - financial statements
+references:
+  - type: book
+    title: "Audience Economics: Media Institutions and the Audience Marketplace"
+    authors:
+      - family-names: Napoli
+        given-names: Philip M.
+    publisher:
+      name: Columbia University Press
+    year: 2003
