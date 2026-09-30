@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..100,500..800&family=Public+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
 /* Layout: una consola de lectura. Franja de conmutadores arriba, gráfico comparativo como tesis,
-   paneles por canal (2×2) como detalle, notas de fuente al pie. Tinta azul pizarra, neutros fríos. */
+   paneles de industria y por canal (2 columnas) como detalle, notas de fuente al pie. Tinta azul pizarra, neutros fríos. */
 :root {
   --paper: #f6f7f9;
   --surface: #fdfdfe;
@@ -83,6 +83,7 @@ header .lede { color: var(--ink-2); font-size: 16px; }
 .legend i.line { height: 3px; border-radius: 2px; vertical-align: 3px; }
 .legend i.dash { height: 0; border-top: 2px dashed var(--muted); vertical-align: 3px; background: none; }
 .legend i.band { opacity: .45; }
+.legend svg { display: inline-block; width: 22px; height: 8px; }
 svg { display: block; width: 100%; height: auto; overflow: visible; }
 svg text { font-family: var(--f-data); font-size: 11px; fill: var(--muted); font-variant-numeric: tabular-nums; }
 svg .lbl { font-family: var(--f-body); font-size: 12px; font-weight: 600; fill: var(--ink-2); }
@@ -130,7 +131,7 @@ table.data td { font-family: var(--f-data); font-variant-numeric: tabular-nums; 
   <header>
     <span class="eyebrow">TV abierta · Chile · 2016–2026 · EEFF CMF</span>
     <h1>Audiencias en venta</h1>
-    <p class="lede">Qué parte de los ingresos de TVN, Canal 13, Mega y Chilevisión viene de vender audiencias a los anunciantes y qué parte de vender contenidos, según la nota «Ingresos de actividades ordinarias» de cada estado financiero. Marco: Napoli (2003), <i>Audience Economics</i>, tabla 1.1.</p>
+    <p class="lede">Qué parte de los ingresos de la TV abierta chilena viene de vender audiencias a los anunciantes y qué parte de vender contenidos. Seis canales que informan a la CMF (TVN, Canal 13, Mega, Chilevisión, La Red y TV+), leídos desde la nota «Ingresos de actividades ordinarias» de cada estado financiero. Marco: Napoli (2003), <i>Audience Economics</i>, tabla 1.1.</p>
     <p class="src" id="gen"></p>
   </header>
 
@@ -142,10 +143,12 @@ table.data td { font-family: var(--f-data); font-variant-numeric: tabular-nums; 
     <div class="sw"><span>Frecuencia</span><div class="seg" id="c-freq">
       <button id="freq-a" data-v="a" aria-pressed="true">Anual</button>
       <button id="freq-s" data-v="s" aria-pressed="false">Semestral</button></div></div>
-    <div class="sw"><span>Paneles</span><div class="seg" id="c-unit">
+    <div class="sw"><span>Unidad</span><div class="seg" id="c-unit">
       <button id="unit-pct" data-v="pct" aria-pressed="true">% del total</button>
       <button id="unit-nom" data-v="nom" aria-pressed="false">$ nominales</button>
-      <button id="unit-real" data-v="real" aria-pressed="false">$ reales</button></div></div>
+      <button id="unit-real" data-v="real" aria-pressed="false">$ de 2025</button>
+      <button id="unit-uf" data-v="uf" aria-pressed="false">UF</button>
+      <button id="unit-usd" data-v="usd" aria-pressed="false">US$</button></div></div>
     <div class="sw"><span>Mega</span><div class="seg" id="c-per">
       <button id="per-c" data-v="c" aria-pressed="true">Consolidado</button>
       <button id="per-tv" data-v="tv" aria-pressed="false">Solo TV</button></div></div>
@@ -155,14 +158,17 @@ table.data td { font-family: var(--f-data); font-variant-numeric: tabular-nums; 
     <div class="head">
       <div><h2 id="t-comp">Participación de la venta de audiencias</h2>
         <p class="sub" id="s-comp"></p></div>
-      <div class="legend" id="lg-comp"></div>
+      <div class="sw"><div class="seg" id="c-vista">
+        <button id="vista-ind" data-v="ind" aria-pressed="true">Industria</button>
+        <button id="vista-can" data-v="can" aria-pressed="false">Canales</button></div></div>
     </div>
+    <div class="legend" id="lg-comp"></div>
     <div id="comp"></div>
   </section>
 
   <section class="figure" aria-labelledby="t-pan">
     <div class="head">
-      <div><h2 id="t-pan">Composición de ingresos por canal</h2><p class="sub" id="s-pan"></p></div>
+      <div><h2 id="t-pan">Composición de ingresos</h2><p class="sub" id="s-pan"></p></div>
       <div class="legend" id="lg-pan"></div>
     </div>
     <div class="panels" id="panels"></div>
@@ -175,18 +181,19 @@ table.data td { font-family: var(--f-data); font-variant-numeric: tabular-nums; 
 
   <div class="notes">
     <section><h3>Eventos marcados</h3><ol id="evts"></ol></section>
-    <section><h3>Cómo leer los rangos</h3><ul>
+    <section><h3>Cómo leer los rangos y agregados</h3><ul>
       <li><b>Punto</b>: cada línea de la nota va entera a su código principal (Audiencias, Contenidos o Fuera de Napoli).</li>
-      <li><b>Piso</b>: solo las líneas puras de la categoría. <b>Techo</b>: todas las líneas que podrían contenerla.</li>
-      <li>La banda sombreada va del piso al techo de Audiencias.</li>
-      <li>«Solo TV» resta la publicidad radial y de cable de Mega (y su antecesora 2016–2017).</li>
+      <li><b>Piso</b>: solo las líneas puras de la categoría. <b>Techo</b>: todas las líneas que podrían contenerla. La banda va del piso al techo de Audiencias.</li>
+      <li><b>4 grandes</b> y <b>6 canales CMF</b> suman los canales solo en los períodos en que todos informan. No incluyen canales que no reportan a la CMF (Telecanal, regionales).</li>
+      <li>«Solo TV» resta la publicidad radial y de cable de Mega.</li>
       <li>Referencias de Napoli: 100% (broadcast, EE.UU. c. 2001) y 60% (cable networks).</li></ul></section>
-    <section><h3>Advertencias de datos</h3><ul id="warns">
-      <li>Montos en miles de pesos (M$) de los EEFF; los ejes muestran miles de millones de $.</li>
-      <li>$ reales: IPC encadenado desde variaciones mensuales de mindicador.cl (redondeadas a 0,1%). Provisional hasta definir fuente y año base.</li>
+    <section><h3>Fuentes y advertencias</h3><ul id="warns">
+      <li>Montos de los EEFF en miles de pesos (M$). Cada cifra lleva documento y página.</li>
+      <li>$ de 2025: IPC del Banco Central (variación mensual oficial, encadenada; promedio 2025 = 100). UF y US$: promedio del período de la UF diaria y del dólar observado (Banco Central).</li>
       <li>H2 = año completo − primer semestre. Si los documentos clasifican distinto, H2 puede salir negativo en alguna categoría.</li>
+      <li>C13: la venta de activos que la nota informa (2018 y 2020) se separa como Fuera de Napoli. Q1 y Q2 de 2020 la incluyen sin desglose.</li>
       <li>TVN 2025: la tabla del EEFF tiene fuente corrupta; cifras del piloto validado, coinciden con la lectura OCR.</li>
-      <li>Dic-2017 y otros EEFF escaneados se leyeron con OCR y cuadran línea a línea con el total.</li>
+      <li>Los EEFF escaneados se leyeron con OCR y cuadran línea a línea con el total.</li>
     </ul></section>
   </div>
 </div>
@@ -194,13 +201,27 @@ table.data td { font-family: var(--f-data); font-variant-numeric: tabular-nums; 
 
 <script>
 const DATA = /*__DATA__*/null;
-const CANALES = ["TVN", "Canal 13", "Mega", "Chilevisión"];
-const CHCOL = { "TVN": "--ch-1", "Canal 13": "--ch-2", "Mega": "--ch-3", "Chilevisión": "--ch-4" };
-const S = { clas: "n1", freq: "a", unit: "pct", per: "c" };
+const GRANDES = ["TVN", "Canal 13", "Mega", "Chilevisión"];
+const MENORES = ["La Red", "TV+"];
+const CANALES = [...GRANDES, ...MENORES];
+const AGREG = ["4 grandes", "6 canales CMF"];
+// estilo de cada serie: los 4 grandes con los slots validados; menores y agregados en tinta, distinguidos por trazo
+const EST = {
+  "TVN": { c: "--ch-1" }, "Canal 13": { c: "--ch-2" }, "Mega": { c: "--ch-3" }, "Chilevisión": { c: "--ch-4" },
+  "La Red": { c: "--ink-2", dash: "7 4" }, "TV+": { c: "--ink-2", dash: "2 3" },
+  "4 grandes": { c: "--accent", w: 3 }, "6 canales CMF": { c: "--ink", w: 2, dash: "8 4" },
+};
+const S = { clas: "n1", freq: "a", unit: "pct", per: "c", vista: "ind" };
 const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
 const fmt = n => Math.round(n).toLocaleString("es-CL");
 const pct = n => (n * 100).toLocaleString("es-CL", { maximumFractionDigits: 1, minimumFractionDigits: 1 }) + "%";
 const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const UNI = {
+  nom: { eje: "Miles de millones de pesos nominales.", tip: "M$" },
+  real: { eje: "Miles de millones de pesos de 2025 (IPC Banco Central).", tip: "M$ de 2025" },
+  uf: { eje: "Millones de UF (UF promedio del período).", tip: "UF" },
+  usd: { eje: "Millones de US$ (dólar observado promedio del período).", tip: "US$" },
+};
 
 const CATS = {
   n1: [{ k: "n1_publicidad", l: "Publicidad", c: "--cat-1" }, { k: "n1_otros", l: "Otros ingresos", c: "--cat-2" }],
@@ -209,9 +230,9 @@ const CATS = {
   np: [{ k: "A_punto", l: "Audiencias", c: "--cat-1" }, { k: "C_punto", l: "Contenidos", c: "--cat-2" }, { k: "F_punto", l: "Fuera de Napoli", c: "--cat-3" }],
 };
 
-// valor de un campo según perímetro
+// valor de un campo según perímetro (Mega solo TV; los agregados traen su propia columna tvp_)
 function val(r, k) {
-  if (S.per === "tv" && r.canal === "Mega") {
+  if (S.per === "tv" && (r.canal === "Mega" || AGREG.includes(r.canal))) {
     if (k === "total") return r.tvp_total;
     if (k === "n1_publicidad" || k === "n2_publicidad") return r.tvp_n1_publicidad;
     if (k === "n1_otros") return r.tvp_total - r.tvp_n1_publicidad;
@@ -225,23 +246,37 @@ function xOf(r) {
   if (r.tipo_periodo === "anual") return y + 0.5;
   return r.tipo_periodo === "semestre" ? y + 0.25 : y + 0.75;
 }
-function rows(canal) {
+function rows(ent) {
   const t = S.freq === "a" ? ["anual"] : ["semestre", "semestre2"];
-  return DATA.agregados.filter(r => r.canal === canal && t.includes(r.tipo_periodo)).sort((a, b) => xOf(a) - xOf(b));
+  return DATA.agregados.filter(r => r.canal === ent && t.includes(r.tipo_periodo)).sort((a, b) => xOf(a) - xOf(b));
 }
-function money(r, v) { const m = S.unit === "real" ? v * 100 / r.ipc_indice : v; return m / 1e6; } // M$ -> miles de millones de $
+// M$ -> unidad del eje
+function conv(r, v) {
+  if (S.unit === "real") return v * 100 / r.ipc_indice / 1e6;
+  if (S.unit === "uf") return v * 1000 / r.uf_prom / 1e6;
+  if (S.unit === "usd") return v * 1000 / r.dolar_prom / 1e6;
+  return v / 1e6;
+}
+function convTip(r, v) {
+  if (S.unit === "real") return fmt(v * 100 / r.ipc_indice);
+  if (S.unit === "uf") return fmt(v * 1000 / r.uf_prom);
+  if (S.unit === "usd") return fmt(v * 1000 / r.dolar_prom);
+  return fmt(v);
+}
 function share(r) {
   const tot = val(r, "total");
   if (S.clas === "np") return { p: val(r, "A_punto") / tot, lo: val(r, "A_piso") / tot, hi: val(r, "A_techo") / tot };
   return { p: val(r, "n1_publicidad") / tot };
 }
+const reclas = (ent, per) => DATA.reclasificaciones.find(x => x.canal === ent && x.periodo === per);
 
 // ---------- ejes ----------
 const X0 = 2016;
 const X1 = () => S.freq === "a" ? 2026.15 : 2026.6;
 function scaleX(w, ml, mr) { return x => ml + (x - X0) / (X1() - X0) * (w - ml - mr); }
-function niceMax(v) { const s = [1, 2, 2.5, 5, 10]; const e = Math.pow(10, Math.floor(Math.log10(v))); for (const m of s) if (m * e >= v) return m * e; return 10 * e; }
-function ticks(max, n = 4) { const st = niceMax(max / n); const out = []; for (let v = 0; v <= max + 1e-9; v += st) out.push(+v.toFixed(6)); return out; }
+function niceMax(v) { const s = [1, 1.5, 2, 2.5, 3, 4, 5, 6, 8, 10]; const e = Math.pow(10, Math.floor(Math.log10(v))); for (const m of s) if (m * e >= v) return m * e; return 10 * e; }
+function niceStep(max) { const raw = max / 4, e = Math.pow(10, Math.floor(Math.log10(raw))); for (const m of [1, 2, 2.5, 5, 10]) if (m * e >= raw) return m * e; return 10 * e; }
+function ticks(max) { const st = niceStep(max); const out = []; for (let v = 0; v <= max + 1e-9; v += st) out.push(+v.toFixed(6)); return out; }
 function el(tag, attrs = {}, parent) {
   const e = document.createElementNS("http://www.w3.org/2000/svg", tag);
   for (const [k, v] of Object.entries(attrs)) e.setAttribute(k, v);
@@ -261,7 +296,17 @@ function axes(svg, w, h, m, ymax, yfmt) {
   el("line", { class: "base", x1: m.l, x2: w - m.r, y1: sy(0), y2: sy(0) }, svg);
   return { sx, sy };
 }
+const yLabel = v => v.toLocaleString("es-CL", { maximumFractionDigits: 1 });
 function pathLine(pts) { return pts.map((p, i) => (i ? "L" : "M") + p[0].toFixed(1) + "," + p[1].toFixed(1)).join(""); }
+function eventos(svg, sx, y1, y2, filtro, ytxt) {
+  const ge = el("g", { class: "evt" }, svg);
+  DATA.eventos.forEach((e, i) => {
+    if (!filtro(e)) return;
+    const d = new Date(e.fecha), x = sx(d.getFullYear() + d.getMonth() / 12);
+    el("line", { x1: x, x2: x, y1, y2 }, ge);
+    el("text", { x: x + 3, y: ytxt }, ge).textContent = i + 1;
+  });
+}
 
 // ---------- tooltip ----------
 const tip = document.getElementById("tip");
@@ -279,60 +324,61 @@ function catOfLine(l) {
   return l.napoli_principal + " · " + l.pureza.toLowerCase();
 }
 function linesHtml(r) {
+  if (AGREG.includes(r.canal)) {
+    const g = r.canal === "4 grandes" ? GRANDES : CANALES;
+    const parts = g.map(c => DATA.agregados.find(x => x.canal === c && x.periodo === r.periodo)).filter(Boolean);
+    return `<table>${parts.map(p => `<tr><td><span class="sw-dot" style="background:${css(EST[p.canal].c)}"></span>${esc(p.canal)}</td><td class="n">${pct(share(p).p)}</td><td class="n">${fmt(val(p, "total"))}</td></tr>`).join("")}</table>
+      <div class="doc">Suma de canales; total en M$ nominales. Pase por el panel de cada canal para ver sus líneas.</div>`;
+  }
   if (r.tipo_periodo === "semestre2") return `<div class="warn">H2 derivado: ${esc(r.periodo.replace("H2", "año"))} − H1. Sin líneas propias.</div>`;
   let ls = DATA.lineas.filter(l => l.canal === r.canal && l.periodo === r.periodo);
   if (S.per === "tv" && r.canal === "Mega") ls = ls.filter(l => l.medio !== "Radio/cable");
   const docs = [...new Set(ls.map(l => l.documento + (l.pagina ? " · p. " + l.pagina : "") + (l.origen_cifra === "manual" ? " · cifra manual" : "")))];
   return `<table>${ls.map(l => `<tr><td>${esc(l.linea_original)}<br><span class="doc">${esc(catOfLine(l))}</span></td><td class="n">${fmt(l.monto)}</td></tr>`).join("")}</table>
-    <div class="doc">M$ · ${docs.map(esc).join("<br>")}</div>`;
+    <div class="doc">Líneas de la nota en M$ nominales · ${docs.map(esc).join("<br>")}</div>`;
 }
 function reclasHtml(r) {
-  const rc = DATA.reclasificaciones.find(x => x.canal === r.canal && x.periodo === r.periodo);
-  return rc ? `<div class="warn">Reclasificado: los EEFF de ${rc.fecha_cierre.join(", ")} informan este período con distinta composición. Se muestra la versión más reciente.</div>` : "";
+  const rc = reclas(r.canal, r.periodo);
+  if (!rc) return "";
+  if (AGREG.includes(r.canal)) return `<div class="warn">Incluye canales con este período reclasificado entre EEFF; se usa la versión más reciente de cada uno.</div>`;
+  return `<div class="warn">Reclasificado: los EEFF de ${rc.fecha_cierre.join(", ")} informan este período con distinta composición. Se muestra la versión más reciente.</div>`;
 }
 
 // ---------- gráfico comparativo ----------
 function drawComp() {
   const box = document.getElementById("comp"); box.innerHTML = "";
-  const w = Math.max(320, box.clientWidth), h = w < 520 ? 300 : 360, m = { t: 26, r: w < 520 ? 70 : 96, b: 28, l: 40 };
-  const svg = el("svg", { viewBox: `0 0 ${w} ${h}`, role: "img", "aria-label": "Participación por canal en el tiempo" }, box);
+  const ents = S.vista === "ind" ? AGREG : CANALES;
+  const w = Math.max(320, box.clientWidth), h = w < 520 ? 300 : 360, m = { t: 26, r: w < 520 ? 84 : 118, b: 28, l: 40 };
+  const svg = el("svg", { viewBox: `0 0 ${w} ${h}`, role: "img", "aria-label": "Participación en el tiempo" }, box);
   const { sx, sy } = axes(svg, w, h, m, 1, v => Math.round(v * 100) + "%");
-  // referencias Napoli
   for (const [v, t] of [[1, "100% broadcast EE.UU."], [0.6, "60% cable networks"]]) {
     el("line", { class: "ref", x1: m.l, x2: w - m.r, y1: sy(v), y2: sy(v) }, svg);
     el("text", { x: m.l + 4, y: sy(v) + 13 }, svg).textContent = "Napoli: " + t;
   }
-  // eventos generales
-  const ge = el("g", { class: "evt" }, svg);
-  DATA.eventos.forEach((e, i) => {
-    const d = new Date(e.fecha), x = sx(d.getFullYear() + d.getMonth() / 12);
-    if (e.canal) return;
-    el("line", { x1: x, x2: x, y1: m.t - 6, y2: h - m.b }, ge);
-    el("text", { x: x + 3, y: m.t - 10 }, ge).textContent = i + 1;
-  });
-  const series = CANALES.map(c => ({ c, rs: rows(c).map(r => ({ r, s: share(r), x: sx(xOf(r)) })) }));
+  eventos(svg, sx, m.t - 6, h - m.b, e => !e.canal, m.t - 10);
+  const series = ents.map(c => ({ c, rs: rows(c).map(r => ({ r, s: share(r), x: sx(xOf(r)) })) })).filter(s => s.rs.length);
   if (S.clas === "np") for (const { c, rs } of series) {
+    if (MENORES.includes(c)) continue;
     const up = rs.map(p => [p.x, sy(p.s.hi)]), dn = rs.map(p => [p.x, sy(p.s.lo)]).reverse();
-    el("path", { d: pathLine(up) + pathLine(dn).replace("M", "L") + "Z", fill: css(CHCOL[c]), "fill-opacity": css("--band-op") }, svg);
+    el("path", { d: pathLine(up) + pathLine(dn).replace("M", "L") + "Z", fill: css(EST[c].c), "fill-opacity": css("--band-op") }, svg);
   }
   const labels = [];
   for (const { c, rs } of series) {
-    const col = css(CHCOL[c]);
-    el("path", { d: pathLine(rs.map(p => [p.x, sy(p.s.p)])), fill: "none", stroke: col, "stroke-width": 2, "stroke-linejoin": "round" }, svg);
+    const e = EST[c], col = css(e.c);
+    el("path", { d: pathLine(rs.map(p => [p.x, sy(p.s.p)])), fill: "none", stroke: col, "stroke-width": e.w || 2,
+      "stroke-dasharray": e.dash || "none", "stroke-linejoin": "round" }, svg);
     for (const p of rs) {
-      const rc = DATA.reclasificaciones.some(x => x.canal === c && x.periodo === p.r.periodo);
+      const rc = !!reclas(c, p.r.periodo);
       el("circle", { cx: p.x, cy: sy(p.s.p), r: rc ? 4.5 : 3, fill: rc ? css("--surface") : col, stroke: rc ? col : css("--surface"), "stroke-width": rc ? 2 : 1.5 }, svg);
     }
-    const last = rs[rs.length - 1]; if (last) labels.push({ c, col, y: sy(last.s.p), x: last.x });
+    const last = rs[rs.length - 1]; labels.push({ c, col, y: sy(last.s.p), x: last.x, dash: e.dash });
   }
-  // etiquetas directas sin choques
   labels.sort((a, b) => a.y - b.y);
   for (let i = 1; i < labels.length; i++) if (labels[i].y - labels[i - 1].y < 14) labels[i].y = labels[i - 1].y + 14;
   for (const L of labels) {
-    el("rect", { x: L.x + 8, y: L.y - 4, width: 8, height: 8, rx: 2, fill: L.col }, svg);
-    el("text", { class: "lbl", x: L.x + 20, y: L.y + 4 }, svg).textContent = L.c;
+    el("line", { x1: L.x + 6, x2: L.x + 18, y1: L.y, y2: L.y, stroke: L.col, "stroke-width": 3, "stroke-dasharray": L.dash || "none" }, svg);
+    el("text", { class: "lbl", x: L.x + 22, y: L.y + 4 }, svg).textContent = L.c;
   }
-  // capa de hover: período más cercano
   const hair = el("line", { class: "hair", y1: m.t, y2: h - m.b, visibility: "hidden" }, svg);
   const hit = el("rect", { x: m.l, y: m.t, width: w - m.l - m.r, height: h - m.t - m.b, fill: "transparent" }, svg);
   const xs = [...new Set(series.flatMap(s => s.rs.map(p => p.x)))].sort((a, b) => a - b);
@@ -342,76 +388,69 @@ function drawComp() {
     hair.setAttribute("x1", x); hair.setAttribute("x2", x); hair.setAttribute("visibility", "visible");
     const pts = series.map(s => ({ c: s.c, p: s.rs.find(p => p.x === x) })).filter(o => o.p).sort((a, b) => b.p.s.p - a.p.s.p);
     const per = pts[0].p.r.periodo;
-    showTip(`<b>${esc(per)}</b><table>${pts.map(o => `<tr><td><i class="sw-dot" style="background:${css(CHCOL[o.c])}"></i>${esc(o.c)}${DATA.reclasificaciones.some(x => x.canal === o.c && x.periodo === per) ? ' <span class="flag">reclasificado</span>' : ""}</td>
+    showTip(`<b>${esc(per)}</b><table>${pts.map(o => `<tr><td><i class="sw-dot" style="background:${css(EST[o.c].c)}"></i>${esc(o.c)}${reclas(o.c, per) ? ' <span class="flag">reclasificado</span>' : ""}</td>
       <td class="n">${pct(o.p.s.p)}${S.clas === "np" ? ` <span class="doc">[${pct(o.p.s.lo)}–${pct(o.p.s.hi)}]</span>` : ""}</td></tr>`).join("")}</table>
-      <div class="doc">Pase por los paneles de cada canal para ver las líneas de la nota.</div>`, ev);
+      <div class="doc">${S.vista === "ind" ? "Participación de la suma de ingresos (ponderada por tamaño)." : "Pase por los paneles de cada canal para ver las líneas de la nota."}</div>`, ev);
   });
   hit.addEventListener("mouseleave", () => { hair.setAttribute("visibility", "hidden"); hideTip(); });
 
-  document.getElementById("s-comp").textContent = S.clas === "np"
-    ? "Audiencias según Napoli: línea = punto; banda = piso a techo. Círculo hueco = período reclasificado entre EEFF."
-    : "Publicidad sobre ingresos de actividades ordinarias. Círculo hueco = período reclasificado entre EEFF.";
-  document.getElementById("lg-comp").innerHTML = CANALES.map(c => `<span><i class="line" style="background:${css(CHCOL[c])}"></i>${c}</span>`).join("")
+  const que = S.clas === "np" ? "Audiencias según Napoli: línea = punto; banda = piso a techo." : "Publicidad sobre ingresos de actividades ordinarias.";
+  document.getElementById("s-comp").textContent = que + (S.vista === "ind"
+    ? " Industria = suma de canales en los períodos en que todos informan (4 grandes desde 2016; 6 canales desde 2017)."
+    : " La Red y TV+ sin banda para no saturar el gráfico.") + " Círculo hueco = período reclasificado entre EEFF.";
+  document.getElementById("lg-comp").innerHTML = ents.map(c => { const e = EST[c];
+    return `<span><svg width="22" height="8" style="display:inline-block;vertical-align:1px;margin-right:6px;overflow:visible"><line x1="0" x2="22" y1="4" y2="4" stroke="${css(e.c)}" stroke-width="3" stroke-dasharray="${e.dash || "none"}"/></svg>${c}</span>`; }).join("")
     + (S.clas === "np" ? `<span><i class="band" style="background:${css("--muted")}"></i>Rango piso–techo</span>` : "")
     + `<span><i class="dash"></i>Referencia Napoli</span>`;
 }
 
-// ---------- paneles por canal ----------
+// ---------- paneles ----------
 function drawPanels() {
   const host = document.getElementById("panels"); host.innerHTML = "";
   const cats = CATS[S.clas];
-  let ymax = 1;
-  if (S.unit !== "pct") ymax = niceMax(Math.max(...CANALES.flatMap(c => rows(c).map(r => money(r, val(r, "total")))))) ;
-  for (const canal of CANALES) {
-    const rs = rows(canal);
+  for (const ent of [...AGREG, ...CANALES]) {
+    const rs = rows(ent);
+    if (!rs.length) continue;
     const div = document.createElement("div"); div.className = "panel";
-    const tot = rs.length ? rs[rs.length - 1] : null;
-    div.innerHTML = `<h3>${canal}<small>${canal === "Mega" ? (S.per === "tv" ? "sin radio ni cable" : "consolidado") : ""}</small></h3>`;
+    const sub = ent === "Mega" ? (S.per === "tv" ? "sin radio ni cable" : "consolidado")
+      : ent === "4 grandes" ? "TVN + C13 + Mega + CHV" : ent === "6 canales CMF" ? "+ La Red + TV+" : "";
+    div.innerHTML = `<h3>${ent}<small>${sub}</small></h3>`;
     host.appendChild(div);
-    const w = Math.max(300, div.clientWidth || 520), h = 230, m = { t: 10, r: 8, b: 26, l: 40 };
-    const svg = el("svg", { viewBox: `0 0 ${w} ${h}`, role: "img", "aria-label": "Composición de ingresos de " + canal }, div);
-    const yf = S.unit === "pct" ? v => Math.round(v * 100) + "%" : v => v.toLocaleString("es-CL");
-    const { sx, sy } = axes(svg, w, h, m, ymax, yf);
-    const norm = (r, v) => S.unit === "pct" ? v / val(r, "total") : money(r, v);
-    // áreas apiladas (valores negativos derivados se dibujan en 0 y se informan en el tooltip)
+    const w = Math.max(300, div.clientWidth || 520), h = 220, m = { t: 10, r: 8, b: 26, l: 44 };
+    const norm = (r, v) => S.unit === "pct" ? v / val(r, "total") : conv(r, v);
+    const ymax = S.unit === "pct" ? 1 : niceMax(Math.max(...rs.map(r => norm(r, val(r, "total")))));
+    const svg = el("svg", { viewBox: `0 0 ${w} ${h}`, role: "img", "aria-label": "Composición de ingresos de " + ent }, div);
+    const { sx, sy } = axes(svg, w, h, m, ymax, S.unit === "pct" ? v => Math.round(v * 100) + "%" : yLabel);
     let acc = rs.map(() => 0);
     cats.forEach(cat => {
       const top = rs.map((r, i) => acc[i] + Math.max(0, norm(r, val(r, cat.k))));
-      if (top.every((v, i) => v === acc[i])) { return; }
+      if (top.every((v, i) => v === acc[i])) return;
       const up = rs.map((r, i) => [sx(xOf(r)), sy(top[i])]), dn = rs.map((r, i) => [sx(xOf(r)), sy(acc[i])]).reverse();
       el("path", { d: pathLine(up) + pathLine(dn).replace("M", "L") + "Z", fill: css(cat.c), "fill-opacity": .82, stroke: css("--surface"), "stroke-width": 1.5, "stroke-linejoin": "round" }, svg);
       acc = top;
     });
-    if (S.clas === "np") {
-      for (const k of ["A_piso", "A_techo"]) {
-        el("path", { d: pathLine(rs.map(r => [sx(xOf(r)), sy(norm(r, val(r, k)))])), fill: "none", stroke: css("--ink"), "stroke-width": 1.3, "stroke-dasharray": k === "A_piso" ? "2 3" : "6 3" }, svg);
-      }
+    if (S.clas === "np") for (const k of ["A_piso", "A_techo"]) {
+      el("path", { d: pathLine(rs.map(r => [sx(xOf(r)), sy(norm(r, val(r, k)))])), fill: "none", stroke: css("--ink"), "stroke-width": 1.3, "stroke-dasharray": k === "A_piso" ? "2 3" : "6 3" }, svg);
     }
-    // eventos del canal
-    const ge = el("g", { class: "evt" }, svg);
-    DATA.eventos.forEach((e, i) => {
-      if (e.canal !== canal) return;
-      const d = new Date(e.fecha), x = sx(d.getFullYear() + d.getMonth() / 12);
-      el("line", { x1: x, x2: x, y1: m.t, y2: h - m.b }, ge);
-      el("text", { x: x + 3, y: m.t + 9 }, ge).textContent = i + 1;
-    });
+    eventos(svg, sx, m.t, h - m.b, e => e.canal === ent, m.t + 9);
     const hair = el("line", { class: "hair", y1: m.t, y2: h - m.b, visibility: "hidden" }, svg);
     const hit = el("rect", { x: m.l, y: m.t, width: w - m.l - m.r, height: h - m.t - m.b, fill: "transparent" }, svg);
     hit.addEventListener("mousemove", ev => {
       const pt = svg.getBoundingClientRect(), mx = (ev.clientX - pt.left) * w / pt.width;
       const r = rs.reduce((a, b) => Math.abs(sx(xOf(b)) - mx) < Math.abs(sx(xOf(a)) - mx) ? b : a);
       const x = sx(xOf(r)); hair.setAttribute("x1", x); hair.setAttribute("x2", x); hair.setAttribute("visibility", "visible");
-      const T = val(r, "total");
-      const rowsHtml = cats.map(c => { const v = val(r, c.k); return v || c.k === "n1_otros" ? `<tr><td><i class="sw-dot" style="background:${css(c.c)}"></i>${c.l}</td><td class="n">${pct(v / T)}</td><td class="n">${S.unit === "real" ? fmt(v * 100 / r.ipc_indice) + " r" : fmt(v)}</td></tr>` : ""; }).join("");
+      const T = val(r, "total"), u = S.unit === "pct" ? "M$" : UNI[S.unit].tip;
+      const cv = v => S.unit === "pct" ? fmt(v) : convTip(r, v);
+      const filas = cats.map(c => { const v = val(r, c.k); return v || c.k === "n1_otros" ? `<tr><td><i class="sw-dot" style="background:${css(c.c)}"></i>${c.l}</td><td class="n">${pct(v / T)}</td><td class="n">${cv(v)}</td></tr>` : ""; }).join("");
       const rng = S.clas === "np" ? `<tr><td>Audiencias piso–techo</td><td class="n" colspan="2">${pct(val(r, "A_piso") / T)} – ${pct(val(r, "A_techo") / T)}</td></tr>` : "";
       const neg = cats.some(c => val(r, c.k) < 0) ? `<div class="warn">Valor negativo en una categoría: el EEFF anual y el semestral clasifican distinto.</div>` : "";
-      const ipc = S.unit === "real" ? `<div class="doc">M$ de ${DATA.base_ipc}${r.ipc_completo ? "" : " · IPC del período incompleto: se usa el último mes disponible"}</div>` : "";
-      showTip(`<b>${esc(canal)} · ${esc(r.periodo)}</b><table>${rowsHtml}${rng}<tr><td>Total</td><td></td><td class="n">${fmt(S.unit === "real" ? T * 100 / r.ipc_indice : T)}</td></tr></table>${ipc}${neg}${reclasHtml(r)}${linesHtml(r)}`, ev);
+      const inc = (S.unit === "real" && !r.ipc_completo) || (S.unit === "uf" && !r.uf_completo) || (S.unit === "usd" && !r.dolar_completo)
+        ? `<div class="doc">Serie del Banco Central incompleta para este período: se usa lo publicado.</div>` : "";
+      showTip(`<b>${esc(ent)} · ${esc(r.periodo)}</b><table>${filas}${rng}<tr><td>Total</td><td></td><td class="n">${cv(T)}</td></tr></table><div class="doc">Montos en ${u}</div>${inc}${neg}${reclasHtml(r)}${linesHtml(r)}`, ev);
     });
     hit.addEventListener("mouseleave", () => { hair.setAttribute("visibility", "hidden"); hideTip(); });
   }
-  document.getElementById("s-pan").textContent = (S.unit === "pct" ? "Porcentaje del total de ingresos de actividades ordinarias." :
-    S.unit === "nom" ? "Miles de millones de pesos nominales." : `Miles de millones de pesos de ${DATA.base_ipc} (IPC provisional).`)
+  document.getElementById("s-pan").textContent = (S.unit === "pct" ? "Porcentaje del total de ingresos de actividades ordinarias." : UNI[S.unit].eje + " Escala propia por panel.")
     + (S.freq === "s" ? " H1 = enero–junio; H2 = anual − H1." : "") + " Pase el cursor para ver las líneas de la nota y su documento.";
   document.getElementById("lg-pan").innerHTML = cats.map(c => `<span><i style="background:${css(c.c)}"></i>${c.l}</span>`).join("")
     + (S.clas === "np" ? `<span><i class="dash" style="border-top-style:dotted;border-color:${css("--ink")}"></i>Piso Audiencias</span><span><i class="dash" style="border-color:${css("--ink")}"></i>Techo Audiencias</span>` : "");
@@ -419,16 +458,16 @@ function drawPanels() {
 
 // ---------- tabla ----------
 function drawTable() {
-  const cats = CATS[S.clas];
-  const per = [...new Set(CANALES.flatMap(c => rows(c).map(r => r.periodo)))];
-  const all = CANALES.flatMap(rows);
+  const ents = [...AGREG, ...CANALES];
+  const all = ents.flatMap(rows);
+  const per = [...new Set(all.map(r => r.periodo))];
   per.sort((a, b) => xOf(all.find(r => r.periodo === a)) - xOf(all.find(r => r.periodo === b)));
-  let h = `<table class="data"><thead><tr><th>Período</th>${CANALES.map(c => `<th>${c}</th>`).join("")}</tr></thead><tbody>`;
+  let h = `<table class="data"><thead><tr><th>Período</th>${ents.map(c => `<th>${c}</th>`).join("")}</tr></thead><tbody>`;
   for (const p of per) {
-    h += `<tr><td>${p}</td>` + CANALES.map(c => {
+    h += `<tr><td>${p}</td>` + ents.map(c => {
       const r = rows(c).find(x => x.periodo === p); if (!r) return "<td>—</td>";
-      const s = share(r); const rc = DATA.reclasificaciones.some(x => x.canal === c && x.periodo === p);
-      return `<td>${pct(s.p)}${S.clas === "np" ? ` [${pct(s.lo)}–${pct(s.hi)}]` : ""}${rc ? ' <span class="flag">R</span>' : ""}</td>`;
+      const s = share(r);
+      return `<td>${pct(s.p)}${S.clas === "np" ? ` [${pct(s.lo)}–${pct(s.hi)}]` : ""}${reclas(c, p) ? ' <span class="flag">R</span>' : ""}</td>`;
     }).join("") + "</tr>";
   }
   document.getElementById("tbl").innerHTML = h + `</tbody></table><p class="src" style="margin-top:8px">${S.clas === "np" ? "Audiencias: punto [piso–techo]" : "Publicidad / total"}. R = reclasificado entre EEFF.</p>`;
@@ -438,7 +477,7 @@ function render() { drawComp(); drawPanels(); drawTable(); }
 function init() {
   document.getElementById("gen").textContent = `Datos generados ${DATA.generado} desde salidas/viz_data.json · ${DATA.lineas.length} montos de nota en la serie principal`;
   document.getElementById("evts").innerHTML = DATA.eventos.map(e => `<li>${esc(e.texto)}</li>`).join("");
-  for (const [id, key] of [["c-clas", "clas"], ["c-freq", "freq"], ["c-unit", "unit"], ["c-per", "per"]]) {
+  for (const [id, key] of [["c-clas", "clas"], ["c-freq", "freq"], ["c-unit", "unit"], ["c-per", "per"], ["c-vista", "vista"]]) {
     const g = document.getElementById(id);
     g.addEventListener("click", ev => {
       const b = ev.target.closest("button"); if (!b) return;

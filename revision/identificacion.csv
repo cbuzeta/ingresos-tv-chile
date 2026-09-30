@@ -1,6 +1,5 @@
 motivo,canal,articulo,origen,pdf,paginas,tipo_documento,sociedad_detectada,fecha_cierre,primera_linea
 EEFF sin fecha de cierre reconocida,TVN,,estados_financieros_2018.pdf,data/raw/pdf/TVN/estados_financieros_2018/estados_financieros_2018.pdf,75,EEFF,TVN,,e
-ZIP/archivo sin EEFF identificado,TV+,29081,,,,,,,
 2 EEFF para el mismo canal y fecha,Canal 13,53286,articles-53286_recurso_1.zip,data/raw/pdf/Canal 13/53286/2022090357517_2.pdf,81,EEFF,Canal 13,2022-06-30,estados financieros intermedios
 2 EEFF para el mismo canal y fecha,Canal 13,53286,articles-53286_recurso_1.zip,data/raw/pdf/Canal 13/53286/2022090357517_4.pdf,81,EEFF,Canal 13,2022-06-30,estados financieros intermedios
 2 EEFF para el mismo canal y fecha,Mega,75893,articles-75893_recurso_1.zip,data/raw/pdf/Mega/75893/2023110516283_2.pdf,70,EEFF,Mega,2023-09-30,megamedia s.a. y subsidiarias

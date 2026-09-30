@@ -18,15 +18,17 @@ ROOT = Path(__file__).resolve().parents[1]
 SAL = ROOT / "salidas"
 BASE_IPC = 2025  # CLAUDE.md 6.4: año base por definir; provisional
 
+CANALES = ["TVN", "Canal 13", "Mega", "Chilevisión", "La Red", "TV+"]
+AGREGADOS = {"4 grandes": CANALES[:4], "6 canales CMF": CANALES}
 CATS = {"A": "Audiencias", "C": "Contenidos", "F": "Fuera de Napoli"}
 FLAG = {"A": "puede_audiencias", "C": "puede_contenidos", "F": "puede_fuera"}
 
 EVENTOS = [
     {"fecha": "2018-01-01", "canal": None, "texto": "IFRS 15 entra en vigencia (posible quiebre 2017→2018)"},
-    {"fecha": "2018-12-31", "canal": "Canal 13", "texto": "C13: 'Otros ingresos' 2018 incluye venta de activos (Secuoya M$5.376.862; torres M$1.053.236)"},
+    {"fecha": "2018-12-31", "canal": "Canal 13", "texto": "C13: venta de activos 2018 (Secuoya M$5.376.862; torres M$1.053.236), separada como Fuera de Napoli"},
     {"fecha": "2020-03-15", "canal": None, "texto": "Pandemia COVID-19"},
-    {"fecha": "2020-12-31", "canal": "Canal 13", "texto": "C13: 'Otros ingresos' 2020 incluye venta de activos por M$13.771.539"},
-    {"fecha": "2020-01-01", "canal": "Mega", "texto": "Mega: la sociedad informante pasa de Red Televisiva Megavisión a Megamedia (verificar perímetro)"},
+    {"fecha": "2020-12-31", "canal": "Canal 13", "texto": "C13: venta de activos 2020 por M$13.771.539, separada como Fuera de Napoli (Q1 y Q2 2020 sin desglose)"},
+    {"fecha": "2020-01-01", "canal": "Mega", "texto": "Mega: la sociedad informante pasa de Red Televisiva Megavisión a Megamedia; el 2019 informado por ambas coincide"},
     {"fecha": "2021-01-01", "canal": "Chilevisión", "texto": "CHV: controlador pasa a Paramount/ViacomCBS"},
     {"fecha": "2023-01-01", "canal": "Chilevisión", "texto": "CHV: la comisión TILA (TV paga) se integra a 'Ingresos por publicidad'"},
     {"fecha": "2025-01-01", "canal": "TVN", "texto": "TVN: inicia subvención NTV (Ley 19.132 art. 37)"},
@@ -35,12 +37,10 @@ EVENTOS = [
 
 
 def ipc():
-    """Índice IPC mensual encadenado desde variaciones de mindicador.cl (redondeadas a 0,1%)."""
-    rows = []
-    for f in sorted(glob.glob(str(ROOT / "data" / "externos" / "ipc_mindicador_*.json"))):
-        for s in json.load(open(f, encoding="utf-8"))["serie"]:
-            rows.append((s["fecha"][:7], s["valor"]))
-    d = pd.DataFrame(rows, columns=["mes", "var"]).drop_duplicates("mes").sort_values("mes").reset_index(drop=True)
+    """Índice IPC mensual encadenado desde las variaciones mensuales oficiales del Banco Central
+    (IPC general, % c/r al período anterior, publicadas con un decimal). Promedio BASE_IPC = 100."""
+    d = pd.read_csv(ROOT / "data" / "externos" / "bcch_ipc_var.csv").rename(columns={"fecha": "mes", "valor": "var"})
+    d = d.sort_values("mes").reset_index(drop=True)
     d["indice"] = (1 + d["var"] / 100).cumprod()
     base = d[d.mes.str[:4] == str(BASE_IPC)]["indice"].mean()
     d["indice"] = 100 * d["indice"] / base
@@ -54,6 +54,12 @@ def deflactor(idx, inicio, fin):
     completo = v.notna().all()
     v = v.fillna(idx["indice"].iloc[-1])
     return v.mean(), completo
+
+
+def promedio_diario(serie, inicio, fin):
+    """Promedio simple de los valores diarios publicados (UF o dólar observado) dentro del período."""
+    v = serie[(serie.fecha >= inicio) & (serie.fecha <= fin)]["valor"]
+    return v.mean(), len(v) > 0 and serie.fecha.max() >= fin
 
 
 def agregar(g):
@@ -114,10 +120,30 @@ def main():
         print("Aviso: agregados negativos (H2 derivado con líneas reclasificadas entre documentos):")
         print(neg[["canal", "periodo"]].to_string())
 
+    # Agregado de industria: suma de canales solo en los períodos en que todos informan (panel balanceado)
+    ind = []
+    for nombre, grupo in AGREGADOS.items():
+        sub = agg[agg.canal.isin(grupo)]
+        for (periodo, tipo), g in sub.groupby(["periodo", "tipo_periodo"]):
+            if set(g.canal) != set(grupo):
+                continue
+            r = {"canal": nombre, "periodo": periodo, "tipo_periodo": tipo, "inicio": g.inicio.iloc[0], "fin": g.fin.iloc[0],
+                 "documento": "suma de " + ", ".join(grupo), "fecha_documento": g.fecha_documento.max(),
+                 "reclasificado": bool(g.reclasificado.any()), "origen_cifra": "agregado"}
+            for c in num:
+                r[c] = int(g[c].sum())
+            ind.append(r)
+    agg = pd.concat([agg, pd.DataFrame(ind)], ignore_index=True)
+
     idx = ipc()
     d = agg.apply(lambda r: deflactor(idx, r["inicio"], r["fin"]), axis=1)
     agg["ipc_indice"] = [x[0] for x in d]
     agg["ipc_completo"] = [x[1] for x in d]
+    for nombre in ("uf", "dolar"):
+        serie = pd.read_csv(ROOT / "data" / "externos" / f"bcch_{nombre}.csv")
+        d = agg.apply(lambda r: promedio_diario(serie, r["inicio"], r["fin"]), axis=1)
+        agg[f"{nombre}_prom"] = [x[0] for x in d]
+        agg[f"{nombre}_completo"] = [x[1] for x in d]
     agg = agg.sort_values(["canal", "fin", "tipo_periodo"]).reset_index(drop=True)
     agg.to_csv(SAL / "agregados.csv", index=False, encoding="utf-8")
 
@@ -130,7 +156,8 @@ def main():
             "Serie principal = versión del documento más reciente para cada período (decisión 6.1, confirmada 2026-09-30).",
             "Napoli: punto = según código principal; piso = líneas puras; techo = líneas que pueden contener la categoría.",
             "tvp_* = perímetro TV (sin publicidad radial y cable de Mega).",
-            f"IPC: índice encadenado desde variaciones mensuales de mindicador.cl (redondeadas a 0,1%), promedio {BASE_IPC} = 100. PROVISIONAL.",
+            f"$ reales: índice IPC encadenado desde las variaciones mensuales del Banco Central de Chile (BDE, 1 decimal), promedio {BASE_IPC} = 100.",
+            "UF: promedio de la UF diaria del período (BDE). USD: promedio del dólar observado diario del período (BDE).",
             "H2 = anual − H1 (derivado).",
         ]}).to_excel(xw, sheet_name="LEEME", index=False)
         for nombre, cols in (("N1", ["n1_publicidad", "n1_otros", "total"]),

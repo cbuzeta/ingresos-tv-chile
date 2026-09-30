@@ -72,6 +72,27 @@ def main():
             x = x[~((x.canal == canal) & (x.fecha_cierre == fecha) & (x.documento != docs[0]))]
 
     x["linea_norm"] = x["linea_original"].map(linea_norm)
+    # Desgloses documentados en las notas (p. ej. venta de activos de C13 dentro de "Otros ingresos de
+    # explotación"): se separan de la línea madre en todas las versiones del período. Solo montos que la nota informa.
+    desg = ROOT / "mapeo" / "desgloses_nota.csv"
+    if desg.exists():
+        x["periodo"] = x.apply(etiqueta, axis=1)
+        nuevas = []
+        for _, d in pd.read_csv(desg, dtype=str).iterrows():
+            m = (x.canal == d.canal) & (x.periodo == d.periodo) & (x.linea_norm == d.linea_padre_norm)
+            if not m.any():
+                sys.exit(f"ALTO: desglose sin línea madre: {d.canal} {d.periodo} {d.linea_padre_norm}")
+            for i in x.index[m]:
+                monto = int(d.monto)
+                if x.at[i, "monto"] < monto:
+                    sys.exit(f"ALTO: desglose mayor que la línea madre en {d.canal} {d.periodo} ({x.at[i, 'documento']})")
+                x.at[i, "monto"] -= monto
+                r = x.loc[i].copy()
+                r["linea_original"], r["linea_norm"], r["monto"] = d.linea_nueva, linea_norm(d.linea_nueva), monto
+                r["origen_cifra"] = f"desglose de nota ({d.documento_fuente}, p. {d.pagina_fuente})"
+                nuevas.append(r)
+        x = pd.concat([x, pd.DataFrame(nuevas)], ignore_index=True).drop(columns="periodo")
+
     mapeo = pd.read_csv(ROOT / "mapeo" / "lineas_mapeo.csv", dtype=str)
     mapeo = mapeo.drop(columns=["linea_original"])
     y = x.merge(mapeo, on=["canal", "linea_norm"], how="left")

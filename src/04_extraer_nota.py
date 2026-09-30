@@ -22,7 +22,7 @@ sys.path.insert(0, str(Path(__file__).parent))
 from pdftexto import norm, ocr_pagina, pagina, texto_pagina  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[1]
-CANALES = {"TVN", "Canal 13", "Mega", "Chilevisión"}
+CANALES = {"TVN", "Canal 13", "Mega", "Chilevisión", "La Red", "TV+"}
 
 HEAD = re.compile(r"ingresos (?:de|por) (?:las )?actividades ordinarias|ingresos ordinarios|ingresos de explotacion"
                   r"|ingresos operacionales")
@@ -43,6 +43,10 @@ def amount(tok):
 
 def split_line(line):
     """Separa una línea en (rótulo, [montos]). Los números de nota tipo '(1)' o '(a)' quedan en el rótulo."""
+    if "¦" in line:  # fuente por coordenadas: celdas ya separadas
+        partes = [x.strip() for x in line.split("¦")]
+        lab = re.sub(r"\s+", " ", partes[0]).strip(" .:$")
+        return lab, [amount(x) for x in partes[1:]]
     toks = list(AMT.finditer(line))
     # descartar montos pequeños sin puntos que sean referencias de nota "(1)" pegadas al rótulo
     nums, cut = [], None
@@ -50,6 +54,8 @@ def split_line(line):
         s = m.group(0)
         if re.fullmatch(r"\(\d{1,2}\)", s) and not nums:
             continue
+        if s == "-" and re.match(r"\s*[^\W\d_]", line[m.end():]):
+            continue  # guion dentro del rótulo ("Ingresos de operación - canje"), no una celda vacía
         if re.fullmatch(r"\d{1,2}", s) and not nums and len(toks) > 1:
             # número de nota en la columna "Nota" del estado de resultados
             continue
@@ -94,16 +100,20 @@ def es_encabezado(label_n, label=""):
     return False
 
 
-def buscar_tabla(lines):
-    """Primero exige cuadre exacto; si no hay, acepta diferencias de redondeo de hasta M$2 por columna."""
+def buscar_tabla(lines, ks=(1, 2, 4)):
+    """Primero exige cuadre exacto; si no hay, acepta diferencias de redondeo de hasta M$2 por columna.
+
+    ks=None: filas con todas las columnas de la página (fuente por coordenadas); se descartan las columnas
+    que la tabla no usa y recién entonces se exige 1, 2 o 4 columnas.
+    """
     for tol in (0, 2):
-        filas, parsed = _buscar_tabla(lines, tol)
+        filas, parsed = _buscar_tabla(lines, tol, ks)
         if filas:
             return filas, parsed
     return None, parsed
 
 
-def _buscar_tabla(lines, tol):
+def _buscar_tabla(lines, tol, ks=(1, 2, 4)):
     """Encuentra el primer bloque de filas numéricas con igual n° de columnas cuya última fila es la suma.
 
     Devuelve (i_ini, i_fin, k) sobre la lista de índices de filas numéricas, o None.
@@ -112,16 +122,25 @@ def _buscar_tabla(lines, tol):
     num = [(i, lab, v) for i, lab, v in parsed if v and any(x != 0 for x in v)]
     for a in range(len(num)):
         k = len(num[a][2])
-        if k not in (1, 2, 4):  # la nota a) trae 2 o 4 columnas; 8 es la desagregación geográfica b)
+        if ks and k not in ks:  # la nota a) trae 2 o 4 columnas; 8 es la desagregación geográfica b)
             continue
-        for b in range(a + 2, min(a + 25, len(num))):
+        for b in range(a + 1, min(a + 25, len(num))):
             if len(num[b][2]) != k:
                 break
+            # una sola línea igual al total solo vale si la fila siguiente se rotula como total (TV+ 2017)
+            if b == a + 1 and not re.search(r"total", norm(num[b][1])):
+                continue
             filas = [r[2] for r in num[a:b]]
             if any(len(f) != k for f in filas):
                 break
-            if all(abs(sum(f[c] for f in filas) - num[b][2][c]) <= tol for c in range(k)) and num[b][2][0] > 1000:
-                return num[a:b + 1], parsed
+            if all(abs(sum(f[c] for f in filas) - num[b][2][c]) <= tol for c in range(k)) and max(num[b][2]) > 1000:
+                bloque = num[a:b + 1]
+                if ks is None:
+                    usadas = [c for c in range(k) if any(r[2][c] for r in bloque)]
+                    if len(usadas) not in (1, 2, 4):
+                        continue
+                    bloque = [(i, lab, [v[c] for c in usadas]) for i, lab, v in bloque]
+                return bloque, parsed
     return None, parsed
 
 
@@ -162,12 +181,57 @@ def asignar(filas, labs):
     return None
 
 
+SEP = " ¦ "  # separador explícito de celdas en la fuente por coordenadas
+NUM_TOK = re.compile(r"\(?-?\d{1,3}(?:\.\d{3})+\)?|\(?\d{1,3}\)?|-")
+
+
+def lineas_por_columnas(page):
+    """Reconstruye filas por coordenadas: celdas vacías quedan como '-' (cero).
+
+    Las cifras van alineadas a la derecha, así que las columnas se definen agrupando el borde derecho (x1)
+    de los números con puntos de miles. Cada fila se escribe con todas las columnas de la página;
+    las columnas que la tabla no usa quedan en cero y se descartan después (ver extraer_doc).
+    """
+    words = page.extract_words(keep_blank_chars=False, x_tolerance=3)
+    filas = []
+    for w in sorted(words, key=lambda w: (round(w["top"]), w["x0"])):
+        if filas and abs(filas[-1][0] - w["top"]) <= 3:
+            filas[-1][1].append(w)
+        else:
+            filas.append([w["top"], [w]])
+    xs = sorted(w["x1"] for w in words if re.fullmatch(r"\(?-?\d{1,3}(?:\.\d{3})+\)?", w["text"]))
+    anclas = []
+    for x in xs:
+        if anclas and x - anclas[-1][-1] <= 12:
+            anclas[-1].append(x)
+        else:
+            anclas.append([x])
+    anclas = [sum(a) / len(a) for a in anclas if len(a) >= 2]
+    out = []
+    for _, ws in filas:
+        ws.sort(key=lambda w: w["x0"])
+        nums = [w for w in ws if NUM_TOK.fullmatch(w["text"]) and anclas
+                and min(abs(w["x1"] - a) for a in anclas) <= 14]
+        label = " ".join(w["text"] for w in ws if w not in nums)
+        if not nums:
+            out.append(label)
+            continue
+        celdas = ["-"] * len(anclas)
+        for w in nums:
+            j = min(range(len(anclas)), key=lambda j: abs(w["x1"] - anclas[j]))
+            celdas[j] = w["text"]
+        out.append(label + SEP + SEP.join(celdas))
+    return out
+
+
 def fuentes(pdf, page, npag):
     """Genera (nombre_fuente, lineas) para una página y la siguiente (tablas que se cortan)."""
     rng = [page] + ([page + 1] if page < npag else [])
+    cols = None
     try:
         with pdfplumber.open(pdf) as doc:
             t = "\n".join(doc.pages[p - 1].extract_text() or "" for p in rng)
+            cols = [l for p in rng for l in lineas_por_columnas(doc.pages[p - 1])]
         yield "pdfplumber", t.splitlines()
     except Exception:
         pass
@@ -175,6 +239,8 @@ def fuentes(pdf, page, npag):
     r = subprocess.run(["pdftotext", "-enc", "UTF-8", "-raw", "-f", str(page), "-l", str(rng[-1]), pdf, "-"],
                        capture_output=True)
     yield "pdftotext-raw", r.stdout.decode("utf-8", "ignore").splitlines()
+    if cols:  # por coordenadas: solo si el texto corrido no alcanza (celdas vacías, p. ej. La Red)
+        yield "pdfplumber-columnas", cols
     # último recurso: tabla sin capa de texto utilizable (caracteres sueltos o fuente corrupta)
     yield from fuentes_ocr(pdf, page, npag)
 
@@ -222,7 +288,8 @@ def extraer_doc(doc):
             head_idx = next((i for i, l in enumerate(lines) if NOTA_HEAD.search(norm(l))), None)
             if head_idx is None:
                 head_idx = next((i for i, l in enumerate(lines) if HEAD.search(norm(l))), 0)
-            filas, parsed = buscar_tabla(lines[head_idx:head_idx + 70])
+            filas, parsed = buscar_tabla(lines[head_idx:head_idx + 70],
+                                         None if nombre == "pdfplumber-columnas" else (1, 2, 4))
             if not filas:
                 intentos.append((p, nombre, "sin tabla que sume"))
                 continue
@@ -246,6 +313,7 @@ def extraer_doc(doc):
 
 
 PERIODOS = {  # (mes de cierre, n° columnas) -> [(tipo_periodo, rol)]
+    (12, 1): [("anual", "actual")],
     (12, 2): [("anual", "actual"), ("anual", "comparativo")],
     (3, 2): [("trimestre", "actual"), ("trimestre", "comparativo")],
     (6, 2): [("semestre", "actual"), ("semestre", "comparativo")],
@@ -326,8 +394,9 @@ def total_en_eerr(pdf, npag, totales, ocr):
         tn = norm(t)
         if not ("resultado" in tn or "ganancia" in tn or "perdida" in tn):
             continue
-        dig = re.sub(r"[^\d\n]", "", t)
-        if any(str(abs(x)) in dig for x in totales if abs(x) > 100000):
+        # números completos del texto (con o sin puntos de miles): se comparan enteros, no subcadenas
+        nums = {re.sub(r"\D", "", n) for n in re.findall(r"\d[\d.,]*\d", t)}
+        if any(str(abs(x)) in nums for x in totales if abs(x) > 100000):
             return p
     return 0
 

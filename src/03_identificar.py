@@ -97,7 +97,7 @@ def main():
         soc = next((c for c, pat in SOCIEDADES if re.search(pat, t[:3000])), "")
         fecha = fecha_cierre(t1) or fecha_cierre(t)
         tipo = tipo_doc(t1, n)
-        if ocr and n >= 40:  # escaneo único que empaqueta carta + EEFF + análisis (dic-2017 y otros)
+        if ocr and n >= 30:  # escaneo único que empaqueta carta + EEFF + análisis (dic-2017 y otros)
             tipo = "EEFF"
         rows.append({**p, "paginas": n, "ocr": ocr, "tipo_documento": tipo,
                      "sociedad_detectada": soc, "fecha_cierre": fecha,

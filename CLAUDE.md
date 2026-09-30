@@ -186,13 +186,19 @@ Los nombres de las líneas en años anteriores serán distintos. Hay que mapearl
 **Confirmado (30-sep-2026).** Guardar todas las versiones (original y comparativos posteriores) con `documento_origen` y `rol`. La serie principal usa la **versión más reciente** de cada período, y la versión original queda disponible para análisis de sensibilidad. Se marca `reclasificado = TRUE` cuando las versiones difieren.
 
 ### 6.2 Frecuencia
-**Pendiente de confirmar. Propuesta:** serie anual 2016–2025 como núcleo, más primeros semestres (enero–junio) de todos los años disponibles. Los trimestres se extraen igual, porque vienen en los mismos documentos, pero no son el foco.
+**Confirmado (30-sep-2026).** H2 se deriva como anual − H1. Los privados tienen semestres desde 2019 (la CMF no publica intermedios 2018). serie anual 2016–2025 como núcleo, más primeros semestres (enero–junio) de todos los años disponibles. Los trimestres se extraen igual, porque vienen en los mismos documentos, pero no son el foco.
 
 ### 6.3 Horizonte
 2016–2026, limitado por la sección de concesionarias de la CMF (el primer EEFF es de diciembre 2017, que trae 2016 como comparativo). TVN podría llegar más atrás, pero no se hace, para mantener un panel equilibrado. No se mezclan cifras anteriores a IFRS (FECU en norma chilena, antes de 2009).
 
-### 6.4 Pesos reales
-Los porcentajes no cambian. Para montos, se deflacta con el IPC (INE o Banco Central) a pesos de un año base, por definir, e indicando la fuente.
+### 6.4 Pesos reales y otras unidades
+**Confirmado (30-sep-2026).** Fuente: Banco Central de Chile (BDE, `src/00_externos.py`). $ de 2025: IPC general, variación mensual oficial encadenada (promedio 2025 = 100). UF: promedio de la UF diaria del período. US$: promedio del dólar observado diario del período.
+
+### 6.5 Perímetro de la muestra
+**Confirmado (30-sep-2026).** Se incluyen La Red y TV+ (y su antecesora UCVTV SpA, 2017). Agregados de industria: «4 grandes» y «6 canales CMF», solo en períodos donde todos informan. No cubren canales que no reportan a la CMF.
+
+### 6.6 Venta de activos de C13
+**Confirmado (30-sep-2026).** Los montos que la nota informa se separan de «Otros ingresos de explotación» como línea propia, Fuera de Napoli pura (`mapeo/desgloses_nota.csv`, con documento y página). Q1 y Q2 2020 quedan sin desglose porque la nota no los informa por trimestre.
 
 ---
 
@@ -303,8 +309,11 @@ Herramientas: pdftotext/pdftoppm (poppler), pdfplumber, Tesseract en `C:\Program
 - C13 hasta sep-2020 informa una sola línea "Ingresos de Publicidad" (sin separar otras plataformas).
 - TVN 2016–mar-2018: "Publicidad en televisión abierta e internet".
 - CHV 2019–2022: línea "Comisión Publicidad TV (TILA)", integrada a publicidad desde 2023; "Eventos y espectáculos" hasta sep-2024.
-- Mega dic-2017 y dic-2019 los informa Red Televisiva Megavisión S.A. y subsidiarias; 2016–2017 trae "Ingresos radiales y otros". Verificar que el perímetro consolidado sea comparable con Megamedia.
+- Mega dic-2017 y dic-2019 los informa Red Televisiva Megavisión S.A. y subsidiarias; 2016–2017 trae "Ingresos radiales y otros". El 2019 informado por Megavisión y por Megamedia (comparativo dic-2020) coincide en todas las categorías: se acepta como comparable.
 - 37 canal-períodos con versiones distintas entre EEFF (reclasificaciones o reexpresiones), en `salidas/ingresos_tv_chile.xlsx`, hoja "versiones".
-- Decisión 6.4 sigue pendiente: el IPC actual (mindicador.cl, variaciones redondeadas a 0,1%, base 2025) es provisional.
 
 **Visualización:** `viz/ingresos_tv.html`, generada desde `viz/plantilla.html` con los datos de `salidas/viz_data.json`; publicada como artifact privado: https://claude.ai/code/artifact/24b23b1a-6dd6-4ee2-8fce-21baef3ee651
+
+**Ampliación (30-sep-2026).** La Red (28 EEFF) y TV+ (28 EEFF, incluido mar-2024 que venía en un RAR dentro del ZIP) extraídos y mapeados; decisiones de mapeo en `mapeo/lineas_mapeo.csv`. Extractor con lectura por coordenadas para celdas vacías (solo como respaldo; los 4 grandes quedan idénticos: 1.350 montos, 0 diferencias). Semilla 48/48. Series del Banco Central en `data/externos/bcch_*.csv`.
+- TV+: «Arriendo espacio de transmisión» e «infomerciales» se informan juntos en los EEFF anuales; codificados igual (Otros / Audiencias mixta A-F).
+- La Red: ingresos cayeron de ~M$6,7 millones (2016) a ~M$1,0 millón (2025).

@@ -35,6 +35,24 @@ def sha256(path_or_bytes):
     return h.hexdigest()
 
 
+SEVENZIP = r"C:\Program Files\7-Zip\7z.exe"
+
+
+def desde_rar(data):
+    """PDF contenidos en un RAR (bytes), extraídos con 7-Zip a un directorio temporal."""
+    import subprocess
+    import tempfile
+    out = []
+    with tempfile.TemporaryDirectory() as td:
+        rar = Path(td) / "a.rar"
+        rar.write_bytes(data)
+        subprocess.run([SEVENZIP, "x", "-y", f"-o{td}\\x", str(rar)], capture_output=True, check=True)
+        for p in sorted((Path(td) / "x").rglob("*")):
+            if p.suffix.lower() == ".pdf":
+                out.append((p.name, p.read_bytes()))
+    return out
+
+
 def main():
     manifest, pdfs = [], []
     for carpeta, canal in CANALES.items():
@@ -56,15 +74,19 @@ def main():
             if f.suffix.lower() == ".zip":
                 with zipfile.ZipFile(f) as z:
                     seen = set()
+                    miembros = []
                     for info in z.infolist():
-                        if info.is_dir() or not info.filename.lower().endswith(".pdf"):
-                            continue
-                        data = z.read(info)
+                        nombre = info.filename.lower()
+                        if nombre.endswith(".pdf") and not info.is_dir():
+                            miembros.append((info.filename, z.read(info)))
+                        elif nombre.endswith(".rar"):  # algunos ZIP de la CMF traen un RAR adentro (TV+ mar-2024)
+                            miembros += desde_rar(z.read(info))
+                    for filename, data in miembros:
                         h = sha256(data)
                         if h in seen:  # los ZIP de la CMF traen PDF repetidos
                             continue
                         seen.add(h)
-                        out = dest / Path(info.filename).name
+                        out = dest / Path(filename).name
                         if not out.exists():
                             out.write_bytes(data)
                         pdfs.append({"canal": canal, "articulo": articulo, "origen": f.name,

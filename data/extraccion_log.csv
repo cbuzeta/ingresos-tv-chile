@@ -56,6 +56,34 @@ Chilevisión,2025-09-30,data/raw/pdf/Chilevisión/101642/Estados financieros.pdf
 Chilevisión,2025-12-31,data/raw/pdf/Chilevisión/109184/2026030214248_1.pdf,OK,,59,pdfplumber,2,2,72498180,11
 Chilevisión,2026-03-31,data/raw/pdf/Chilevisión/111126/2026050359726_1.pdf,OK,,54,pdfplumber,2,2,15107634,7
 Chilevisión,2026-06-30,data/raw/pdf/Chilevisión/113714/2026090594832-1.pdf,OK,,53,pdfplumber,2,4,36231357,8
+La Red,2017-12-31,data/raw/pdf/La Red/29082/articles-29082_recurso_1.pdf,OK,,42,ocr,3,2,6365932,11
+La Red,2019-12-31,data/raw/pdf/La Red/28528/articles-28528_recurso_1.pdf,OK,,43,ocr400,3,2,4211423,14
+La Red,2020-03-31,data/raw/pdf/La Red/29050/2020050177661_2.pdf,OK,,37,ocr,3,2,883508,8
+La Red,2020-06-30,data/raw/pdf/La Red/29820/3.pdf,OK,,40,ocr400,3,2,1628152,10
+La Red,2020-09-30,data/raw/pdf/La Red/38814/2020110486093_3.pdf,OK,,37,pdfplumber,3,2,2736238,7
+La Red,2020-12-31,data/raw/pdf/La Red/47351/2021030120869_1.pdf,OK,,38,pdfplumber,3,2,4038531,9
+La Red,2021-03-31,data/raw/pdf/La Red/47715/2021050210171_2.pdf,OK,,36,pdfplumber,3,2,812532,7
+La Red,2021-06-30,data/raw/pdf/La Red/49398/2021090375853_2.pdf,OK,,38,pdfplumber,3,2,2030895,9
+La Red,2021-09-30,data/raw/pdf/La Red/49905/2021110476849_2.pdf,OK,,36,pdfplumber,3,2,3360262,7
+La Red,2021-12-31,data/raw/pdf/La Red/50694/Estados Financieros.pdf,OK,,38,ocr,3,2,4860420,9
+La Red,2022-03-31,data/raw/pdf/La Red/51267/ESTADOS FINANCIEROS.pdf,OK,,36,pdfplumber,3,2,1229831,7
+La Red,2022-06-30,data/raw/pdf/La Red/53287/2022090358063_3.pdf,OK,,38,pdfplumber,3,2,2256017,9
+La Red,2022-09-30,data/raw/pdf/La Red/57119/2022110454862_1.pdf,OK,,37,pdfplumber,3,2,2943178,7
+La Red,2022-12-31,data/raw/pdf/La Red/72570/2023110499561_3.pdf,OK,,40,pdfplumber,3,2,3638369,10
+La Red,2023-03-31,data/raw/pdf/La Red/76623/2023120563000_3 (1).pdf,OK,,37,pdfplumber,3,2,478940,7
+La Red,2023-06-30,data/raw/pdf/La Red/78503/2024020089846_2.pdf,OK,,39,pdfplumber,3,2,1015686,9
+La Red,2023-09-30,data/raw/pdf/La Red/79938/2024030171021_1.pdf,OK,,37,pdfplumber,3,2,1707310,7
+La Red,2023-12-31,data/raw/pdf/La Red/80608/Estados financieros.pdf,OK,,40,pdfplumber,3,2,2198014,10
+La Red,2024-03-31,data/raw/pdf/La Red/82004/2024060331482_3.pdf,OK,,37,pdfplumber,3,2,454248,7
+La Red,2024-06-30,data/raw/pdf/La Red/85356/2024090481543_3.pdf,OK,,39,pdfplumber,3,2,880290,9
+La Red,2024-09-30,data/raw/pdf/La Red/88267/2024110658354_2.pdf,OK,,37,pdfplumber,3,2,1222674,7
+La Red,2024-12-31,data/raw/pdf/La Red/93015/ESTADOS FINANCIEROS.pdf,OK,,40,pdfplumber,3,2,1788135,10
+La Red,2025-03-31,data/raw/pdf/La Red/95047/2025050380606_2.pdf,OK,,37,pdfplumber,2,2,311712,7
+La Red,2025-06-30,data/raw/pdf/La Red/98821/2025090626005_1.pdf,OK,,40,pdfplumber,2,2,578096,10
+La Red,2025-09-30,data/raw/pdf/La Red/101640/Estados financieros.pdf,OK,,37,pdfplumber,3,2,730966,7
+La Red,2025-12-31,data/raw/pdf/La Red/110595/2026050319078_1.pdf,OK,,40,pdfplumber,3,2,966706,10
+La Red,2026-03-31,data/raw/pdf/La Red/113718/2026080530731-2.pdf,OK,,37,pdfplumber,2,2,159104,7
+La Red,2026-06-30,data/raw/pdf/La Red/113715/2026090587585-2.pdf,OK,,41,pdfplumber,2,2,334657,10
 Mega,2017-12-31,data/raw/pdf/Mega/29085/articles-29085_recurso_1.pdf,OK,,41,ocr400,3,2,100966612,11
 Mega,2019-12-31,data/raw/pdf/Mega/28606/archivo_3.pdf,OK,,40,pdfplumber,3,2,86612405,11
 Mega,2020-03-31,data/raw/pdf/Mega/29051/2020050177471_2.pdf,OK,,37,pdfplumber,3,2,16321301,8
@@ -75,7 +103,7 @@ Mega,2023-06-30,data/raw/pdf/Mega/73702/2023090392195-2 Megamedia S.A. Ficha y n
 Mega,2023-09-30,data/raw/pdf/Mega/75893/2023110516283_2.pdf,OK,,37,pdfplumber,3,4,70023830,8
 Mega,2023-09-30,data/raw/pdf/Mega/75893/2023110516283_3.pdf,OK,,37,pdfplumber,3,4,70023830,8
 Mega,2023-12-31,data/raw/pdf/Mega/79942/2024030188005_2.pdf,OK,,42,pdfplumber,3,2,97817821,12
-Mega,2024-03-31,data/raw/pdf/Mega/82007/Estados financieros consolidados_1.pdf,REVISION,p4 pdfplumber: sin tabla que sume; p4 pdftotext-layout: sin tabla que sume; p4 pdftotext-raw: sin tabla que sume; p4 ocr: sin tabla que sume; p4 ocr400: sin tabla que sume; p29 pdfplumber: sin tabla que sume,,,,,,
+Mega,2024-03-31,data/raw/pdf/Mega/82007/Estados financieros consolidados_1.pdf,REVISION,p4 pdfplumber: sin tabla que sume; p4 pdftotext-layout: sin tabla que sume; p4 pdftotext-raw: sin tabla que sume; p4 pdfplumber-columnas: sin tabla que sume; p4 ocr: sin tabla que sume; p4 ocr400: sin tabla que sume,,,,,,
 Mega,2024-06-30,data/raw/pdf/Mega/85360/2024090483478_2.pdf,OK,,42,pdfplumber,3,4,49977132,12
 Mega,2024-09-30,data/raw/pdf/Mega/88269/2024110652109_2.pdf,OK,,39,pdfplumber,3,4,75226394,9
 Mega,2024-12-31,data/raw/pdf/Mega/93019/ESTADOS FINANCIEROS.pdf,OK,,41,pdfplumber,3,2,102919851,12
@@ -85,6 +113,34 @@ Mega,2025-09-30,data/raw/pdf/Mega/101641/Estados financieros.pdf,OK,,37,pdfplumb
 Mega,2025-12-31,data/raw/pdf/Mega/109207/2026030222620_1.pdf,OK,,39,pdfplumber,3,2,104840064,11
 Mega,2026-03-31,data/raw/pdf/Mega/111125/2026050359100_1.pdf,OK,,37,pdfplumber,3,2,30354736,9
 Mega,2026-06-30,data/raw/pdf/Mega/113710/2026090594478-1.pdf,OK,,39,pdfplumber,3,4,56434970,11
+TV+,2017-12-31,data/raw/pdf/TV+/29081/articles-29081_recurso_1.pdf,OK,,37,ocr,1,1,1843830,3
+TV+,2019-12-31,data/raw/pdf/TV+/28568/archivo(2).pdf,OK,,38,pdfplumber,6,2,3521641,8
+TV+,2020-03-31,data/raw/pdf/TV+/29053/2020050177519_0.pdf,OK,,35,pdfplumber,5,2,944432,5
+TV+,2020-06-30,data/raw/pdf/TV+/29825/4.pdf,OK,,38,pdfplumber,5,4,1848859,7
+TV+,2020-09-30,data/raw/pdf/TV+/38817/2020110477430_3.pdf,OK,,37,pdfplumber,6,2,2954065,5
+TV+,2020-12-31,data/raw/pdf/TV+/47354/2021030116956_1.pdf,OK,,37,pdfplumber,6,2,4462207,7
+TV+,2021-03-31,data/raw/pdf/TV+/47719/2021050209482_4.pdf,OK,,34,pdfplumber-columnas,8,2,1035093,5
+TV+,2021-06-30,data/raw/pdf/TV+/49400/2021090374499_2 (1).pdf,OK,,37,pdfplumber,5,4,2293309,7
+TV+,2021-09-30,data/raw/pdf/TV+/49909/2021110473098_2 (1).pdf,OK,,32,pdfplumber,6,2,3829362,5
+TV+,2021-12-31,data/raw/pdf/TV+/50696/Fecu.pdf,OK,,37,pdfplumber,6,2,5549515,7
+TV+,2022-03-31,data/raw/pdf/TV+/51269/Fecu Marzo 2022.pdf,OK,"descuadre de redondeo en la fuente (total - suma = [1, 0])",33,pdftotext-raw,8,2,1182169,5
+TV+,2022-06-30,data/raw/pdf/TV+/53289/2022090352724_2.pdf,OK,,36,pdfplumber,5,4,2721449,7
+TV+,2022-09-30,data/raw/pdf/TV+/57121/2022110443552_1.pdf,OK,,32,pdfplumber,6,2,4222555,5
+TV+,2022-12-31,data/raw/pdf/TV+/68980/2023030131118_2.pdf,OK,,39,pdfplumber,5,2,5662312,7
+TV+,2023-03-31,data/raw/pdf/TV+/70649/2023050230846_2.pdf,OK,"descuadre de redondeo en la fuente (total - suma = [0, 1])",34,ocr,6,2,1103944,5
+TV+,2023-06-30,data/raw/pdf/TV+/73704/2023090382166-0 FECU JUNIO 2023.pdf,OK,,37,pdfplumber,5,4,2384914,7
+TV+,2023-09-30,data/raw/pdf/TV+/75787/2023110504810_1.pdf,OK,,32,pdfplumber,6,2,3556357,5
+TV+,2023-12-31,data/raw/pdf/TV+/79943/2024030188019_4.pdf,OK,,37,pdfplumber,4,2,4706169,8
+TV+,2024-03-31,data/raw/pdf/TV+/82009/Estados financieros_0.pdf,OK,,34,pdfplumber,3,2,845352,5
+TV+,2024-06-30,data/raw/pdf/TV+/85362/2024090475132_3.pdf,OK,,35,pdfplumber,4,4,1968126,7
+TV+,2024-09-30,data/raw/pdf/TV+/88272/2024110658811_2.pdf,OK,,34,pdfplumber,3,2,3133306,5
+TV+,2024-12-31,data/raw/pdf/TV+/93021/ESTADOS FINACIONEROS.pdf,OK,,38,pdfplumber,3,2,4314302,9
+TV+,2025-03-31,data/raw/pdf/TV+/95053/2025050381488_2.pdf,OK,,33,pdfplumber,3,2,837628,5
+TV+,2025-06-30,data/raw/pdf/TV+/98826/2025090624759_3.pdf,OK,,35,pdfplumber,3,4,1726601,7
+TV+,2025-09-30,data/raw/pdf/TV+/101643/Estados financieros.pdf,OK,,34,pdfplumber,3,2,2700183,5
+TV+,2025-12-31,data/raw/pdf/TV+/109185/2026030214030_2.pdf,OK,,38,pdfplumber,3,2,3724647,9
+TV+,2026-03-31,data/raw/pdf/TV+/111128/2026050359074_2.pdf,OK,,34,pdfplumber,3,2,656874,5
+TV+,2026-06-30,data/raw/pdf/TV+/113712/2026090594782-2.pdf,OK,,40,pdfplumber,3,4,1366132,8
 TVN,,data/raw/pdf/TVN/estados_financieros_2018/estados_financieros_2018.pdf,REVISION,documento sin fecha de cierre,,,,,,
 TVN,2017-03-31,data/raw/pdf/TVN/fecu_mar_2017_libro/fecu_mar_2017_libro.pdf,OK,,61,pdfplumber,2,2,11347715,6
 TVN,2017-06-30,data/raw/pdf/TVN/fecu_jun_2017_libro/fecu_jun_2017_libro.pdf,OK,,64,pdfplumber,2,4,25242798,8
