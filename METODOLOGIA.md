@@ -10,6 +10,8 @@ Contenido: [1. Pregunta y marco](#1-pregunta-y-marco) · [2. Fuentes y cobertura
 
 ¿Qué parte de los ingresos de los canales de TV abierta viene de vender audiencias a los anunciantes y qué parte de vender contenidos? La referencia es la Tabla 1.1 de Napoli (2003), *Audience Economics: Media Institutions and the Audience Marketplace* (Columbia University Press), que ubica a la TV abierta estadounidense de c. 2001 cerca del 100% de ingresos por audiencias y a las cadenas de cable en torno al 60%. Esas dos cifras se usan como referencia en la visualización.
 
+**Comparadores actuales.** Las cifras de Napoli describen EE.UU. c. 2001. Como referencia de hoy se agrega, como punto fechado y no como línea, el de las estaciones locales de TV de EE.UU. en 2022: la publicidad over-the-air (US$20,5 mil millones, Pew Research Center con datos de BIA Advisory Services) equivale al 58,6% de la suma de esa publicidad y los derechos de retransmisión que pagan los cableoperadores (US$14.461,9 millones, proyección de Kagan/S&P publicada por Pew). Es una aproximación: combina un dato efectivo con una proyección y excluye la publicidad digital de las estaciones. Los retransmission fees son, en la práctica, venta de contenidos a los distribuidores. Las referencias viven en `data/externos/referencias/referencias.csv`, con su fuente; los informes de Ofcom (Reino Unido) y del Observatorio Audiovisual Europeo no se pudieron descargar automáticamente y quedan pendientes.
+
 La medida principal es la **participación de la publicidad** en los ingresos de actividades ordinarias. Se mide con la información que los propios canales publican; no se estima nada que las notas no informen.
 
 ## 2. Fuentes y cobertura

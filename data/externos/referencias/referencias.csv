@@ -1,0 +1,4 @@
+id,tipo,anio,valor,etiqueta_es,etiqueta_en,fuente,nota
+napoli_broadcast,linea,,1.0,Napoli: 100% broadcast EE.UU.,Napoli: 100% US broadcast,"Napoli (2003), Audience Economics, tabla 1.1",Referencia teórica c. 2001
+napoli_cable,linea,,0.6,Napoli: 60% cable networks,Napoli: 60% cable networks,"Napoli (2003), Audience Economics, tabla 1.1",Referencia teórica c. 2001
+eeuu_tv_local_2022,punto,2022,0.5864,EE.UU. TV local 2022 (aprox.),US local TV 2022 (approx.),"Pew Research Center, Local TV News Fact Sheet (texto: publicidad over-the-air 2022 = US$20,5 mil millones, análisis de BIA) y gráfico «Retransmission fee revenue» (Kagan/S&P, 2022 = US$14.461.900.000, proyección); data/externos/referencias/pew_chart_4431.csv",Publicidad over-the-air / (publicidad over-the-air + retransmisión). Excluye publicidad digital de las estaciones. Aproximación: combina un dato efectivo con una proyección.

@@ -235,7 +235,9 @@ def main():
     data = {"generado": pd.Timestamp.now().strftime("%Y-%m-%d %H:%M"), "base_ipc": BASE_IPC,
             "agregados": json.loads(agg_v.to_json(orient="records")),
             "lineas": json.loads(lineas.to_json(orient="records")),
-            "eventos": EVENTOS, "reclasificaciones": reclas}
+            "eventos": EVENTOS, "reclasificaciones": reclas,
+            "referencias": pd.read_csv(ROOT / "data" / "externos" / "referencias" / "referencias.csv", dtype=str)
+                             .fillna("").to_dict("records")}
     (SAL / "viz_data.json").write_text(json.dumps(data, ensure_ascii=False), encoding="utf-8")
     plantilla = ROOT / "viz" / "plantilla.html"
     if plantilla.exists():
