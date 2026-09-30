@@ -1,0 +1,87 @@
+101 EEFF con estado de resultados; 86 a revisión
+  Canal 13     2017-12-31  no se encontraron las líneas del estado de resultados
+  Canal 13     2019-12-31  no se encontraron las líneas del estado de resultados
+  Canal 13     2020-03-31  no se encontraron las líneas del estado de resultados
+  Canal 13     2020-06-30  no se encontraron las líneas del estado de resultados
+  Canal 13     2020-09-30  no se encontraron las líneas del estado de resultados
+  Canal 13     2020-12-31  antes de impuestos + impuesto ≠ resultado (col 1)
+  Canal 13     2021-06-30  no se encontraron las líneas del estado de resultados
+  Canal 13     2021-09-30  no se encontraron las líneas del estado de resultados
+  Canal 13     2022-06-30  no se encontraron las líneas del estado de resultados
+  Canal 13     2022-06-30  no se encontraron las líneas del estado de resultados
+  Canal 13     2022-09-30  no se encontraron las líneas del estado de resultados
+  Canal 13     2023-06-30  no se encontraron las líneas del estado de resultados
+  Canal 13     2023-09-30  no se encontraron las líneas del estado de resultados
+  Canal 13     2023-12-31  no se encontraron las líneas del estado de resultados
+  Canal 13     2024-03-31  no se encontraron las líneas del estado de resultados
+  Canal 13     2025-03-31  no se encontraron las líneas del estado de resultados
+  Chilevisión  2017-12-31  no se encontraron las líneas del estado de resultados
+  Chilevisión  2019-12-31  distinto número de columnas entre filas
+  Chilevisión  2020-03-31  distinto número de columnas entre filas
+  Chilevisión  2020-06-30  distinto número de columnas entre filas
+  Chilevisión  2020-09-30  distinto número de columnas entre filas
+  Chilevisión  2020-12-31  distinto número de columnas entre filas
+  Chilevisión  2021-03-31  antes de impuestos + impuesto ≠ resultado (col 0)
+  Chilevisión  2021-06-30  distinto número de columnas entre filas
+  Chilevisión  2021-09-30  antes de impuestos + impuesto ≠ resultado (col 0)
+  Chilevisión  2022-03-31  distinto número de columnas entre filas
+  Chilevisión  2022-06-30  distinto número de columnas entre filas
+  Chilevisión  2022-09-30  distinto número de columnas entre filas
+  Chilevisión  2022-12-31  distinto número de columnas entre filas
+  Chilevisión  2023-03-31  antes de impuestos + impuesto ≠ resultado (col 0)
+  Chilevisión  2023-06-30  distinto número de columnas entre filas
+  Chilevisión  2023-09-30  distinto número de columnas entre filas
+  Chilevisión  2023-12-31  distinto número de columnas entre filas
+  Chilevisión  2024-03-31  distinto número de columnas entre filas
+  Chilevisión  2024-06-30  distinto número de columnas entre filas
+  Chilevisión  2024-09-30  distinto número de columnas entre filas
+  Chilevisión  2024-12-31  distinto número de columnas entre filas
+  Chilevisión  2025-03-31  distinto número de columnas entre filas
+  Chilevisión  2025-06-30  antes de impuestos + impuesto ≠ resultado (col 0)
+  Chilevisión  2025-09-30  distinto número de columnas entre filas
+  Chilevisión  2026-03-31  distinto número de columnas entre filas
+  Chilevisión  2026-06-30  distinto número de columnas entre filas
+  La Red       2019-12-31  ingresos 5088103 no coinciden con la nota de ingresos
+  La Red       2026-03-31  distinto número de columnas entre filas
+  La Red       2026-06-30  no se encontraron las líneas del estado de resultados
+  Mega         2017-12-31  no se encontraron las líneas del estado de resultados
+  Mega         2021-12-31  no se encontraron las líneas del estado de resultados
+  Mega         2026-03-31  distinto número de columnas entre filas
+  Mega         2026-06-30  distinto número de columnas entre filas
+  TV+          2017-12-31  no se encontraron las líneas del estado de resultados
+  TV+          2020-03-31  no se encontraron las líneas del estado de resultados
+  TV+          2020-06-30  no se encontraron las líneas del estado de resultados
+  TV+          2020-09-30  no se encontraron las líneas del estado de resultados
+  TV+          2021-03-31  no se encontraron las líneas del estado de resultados
+  TV+          2021-06-30  antes de impuestos + impuesto ≠ resultado (col 0)
+  TV+          2021-09-30  no se encontraron las líneas del estado de resultados
+  TV+          2022-03-31  no se encontraron las líneas del estado de resultados
+  TV+          2022-09-30  no se encontraron las líneas del estado de resultados
+  TV+          2023-03-31  antes de impuestos + impuesto ≠ resultado (col 0)
+  TV+          2023-09-30  no se encontraron las líneas del estado de resultados
+  TV+          2024-09-30  ingresos + costo ≠ ganancia bruta (col 0)
+  TV+          2025-03-31  antes de impuestos + impuesto ≠ resultado (col 1)
+  TV+          2025-09-30  no se encontraron las líneas del estado de resultados
+  TVN          2019-06-30  no se encontraron las líneas del estado de resultados
+  TVN          2019-09-30  no se encontraron las líneas del estado de resultados
+  TVN          2019-12-31  no se encontraron las líneas del estado de resultados
+  TVN          2020-03-31  no se encontraron las líneas del estado de resultados
+  TVN          2020-06-30  no se encontraron las líneas del estado de resultados
+  TVN          2020-09-30  no se encontraron las líneas del estado de resultados
+  TVN          2020-12-31  no se encontraron las líneas del estado de resultados
+  TVN          2021-03-31  no se encontraron las líneas del estado de resultados
+  TVN          2021-06-30  no se encontraron las líneas del estado de resultados
+  TVN          2021-09-30  no se encontraron las líneas del estado de resultados
+  TVN          2021-12-31  no se encontraron las líneas del estado de resultados
+  TVN          2022-03-31  no se encontraron las líneas del estado de resultados
+  TVN          2022-06-30  no se encontraron las líneas del estado de resultados
+  TVN          2022-09-30  no se encontraron las líneas del estado de resultados
+  TVN          2022-12-31  no se encontraron las líneas del estado de resultados
+  TVN          2023-03-31  no se encontraron las líneas del estado de resultados
+  TVN          2023-06-30  no se encontraron las líneas del estado de resultados
+  TVN          2023-09-30  no se encontraron las líneas del estado de resultados
+  TVN          2023-12-31  no se encontraron las líneas del estado de resultados
+  TVN          2024-03-31  no se encontraron las líneas del estado de resultados
+  TVN          2024-06-30  no se encontraron las líneas del estado de resultados
+  TVN          2024-09-30  no se encontraron las líneas del estado de resultados
+  TVN          2025-12-31  no se encontraron las líneas del estado de resultados

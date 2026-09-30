@@ -1,0 +1,416 @@
+documento,fecha_cierre,tipo_periodo,fin,monto,costo_ventas,estado
+data/raw/pdf/Canal 13/29080/2018040075032.pdf,2017-12-31,anual,2017-12-31,-80611409,-80611409.0,coincide
+data/raw/pdf/Canal 13/29080/2018040075032.pdf,2017-12-31,anual,2016-12-31,-73533061,-73533061.0,coincide
+data/raw/pdf/Canal 13/29049/2020050177776_1.pdf,2020-03-31,trimestre,2020-03-31,-26665488,-26665488.0,coincide
+data/raw/pdf/Canal 13/29049/2020050177776_1.pdf,2020-03-31,trimestre,2019-03-31,-17653637,-17653637.0,coincide
+data/raw/pdf/Canal 13/29819/2.pdf,2020-06-30,semestre,2020-06-30,-36606122,-36606122.0,coincide
+data/raw/pdf/Canal 13/29819/2.pdf,2020-06-30,semestre,2019-06-30,-34792224,-34792224.0,coincide
+data/raw/pdf/Canal 13/29819/2.pdf,2020-06-30,trimestre,2020-06-30,-11504209,-11504209.0,coincide
+data/raw/pdf/Canal 13/29819/2.pdf,2020-06-30,trimestre,2019-06-30,-17138587,-17138587.0,coincide
+data/raw/pdf/Canal 13/38818/2020110488373_1.pdf,2020-09-30,acumulado9m,2020-09-30,-48324118,-48324118.0,coincide
+data/raw/pdf/Canal 13/38818/2020110488373_1.pdf,2020-09-30,acumulado9m,2019-09-30,-49961535,-49961535.0,coincide
+data/raw/pdf/Canal 13/38818/2020110488373_1.pdf,2020-09-30,trimestre,2020-09-30,-11717996,-11717996.0,coincide
+data/raw/pdf/Canal 13/38818/2020110488373_1.pdf,2020-09-30,trimestre,2019-09-30,-15169311,-15169311.0,coincide
+data/raw/pdf/Canal 13/47350/2021030123089_1.pdf,2020-12-31,anual,2020-12-31,-52574580,-52574580.0,coincide
+data/raw/pdf/Canal 13/47350/2021030123089_1.pdf,2020-12-31,anual,2019-12-31,-65317154,-65317154.0,coincide
+data/raw/pdf/Canal 13/47714/2021050211434_3.pdf,2021-03-31,trimestre,2021-03-31,-10161930,-10161930.0,coincide
+data/raw/pdf/Canal 13/47714/2021050211434_3.pdf,2021-03-31,trimestre,2020-03-31,-25101912,-25101912.0,coincide
+data/raw/pdf/Canal 13/49397/2021090376181_3.pdf,2021-06-30,semestre,2021-06-30,-21304897,-21304897.0,coincide
+data/raw/pdf/Canal 13/49397/2021090376181_3.pdf,2021-06-30,semestre,2020-06-30,-36606122,-36606122.0,coincide
+data/raw/pdf/Canal 13/49397/2021090376181_3.pdf,2021-06-30,trimestre,2021-06-30,-11142967,-11142967.0,coincide
+data/raw/pdf/Canal 13/49397/2021090376181_3.pdf,2021-06-30,trimestre,2020-06-30,-11504209,-11504209.0,coincide
+data/raw/pdf/Canal 13/49903/2021110476519_1.pdf,2021-09-30,acumulado9m,2021-09-30,-33543149,-33543149.0,coincide
+data/raw/pdf/Canal 13/49903/2021110476519_1.pdf,2021-09-30,acumulado9m,2020-09-30,-48324118,-48324118.0,coincide
+data/raw/pdf/Canal 13/49903/2021110476519_1.pdf,2021-09-30,trimestre,2021-09-30,-12234784,-12234784.0,coincide
+data/raw/pdf/Canal 13/49903/2021110476519_1.pdf,2021-09-30,trimestre,2020-09-30,-11717996,-11717996.0,coincide
+data/raw/pdf/Canal 13/50693/Estados financieros.pdf,2021-12-31,anual,2021-12-31,-48724724,-48724724.0,coincide
+data/raw/pdf/Canal 13/50693/Estados financieros.pdf,2021-12-31,anual,2020-12-31,-52574580,-52574580.0,coincide
+data/raw/pdf/Canal 13/51266/Estados Financieros Marzo 2022.pdf,2022-03-31,trimestre,2022-03-31,-11587325,-11587325.0,coincide
+data/raw/pdf/Canal 13/51266/Estados Financieros Marzo 2022.pdf,2022-03-31,trimestre,2021-03-31,-9891061,-9891061.0,coincide
+data/raw/pdf/Canal 13/53286/2022090357517_2.pdf,2022-06-30,semestre,2022-06-30,-24295862,-24295862.0,coincide
+data/raw/pdf/Canal 13/53286/2022090357517_2.pdf,2022-06-30,semestre,2021-06-30,-21008745,-21008745.0,coincide
+data/raw/pdf/Canal 13/53286/2022090357517_2.pdf,2022-06-30,trimestre,2022-06-30,-12708537,-12708537.0,coincide
+data/raw/pdf/Canal 13/53286/2022090357517_2.pdf,2022-06-30,trimestre,2021-06-30,-10994891,-10994891.0,coincide
+data/raw/pdf/Canal 13/53286/2022090357517_4.pdf,2022-06-30,semestre,2022-06-30,-24295862,,sin estado de resultados
+data/raw/pdf/Canal 13/53286/2022090357517_4.pdf,2022-06-30,semestre,2021-06-30,-21008745,,sin estado de resultados
+data/raw/pdf/Canal 13/53286/2022090357517_4.pdf,2022-06-30,trimestre,2022-06-30,-12708537,,sin estado de resultados
+data/raw/pdf/Canal 13/53286/2022090357517_4.pdf,2022-06-30,trimestre,2021-06-30,-10994891,,sin estado de resultados
+data/raw/pdf/Canal 13/57118/2022110453755_0.pdf,2022-09-30,acumulado9m,2022-09-30,-36587086,-36587086.0,coincide
+data/raw/pdf/Canal 13/57118/2022110453755_0.pdf,2022-09-30,acumulado9m,2021-09-30,-32778011,-32778011.0,coincide
+data/raw/pdf/Canal 13/57118/2022110453755_0.pdf,2022-09-30,trimestre,2022-09-30,-12291224,-12291224.0,coincide
+data/raw/pdf/Canal 13/57118/2022110453755_0.pdf,2022-09-30,trimestre,2021-09-30,-11769266,-11769266.0,coincide
+data/raw/pdf/Canal 13/68977/2023030137056_2.pdf,2022-12-31,anual,2022-12-31,-51649271,-51649271.0,coincide
+data/raw/pdf/Canal 13/68977/2023030137056_2.pdf,2022-12-31,anual,2021-12-31,-47675823,-47675823.0,coincide
+data/raw/pdf/Canal 13/70644/2023050231569_3.pdf,2023-03-31,trimestre,2023-03-31,-15460618,-15460618.0,coincide
+data/raw/pdf/Canal 13/70644/2023050231569_3.pdf,2023-03-31,trimestre,2022-03-31,-11587325,-11587325.0,coincide
+data/raw/pdf/Canal 13/73693/2023090394048-1 Estados Financieros Intermedios Junio 2023.pdf,2023-06-30,semestre,2023-06-30,-28970897,-28970897.0,coincide
+data/raw/pdf/Canal 13/73693/2023090394048-1 Estados Financieros Intermedios Junio 2023.pdf,2023-06-30,semestre,2022-06-30,-24295862,-24295862.0,coincide
+data/raw/pdf/Canal 13/73693/2023090394048-1 Estados Financieros Intermedios Junio 2023.pdf,2023-06-30,trimestre,2023-06-30,-13510279,-13510279.0,coincide
+data/raw/pdf/Canal 13/73693/2023090394048-1 Estados Financieros Intermedios Junio 2023.pdf,2023-06-30,trimestre,2022-06-30,-12708537,-12708537.0,coincide
+data/raw/pdf/Canal 13/75889/2023110517059_3.pdf,2023-09-30,acumulado9m,2023-09-30,-41371002,-41371002.0,coincide
+data/raw/pdf/Canal 13/75889/2023110517059_3.pdf,2023-09-30,acumulado9m,2022-09-30,-36587086,-36587086.0,coincide
+data/raw/pdf/Canal 13/75889/2023110517059_3.pdf,2023-09-30,trimestre,2023-09-30,-12400105,-12400105.0,coincide
+data/raw/pdf/Canal 13/75889/2023110517059_3.pdf,2023-09-30,trimestre,2022-09-30,-12291224,-12291224.0,coincide
+data/raw/pdf/Canal 13/79944/2024040190694_4.pdf,2023-12-31,anual,2023-12-31,-58038595,-58038595.0,coincide
+data/raw/pdf/Canal 13/79944/2024040190694_4.pdf,2023-12-31,anual,2022-12-31,-51649271,-51649271.0,coincide
+data/raw/pdf/Canal 13/82002/Estados financieros 1.pdf,2024-03-31,trimestre,2024-03-31,-16401890,-16401890.0,coincide
+data/raw/pdf/Canal 13/82002/Estados financieros 1.pdf,2024-03-31,trimestre,2023-03-31,-15460618,-15460618.0,coincide
+data/raw/pdf/Canal 13/85354/2024090487105_3.pdf,2024-06-30,semestre,2024-06-30,-32997131,-32997131.0,coincide
+data/raw/pdf/Canal 13/85354/2024090487105_3.pdf,2024-06-30,semestre,2023-06-30,-28970897,-28970897.0,coincide
+data/raw/pdf/Canal 13/85354/2024090487105_3.pdf,2024-06-30,trimestre,2024-06-30,-16595241,-16595241.0,coincide
+data/raw/pdf/Canal 13/85354/2024090487105_3.pdf,2024-06-30,trimestre,2023-06-30,-13510279,-13510279.0,coincide
+data/raw/pdf/Canal 13/88266/2024110657792_2.pdf,2024-09-30,acumulado9m,2024-09-30,-49347544,-49347544.0,coincide
+data/raw/pdf/Canal 13/88266/2024110657792_2.pdf,2024-09-30,acumulado9m,2023-09-30,-41371002,-41371002.0,coincide
+data/raw/pdf/Canal 13/88266/2024110657792_2.pdf,2024-09-30,trimestre,2024-09-30,-16350413,-16350413.0,coincide
+data/raw/pdf/Canal 13/88266/2024110657792_2.pdf,2024-09-30,trimestre,2023-09-30,-12400105,-12400105.0,coincide
+data/raw/pdf/Canal 13/93013/estados financieros.pdf,2024-12-31,anual,2024-12-31,-64899404,-64899404.0,coincide
+data/raw/pdf/Canal 13/93013/estados financieros.pdf,2024-12-31,anual,2023-12-31,-58038595,-58038595.0,coincide
+data/raw/pdf/Canal 13/95045/2025050380967_0.pdf,2025-03-31,trimestre,2025-03-31,-15107941,,sin estado de resultados
+data/raw/pdf/Canal 13/95045/2025050380967_0.pdf,2025-03-31,trimestre,2024-03-31,-16401890,,sin estado de resultados
+data/raw/pdf/Canal 13/98820/2025090628474_3.pdf,2025-06-30,semestre,2025-06-30,-31531429,-31531429.0,coincide
+data/raw/pdf/Canal 13/98820/2025090628474_3.pdf,2025-06-30,semestre,2024-06-30,-32997131,-32997131.0,coincide
+data/raw/pdf/Canal 13/98820/2025090628474_3.pdf,2025-06-30,trimestre,2025-06-30,-16423488,-16423488.0,coincide
+data/raw/pdf/Canal 13/98820/2025090628474_3.pdf,2025-06-30,trimestre,2024-06-30,-16595241,-16595241.0,coincide
+data/raw/pdf/Canal 13/101639/Estados financieros intermedios.pdf,2025-09-30,acumulado9m,2025-09-30,-47818796,-47818796.0,coincide
+data/raw/pdf/Canal 13/101639/Estados financieros intermedios.pdf,2025-09-30,acumulado9m,2024-09-30,-49347544,-49347544.0,coincide
+data/raw/pdf/Canal 13/101639/Estados financieros intermedios.pdf,2025-09-30,trimestre,2025-09-30,-16287367,-16287367.0,coincide
+data/raw/pdf/Canal 13/101639/Estados financieros intermedios.pdf,2025-09-30,trimestre,2024-09-30,-16350413,-16350413.0,coincide
+data/raw/pdf/Canal 13/109182/2026030220532_1.pdf,2025-12-31,anual,2025-12-31,-64556452,-64556452.0,coincide
+data/raw/pdf/Canal 13/109182/2026030220532_1.pdf,2025-12-31,anual,2024-12-31,-64899404,-64899404.0,coincide
+data/raw/pdf/Canal 13/111123/2026050358805_0.pdf,2026-03-31,trimestre,2026-03-31,-16297441,-16297441.0,coincide
+data/raw/pdf/Canal 13/111123/2026050358805_0.pdf,2026-03-31,trimestre,2025-03-31,-15107941,-15107941.0,coincide
+data/raw/pdf/Canal 13/113709/2026090594155-0.pdf,2026-06-30,semestre,2026-06-30,-36996237,-36996237.0,coincide
+data/raw/pdf/Canal 13/113709/2026090594155-0.pdf,2026-06-30,semestre,2025-06-30,-31531429,-31531429.0,coincide
+data/raw/pdf/Canal 13/113709/2026090594155-0.pdf,2026-06-30,trimestre,2026-06-30,-20698796,-20698796.0,coincide
+data/raw/pdf/Canal 13/113709/2026090594155-0.pdf,2026-06-30,trimestre,2025-06-30,-16423488,-16423488.0,coincide
+data/raw/pdf/Chilevisión/29083/articles-29083_recurso_1.pdf,2017-12-31,anual,2017-12-31,-43474590,,sin estado de resultados
+data/raw/pdf/Chilevisión/29083/articles-29083_recurso_1.pdf,2017-12-31,anual,2016-12-31,-45345789,,sin estado de resultados
+data/raw/pdf/Chilevisión/28710/2020040141840_2.pdf,2019-12-31,anual,2019-12-31,-37830173,-37830173.0,coincide
+data/raw/pdf/Chilevisión/28710/2020040141840_2.pdf,2019-12-31,anual,2018-12-31,-47458948,-47458948.0,coincide
+data/raw/pdf/Chilevisión/29052/2020050178104_2.pdf,2020-03-31,trimestre,2020-03-31,-8155324,-8155324.0,coincide
+data/raw/pdf/Chilevisión/29052/2020050178104_2.pdf,2020-03-31,trimestre,2019-03-31,-9465247,-9465247.0,coincide
+data/raw/pdf/Chilevisión/29823/2.pdf,2020-06-30,semestre,2020-06-30,-14204514,-14204514.0,coincide
+data/raw/pdf/Chilevisión/29823/2.pdf,2020-06-30,semestre,2019-06-30,-17905578,-17905578.0,coincide
+data/raw/pdf/Chilevisión/29823/2.pdf,2020-06-30,trimestre,2020-06-30,-6048462,-6048462.0,coincide
+data/raw/pdf/Chilevisión/29823/2.pdf,2020-06-30,trimestre,2019-06-30,-8935435,-8935435.0,coincide
+data/raw/pdf/Chilevisión/38815/2020110486640_3.pdf,2020-09-30,acumulado9m,2020-09-30,-20985423,-20985423.0,coincide
+data/raw/pdf/Chilevisión/38815/2020110486640_3.pdf,2020-09-30,acumulado9m,2019-09-30,-26793876,-26793876.0,coincide
+data/raw/pdf/Chilevisión/38815/2020110486640_3.pdf,2020-09-30,trimestre,2020-09-30,-6780909,-6780909.0,coincide
+data/raw/pdf/Chilevisión/38815/2020110486640_3.pdf,2020-09-30,trimestre,2019-09-30,-8888298,-8888298.0,coincide
+data/raw/pdf/Chilevisión/47353/2021030124626_1.pdf,2020-12-31,anual,2020-12-31,-32694113,-32694113.0,coincide
+data/raw/pdf/Chilevisión/47353/2021030124626_1.pdf,2020-12-31,anual,2019-12-31,-37830173,-37830173.0,coincide
+data/raw/pdf/Chilevisión/47716/2021050210956_2.pdf,2021-03-31,trimestre,2021-03-31,-8164395,-8164395.0,coincide
+data/raw/pdf/Chilevisión/47716/2021050210956_2.pdf,2021-03-31,trimestre,2020-03-31,-8284637,-8284637.0,coincide
+data/raw/pdf/Chilevisión/49401/2021090377437_0 (2).pdf,2021-06-30,semestre,2021-06-30,-17366355,-17366355.0,coincide
+data/raw/pdf/Chilevisión/49401/2021090377437_0 (2).pdf,2021-06-30,semestre,2020-06-30,-14461210,-14461210.0,coincide
+data/raw/pdf/Chilevisión/49401/2021090377437_0 (2).pdf,2021-06-30,trimestre,2021-06-30,-9201960,-9201960.0,coincide
+data/raw/pdf/Chilevisión/49401/2021090377437_0 (2).pdf,2021-06-30,trimestre,2020-06-30,-6176573,-6176573.0,coincide
+data/raw/pdf/Chilevisión/49918/2021110477681_1 (1).pdf,2021-09-30,acumulado9m,2021-09-30,-28411426,-28411426.0,coincide
+data/raw/pdf/Chilevisión/49918/2021110477681_1 (1).pdf,2021-09-30,acumulado9m,2020-09-30,-20985423,-20985423.0,coincide
+data/raw/pdf/Chilevisión/49918/2021110477681_1 (1).pdf,2021-09-30,trimestre,2021-09-30,-11045071,-11045071.0,coincide
+data/raw/pdf/Chilevisión/49918/2021110477681_1 (1).pdf,2021-09-30,trimestre,2020-09-30,-6524213,-6524213.0,coincide
+data/raw/pdf/Chilevisión/50697/Estados Financieros.pdf,2021-12-31,anual,2021-12-31,-44906663,,sin estado de resultados
+data/raw/pdf/Chilevisión/50697/Estados Financieros.pdf,2021-12-31,anual,2020-12-31,-32694113,,sin estado de resultados
+data/raw/pdf/Chilevisión/51270/Estados Financieros Marzo 2022.pdf,2022-03-31,trimestre,2022-03-31,-9665506,-9665506.0,coincide
+data/raw/pdf/Chilevisión/51270/Estados Financieros Marzo 2022.pdf,2022-03-31,trimestre,2021-03-31,-8164395,-8164395.0,coincide
+data/raw/pdf/Chilevisión/53290/2022090358208_3.pdf,2022-06-30,semestre,2022-06-30,-19299087,-19299087.0,coincide
+data/raw/pdf/Chilevisión/53290/2022090358208_3.pdf,2022-06-30,semestre,2021-06-30,-17366355,-17366355.0,coincide
+data/raw/pdf/Chilevisión/53290/2022090358208_3.pdf,2022-06-30,trimestre,2022-06-30,-9633581,-9633581.0,coincide
+data/raw/pdf/Chilevisión/53290/2022090358208_3.pdf,2022-06-30,trimestre,2021-06-30,-9201960,-9201960.0,coincide
+data/raw/pdf/Chilevisión/57122/2022110453703_1.pdf,2022-09-30,acumulado9m,2022-09-30,-30881634,,sin estado de resultados
+data/raw/pdf/Chilevisión/57122/2022110453703_1.pdf,2022-09-30,acumulado9m,2021-09-30,-28411426,,sin estado de resultados
+data/raw/pdf/Chilevisión/57122/2022110453703_1.pdf,2022-09-30,trimestre,2022-09-30,-11582547,,sin estado de resultados
+data/raw/pdf/Chilevisión/57122/2022110453703_1.pdf,2022-09-30,trimestre,2021-09-30,-11045071,,sin estado de resultados
+data/raw/pdf/Chilevisión/68983/2023030138847_1.pdf,2022-12-31,anual,2022-12-31,-43478422,-43478422.0,coincide
+data/raw/pdf/Chilevisión/68983/2023030138847_1.pdf,2022-12-31,anual,2021-12-31,-44906663,-44906663.0,coincide
+data/raw/pdf/Chilevisión/70647/2023050232246_1.pdf,2023-03-31,trimestre,2023-03-31,-10003209,,sin estado de resultados
+data/raw/pdf/Chilevisión/70647/2023050232246_1.pdf,2023-03-31,trimestre,2022-03-31,-9665506,,sin estado de resultados
+data/raw/pdf/Chilevisión/73701/2023090394685-3 Estados Financieros 06.2023.pdf,2023-06-30,semestre,2023-06-30,-21965489,,sin estado de resultados
+data/raw/pdf/Chilevisión/73701/2023090394685-3 Estados Financieros 06.2023.pdf,2023-06-30,semestre,2022-06-30,-19299087,,sin estado de resultados
+data/raw/pdf/Chilevisión/73701/2023090394685-3 Estados Financieros 06.2023.pdf,2023-06-30,trimestre,2023-06-30,-11962280,,sin estado de resultados
+data/raw/pdf/Chilevisión/73701/2023090394685-3 Estados Financieros 06.2023.pdf,2023-06-30,trimestre,2022-06-30,-9633581,,sin estado de resultados
+data/raw/pdf/Chilevisión/75891/2023110513636_2.pdf,2023-09-30,acumulado9m,2023-09-30,-36248758,-37394741.0,difiere
+data/raw/pdf/Chilevisión/75891/2023110513636_2.pdf,2023-09-30,acumulado9m,2022-09-30,-30881634,-30881634.0,coincide
+data/raw/pdf/Chilevisión/75891/2023110513636_2.pdf,2023-09-30,trimestre,2023-09-30,-14308145,-14308145.0,coincide
+data/raw/pdf/Chilevisión/75891/2023110513636_2.pdf,2023-09-30,trimestre,2022-09-30,-11582547,-11582547.0,coincide
+data/raw/pdf/Chilevisión/79941/2024030188463_3.pdf,2023-12-31,anual,2023-12-31,-55925607,-55925607.0,coincide
+data/raw/pdf/Chilevisión/79941/2024030188463_3.pdf,2023-12-31,anual,2022-12-31,-43478422,-43478422.0,coincide
+data/raw/pdf/Chilevisión/82006/Estados financieros_3.pdf,2024-03-31,trimestre,2024-03-31,-13785725,-13785725.0,coincide
+data/raw/pdf/Chilevisión/82006/Estados financieros_3.pdf,2024-03-31,trimestre,2023-03-31,-10003209,-10003209.0,coincide
+data/raw/pdf/Chilevisión/85359/2024090483672_2.pdf,2024-06-30,semestre,2024-06-30,-26937606,-26937606.0,coincide
+data/raw/pdf/Chilevisión/85359/2024090483672_2.pdf,2024-06-30,semestre,2023-06-30,-21965489,-21965489.0,coincide
+data/raw/pdf/Chilevisión/85359/2024090483672_2.pdf,2024-06-30,trimestre,2024-06-30,-13151881,-13151881.0,coincide
+data/raw/pdf/Chilevisión/85359/2024090483672_2.pdf,2024-06-30,trimestre,2023-06-30,-11962280,-11962280.0,coincide
+data/raw/pdf/Chilevisión/88270/2024110655725_1.pdf,2024-09-30,acumulado9m,2024-09-30,-44993124,-44993124.0,coincide
+data/raw/pdf/Chilevisión/88270/2024110655725_1.pdf,2024-09-30,acumulado9m,2023-09-30,-37394741,-37394741.0,coincide
+data/raw/pdf/Chilevisión/88270/2024110655725_1.pdf,2024-09-30,trimestre,2024-09-30,-18055518,-18055518.0,coincide
+data/raw/pdf/Chilevisión/88270/2024110655725_1.pdf,2024-09-30,trimestre,2023-09-30,-15429252,-15429252.0,coincide
+data/raw/pdf/Chilevisión/93017/ESTADOS FINANCIEROS.pdf,2024-12-31,anual,2024-12-31,-63421862,-63421863.0,coincide
+data/raw/pdf/Chilevisión/93017/ESTADOS FINANCIEROS.pdf,2024-12-31,anual,2023-12-31,-55925607,-55925607.0,coincide
+data/raw/pdf/Chilevisión/95049/2025050383970_1.pdf,2025-03-31,trimestre,2025-03-31,-13931224,-13931224.0,coincide
+data/raw/pdf/Chilevisión/95049/2025050383970_1.pdf,2025-03-31,trimestre,2024-03-31,-13785725,-13785725.0,coincide
+data/raw/pdf/Chilevisión/98825/2025090626894_1.pdf,2025-06-30,semestre,2025-06-30,-28953735,-28953735.0,coincide
+data/raw/pdf/Chilevisión/98825/2025090626894_1.pdf,2025-06-30,semestre,2024-06-30,-26937606,-26937606.0,coincide
+data/raw/pdf/Chilevisión/98825/2025090626894_1.pdf,2025-06-30,trimestre,2025-06-30,-15315211,-15315211.0,coincide
+data/raw/pdf/Chilevisión/98825/2025090626894_1.pdf,2025-06-30,trimestre,2024-06-30,-13151881,-13151881.0,coincide
+data/raw/pdf/Chilevisión/101642/Estados financieros.pdf,2025-09-30,acumulado9m,2025-09-30,-44192682,-44192682.0,coincide
+data/raw/pdf/Chilevisión/101642/Estados financieros.pdf,2025-09-30,acumulado9m,2024-09-30,-44993124,-44993124.0,coincide
+data/raw/pdf/Chilevisión/101642/Estados financieros.pdf,2025-09-30,trimestre,2025-09-30,-15238947,-15238947.0,coincide
+data/raw/pdf/Chilevisión/101642/Estados financieros.pdf,2025-09-30,trimestre,2024-09-30,-18055518,-18055518.0,coincide
+data/raw/pdf/Chilevisión/109184/2026030214248_1.pdf,2025-12-31,anual,2025-12-31,-59219262,-59219262.0,coincide
+data/raw/pdf/Chilevisión/109184/2026030214248_1.pdf,2025-12-31,anual,2024-12-31,-63421863,-63421863.0,coincide
+data/raw/pdf/Chilevisión/111126/2026050359726_1.pdf,2026-03-31,trimestre,2026-03-31,-13094314,-13094314.0,coincide
+data/raw/pdf/Chilevisión/111126/2026050359726_1.pdf,2026-03-31,trimestre,2025-03-31,-13931224,-13931224.0,coincide
+data/raw/pdf/Chilevisión/113714/2026090594832-1.pdf,2026-06-30,semestre,2026-06-30,-27712816,-27712816.0,coincide
+data/raw/pdf/Chilevisión/113714/2026090594832-1.pdf,2026-06-30,semestre,2025-06-30,-28953735,-28953735.0,coincide
+data/raw/pdf/Chilevisión/113714/2026090594832-1.pdf,2026-06-30,trimestre,2026-06-30,-14618184,-14618184.0,coincide
+data/raw/pdf/Chilevisión/113714/2026090594832-1.pdf,2026-06-30,trimestre,2025-06-30,-15315211,-15315211.0,coincide
+data/raw/pdf/Mega/28606/archivo_3.pdf,2019-12-31,anual,2019-12-31,-72351517,-72351517.0,coincide
+data/raw/pdf/Mega/28606/archivo_3.pdf,2019-12-31,anual,2018-12-31,-75412903,-75412903.0,coincide
+data/raw/pdf/Mega/29051/2020050177471_2.pdf,2020-03-31,trimestre,2020-03-31,-14146026,-14146026.0,coincide
+data/raw/pdf/Mega/29051/2020050177471_2.pdf,2020-03-31,trimestre,2019-03-31,-16521396,-16521396.0,coincide
+data/raw/pdf/Mega/29822/3.pdf,2020-06-30,semestre,2020-06-30,-29381942,-29381942.0,coincide
+data/raw/pdf/Mega/29822/3.pdf,2020-06-30,semestre,2019-06-30,-37847264,-37847264.0,coincide
+data/raw/pdf/Mega/29822/3.pdf,2020-06-30,trimestre,2020-06-30,-15235916,-15235916.0,coincide
+data/raw/pdf/Mega/29822/3.pdf,2020-06-30,trimestre,2019-06-30,-21325868,-21325868.0,coincide
+data/raw/pdf/Mega/38819/2020110485843_2.pdf,2020-09-30,acumulado9m,2020-09-30,-39953231,-39953231.0,coincide
+data/raw/pdf/Mega/38819/2020110485843_2.pdf,2020-09-30,acumulado9m,2019-09-30,-55698122,-55698122.0,coincide
+data/raw/pdf/Mega/38819/2020110485843_2.pdf,2020-09-30,trimestre,2020-09-30,-9972525,-9972525.0,coincide
+data/raw/pdf/Mega/38819/2020110485843_2.pdf,2020-09-30,trimestre,2019-09-30,-17746112,-17746112.0,coincide
+data/raw/pdf/Mega/47352/2021030123006_1.pdf,2020-12-31,anual,2020-12-31,-55472853,-55472853.0,coincide
+data/raw/pdf/Mega/47352/2021030123006_1.pdf,2020-12-31,anual,2019-12-31,-72644630,-72644630.0,coincide
+data/raw/pdf/Mega/47717/2021050208939_1.pdf,2021-03-31,trimestre,2021-03-31,-12914664,-12914664.0,coincide
+data/raw/pdf/Mega/47717/2021050208939_1.pdf,2021-03-31,trimestre,2020-03-31,-14296960,-14296960.0,coincide
+data/raw/pdf/Mega/49403/2021090374840_0 (1).pdf,2021-06-30,semestre,2021-06-30,-30628695,-30628695.0,coincide
+data/raw/pdf/Mega/49403/2021090374840_0 (1).pdf,2021-06-30,semestre,2020-06-30,-29980706,-29980706.0,coincide
+data/raw/pdf/Mega/49403/2021090374840_0 (1).pdf,2021-06-30,trimestre,2021-06-30,-17714031,-17714031.0,coincide
+data/raw/pdf/Mega/49403/2021090374840_0 (1).pdf,2021-06-30,trimestre,2020-06-30,-15683746,-15683746.0,coincide
+data/raw/pdf/Mega/49907/2021110471982_1.pdf,2021-09-30,acumulado9m,2021-09-30,-48083424,-48083424.0,coincide
+data/raw/pdf/Mega/49907/2021110471982_1.pdf,2021-09-30,acumulado9m,2020-09-30,-39953231,-39953231.0,coincide
+data/raw/pdf/Mega/49907/2021110471982_1.pdf,2021-09-30,trimestre,2021-09-30,-17454729,-17454729.0,coincide
+data/raw/pdf/Mega/49907/2021110471982_1.pdf,2021-09-30,trimestre,2020-09-30,-9972525,-9972525.0,coincide
+data/raw/pdf/Mega/50699/EEFF.pdf,2021-12-31,anual,2021-12-31,-66635964,,sin estado de resultados
+data/raw/pdf/Mega/50699/EEFF.pdf,2021-12-31,anual,2020-12-31,-55472853,,sin estado de resultados
+data/raw/pdf/Mega/51272/Ficha y Notas Megamedia S.A. 31.03.2022.pdf,2022-03-31,trimestre,2022-03-31,-16509620,-16509620.0,coincide
+data/raw/pdf/Mega/51272/Ficha y Notas Megamedia S.A. 31.03.2022.pdf,2022-03-31,trimestre,2021-03-31,-12914664,-12914664.0,coincide
+data/raw/pdf/Mega/53293/2022090356584_1.pdf,2022-06-30,semestre,2022-06-30,-33724605,-33724605.0,coincide
+data/raw/pdf/Mega/53293/2022090356584_1.pdf,2022-06-30,semestre,2021-06-30,-30628695,-30628695.0,coincide
+data/raw/pdf/Mega/53293/2022090356584_1.pdf,2022-06-30,trimestre,2022-06-30,-17214985,-17214985.0,coincide
+data/raw/pdf/Mega/53293/2022090356584_1.pdf,2022-06-30,trimestre,2021-06-30,-17714031,-17714031.0,coincide
+data/raw/pdf/Mega/57125/2022110448272_0.pdf,2022-09-30,acumulado9m,2022-09-30,-52889371,-52889371.0,coincide
+data/raw/pdf/Mega/57125/2022110448272_0.pdf,2022-09-30,acumulado9m,2021-09-30,-48083424,-48083424.0,coincide
+data/raw/pdf/Mega/57125/2022110448272_0.pdf,2022-09-30,trimestre,2022-09-30,-19164766,-19164766.0,coincide
+data/raw/pdf/Mega/57125/2022110448272_0.pdf,2022-09-30,trimestre,2021-09-30,-17454729,-17454729.0,coincide
+data/raw/pdf/Mega/68984/2023030137794_1.pdf,2022-12-31,anual,2022-12-31,-70344903,-70344903.0,coincide
+data/raw/pdf/Mega/68984/2023030137794_1.pdf,2022-12-31,anual,2021-12-31,-66635964,-66635964.0,coincide
+data/raw/pdf/Mega/70646/2023050231873_1.pdf,2023-03-31,trimestre,2023-03-31,-17070689,-17070689.0,coincide
+data/raw/pdf/Mega/70646/2023050231873_1.pdf,2023-03-31,trimestre,2022-03-31,-16509620,-16509620.0,coincide
+data/raw/pdf/Mega/73702/2023090392195-2 Megamedia S.A. Ficha y notas al 30.06.2023.pdf,2023-06-30,semestre,2023-06-30,-35617345,-35617345.0,coincide
+data/raw/pdf/Mega/73702/2023090392195-2 Megamedia S.A. Ficha y notas al 30.06.2023.pdf,2023-06-30,semestre,2022-06-30,-33724605,-33724605.0,coincide
+data/raw/pdf/Mega/73702/2023090392195-2 Megamedia S.A. Ficha y notas al 30.06.2023.pdf,2023-06-30,trimestre,2023-06-30,-18546656,-18546656.0,coincide
+data/raw/pdf/Mega/73702/2023090392195-2 Megamedia S.A. Ficha y notas al 30.06.2023.pdf,2023-06-30,trimestre,2022-06-30,-17214985,-17214985.0,coincide
+data/raw/pdf/Mega/75893/2023110516283_2.pdf,2023-09-30,acumulado9m,2023-09-30,-52851524,-52851524.0,coincide
+data/raw/pdf/Mega/75893/2023110516283_2.pdf,2023-09-30,acumulado9m,2022-09-30,-52889371,-52889371.0,coincide
+data/raw/pdf/Mega/75893/2023110516283_2.pdf,2023-09-30,trimestre,2023-09-30,-17234179,-17234179.0,coincide
+data/raw/pdf/Mega/75893/2023110516283_2.pdf,2023-09-30,trimestre,2022-09-30,-19164766,-19164766.0,coincide
+data/raw/pdf/Mega/75893/2023110516283_3.pdf,2023-09-30,acumulado9m,2023-09-30,-52851524,,sin estado de resultados
+data/raw/pdf/Mega/75893/2023110516283_3.pdf,2023-09-30,acumulado9m,2022-09-30,-52889371,,sin estado de resultados
+data/raw/pdf/Mega/75893/2023110516283_3.pdf,2023-09-30,trimestre,2023-09-30,-17234179,,sin estado de resultados
+data/raw/pdf/Mega/75893/2023110516283_3.pdf,2023-09-30,trimestre,2022-09-30,-19164766,,sin estado de resultados
+data/raw/pdf/Mega/79942/2024030188005_2.pdf,2023-12-31,anual,2023-12-31,-70273169,-70273169.0,coincide
+data/raw/pdf/Mega/79942/2024030188005_2.pdf,2023-12-31,anual,2022-12-31,-70344903,-70344903.0,coincide
+data/raw/pdf/Mega/82007/Estados financieros consolidados_1.pdf,2024-03-31,trimestre,2024-03-31,-17322281,,sin estado de resultados
+data/raw/pdf/Mega/82007/Estados financieros consolidados_1.pdf,2024-03-31,trimestre,2023-03-31,-17070689,,sin estado de resultados
+data/raw/pdf/Mega/85360/2024090483478_2.pdf,2024-06-30,semestre,2024-06-30,-36464311,-36464311.0,coincide
+data/raw/pdf/Mega/85360/2024090483478_2.pdf,2024-06-30,semestre,2023-06-30,-35617345,-35617345.0,coincide
+data/raw/pdf/Mega/85360/2024090483478_2.pdf,2024-06-30,trimestre,2024-06-30,-19142030,-19142030.0,coincide
+data/raw/pdf/Mega/85360/2024090483478_2.pdf,2024-06-30,trimestre,2023-06-30,-18546656,-18546656.0,coincide
+data/raw/pdf/Mega/88269/2024110652109_2.pdf,2024-09-30,acumulado9m,2024-09-30,-55545771,-55545771.0,coincide
+data/raw/pdf/Mega/88269/2024110652109_2.pdf,2024-09-30,acumulado9m,2023-09-30,-52851524,-52851524.0,coincide
+data/raw/pdf/Mega/88269/2024110652109_2.pdf,2024-09-30,trimestre,2024-09-30,-19081460,-19081460.0,coincide
+data/raw/pdf/Mega/88269/2024110652109_2.pdf,2024-09-30,acumulado9m,2023-09-30,-17234179,-52851524.0,difiere
+data/raw/pdf/Mega/93019/ESTADOS FINANCIEROS.pdf,2024-12-31,anual,2024-12-31,-77029808,-77029808.0,coincide
+data/raw/pdf/Mega/93019/ESTADOS FINANCIEROS.pdf,2024-12-31,anual,2023-12-31,-70273169,-70273169.0,coincide
+data/raw/pdf/Mega/95052/2025050382210_1 (1).pdf,2025-03-31,trimestre,2025-03-31,-25150501,-25150501.0,coincide
+data/raw/pdf/Mega/95052/2025050382210_1 (1).pdf,2025-03-31,trimestre,2024-03-31,-17322281,-17322281.0,coincide
+data/raw/pdf/Mega/98823/2025090625950_1.pdf,2025-06-30,semestre,2025-06-30,-43019918,-43019918.0,coincide
+data/raw/pdf/Mega/98823/2025090625950_1.pdf,2025-06-30,semestre,2024-06-30,-36464311,-36464311.0,coincide
+data/raw/pdf/Mega/98823/2025090625950_1.pdf,2025-06-30,trimestre,2025-06-30,-17869417,-17869417.0,coincide
+data/raw/pdf/Mega/98823/2025090625950_1.pdf,2025-06-30,trimestre,2024-06-30,-19142030,-19142030.0,coincide
+data/raw/pdf/Mega/101641/Estados financieros.pdf,2025-09-30,acumulado9m,2025-09-30,-60471720,-60471720.0,coincide
+data/raw/pdf/Mega/101641/Estados financieros.pdf,2025-09-30,acumulado9m,2024-09-30,-55545771,-55545771.0,coincide
+data/raw/pdf/Mega/101641/Estados financieros.pdf,2025-09-30,trimestre,2025-09-30,-17451802,-17451802.0,coincide
+data/raw/pdf/Mega/101641/Estados financieros.pdf,2025-09-30,trimestre,2024-09-30,-19081460,-19081460.0,coincide
+data/raw/pdf/Mega/109207/2026030222620_1.pdf,2025-12-31,anual,2025-12-31,-79439435,-79439435.0,coincide
+data/raw/pdf/Mega/109207/2026030222620_1.pdf,2025-12-31,anual,2024-12-31,-77029808,-77029808.0,coincide
+data/raw/pdf/Mega/111125/2026050359100_1.pdf,2026-03-31,trimestre,2026-03-31,-26644186,,sin estado de resultados
+data/raw/pdf/Mega/111125/2026050359100_1.pdf,2026-03-31,trimestre,2025-03-31,-25150501,,sin estado de resultados
+data/raw/pdf/Mega/113710/2026090594478-1.pdf,2026-06-30,semestre,2026-06-30,-48183294,,sin estado de resultados
+data/raw/pdf/Mega/113710/2026090594478-1.pdf,2026-06-30,semestre,2025-06-30,-43019918,,sin estado de resultados
+data/raw/pdf/Mega/113710/2026090594478-1.pdf,2026-06-30,trimestre,2026-06-30,-21539108,,sin estado de resultados
+data/raw/pdf/Mega/113710/2026090594478-1.pdf,2026-06-30,trimestre,2025-06-30,-17869417,,sin estado de resultados
+data/raw/pdf/TV+/29081/articles-29081_recurso_1.pdf,2017-12-31,anual,2017-12-31,1201594,,sin estado de resultados
+data/raw/pdf/TV+/28568/archivo(2).pdf,2019-12-31,anual,2019-12-31,2893248,-2893248.0,coincide
+data/raw/pdf/TV+/28568/archivo(2).pdf,2019-12-31,anual,2018-12-31,2899477,-2899477.0,coincide
+data/raw/pdf/TV+/29825/4.pdf,2020-06-30,semestre,2020-06-30,1550151,,sin estado de resultados
+data/raw/pdf/TV+/29825/4.pdf,2020-06-30,semestre,2019-06-30,1566055,,sin estado de resultados
+data/raw/pdf/TV+/29825/4.pdf,2020-06-30,trimestre,2020-06-30,722724,,sin estado de resultados
+data/raw/pdf/TV+/29825/4.pdf,2020-06-30,trimestre,2019-06-30,878560,,sin estado de resultados
+data/raw/pdf/TV+/38817/2020110477430_3.pdf,2020-09-30,acumulado9m,2020-09-30,2357885,,sin estado de resultados
+data/raw/pdf/TV+/38817/2020110477430_3.pdf,2020-09-30,acumulado9m,2019-09-30,2320116,,sin estado de resultados
+data/raw/pdf/TV+/47354/2021030116956_1.pdf,2020-12-31,anual,2020-12-31,3353581,-3353581.0,coincide
+data/raw/pdf/TV+/47354/2021030116956_1.pdf,2020-12-31,anual,2019-12-31,2893248,-2893248.0,coincide
+data/raw/pdf/TV+/47719/2021050209482_4.pdf,2021-03-31,trimestre,2021-03-31,804061,,sin estado de resultados
+data/raw/pdf/TV+/47719/2021050209482_4.pdf,2021-03-31,trimestre,2020-03-31,827427,,sin estado de resultados
+data/raw/pdf/TV+/49400/2021090374499_2 (1).pdf,2021-06-30,semestre,2021-06-30,305650,,sin estado de resultados
+data/raw/pdf/TV+/49400/2021090374499_2 (1).pdf,2021-06-30,semestre,2020-06-30,293905,,sin estado de resultados
+data/raw/pdf/TV+/49909/2021110473098_2 (1).pdf,2021-09-30,acumulado9m,2021-09-30,2853632,,sin estado de resultados
+data/raw/pdf/TV+/49909/2021110473098_2 (1).pdf,2021-09-30,acumulado9m,2020-09-30,2357885,,sin estado de resultados
+data/raw/pdf/TV+/50696/Fecu.pdf,2021-12-31,anual,2021-12-31,3971638,-3971638.0,coincide
+data/raw/pdf/TV+/50696/Fecu.pdf,2021-12-31,anual,2020-12-31,3353581,-3353581.0,coincide
+data/raw/pdf/TV+/51269/Fecu Marzo 2022.pdf,2022-03-31,trimestre,2022-03-31,964817,,sin estado de resultados
+data/raw/pdf/TV+/51269/Fecu Marzo 2022.pdf,2022-03-31,trimestre,2021-03-31,804061,,sin estado de resultados
+data/raw/pdf/TV+/53289/2022090352724_2.pdf,2022-06-30,semestre,2022-06-30,1999739,-1999739.0,coincide
+data/raw/pdf/TV+/53289/2022090352724_2.pdf,2022-06-30,semestre,2021-06-30,1760579,-1760579.0,coincide
+data/raw/pdf/TV+/53289/2022090352724_2.pdf,2022-06-30,trimestre,2022-06-30,1053064,-1053064.0,coincide
+data/raw/pdf/TV+/53289/2022090352724_2.pdf,2022-06-30,trimestre,2021-06-30,956518,-956518.0,coincide
+data/raw/pdf/TV+/57121/2022110443552_1.pdf,2022-09-30,acumulado9m,2022-09-30,3133994,,sin estado de resultados
+data/raw/pdf/TV+/57121/2022110443552_1.pdf,2022-09-30,acumulado9m,2021-09-30,2853632,,sin estado de resultados
+data/raw/pdf/TV+/68980/2023030131118_2.pdf,2022-12-31,anual,2022-12-31,4297657,-4297657.0,coincide
+data/raw/pdf/TV+/68980/2023030131118_2.pdf,2022-12-31,anual,2021-12-31,3971638,-3971638.0,coincide
+data/raw/pdf/TV+/70649/2023050230846_2.pdf,2023-03-31,trimestre,2023-03-31,1052305,,sin estado de resultados
+data/raw/pdf/TV+/70649/2023050230846_2.pdf,2023-03-31,trimestre,2022-03-31,964817,,sin estado de resultados
+data/raw/pdf/TV+/73704/2023090382166-0 FECU JUNIO 2023.pdf,2023-06-30,semestre,2023-06-30,2162931,-2162930.0,coincide
+data/raw/pdf/TV+/73704/2023090382166-0 FECU JUNIO 2023.pdf,2023-06-30,semestre,2022-06-30,1999739,-1999739.0,coincide
+data/raw/pdf/TV+/73704/2023090382166-0 FECU JUNIO 2023.pdf,2023-06-30,trimestre,2023-06-30,1116384,-1116384.0,coincide
+data/raw/pdf/TV+/73704/2023090382166-0 FECU JUNIO 2023.pdf,2023-06-30,trimestre,2022-06-30,1053064,-1053064.0,coincide
+data/raw/pdf/TV+/75787/2023110504810_1.pdf,2023-09-30,acumulado9m,2023-09-30,3232470,,sin estado de resultados
+data/raw/pdf/TV+/75787/2023110504810_1.pdf,2023-09-30,acumulado9m,2022-09-30,3133994,,sin estado de resultados
+data/raw/pdf/TV+/79943/2024030188019_4.pdf,2023-12-31,anual,2023-12-31,4392160,-4392160.0,coincide
+data/raw/pdf/TV+/79943/2024030188019_4.pdf,2023-12-31,anual,2022-12-31,4297657,-4297657.0,coincide
+data/raw/pdf/TV+/82009/Estados financieros_0.pdf,2024-03-31,trimestre,2024-03-31,973474,-973474.0,coincide
+data/raw/pdf/TV+/82009/Estados financieros_0.pdf,2024-03-31,trimestre,2023-03-31,1052305,-1052305.0,coincide
+data/raw/pdf/TV+/85362/2024090475132_3.pdf,2024-06-30,semestre,2024-06-30,254758,-1961233.0,difiere
+data/raw/pdf/TV+/85362/2024090475132_3.pdf,2024-06-30,semestre,2023-06-30,260714,-2162930.0,difiere
+data/raw/pdf/TV+/88272/2024110658811_2.pdf,2024-09-30,acumulado9m,2024-09-30,3117787,,sin estado de resultados
+data/raw/pdf/TV+/88272/2024110658811_2.pdf,2024-09-30,acumulado9m,2023-09-30,3232470,,sin estado de resultados
+data/raw/pdf/TV+/93021/ESTADOS FINACIONEROS.pdf,2024-12-31,anual,2024-12-31,4191808,-4191808.0,coincide
+data/raw/pdf/TV+/93021/ESTADOS FINACIONEROS.pdf,2024-12-31,anual,2023-12-31,4392160,-4392160.0,coincide
+data/raw/pdf/TV+/95053/2025050381488_2.pdf,2025-03-31,trimestre,2025-03-31,944434,,sin estado de resultados
+data/raw/pdf/TV+/95053/2025050381488_2.pdf,2025-03-31,trimestre,2024-03-31,973474,,sin estado de resultados
+data/raw/pdf/TV+/98826/2025090624759_3.pdf,2025-06-30,semestre,2025-06-30,267064,-1981965.0,difiere
+data/raw/pdf/TV+/98826/2025090624759_3.pdf,2025-06-30,semestre,2024-06-30,268189,-1961233.0,difiere
+data/raw/pdf/TV+/101643/Estados financieros.pdf,2025-09-30,acumulado9m,2025-09-30,3030637,,sin estado de resultados
+data/raw/pdf/TV+/101643/Estados financieros.pdf,2025-09-30,acumulado9m,2024-09-30,3117787,,sin estado de resultados
+data/raw/pdf/TV+/109185/2026030214030_2.pdf,2025-12-31,anual,2025-12-31,4055487,-4055487.0,coincide
+data/raw/pdf/TV+/109185/2026030214030_2.pdf,2025-12-31,anual,2024-12-31,4191808,-4191808.0,coincide
+data/raw/pdf/TV+/111128/2026050359074_2.pdf,2026-03-31,trimestre,2026-03-31,801424,-801424.0,coincide
+data/raw/pdf/TV+/111128/2026050359074_2.pdf,2026-03-31,trimestre,2025-03-31,944434,-944434.0,coincide
+data/raw/pdf/TV+/113712/2026090594782-2.pdf,2026-06-30,semestre,2026-06-30,1658732,-1658732.0,coincide
+data/raw/pdf/TV+/113712/2026090594782-2.pdf,2026-06-30,semestre,2025-06-30,1981965,-1981965.0,coincide
+data/raw/pdf/TV+/113712/2026090594782-2.pdf,2026-06-30,trimestre,2026-06-30,865834,-865834.0,coincide
+data/raw/pdf/TV+/113712/2026090594782-2.pdf,2026-06-30,trimestre,2025-06-30,1037591,-1037591.0,coincide
+data/raw/pdf/TVN/fecu_dic_2017_libro/fecu_dic_2017_libro.pdf,2017-12-31,anual,2017-12-31,51690777,-51690777.0,coincide
+data/raw/pdf/TVN/fecu_dic_2017_libro/fecu_dic_2017_libro.pdf,2017-12-31,anual,2016-12-31,50458570,-50458570.0,coincide
+data/raw/pdf/TVN/fecu_mar_2018_libro/fecu_mar_2018_libro.pdf,2018-03-31,trimestre,2018-03-31,11811315,-11811315.0,coincide
+data/raw/pdf/TVN/fecu_mar_2018_libro/fecu_mar_2018_libro.pdf,2018-03-31,trimestre,2017-03-31,12249882,-12249882.0,coincide
+data/raw/pdf/TVN/fecu_06_2018_libro/fecu_06_2018_libro.pdf,2018-06-30,semestre,2018-06-30,23744957,-23744957.0,coincide
+data/raw/pdf/TVN/fecu_06_2018_libro/fecu_06_2018_libro.pdf,2018-06-30,semestre,2017-06-30,25185415,-25185415.0,coincide
+data/raw/pdf/TVN/fecu_06_2018_libro/fecu_06_2018_libro.pdf,2018-06-30,semestre,2018-06-30,11933642,-23744957.0,difiere
+data/raw/pdf/TVN/fecu_06_2018_libro/fecu_06_2018_libro.pdf,2018-06-30,semestre,2017-06-30,12935533,-25185415.0,difiere
+data/raw/pdf/TVN/fecu_tvn_09_2018_libro/fecu_tvn_09_2018_libro.pdf,2018-09-30,acumulado9m,2018-09-30,34051629,-34051629.0,coincide
+data/raw/pdf/TVN/fecu_tvn_09_2018_libro/fecu_tvn_09_2018_libro.pdf,2018-09-30,acumulado9m,2017-09-30,36709645,-36709645.0,coincide
+data/raw/pdf/TVN/fecu_tvn_09_2018_libro/fecu_tvn_09_2018_libro.pdf,2018-09-30,trimestre,2018-09-30,10306672,-10306672.0,coincide
+data/raw/pdf/TVN/fecu_tvn_09_2018_libro/fecu_tvn_09_2018_libro.pdf,2018-09-30,trimestre,2017-09-30,11524230,-11524230.0,coincide
+data/raw/pdf/TVN/Fecu_tvn_dic_18_libro/Fecu_tvn_dic_18_libro.pdf,2018-12-31,anual,2018-12-31,46364469,,sin estado de resultados
+data/raw/pdf/TVN/Fecu_tvn_dic_18_libro/Fecu_tvn_dic_18_libro.pdf,2018-12-31,anual,2017-12-31,51690777,,sin estado de resultados
+data/raw/pdf/TVN/FECU_TVN_0319_LIBRO/FECU_TVN_0319_LIBRO.pdf,2019-03-31,trimestre,2019-03-31,13089896,-13089896.0,coincide
+data/raw/pdf/TVN/FECU_TVN_0319_LIBRO/FECU_TVN_0319_LIBRO.pdf,2019-03-31,trimestre,2018-03-31,11811315,-11811315.0,coincide
+data/raw/pdf/TVN/Libro_81689800-5-blce-06-2019/Libro_81689800-5-blce-06-2019.pdf,2019-06-30,semestre,2019-06-30,24786653,,sin estado de resultados
+data/raw/pdf/TVN/Libro_81689800-5-blce-06-2019/Libro_81689800-5-blce-06-2019.pdf,2019-06-30,semestre,2018-06-30,23744957,,sin estado de resultados
+data/raw/pdf/TVN/Libro_81689800-5-blce-06-2019/Libro_81689800-5-blce-06-2019.pdf,2019-06-30,trimestre,2019-06-30,11696757,,sin estado de resultados
+data/raw/pdf/TVN/Libro_81689800-5-blce-06-2019/Libro_81689800-5-blce-06-2019.pdf,2019-06-30,trimestre,2018-06-30,11933642,,sin estado de resultados
+data/raw/pdf/TVN/816898005_eef_0919_libro/816898005_eef_0919_libro.pdf,2019-09-30,acumulado9m,2019-09-30,35422647,-35422647.0,coincide
+data/raw/pdf/TVN/816898005_eef_0919_libro/816898005_eef_0919_libro.pdf,2019-09-30,acumulado9m,2018-09-30,31818419,-31818419.0,coincide
+data/raw/pdf/TVN/816898005_eef_0919_libro/816898005_eef_0919_libro.pdf,2019-09-30,trimestre,2019-09-30,11984584,-11984584.0,coincide
+data/raw/pdf/TVN/816898005_eef_0919_libro/816898005_eef_0919_libro.pdf,2019-09-30,trimestre,2018-09-30,9612000,-9612000.0,coincide
+data/raw/pdf/TVN/fecu dic 2019 libro/fecu dic 2019 libro.pdf,2019-12-31,anual,2019-12-31,47093417,-47093417.0,coincide
+data/raw/pdf/TVN/fecu dic 2019 libro/fecu dic 2019 libro.pdf,2019-12-31,anual,2018-12-31,45339669,-45339669.0,coincide
+data/raw/pdf/TVN/Libro-TVN-03-2020/Libro-TVN-03-2020.pdf,2020-03-31,trimestre,2020-03-31,11178820,-11178820.0,coincide
+data/raw/pdf/TVN/Libro-TVN-03-2020/Libro-TVN-03-2020.pdf,2020-03-31,trimestre,2019-03-31,13015146,-13015146.0,coincide
+data/raw/pdf/TVN/fecu-tvn-06-2020-LIBRO/fecu-tvn-06-2020-LIBRO.pdf,2020-06-30,semestre,2020-06-30,19569337,-19569337.0,coincide
+data/raw/pdf/TVN/fecu-tvn-06-2020-LIBRO/fecu-tvn-06-2020-LIBRO.pdf,2020-06-30,semestre,2019-06-30,24429338,-24429338.0,coincide
+data/raw/pdf/TVN/fecu-tvn-06-2020-LIBRO/fecu-tvn-06-2020-LIBRO.pdf,2020-06-30,trimestre,2020-06-30,8390517,-8390517.0,coincide
+data/raw/pdf/TVN/fecu-tvn-06-2020-LIBRO/fecu-tvn-06-2020-LIBRO.pdf,2020-06-30,trimestre,2019-06-30,11414192,-11414192.0,coincide
+data/raw/pdf/TVN/fecu-septiembre-2020/fecu-septiembre-2020.pdf,2020-09-30,acumulado9m,2020-09-30,26286465,-26286465.0,coincide
+data/raw/pdf/TVN/fecu-septiembre-2020/fecu-septiembre-2020.pdf,2020-09-30,acumulado9m,2019-09-30,36872394,-36872394.0,coincide
+data/raw/pdf/TVN/fecu-septiembre-2020/fecu-septiembre-2020.pdf,2020-09-30,trimestre,2020-09-30,6717128,-6717128.0,coincide
+data/raw/pdf/TVN/fecu-septiembre-2020/fecu-septiembre-2020.pdf,2020-09-30,trimestre,2019-09-30,12443056,-12443056.0,coincide
+data/raw/pdf/TVN/Librodic2021 81689800_eeff_aud/Librodic2021 81689800_eeff_aud.pdf,2020-12-31,anual,2020-12-31,32886903,-32886903.0,coincide
+data/raw/pdf/TVN/Librodic2021 81689800_eeff_aud/Librodic2021 81689800_eeff_aud.pdf,2020-12-31,anual,2019-12-31,47093417,-47093417.0,coincide
+data/raw/pdf/TVN/fecu_03_21_libro/fecu_03_21_libro.pdf,2021-03-31,trimestre,2021-03-31,6391514,-6391514.0,coincide
+data/raw/pdf/TVN/fecu_03_21_libro/fecu_03_21_libro.pdf,2021-03-31,trimestre,2020-03-31,11178820,-11178820.0,coincide
+data/raw/pdf/TVN/FECUTVNLIBROJUNIO2021/FECUTVNLIBROJUNIO2021.pdf,2021-06-30,semestre,2021-06-30,14037087,-14037087.0,coincide
+data/raw/pdf/TVN/FECUTVNLIBROJUNIO2021/FECUTVNLIBROJUNIO2021.pdf,2021-06-30,semestre,2020-06-30,19569337,-19569337.0,coincide
+data/raw/pdf/TVN/FECUTVNLIBROJUNIO2021/FECUTVNLIBROJUNIO2021.pdf,2021-06-30,trimestre,2021-06-30,7645573,-7645573.0,coincide
+data/raw/pdf/TVN/FECUTVNLIBROJUNIO2021/FECUTVNLIBROJUNIO2021.pdf,2021-06-30,trimestre,2020-06-30,8390517,-8390517.0,coincide
+data/raw/pdf/TVN/LIBRO_EEFF-09-2021/LIBRO_EEFF-09-2021.pdf,2021-09-30,acumulado9m,2021-09-30,22802064,-22802064.0,coincide
+data/raw/pdf/TVN/LIBRO_EEFF-09-2021/LIBRO_EEFF-09-2021.pdf,2021-09-30,acumulado9m,2020-09-30,26286465,-26286465.0,coincide
+data/raw/pdf/TVN/LIBRO_EEFF-09-2021/LIBRO_EEFF-09-2021.pdf,2021-09-30,trimestre,2021-09-30,8764977,-8764977.0,coincide
+data/raw/pdf/TVN/LIBRO_EEFF-09-2021/LIBRO_EEFF-09-2021.pdf,2021-09-30,trimestre,2020-09-30,6717128,-6717128.0,coincide
+data/raw/pdf/TVN/LIBROFECUTVNDIC2021/LIBROFECUTVNDIC2021.pdf,2021-12-31,anual,2021-12-31,31913457,-31913457.0,coincide
+data/raw/pdf/TVN/LIBROFECUTVNDIC2021/LIBROFECUTVNDIC2021.pdf,2021-12-31,anual,2020-12-31,32886903,-32886903.0,coincide
+data/raw/pdf/TVN/FECUTVN03_2022/FECUTVN03_2022.pdf,2022-03-31,trimestre,2022-03-31,8994384,-8994384.0,coincide
+data/raw/pdf/TVN/FECUTVN03_2022/FECUTVN03_2022.pdf,2022-03-31,trimestre,2021-03-31,6391514,-6391514.0,coincide
+data/raw/pdf/TVN/fecutvnjunio2022/fecutvnjunio2022.pdf,2022-06-30,semestre,2022-06-30,19890767,-19890767.0,coincide
+data/raw/pdf/TVN/fecutvnjunio2022/fecutvnjunio2022.pdf,2022-06-30,semestre,2021-06-30,14037087,-14037087.0,coincide
+data/raw/pdf/TVN/fecutvnjunio2022/fecutvnjunio2022.pdf,2022-06-30,trimestre,2022-06-30,10896383,-10896383.0,coincide
+data/raw/pdf/TVN/fecutvnjunio2022/fecutvnjunio2022.pdf,2022-06-30,trimestre,2021-06-30,7645573,-7645573.0,coincide
+data/raw/pdf/TVN/LIBRO_FECU_TVN_09_22/LIBRO_FECU_TVN_09_22.pdf,2022-09-30,acumulado9m,2022-09-30,30011969,-30011969.0,coincide
+data/raw/pdf/TVN/LIBRO_FECU_TVN_09_22/LIBRO_FECU_TVN_09_22.pdf,2022-09-30,acumulado9m,2021-09-30,22802064,-22802064.0,coincide
+data/raw/pdf/TVN/LIBRO_FECU_TVN_09_22/LIBRO_FECU_TVN_09_22.pdf,2022-09-30,trimestre,2022-09-30,10121202,-10121202.0,coincide
+data/raw/pdf/TVN/LIBRO_FECU_TVN_09_22/LIBRO_FECU_TVN_09_22.pdf,2022-09-30,trimestre,2021-09-30,8764977,-8764977.0,coincide
+data/raw/pdf/TVN/Fecu_tvn_2022_dec/Fecu_tvn_2022_dec.pdf,2022-12-31,anual,2022-12-31,42806252,-42806252.0,coincide
+data/raw/pdf/TVN/Fecu_tvn_2022_dec/Fecu_tvn_2022_dec.pdf,2022-12-31,anual,2021-12-31,31913457,-31913457.0,coincide
+data/raw/pdf/TVN/LIBRO_EEFF_032023_816898005/LIBRO_EEFF_032023_816898005.pdf,2023-03-31,trimestre,2023-03-31,13628356,-13628356.0,coincide
+data/raw/pdf/TVN/LIBRO_EEFF_032023_816898005/LIBRO_EEFF_032023_816898005.pdf,2023-03-31,trimestre,2022-03-31,8994384,-8994384.0,coincide
+data/raw/pdf/TVN/Libro_FECU_30_06_2023/Libro_FECU_30_06_2023.pdf,2023-06-30,semestre,2023-06-30,25274975,-25274975.0,coincide
+data/raw/pdf/TVN/Libro_FECU_30_06_2023/Libro_FECU_30_06_2023.pdf,2023-06-30,semestre,2022-06-30,19890767,-19890767.0,coincide
+data/raw/pdf/TVN/Libro_FECU_30_06_2023/Libro_FECU_30_06_2023.pdf,2023-06-30,trimestre,2023-06-30,11646619,-11646619.0,coincide
+data/raw/pdf/TVN/Libro_FECU_30_06_2023/Libro_FECU_30_06_2023.pdf,2023-06-30,trimestre,2022-06-30,10896383,-10896383.0,coincide
+data/raw/pdf/TVN/LIBRO_EEFF_816898005_09_23/LIBRO_EEFF_816898005_09_23.pdf,2023-09-30,acumulado9m,2023-09-30,36250297,-36250297.0,coincide
+data/raw/pdf/TVN/LIBRO_EEFF_816898005_09_23/LIBRO_EEFF_816898005_09_23.pdf,2023-09-30,acumulado9m,2022-09-30,30011969,-30011969.0,coincide
+data/raw/pdf/TVN/LIBRO_EEFF_816898005_09_23/LIBRO_EEFF_816898005_09_23.pdf,2023-09-30,trimestre,2023-09-30,10975322,-10975322.0,coincide
+data/raw/pdf/TVN/LIBRO_EEFF_816898005_09_23/LIBRO_EEFF_816898005_09_23.pdf,2023-09-30,trimestre,2022-09-30,10121202,-10121202.0,coincide
+data/raw/pdf/TVN/FECU-dic-2023/FECU-dic-2023.pdf,2023-12-31,anual,2023-12-31,48538069,,sin estado de resultados
+data/raw/pdf/TVN/FECU-dic-2023/FECU-dic-2023.pdf,2023-12-31,anual,2022-12-31,42806252,,sin estado de resultados
+data/raw/pdf/TVN/2024-03-Estados-Financieros-TVN/2024-03-Estados-Financieros-TVN.pdf,2024-03-31,trimestre,2024-03-31,14475847,-14475847.0,coincide
+data/raw/pdf/TVN/2024-03-Estados-Financieros-TVN/2024-03-Estados-Financieros-TVN.pdf,2024-03-31,trimestre,2023-03-31,13628356,-13628356.0,coincide
+data/raw/pdf/TVN/2024-06-Estados-Financieros-TVN/2024-06-Estados-Financieros-TVN.pdf,2024-06-30,semestre,2024-06-30,28113904,-28113904.0,coincide
+data/raw/pdf/TVN/2024-06-Estados-Financieros-TVN/2024-06-Estados-Financieros-TVN.pdf,2024-06-30,semestre,2023-06-30,25274975,-25274975.0,coincide
+data/raw/pdf/TVN/2024-06-Estados-Financieros-TVN/2024-06-Estados-Financieros-TVN.pdf,2024-06-30,trimestre,2024-06-30,13638057,-13638057.0,coincide
+data/raw/pdf/TVN/2024-06-Estados-Financieros-TVN/2024-06-Estados-Financieros-TVN.pdf,2024-06-30,trimestre,2023-06-30,11646619,-11646619.0,coincide
+data/raw/pdf/TVN/2024-09-Estados-Financieros-TVN/2024-09-Estados-Financieros-TVN.pdf,2024-09-30,acumulado9m,2024-09-30,41410915,-41410915.0,coincide
+data/raw/pdf/TVN/2024-09-Estados-Financieros-TVN/2024-09-Estados-Financieros-TVN.pdf,2024-09-30,acumulado9m,2023-09-30,36250297,-36250297.0,coincide
+data/raw/pdf/TVN/2024-09-Estados-Financieros-TVN/2024-09-Estados-Financieros-TVN.pdf,2024-09-30,trimestre,2024-09-30,13297011,-13297011.0,coincide
+data/raw/pdf/TVN/2024-09-Estados-Financieros-TVN/2024-09-Estados-Financieros-TVN.pdf,2024-09-30,trimestre,2023-09-30,10975322,-10975322.0,coincide
+data/raw/pdf/TVN/Estados-Financieros-TVN-31-12-2024/Estados-Financieros-TVN-31-12-2024.pdf,2024-12-31,anual,2024-12-31,52453731,-52453731.0,coincide
+data/raw/pdf/TVN/Estados-Financieros-TVN-31-12-2024/Estados-Financieros-TVN-31-12-2024.pdf,2024-12-31,anual,2023-12-31,48475920,-48475920.0,coincide
+data/raw/pdf/TVN/1-Estados-Financieros-TVN-032025/1-Estados-Financieros-TVN-032025.pdf,2025-03-31,trimestre,2025-03-31,13338940,-13338940.0,coincide
+data/raw/pdf/TVN/1-Estados-Financieros-TVN-032025/1-Estados-Financieros-TVN-032025.pdf,2025-03-31,trimestre,2024-03-31,14475847,-14475847.0,coincide
+data/raw/pdf/TVN/Estados-Financieros-TVN-junio-2025/Estados-Financieros-TVN-junio-2025.pdf,2025-06-30,semestre,2025-06-30,25323127,-25323127.0,coincide
+data/raw/pdf/TVN/Estados-Financieros-TVN-junio-2025/Estados-Financieros-TVN-junio-2025.pdf,2025-06-30,semestre,2024-06-30,28113904,-28113904.0,coincide
+data/raw/pdf/TVN/Estados-Financieros-TVN-junio-2025/Estados-Financieros-TVN-junio-2025.pdf,2025-06-30,trimestre,2025-06-30,11984187,-11984187.0,coincide
+data/raw/pdf/TVN/Estados-Financieros-TVN-junio-2025/Estados-Financieros-TVN-junio-2025.pdf,2025-06-30,trimestre,2024-06-30,13638057,-13638057.0,coincide
+data/raw/pdf/TVN/Estados_Financieros_TVN-30_09_2025/Estados_Financieros_TVN-30_09_2025.pdf,2025-09-30,acumulado9m,2025-09-30,38110724,-38110724.0,coincide
+data/raw/pdf/TVN/Estados_Financieros_TVN-30_09_2025/Estados_Financieros_TVN-30_09_2025.pdf,2025-09-30,acumulado9m,2024-09-30,41410915,-41410915.0,coincide
+data/raw/pdf/TVN/Estados_Financieros_TVN-30_09_2025/Estados_Financieros_TVN-30_09_2025.pdf,2025-09-30,trimestre,2025-09-30,12787597,-12787597.0,coincide
+data/raw/pdf/TVN/Estados_Financieros_TVN-30_09_2025/Estados_Financieros_TVN-30_09_2025.pdf,2025-09-30,trimestre,2024-09-30,13297011,-13297011.0,coincide
+data/raw/pdf/TVN/Estados-Financieros-TVN-31-12-2025/Estados-Financieros-TVN-31-12-2025.pdf,2025-12-31,anual,2025-12-31,50780074,,sin estado de resultados
+data/raw/pdf/TVN/Estados-Financieros-TVN-31-12-2025/Estados-Financieros-TVN-31-12-2025.pdf,2025-12-31,anual,2024-12-31,52453731,,sin estado de resultados
+data/raw/pdf/TVN/Estados-Financieros-TVN-03-2026/Estados-Financieros-TVN-03-2026.pdf,2026-03-31,trimestre,2026-03-31,12531725,-12531725.0,coincide
+data/raw/pdf/TVN/Estados-Financieros-TVN-03-2026/Estados-Financieros-TVN-03-2026.pdf,2026-03-31,trimestre,2025-03-31,13338940,-13338940.0,coincide
+data/raw/pdf/TVN/Estados Financieros TVN al 06-2026/Estados Financieros TVN al 06-2026.pdf,2026-06-30,semestre,2026-06-30,23260411,-23260411.0,coincide
+data/raw/pdf/TVN/Estados Financieros TVN al 06-2026/Estados Financieros TVN al 06-2026.pdf,2026-06-30,semestre,2025-06-30,25323127,-25323127.0,coincide
+data/raw/pdf/TVN/Estados Financieros TVN al 06-2026/Estados Financieros TVN al 06-2026.pdf,2026-06-30,trimestre,2026-06-30,10728686,-10728686.0,coincide
+data/raw/pdf/TVN/Estados Financieros TVN al 06-2026/Estados Financieros TVN al 06-2026.pdf,2026-06-30,trimestre,2025-06-30,11984187,-11984187.0,coincide

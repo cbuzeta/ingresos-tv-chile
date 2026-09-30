@@ -62,7 +62,7 @@ La Red,2020-03-31,data/raw/pdf/La Red/29050/2020050177661_2.pdf,OK,,37,ocr,3,2,8
 La Red,2020-06-30,data/raw/pdf/La Red/29820/3.pdf,OK,,40,ocr400,3,2,1628152,10
 La Red,2020-09-30,data/raw/pdf/La Red/38814/2020110486093_3.pdf,OK,,37,pdfplumber,3,2,2736238,7
 La Red,2020-12-31,data/raw/pdf/La Red/47351/2021030120869_1.pdf,OK,,38,pdfplumber,3,2,4038531,9
-La Red,2021-03-31,data/raw/pdf/La Red/47715/2021050210171_2.pdf,OK,,36,pdfplumber,3,2,812532,7
+La Red,2021-03-31,data/raw/pdf/La Red/47715/2021050210171_2.pdf,REVISAR,"fechas de encabezado no interpretables ['2021-01-01', '2020-01-01', '2021-03-31', '2021-03-31']",36,pdfplumber,3,2,812532,7
 La Red,2021-06-30,data/raw/pdf/La Red/49398/2021090375853_2.pdf,OK,,38,pdfplumber,3,2,2030895,9
 La Red,2021-09-30,data/raw/pdf/La Red/49905/2021110476849_2.pdf,OK,,36,pdfplumber,3,2,3360262,7
 La Red,2021-12-31,data/raw/pdf/La Red/50694/Estados Financieros.pdf,OK,,38,ocr,3,2,4860420,9
@@ -83,7 +83,7 @@ La Red,2025-06-30,data/raw/pdf/La Red/98821/2025090626005_1.pdf,OK,,40,pdfplumbe
 La Red,2025-09-30,data/raw/pdf/La Red/101640/Estados financieros.pdf,OK,,37,pdfplumber,3,2,730966,7
 La Red,2025-12-31,data/raw/pdf/La Red/110595/2026050319078_1.pdf,OK,,40,pdfplumber,3,2,966706,10
 La Red,2026-03-31,data/raw/pdf/La Red/113718/2026080530731-2.pdf,OK,,37,pdfplumber,2,2,159104,7
-La Red,2026-06-30,data/raw/pdf/La Red/113715/2026090587585-2.pdf,OK,,41,pdfplumber,2,2,334657,10
+La Red,2026-06-30,data/raw/pdf/La Red/113715/2026090587585-2.pdf,REVISAR,"encabezado ['2026-01-01', '2025-01-01'] ≠ supuesto ['2026-06-30', '2025-06-30']",41,pdfplumber,2,2,334657,10
 Mega,2017-12-31,data/raw/pdf/Mega/29085/articles-29085_recurso_1.pdf,OK,,41,ocr400,3,2,100966612,11
 Mega,2019-12-31,data/raw/pdf/Mega/28606/archivo_3.pdf,OK,,40,pdfplumber,3,2,86612405,11
 Mega,2020-03-31,data/raw/pdf/Mega/29051/2020050177471_2.pdf,OK,,37,pdfplumber,3,2,16321301,8
@@ -123,11 +123,11 @@ TV+,2021-03-31,data/raw/pdf/TV+/47719/2021050209482_4.pdf,OK,,34,pdfplumber-colu
 TV+,2021-06-30,data/raw/pdf/TV+/49400/2021090374499_2 (1).pdf,OK,,37,pdfplumber,5,4,2293309,7
 TV+,2021-09-30,data/raw/pdf/TV+/49909/2021110473098_2 (1).pdf,OK,,32,pdfplumber,6,2,3829362,5
 TV+,2021-12-31,data/raw/pdf/TV+/50696/Fecu.pdf,OK,,37,pdfplumber,6,2,5549515,7
-TV+,2022-03-31,data/raw/pdf/TV+/51269/Fecu Marzo 2022.pdf,OK,"descuadre de redondeo en la fuente (total - suma = [1, 0])",33,pdftotext-raw,8,2,1182169,5
+TV+,2022-03-31,data/raw/pdf/TV+/51269/Fecu Marzo 2022.pdf,OK,"descuadre de redondeo en la fuente (total - suma = [1, 0])",33,pdfplumber,8,2,1182169,5
 TV+,2022-06-30,data/raw/pdf/TV+/53289/2022090352724_2.pdf,OK,,36,pdfplumber,5,4,2721449,7
 TV+,2022-09-30,data/raw/pdf/TV+/57121/2022110443552_1.pdf,OK,,32,pdfplumber,6,2,4222555,5
 TV+,2022-12-31,data/raw/pdf/TV+/68980/2023030131118_2.pdf,OK,,39,pdfplumber,5,2,5662312,7
-TV+,2023-03-31,data/raw/pdf/TV+/70649/2023050230846_2.pdf,OK,"descuadre de redondeo en la fuente (total - suma = [0, 1])",34,ocr,6,2,1103944,5
+TV+,2023-03-31,data/raw/pdf/TV+/70649/2023050230846_2.pdf,OK,"descuadre de redondeo en la fuente (total - suma = [0, 1])",34,pdfplumber,6,2,1103944,5
 TV+,2023-06-30,data/raw/pdf/TV+/73704/2023090382166-0 FECU JUNIO 2023.pdf,OK,,37,pdfplumber,5,4,2384914,7
 TV+,2023-09-30,data/raw/pdf/TV+/75787/2023110504810_1.pdf,OK,,32,pdfplumber,6,2,3556357,5
 TV+,2023-12-31,data/raw/pdf/TV+/79943/2024030188019_4.pdf,OK,,37,pdfplumber,4,2,4706169,8
@@ -142,6 +142,18 @@ TV+,2025-12-31,data/raw/pdf/TV+/109185/2026030214030_2.pdf,OK,,38,pdfplumber,3,2
 TV+,2026-03-31,data/raw/pdf/TV+/111128/2026050359074_2.pdf,OK,,34,pdfplumber,3,2,656874,5
 TV+,2026-06-30,data/raw/pdf/TV+/113712/2026090594782-2.pdf,OK,,40,pdfplumber,3,4,1366132,8
 TVN,,data/raw/pdf/TVN/estados_financieros_2018/estados_financieros_2018.pdf,REVISION,documento sin fecha de cierre,,,,,,
+TVN,2011-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2011-06/Estados-Financieros-TVN-2011-06.pdf,OK,,83,pdfplumber,2,4,36332272,8
+TVN,2011-12-31,data/raw/pdf/TVN/Estados-Financieros-TVN-2011-12/Estados-Financieros-TVN-2011-12.pdf,OK,,70,pdfplumber,2,4,80246610,7
+TVN,2012-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2012-06/Estados-Financieros-TVN-2012-06.pdf,OK,,68,pdfplumber,2,4,33473242,7
+TVN,2012-12-31,data/raw/pdf/TVN/Estados-Financieros-TVN-2012-12/Estados-Financieros-TVN-2012-12.pdf,OK,,74,pdfplumber,2,4,77432144,8
+TVN,2013-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2013-06/Estados-Financieros-TVN-2013-06.pdf,REVISAR,total no hallado en EERR,73,pdfplumber,2,4,35945985,0
+TVN,2013-12-31,data/raw/pdf/TVN/Estados-Financieros-TVN-2013-12/Estados-Financieros-TVN-2013-12.pdf,OK,,74,pdfplumber,2,2,78770316,9
+TVN,2014-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2014-06/Estados-Financieros-TVN-2014-06.pdf,REVISION,,,,,,,
+TVN,2014-12-31,data/raw/pdf/TVN/Estados-Financieros-TVN-2014-12/Estados-Financieros-TVN-2014-12.pdf,OK,,79,pdfplumber,2,2,75861667,8
+TVN,2015-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2015-06/Estados-Financieros-TVN-2015-06.pdf,REVISAR,total no hallado en EERR,79,ocr400,2,4,23164538,0
+TVN,2015-12-31,data/raw/pdf/TVN/Estados-Financieros-TVN-2015-12/Estados-Financieros-TVN-2015-12.pdf,OK,,69,pdfplumber,2,2,49705076,8
+TVN,2016-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2016-06/Estados-Financieros-TVN-2016-06.pdf,OK,,64,pdfplumber,2,4,20527246,8
+TVN,2016-12-31,data/raw/pdf/TVN/Estados-Financieros-TVN-2016-12/Estados-Financieros-TVN-2016-12.pdf,OK,,65,pdftotext-layout,2,2,48781990,8
 TVN,2017-03-31,data/raw/pdf/TVN/fecu_mar_2017_libro/fecu_mar_2017_libro.pdf,OK,,61,pdfplumber,2,2,11347715,6
 TVN,2017-06-30,data/raw/pdf/TVN/fecu_jun_2017_libro/fecu_jun_2017_libro.pdf,OK,,64,pdfplumber,2,4,25242798,8
 TVN,2017-09-30,data/raw/pdf/TVN/fecu_sep_2017_libro/fecu_sep_2017_libro.pdf,OK,,64,pdfplumber,2,4,37811376,6

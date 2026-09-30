@@ -2,7 +2,7 @@
 
 Este documento explica cómo se construye la serie de ingresos de la TV abierta chilena, qué decisiones se tomaron y por qué, y qué límites tienen los datos. Las cifras de cobertura y control que aparecen aquí corresponden a la versión de datos del 30 de septiembre de 2026.
 
-Contenido: [1. Pregunta y marco](#1-pregunta-y-marco) · [2. Fuentes y cobertura](#2-fuentes-y-cobertura) · [3. Extracción y controles](#3-extracción-y-controles) · [4. Versiones y reclasificaciones](#4-versiones-y-reclasificaciones) · [5. Períodos](#5-períodos) · [6. Clasificación](#6-clasificación) · [7. Decisiones por canal](#7-decisiones-por-canal) · [8. Agregados de industria](#8-agregados-de-industria) · [9. Unidades monetarias](#9-unidades-monetarias) · [10. Limitaciones](#10-limitaciones) · [11. Trazabilidad y reproducción](#11-trazabilidad-y-reproducción)
+Contenido: [1. Pregunta y marco](#1-pregunta-y-marco) · [2. Fuentes y cobertura](#2-fuentes-y-cobertura) · [3. Extracción y controles](#3-extracción-y-controles) · [4. Versiones y reclasificaciones](#4-versiones-y-reclasificaciones) · [5. Períodos](#5-períodos) · [6. Clasificación](#6-clasificación) · [7. Decisiones por canal](#7-decisiones-por-canal) · [8. Agregados de industria](#8-agregados-de-industria) · [9. Unidades monetarias](#9-unidades-monetarias) · [10. Limitaciones](#10-limitaciones) · [11. Utilidades y costo de ventas](#11-utilidades-y-costo-de-ventas) · [12. Trazabilidad y reproducción](#12-trazabilidad-y-reproducción)
 
 ---
 
@@ -20,14 +20,14 @@ La medida principal es la **participación de la publicidad** en los ingresos de
 
 | Canal | Sociedad informante | Años | Semestres | Documentos |
 |---|---|---|---|---|
-| TVN | Televisión Nacional de Chile | 2016–2025 | desde 2016 | 38 EEFF trimestrales |
+| TVN | Televisión Nacional de Chile | 2010–2025 | desde 2010 | 50 EEFF: trimestrales desde 2017, junio y diciembre 2011–2016 |
 | Canal 13 | Canal 13 SpA | 2016–2025 | desde 2019 | 28 |
 | Mega | Megamedia S.A., consolidado (Red Televisiva Megavisión S.A. en los EEFF 2017 y 2019) | 2016–2025 | desde 2019 | 28 |
 | Chilevisión | Red de Televisión Chilevisión S.A. | 2016–2025 | desde 2019 | 28 |
 | La Red | Compañía Chilena de Televisión S.A. | 2016–2025 | desde 2019 | 28 |
 | TV+ | TVMAS SpA (UCVTV SpA en 2017) | 2017–2025 | desde 2019 | 28 |
 
-Se incluye además el primer semestre de 2026. Para los privados, la CMF publica el EEFF de diciembre de 2017 (que trae 2016 como comparativo), el de diciembre de 2019 (que trae 2018) y todos los trimestres desde marzo de 2020. Por eso los años 2016 y 2018 salen de comparativos y los semestres parten en 2019. TVN publica todos los trimestres desde 2017.
+Se incluye además el primer semestre de 2026. TVN se extiende hasta 2010 con los EEFF de junio y diciembre 2011–2016 de su ficha en la CMF (el de diciembre 2011 trae 2010 como comparativo); queda fuera del panel balanceado de los agregados, que parten en 2016. Para los privados, la CMF publica el EEFF de diciembre de 2017 (que trae 2016 como comparativo), el de diciembre de 2019 (que trae 2018) y todos los trimestres desde marzo de 2020. Por eso los años 2016 y 2018 salen de comparativos y los semestres parten en 2019. TVN publica todos los trimestres desde 2017.
 
 **Perímetro.** Mega se mide consolidado (incluye radios y cable); la visualización ofrece además la variante «solo TV», que resta la publicidad radial y de cable. Los estados individuales de Megamedia (anexos del Oficio Circular 498) no traen desglose de ingresos y no se usan.
 
@@ -43,7 +43,7 @@ Se incluye además el primer semestre de 2026. Para los privados, la CMF publica
 1. En **cada columna**, la suma de las líneas es igual a la fila de total (autocontrol aritmético). Se acepta una diferencia de hasta M$2 solo cuando está en la fuente; ocurrió en 4 documentos (Chilevisión septiembre 2021 y junio 2023; TV+ marzo 2022 y marzo 2023) y queda registrada en el log.
 2. Sus rótulos son de ingresos (se descartan tablas con costos, gastos o márgenes, como el propio estado de resultados).
 3. El total (actual o comparativo) aparece como número completo en el estado de resultados.
-4. Las columnas se asignan a períodos según las fechas del encabezado cuando están; si no, según el tipo de EEFF (anual, trimestral).
+4. Las columnas se asignan a períodos según las fechas del encabezado cuando están (escritas con guion, barra o punto); si no, según el tipo de EEFF (anual, trimestral). El encabezado manda sobre el supuesto: así se detectó que el EEFF de diciembre 2019 de La Red compara con los nueve meses a septiembre de 2018 («30.09.2018») y no con el año 2018. La Red no tiene, por eso, desglose de ingresos para el año 2018 completo (la CMF no publica su EEFF de diciembre 2018); su ingreso total 2018 según el estado de resultados fue M$5.088.103.
 
 **Controles externos** (`src/07_controles_externos.py`, resultado en `salidas/controles_externos.csv`):
 - **SEP.** El Sistema de Empresas Públicas publica los ingresos de actividades ordinarias de TVN (anual 2018–2024 y trimestral acumulado hasta septiembre 2025). Los 31 valores coinciden exactamente con la serie.
@@ -152,7 +152,15 @@ Los porcentajes no dependen de la unidad.
 - **Canje.** Solo La Red y TV+ informan el canje por separado; en los demás canales, si existe, va dentro de publicidad.
 - **Cobertura.** 2016 y 2018 provienen de comparativos; los privados no tienen semestres antes de 2019.
 
-## 11. Trazabilidad y reproducción
+## 11. Utilidades y costo de ventas
+
+**Utilidades** (`src/04d_extraer_resultados.py`). Del estado de resultados de cada EEFF se leen siete líneas: ingresos, costo de ventas, ganancia bruta, gastos de administración, resultado antes de impuestos, impuesto y resultado del ejercicio. Una lectura se acepta solo si, en cada columna, ingresos + costo de ventas = ganancia bruta y resultado antes de impuestos + impuesto = resultado (±M$2), y si los ingresos son iguales al total de la nota de ingresos ya extraída; esa coincidencia también asigna el período de cada columna. 157 de 187 EEFF pasan los tres controles. El resultado anual está disponible para TVN 2010–2024, Canal 13 y La Red 2016–2025 (sin 2018), y Chilevisión, Mega y TV+ 2018–2025. Faltan sobre todo los EEFF escaneados de 2017 y el de TVN de diciembre 2025 (fuente corrupta). No se calcula un «resultado operacional» común, porque los canales no lo presentan igual (Mega no lo presenta).
+
+**Costo de ventas** (`src/04c_extraer_costos.py`). La nota de costo de ventas se extrae con el mismo método y controles que la de ingresos. Además, su total debe ser igual al costo de ventas del estado de resultados del mismo EEFF: 336 totales coinciden, 71 no tienen estado de resultados extraído para comparar y 8 difieren (5 EEFF), que se descartan porque correspondían a otras tablas que también sumaban. La Red no publica una nota de costo de ventas. TVN no la desglosa antes de 2016.
+
+Cada línea se clasifica en siete categorías (`mapeo/costos_mapeo.csv`, aprobadas el 30-sep-2026): Contenidos y producción, Personal, Depreciación y amortización, Comercialización de audiencias (comisiones de agencia, medición y verificación publicitaria), Técnica y transmisión, Canje y Otros costos. Los canales desglosan de forma muy distinta (TVN y Mega por naturaleza del gasto; Chilevisión por tipo de contenido), así que la comparación entre canales es gruesa. En Canal 13, «Costos de publicidad exhibida» (86,3% de su costo de ventas en 2025) se clasifica como Contenidos y producción: corresponde al costo de la programación exhibida.
+
+## 12. Trazabilidad y reproducción
 
 Cada monto de la base (`salidas/lineas_larga.csv`, `data/ingresos.sqlite`) registra el documento de origen, la página, la fuente de lectura (texto u OCR) y si es extraído, manual o desglose de nota. Los PDF originales no están en el repositorio; `data/manifest.csv` lista cada paquete con su número de artículo en la CMF y su hash SHA-256. Los pasos para reconstruir la base están en el [README](README.md).
 

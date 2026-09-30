@@ -1,0 +1,193 @@
+OK Canal 13 2017-12-31 p74 ocr 2 cols ['Costos de Publicidad', 'Otros costos de explotación', 'Totales'] 
+OK Canal 13 2019-12-31 p93 ocr 2 cols ['Operación discontinuadas, neta', 'discontimuada Radiodifusión SpA, neta', 'disconti er)'] 
+OK Canal 13 2020-03-31 p79 pdfplumber 2 cols ['Costos de Publicidad Exhibida', 'Costos de Mantenciones Técnicas (a)', 'Costos por Bonificación Agencia', 'Otros costos de explotación (b)', 'Totales'] 
+OK Canal 13 2020-06-30 p74 pdfplumber 4 cols ['Costos de Publicidad Exhibida', 'Costos mantenciones técnicas(a)', 'Costos por Bonificación Agencia', 'Otros costos de explotación(b)', 'Totales'] 
+OK Canal 13 2020-09-30 p69 pdfplumber 4 cols ['Costos de Publicidad Exhibida', 'Costos mantenciones técnicas (a)', 'Costos por Bonificación Agencia', 'Otros costos de explotación (b)', 'Totales'] 
+OK Canal 13 2020-12-31 p75 pdfplumber 2 cols ['Costos de Publicidad Exhibida', 'Costos mantenciones técnicas (a)', 'Costos por Bonificación Agencia', 'Otros costos de explotación (b)', 'Totales'] 
+OK Canal 13 2021-03-31 p65 pdfplumber 2 cols ['Costos de Publicidad Exhibida', 'Costos mantenciones técnicas (a)', 'Costos por Bonificación Agencia', 'Otros costos de explotación (b)', 'Totales'] 
+OK Canal 13 2021-06-30 p69 pdfplumber 4 cols ['Costos de Publicidad Exhibida', 'Costos mantenciones técnicas(a)', 'Costos por Bonificación Agencia', 'Otros costos de explotación(b)', 'Totales'] 
+OK Canal 13 2021-09-30 p67 pdfplumber 4 cols ['Costos de Publicidad Exhibida', 'Costos mantenciones técnicas (a)', 'Costos por Bonificación Agencia', 'Otros costos de explotación (b)', 'Totales'] 
+OK Canal 13 2021-12-31 p70 ocr 2 cols ['Costos de Publicidad Exhibida', 'Costos mantenciones técnicas (a)', 'Costos por Bonificación Agencia', 'Otros costos de explotación (b)', 'Totales'] 
+OK Canal 13 2022-03-31 p66 pdfplumber 2 cols ['Costos de Publicidad Exhibida', 'Costos mantenciones técnicas (a)', 'Costos por Bonificación Agencia', 'Otros costos de explotación (b)', 'Totales'] 
+OK Canal 13 2022-06-30 p68 pdfplumber 4 cols ['Costos de Publicidad Exhibida', 'CostosMantención Técnicas (a)', 'Costos por Bonificación Agencia', 'Otros Costos de Explotación (b)', 'Totales'] 
+OK Canal 13 2022-06-30 p68 pdfplumber 4 cols ['Costos de Publicidad Exhibida', 'CostosMantención Técnicas (a)', 'Costos por Bonificación Agencia', 'Otros Costos de Explotación (b)', 'Totales'] 
+OK Canal 13 2022-09-30 p66 pdfplumber 4 cols ['Costos de Publicidad Exhibida', 'Costos Mantención Técnicas (a)', 'Costos por Bonificación Agencia', 'Otros Costos de Explotación (b)', 'Totales'] 
+OK Canal 13 2022-12-31 p70 pdfplumber 2 cols ['Costos de Publicidad Exhibida', 'CostosMantención Técnicas (a)', 'Costos por Bonificación Agencia', 'Otros Costos de Explotación(b)', 'Totales'] 
+OK Canal 13 2023-03-31 p66 pdfplumber 2 cols ['Costos de Publicidad Exhibida', 'Costos Mantención Técnicas (a)', 'Costos por Bonificación Agencia', 'Otros Costos de Explotación (b)', 'Totales'] 
+OK Canal 13 2023-06-30 p66 pdfplumber 4 cols ['Costos de Publicidad Exhibida', 'CostosMantención Técnicas (a)', 'Costos por Bonificación Agencia', 'Otros Costos de Explotación (b)', 'Totales'] 
+OK Canal 13 2023-09-30 p62 pdfplumber 4 cols ['Costos de Publicidad Exhibida', 'Costos Mantención Técnicas (a)', 'Costos por Bonificación Agencia', 'Otros Costos de Explotación (b)', 'Totales'] 
+OK Canal 13 2023-12-31 p67 pdfplumber 2 cols ['Costos de Publicidad Exhibida', 'Costos Mantención Técnicas (a)', 'Costos por Bonificación Agencia', 'Otros Costos de Explotación (b)', 'Totales'] 
+OK Canal 13 2024-03-31 p63 pdfplumber 2 cols ['Costos de Publicidad Exhibida', 'Costos Mantención Técnicas (a)', 'Costos por Bonificación Agencia', 'Otros Costos de Explotación (b)', 'Totales'] 
+OK Canal 13 2024-06-30 p66 pdfplumber 4 cols ['Costos de Publicidad Exhibida', 'CostosMantención Técnicas (a)', 'Costos por Bonificación Agencia', 'Otros Costos de Explotación (b)', 'Totales'] 
+OK Canal 13 2024-09-30 p62 pdfplumber 4 cols ['Costos de Publicidad Exhibida', 'Costos Mantención Técnicas (a)', 'Costos por Bonificación Agencia', 'Otros Costos de Explotación (b)', 'Totales'] 
+OK Canal 13 2024-12-31 p65 pdfplumber 2 cols ['Costos de Publicidad Exhibida', 'Costos Mantención Técnicas (a)', 'Costos por Bonificación Agencia', 'Otros Costos de Explotación (b)', 'Totales'] 
+OK Canal 13 2025-03-31 p82 ocr 2 cols ['Costos de Publicidad Exhibida', 'Costos Mantención Técnicas (a)', 'Costos por Bonificación Agencia', 'Otros Costos de Explotación (b)', 'Totales'] 
+OK Canal 13 2025-06-30 p64 pdfplumber 4 cols ['Costos de Publicidad Exhibida', 'Costos Mantención Técnicas (a)', 'Costos por Bonificación Agencia', 'Otros Costos de Explotación (b)', 'Totales'] 
+OK Canal 13 2025-09-30 p60 pdfplumber 4 cols ['Costos de Publicidad Exhibida', 'Costos Mantención Técnicas (a)', 'Costos por Bonificación Agencia', 'Otros Costos de Explotación (b)', 'Totales'] 
+OK Canal 13 2025-12-31 p64 pdfplumber 2 cols ['Costos de Publicidad Exhibida', 'Costos Mantención Técnicas (a)', 'Costos por Bonificación Agencia', 'Otros Costos de Explotación (b)', 'Totales'] 
+OK Canal 13 2026-03-31 p61 pdfplumber 2 cols ['Costos de Publicidad Exhibida', 'Costos Mantención Técnicas (a)', 'Costos por Bonificación Agencia', 'Otros Costos de Explotación (b)', 'Totales'] 
+OK Canal 13 2026-06-30 p67 pdfplumber 4 cols ['Costos de Publicidad Exhibida', 'CostosMantención Técnicas (a)', 'Costos por Bonificación Agencia', 'Otros Costos de Explotación (b)', 'Totales'] 
+OK Chilevisión 2017-12-31 p63 ocr 2 cols ['Producción nacional propia', 'Material fílmico y producciones provisionadas', 'Elenco', 'Producción nacional externa', 'Otros costos de producción (1)', 'Total Costo de Venta'] 
+OK Chilevisión 2019-12-31 p59 pdfplumber 2 cols ['Producción nacional propia', 'Costo elenco', 'Otros costos de producción (1)', 'Material fílmico y producciones provisionadas', 'Producción nacional externa', 'Total Costo de Venta'] 
+OK Chilevisión 2020-03-31 p53 pdfplumber 2 cols ['Producción nacional propia', 'Costo elenco', 'Otros costos de producción (1)', 'Material fílmico y producciones provisionadas', 'Producción nacional externa', 'Total Costo de Venta'] 
+OK Chilevisión 2020-06-30 p58 pdfplumber 4 cols ['Producción nacional propia', 'Costo elenco', 'Material fílmico y producciones provisionadas', 'Otros costos de producción (1)', 'Producción nacional externa', 'Totales costos de actividades ordinarias'] 
+OK Chilevisión 2020-09-30 p57 pdfplumber 4 cols ['Producción nacional propia', 'Costo elenco', 'Material fílmico y producciones provisionadas', 'Otros costos de producción (1)', 'Producción nacional externa', 'Totales costos de actividades ordinarias'] 
+OK Chilevisión 2020-12-31 p59 pdfplumber 2 cols ['Producción nacional propia', 'Costo elenco', 'Material fílmico y producciones provisionadas', 'Otros costos de producción (1)', 'Producción nacional externa', 'Totales costos de actividades ordinarias'] 
+OK Chilevisión 2021-03-31 p57 pdfplumber 2 cols ['Producción nacional propia', 'Costo elenco', 'Material fílmico y producciones provisionadas', 'Otros costos de producción (1)', 'Producción nacional externa', 'Totales costos de actividades ordinarias'] 
+OK Chilevisión 2021-06-30 p59 pdfplumber 4 cols ['Producción nacional propia', 'Costo elenco', 'provisionadas', 'Otros costos de producción (1)', 'Producción nacional externa', 'Totales costos de actividades ordinarias'] 
+OK Chilevisión 2021-09-30 p57 pdfplumber 4 cols ['Producción nacional propia', 'Costo elenco', 'provisionadas', 'Otros costos de producción (1)', 'Producción nacional externa', 'Totales costos de actividades ordinarias'] 
+REVISAR Chilevisión 2021-12-31 p56 ocr 2 cols ['Producción nacional propia', 'Costo elenco', 'Material fílmico y producciones provisionadas', 'Otros costos de producción (1)', 'Producción nacional externa', 'Totales costos de actividades ordinarias'] total no hallado en EERR
+OK Chilevisión 2022-03-31 p53 pdfplumber 2 cols ['Producción nacional propia', 'Costo elenco', 'Material fílmico y producciones provisionadas', 'Otros costos de producción (1)', 'Producción nacional externa', 'Totales costos de actividades ordinarias'] 
+OK Chilevisión 2022-06-30 p57 pdfplumber 4 cols ['Producción nacional propia', 'Costo elenco', 'Material fílmico y producciones provisionadas', 'Otros costos de producción (1)', 'Producción nacional externa', 'Totales costos de actividades ordinarias'] 
+OK Chilevisión 2022-09-30 p56 pdfplumber 4 cols ['Costo elenco', 'Material fílmico y producciones', 'provisionadas', 'Otros costos de producción (1)', 'Producción nacional externa', 'Totales costos de actividades ordinarias'] 
+OK Chilevisión 2022-12-31 p58 pdfplumber 2 cols ['Producción nacional propia', 'Costo elenco', 'Material fílmico y producciones provisionadas', 'Otros costos de producción (1)', 'Producción nacional externa', 'Totales costos de actividades ordinarias'] 
+OK Chilevisión 2023-03-31 p54 pdfplumber 2 cols ['Producción nacional propia', 'Costo elenco', 'Material fílmico y producciones provisionadas', 'Otros costos de producción (1)', 'Totales costos de actividades ordinarias'] 
+OK Chilevisión 2023-06-30 p54 pdfplumber 4 cols ['Producción nacional propia', 'Costo elenco', 'Material fílmico y producciones provisionadas', 'Otros costos de producción (1)', 'Totales costos de actividades ordinarias'] 
+OK Chilevisión 2023-09-30 p56 pdfplumber 4 cols ['Costo elenco', 'Material fílmico y producciones', 'provisionadas', 'Otros costos de producción (1)', 'Totales costos de actividades ordinarias'] descuadre de redondeo en la fuente (total - suma = [0, 0, 1, 0])
+OK Chilevisión 2023-12-31 p59 pdfplumber 2 cols ['Producción nacional propia', 'Costo elenco', 'Material fílmico y producciones provisionadas', 'Otros costos de producción (1)', 'Totales costos de actividades ordinarias'] 
+OK Chilevisión 2024-03-31 p56 pdfplumber 2 cols ['Producción nacional propia', 'Costo elenco', 'Material fílmico y producciones provisionadas', 'Otros costos de producción (1)', 'Totales costos de actividades ordinarias'] 
+OK Chilevisión 2024-06-30 p58 pdfplumber 4 cols ['Producción nacional propia', 'Costo elenco', 'Material fílmico y producciones provisionadas', 'Otros costos de producción (1)', 'Totales costos de actividades ordinarias'] 
+OK Chilevisión 2024-09-30 p55 pdfplumber 4 cols ['Producción nacional propia', 'Costo elenco', 'Material fílmico y producciones provisionadas', 'Otros costos de producción (1)', 'Totales costos de actividades ordinarias'] 
+OK Chilevisión 2024-12-31 p58 pdfplumber 2 cols ['Producción nacional propia', 'Costo elenco', 'Material fílmico y producciones provisionadas', 'Otros costos de producción (1)', 'Totales costos de actividades ordinarias'] 
+OK Chilevisión 2025-03-31 p55 pdfplumber 2 cols ['Producción nacional propia', 'Costo elenco', 'Material fílmico y producciones provisionadas', 'Otros costos de producción (1)', 'Totales costos de actividades ordinarias'] 
+OK Chilevisión 2025-06-30 p52 pdfplumber 4 cols ['Producción nacional propia', 'Costo elenco', 'Material fílmico y producciones provisionadas', 'Otros costos de producción (1)', 'Totales costos de actividades ordinarias'] 
+OK Chilevisión 2025-09-30 p48 pdfplumber 4 cols ['Costo elenco', 'Material fílmico y producciones', 'provisionadas', 'Otros costos de producción (1)', 'Totales costos de actividades ordinarias'] descuadre de redondeo en la fuente (total - suma = [-1, 0, -1, 0])
+OK Chilevisión 2025-12-31 p59 pdfplumber 2 cols ['Producción nacional propia', 'Costo elenco', 'Material fílmico y producciones provisionadas', 'Otros costos de producción (1)', 'Totales costos de actividades ordinarias'] 
+OK Chilevisión 2026-03-31 p54 pdfplumber 2 cols ['Producción nacional propia', 'Costo elenco', 'Material fílmico y producciones provisionadas', 'Otros costos de producción (1)', 'Totales costos de actividades ordinarias'] 
+OK Chilevisión 2026-06-30 p53 pdfplumber 4 cols ['Producción nacional propia', 'Costo elenco', 'Material fílmico y producciones provisionadas', 'Otros costos de producción (1)', 'Totales costos de actividades ordinarias'] 
+REVISION La Red 2017-12-31
+REVISION La Red 2019-12-31
+REVISION La Red 2020-03-31
+REVISION La Red 2020-06-30
+REVISION La Red 2020-09-30
+REVISION La Red 2020-12-31
+REVISION La Red 2021-03-31
+REVISION La Red 2021-06-30
+REVISION La Red 2021-09-30
+REVISION La Red 2021-12-31
+REVISION La Red 2022-03-31
+REVISION La Red 2022-06-30
+REVISION La Red 2022-09-30
+REVISION La Red 2022-12-31
+REVISION La Red 2023-03-31
+REVISION La Red 2023-06-30
+REVISION La Red 2023-09-30
+REVISION La Red 2023-12-31
+REVISION La Red 2024-03-31
+REVISION La Red 2024-06-30
+REVISION La Red 2024-09-30
+REVISION La Red 2024-12-31
+REVISION La Red 2025-03-31
+REVISION La Red 2025-06-30
+REVISION La Red 2025-09-30
+REVISION La Red 2025-12-31
+REVISION La Red 2026-03-31
+REVISION La Red 2026-06-30
+REVISION Mega 2017-12-31
+OK Mega 2019-12-31 p41 pdfplumber 2 cols ['Depreciaciones', 'Gastos del personal', 'Otros costos', 'Total'] 
+OK Mega 2020-03-31 p38 pdfplumber 2 cols ['Depreciaciones', 'Gastos del personal', 'Otros costos', 'Total'] 
+OK Mega 2020-06-30 p39 pdfplumber 4 cols ['Depreciaciones', 'Gastos del personal', 'Otros costos', 'Total'] 
+OK Mega 2020-09-30 p37 pdfplumber 4 cols ['Depreciaciones', 'Gastos del personal', 'Otros costos', 'Total'] 
+OK Mega 2020-12-31 p42 pdfplumber 2 cols ['Depreciaciones', 'Gastos del personal', 'Otros costos', 'Total'] 
+OK Mega 2021-03-31 p39 pdfplumber 2 cols ['Depreciaciones', 'Gastos del personal', 'Otros costos', 'Total'] 
+OK Mega 2021-06-30 p42 pdfplumber 4 cols ['Depreciaciones', 'Gastos del personal', 'Otros costos', 'Total'] 
+OK Mega 2021-09-30 p39 pdfplumber 4 cols ['Depreciaciones', 'Gastos del personal', 'Otros costos', 'Total'] 
+REVISAR Mega 2021-12-31 p42 ocr 2 cols ['Gastos del personal', 'Centros de Costos Administrativos', 'Total'] total no hallado en EERR
+OK Mega 2022-03-31 p38 pdfplumber 2 cols ['Depreciaciones', 'Gastos del personal', 'Costos de producción y otros', 'Total'] 
+OK Mega 2022-06-30 p41 pdfplumber 4 cols ['Depreciaciones', 'Gastos del personal', 'Costos de producción y otros', 'Total'] 
+OK Mega 2022-09-30 p38 pdfplumber 4 cols ['Depreciaciones', 'Gastos del personal', 'Costos de producción y otros', 'Total'] 
+OK Mega 2022-12-31 p42 pdfplumber 2 cols ['Depreciaciones', 'Gastos del personal', 'Costos de producción y otros', 'Total'] 
+OK Mega 2023-03-31 p38 pdfplumber 2 cols ['Depreciaciones', 'Gastos del personal', 'Costos de producción y otros', 'Total'] 
+OK Mega 2023-06-30 p41 pdfplumber 4 cols ['Depreciaciones', 'Gastos del personal', 'Costos de producción y otros', 'Total'] 
+OK Mega 2023-09-30 p39 pdfplumber 4 cols ['Depreciaciones', 'Gastos del personal', 'Costos de producción y otros', 'Total'] 
+OK Mega 2023-09-30 p39 pdfplumber 4 cols ['Depreciaciones', 'Gastos del personal', 'Costos de producción y otros', 'Total'] 
+OK Mega 2023-12-31 p44 pdfplumber 2 cols ['Depreciaciones', 'Gastos del personal', 'Costos de producción y otros', 'Total'] 
+OK Mega 2024-03-31 p40 pdfplumber 2 cols ['Depreciaciones', 'Gastos del personal', 'Costos de producción y otros', 'Total'] 
+OK Mega 2024-06-30 p44 pdfplumber 4 cols ['Depreciaciones', 'Gastos del personal', 'Costo de producción y otros', 'Total'] 
+OK Mega 2024-09-30 p41 pdfplumber 4 cols ['Depreciaciones', 'Gastos del personal', 'Costo de producción y otros', 'Total'] 
+OK Mega 2024-12-31 p43 pdfplumber 2 cols ['Depreciaciones', 'Gastos del personal', 'Costo de producción y otros', 'Total'] 
+OK Mega 2025-03-31 p40 pdfplumber 2 cols ['Depreciaciones', 'Gastos del personal', 'Costo de producción y otros', 'Total'] 
+OK Mega 2025-06-30 p40 pdfplumber 4 cols ['Depreciación', 'Gastos del personal', 'Costo de producción y otros', 'Total'] 
+OK Mega 2025-09-30 p39 pdfplumber 4 cols ['Depreciación', 'Gastos del personal', 'Costo de producción y otros', 'Total'] 
+OK Mega 2025-12-31 p41 pdfplumber 2 cols ['Depreciación', 'Gastos del personal', 'Costo de producción y otros', 'Total'] 
+OK Mega 2026-03-31 p39 pdfplumber 2 cols ['Depreciación', 'Gastos del personal', 'Costo de producción y otros', 'Total'] 
+OK Mega 2026-06-30 p41 pdfplumber 4 cols ['Depreciación', 'Gastos del personal', 'Costo de producción y otros', 'Total'] 
+OK TV+ 2017-12-31 p37 ocr 1 cols ['Producciones de Programas', 'Remuneraciones Personal Operativo', 'Derechos Material Importado', 'Comisión Agencia', 'Medición Publicitaria', 'Gastos Operaciones', 'Total costo de ventas'] 
+OK TV+ 2019-12-31 p38 pdfplumber 2 cols ['Producción de programas', 'Remuneración personal operativo', 'Amortización derecho material y concesiones', 'Comisión de agencia', 'Medición publicitaria', 'Arriendos de estudios y sitios de transmisión', 'Depreciación de propiedad, planta y equipos', 'Gastos comunes', 'Servicios de red', 'Derechos varios', 'Otros costos operacionales', 'Servicio verificación', 'Costo Publisher', 'Total costo de ventas'] 
+REVISION TV+ 2020-03-31
+OK TV+ 2020-06-30 p39 pdfplumber 4 cols ['Producción de programas', 'Remuneraciones del personal', 'Amortización derecho material', 'Comisión agencia', 'Medición publicitaria', 'Arriendo de estudios y sitios de transmisión', 'Depreciación de propiedad planta y equipos', 'Servicios de red', 'Derechos varios', 'Servicio verificación', 'Costo publisher', 'Otros costos', 'Total'] 
+OK TV+ 2020-09-30 p37 pdfplumber 2 cols ['Producción de programas', 'Remuneración personal operativo', 'Derecho Material Importado', 'Comisión de agencia', 'Medición publicitaria', 'Otros costos', 'Arriendo de estudios y sitios de transmisión', 'Depreciación de propiedad, plantas y equipos', 'Gastos canje VTR', 'Servicios de red', 'Derechos varios', 'Servicio verificación', 'Costo Publisher', 'Total costo de ventas'] 
+OK TV+ 2020-12-31 p37 pdfplumber 2 cols ['Producción de programas', 'Remuneración personal operativo', 'Amortización derecho material y concesiones', 'Comisión agencia', 'Medición publicitaria', 'Arriendo de estudios y sitio de transmisión', 'Depreciación de propiedad, plantas y equipos', 'Gastos comunes', 'Servicios de red', 'Derechos varios', 'Otros costos operacionales', 'Servicio verificación', 'Costo Publisher', 'Total costo de ventas'] 
+OK TV+ 2021-03-31 p34 pdfplumber 2 cols ['Producción de programas', 'Remuneración personal operativo', 'Amortización derecho material y concesiones', 'Comisión agencia', 'Medición publicitaria', 'Arriendo de estudios y sitio de transmisión', 'Depreciación de propiedad, plantas y equipos', 'Gastos canje VTR', 'Servicios de red', 'Derechos varios', 'Otros costos operacionales', 'Servicio verificación', 'Costo Publisher', 'Total costo de ventas'] 
+REVISAR TV+ 2021-06-30 p25 pdfplumber 2 cols ['Material importado (*)', 'Material nacional (**)', 'Concesiones de radiodifusión', 'Total activos intangibles (netos)'] encabezado ['2021-06-30', '2020-12-31'] ≠ supuesto ['2021-06-30', '2020-06-30']; total no hallado en EERR
+OK TV+ 2021-09-30 p33 pdfplumber 2 cols ['Producción de programas', 'Remuneración personal operativo', 'Derecho material importado', 'Comisión agencia', 'Medición publicitaria', 'Otros costos', 'Arriendo de estudios y sitio de transmisión', 'Depreciación de propiedad, plantas y equipos', 'Gastos canje VTR', 'Servicios de red', 'Derechos varios', 'Servicio verificación', 'Costo Publisher', 'Total costo de ventas'] 
+OK TV+ 2021-12-31 p37 pdfplumber 2 cols ['Produccióndeprogramas', 'Remuneraciónpersonaloperativo', 'Amortizaciónderechomaterialyconcesiones', 'Comisiónagencia', 'Mediciónpublicitaria', 'Arriendodeestudiosysitiodetransmisión', 'Depreciacióndepropiedad,plantasyequipos', 'Gastoscomunes', 'Serviciosdered', 'Derechosvarios', 'Otroscostosoperacionales', 'Servicioverificación', 'CostoPublisher', 'Totalcostodeventas'] 
+OK TV+ 2022-03-31 p33 pdfplumber 2 cols ['Producción de programas', 'Remuneración personal operativo', 'Amortización derecho material y concesiones', 'Comisión agencia', 'Medición publicitaria', 'Arriendo de estudios y sitio de transmisión', 'Depreciación de propiedad, plantas y equipos', 'Gastos canje VTR', 'Servicios de red', 'Derechos varios', 'Otros costos operacionales', 'Servicio verificación', 'Costo Publisher', 'Total costo de ventas'] 
+OK TV+ 2022-06-30 p36 pdfplumber 4 cols ['Producción de programas', 'Remuneración del personal', 'Amortización derecho material', 'Comisión agencia', 'Medición publicitaria', 'Arriendo de estudios y sitio de transmisión', 'Depreciación de propiedad, plantas y equipos', 'Servicios de red', 'Derechos varios', 'Servicio verificación', 'Costo Publisher', 'Otros Costos', 'Total'] 
+REVISAR TV+ 2022-09-30 p32 pdfplumber 2 cols ['Producción de programas', 'Remuneración del personal operativo', 'Derecho de material importado', 'Comisión agencia', 'Medición publicitaria', 'Otros Costos', 'Arriendo de estudios y sitio de transmisión', 'Depreciación de propiedad, plantas y equipos', 'Gastos canje por VTR', 'Servicios de red', 'Derechos varios', 'Servicio verificación', 'Costo Publisher', 'Total'] encabezado ['2022-06-30', '2021-06-30'] ≠ supuesto ['2022-09-30', '2021-09-30']
+OK TV+ 2022-12-31 p39 pdfplumber 2 cols ['Producción de programas', 'Remuneración personal operativo', 'Amortización derecho material y concesiones', 'Comisión agencia', 'Medición publicitaria', 'Arriendo de estudios y sitio de transmisión', 'Depreciación de propiedad, plantas y equipos', 'Gastos comunes', 'Servicios de red', 'Derechos varios', 'Otros costos operacionales', 'Servicio verificación', 'Costo Publisher', 'Total costo de ventas'] 
+OK TV+ 2023-03-31 p34 pdfplumber 2 cols ['Producción de programas', 'Remuneración personal operativo', 'Amortización derecho material y concesiones', 'Comisión agencia', 'Medición publicitaria', 'Arriendo de estudios y sitio de transmisión', 'Depreciación de propiedad, plantas y equipos', 'Gastos canje', 'Servicios de red', 'Derechos varios', 'Otros costos operacionales', 'Servicio verificación', 'Costo Publisher', 'Total costo de ventas'] 
+OK TV+ 2023-06-30 p38 pdfplumber 4 cols ['Producción de programas', 'Remuneración del personal', 'Amortización derecho material', 'Comisión agencia', 'Medición publicitaria', 'Arriendo de estudios y sitio de transmisión', 'Depreciación de propiedad, plantas y equipos', 'Servicios de red', 'Derechos varios', 'Servicio verificación', 'Costo Publisher', 'Otros Costos', 'Total'] 
+OK TV+ 2023-09-30 p32 pdfplumber 2 cols ['Producción de programas', 'Remuneración personal operativo', 'Derechos de material importado', 'Comisión agencia', 'Medición publicitaria', 'Otros costos', 'Arriendo de estudios y sitio de transmisión', 'Depreciación de propiedad, plantas y equipos', 'Gastos canje por VTR', 'Servicios de red', 'Derechos varios', 'Servicio verificación', 'Costo Publisher', 'Total costo de ventas'] descuadre de redondeo en la fuente (total - suma = [2, 0])
+OK TV+ 2023-12-31 p38 pdfplumber 2 cols ['Producción de programas', 'Remuneración personal operativo', 'Amortización derecho material y concesiones', 'Comisión agencia', 'Medición publicitaria', 'Arriendo de estudios y sitio de transmisión', 'Depreciación de propiedad, plantas y equipos', 'Gastos generales', 'Servicios de red', 'Derechos varios', 'Otros costos operacionales', 'Servicio verificación', 'Costo Publisher', 'Total costo de ventas'] 
+OK TV+ 2024-03-31 p35 pdfplumber 2 cols ['Producción de programas', 'Remuneración personal operativo', 'Amortización derecho material y concesiones', 'Comisión agencia', 'Medición publicitaria', 'Arriendo de estudios y sitio de transmisión', 'Depreciación de propiedad, plantas y equipos', 'Gastos canje', 'Servicios de red', 'Derechos varios', 'Otros costos operacionales', 'Servicio verificación', 'Costo Publisher', 'Total costo de ventas'] 
+REVISAR TV+ 2024-06-30 p24 pdfplumber 2 cols ['Material importado (*)', 'Material nacional (**)', 'Concesiones de radiodifusión', 'Total activos intangibles (netos)'] encabezado ['2024-06-30', '2023-12-31'] ≠ supuesto ['2024-06-30', '2023-06-30']; total no hallado en EERR
+OK TV+ 2024-09-30 p34 pdfplumber 2 cols ['Producción de programas', 'Remuneración personal operativo', 'Amortización derecho material y concesiones', 'Comisión agencia', 'Medición publicitaria', 'Arriendo de estudios y sitio de transmisión', 'Depreciación de propiedad, plantas y equipos', 'Gastos canje', 'Servicios de red', 'Derechos varios', 'Otros costos operacionales', 'Servicio verificación', 'Costo Publisher', 'Total costo de ventas'] descuadre de redondeo en la fuente (total - suma = [0, 2])
+OK TV+ 2024-12-31 p39 pdfplumber 2 cols ['Producción de programas', 'Remuneración personal operativo', 'Amortización derecho material y concesiones', 'Comisión agencia', 'Medición publicitaria', 'Arriendo de estudios y sitio de transmisión', 'Depreciación de propiedad, plantas y equipos', 'Gastos generales', 'Servicios de red', 'Derechos varios', 'Otros costos operacionales', 'Servicio verificación', 'Costo Publisher', 'Total costo de ventas'] 
+OK TV+ 2025-03-31 p34 pdfplumber 2 cols ['Producción de programas', 'Remuneración personal operativo', 'Amortización derecho material y concesiones', 'Comisión agencia', 'Medición publicitaria', 'Arriendo de estudios y sitio de transmisión', 'Depreciación de propiedad, plantas y equipos', 'Gastos generales', 'Servicios de red', 'Derechos varios', 'Otros costos operacionales', 'Servicio verificación', 'Costo Publisher', 'Total costo de ventas'] 
+REVISAR TV+ 2025-06-30 p25 pdfplumber 2 cols ['Material importado (*)', 'Material nacional (**)', 'Concesiones de radiodifusión', 'Total activos intangibles (netos)'] encabezado ['2025-06-30', '2024-12-31'] ≠ supuesto ['2025-06-30', '2024-06-30']
+OK TV+ 2025-09-30 p35 pdfplumber 2 cols ['Producción de programas', 'Remuneración personal operativo', 'Amortización derecho material y concesiones', 'Comisión agencia', 'Medición publicitaria', 'Arriendo de estudios y sitio de transmisión', 'Depreciación de propiedad, plantas y equipos', 'Gastos canje', 'Servicios de red', 'Derechos varios', 'Otros costos operacionales', 'Servicio verificación', 'Costo Publisher', 'Total costo de ventas'] 
+OK TV+ 2025-12-31 p39 pdfplumber 2 cols ['Producción de programas', 'Remuneración personal operativo', 'Costo Publisher', 'Depreciación de propiedad, plantas y equipos', 'Amortización derecho material y concesiones', 'Comisión agencia', 'Medición publicitaria', 'Honorario y asesorías', 'Arriendo de estudios y sitio de transmisión', 'Gastos generales', 'Servicios de red', 'Derechos varios', 'Servicio verificación', 'Plataformas digitales', 'Otros costos operacionales', 'Total costo de ventas'] descuadre de redondeo en la fuente (total - suma = [1, 0])
+OK TV+ 2026-03-31 p35 pdfplumber 2 cols ['Producción de programas', 'Remuneración personal operativo', 'Costo Publisher', 'Depreciación de propiedad, plantas y equipos', 'Gasto canje', 'Amortización derecho material y concesiones', 'Comisión agencia', 'Medición publicitaria', 'Arriendo de estudios y sitio de transmisión', 'Gastos generales', 'Servicios de red', 'Derechos varios', 'Servicio verificación', 'Otros costos operacionales', 'Total costo de ventas'] 
+OK TV+ 2026-06-30 p40 pdfplumber 4 cols ['Producción de programas', 'Remuneración del personal', 'Amortización derecho material', 'Comisión agencia', 'Medición publicitaria', 'Arriendo de estudios y sitio de transmisión', 'Depreciación', 'Servicios de red', 'Derechos varios', 'Servicio verificación', 'Costo Publisher', 'Gastos canje', 'Otros Costos', 'Total, costo de ventas'] 
+REVISION TVN 2011-06-30
+REVISION TVN 2011-12-31
+REVISAR TVN 2012-06-30 p46 pdftotext-layout 2 cols ['Terrenos en Leasing', 'Edificio Corporativo en Leasing', 'Instalaciones en Leasing', 'Depreciación Acumulada', 'Total'] encabezado ['2012-06-30', '2011-12-31'] ≠ supuesto ['2012-06-30', '2011-06-30']; total no hallado en EERR
+REVISAR TVN 2012-12-31 p47 pdftotext-layout 2 cols ['Terrenos en Leasing', 'Edificio Corporativo en Leasing', 'Instalaciones en Leasing', 'Depreciación Acumulada', 'Total'] total no hallado en EERR
+REVISAR TVN 2013-06-30 p47 pdftotext-layout 2 cols ['Terrenos en Leasing', 'Edificio Corporativo en Leasing', 'Instalaciones en Leasing', 'Depreciación Acumulada', 'Total'] encabezado ['2013-06-30', '2012-12-31'] ≠ supuesto ['2013-06-30', '2012-06-30']; total no hallado en EERR
+REVISAR TVN 2013-12-31 p49 pdftotext-layout 2 cols ['Terrenos en Leasing', 'Edificio Corporativo en Leasing', 'Instalaciones en Leasing', 'Depreciación Acumulada', 'Total'] total no hallado en EERR
+REVISION TVN 2014-06-30
+REVISAR TVN 2014-12-31 p50 pdftotext-layout 2 cols ['Terrenos en Leasing', 'Edificio Corporativo en Leasing', 'Instalaciones en Leasing', 'Depreciación Acumulada', 'Totales'] total no hallado en EERR
+REVISION TVN 2015-06-30
+REVISAR TVN 2015-12-31 p46 pdftotext-layout 2 cols ['Terrenos en Leasing', 'Edificio Corporativo en Leasing', 'Instalaciones en Leasing', 'Depreciación Acumulada', 'Totales'] total no hallado en EERR
+REVISAR TVN 2016-06-30 p40 pdftotext-raw 2 cols ['Terrenos en Leasing', 'Edificio Corporativo en Leasing', 'Instalaciones en Leasing', 'Equipos en leasing', 'Depreciación Acumulada', 'Totales'] encabezado ['2016-06-30', '2015-12-31'] ≠ supuesto ['2016-06-30', '2015-06-30']; total no hallado en EERR
+REVISAR TVN 2016-12-31 p41 pdftotext-raw 2 cols ['Terrenos en Leasing', 'Edificio Corporativo en Leasing', 'Instalaciones en Leasing', 'Equipos en Leasing', 'Depreciación Acumulada', 'Totales'] total no hallado en EERR
+REVISAR TVN 2017-03-31 p37 pdftotext-raw 2 cols ['Terrenos en Leasing', 'Edificio Corporativo en Leasing', 'Instalaciones en Leasing', 'Equipos en Leasing', 'Depreciación Acumulada', 'Total'] encabezado ['2017-03-31', '2016-12-31'] ≠ supuesto ['2017-03-31', '2016-03-31']; total no hallado en EERR
+REVISAR TVN 2017-06-30 p39 pdftotext-layout 2 cols ['Terrenos en Leasing', 'Edificio Corporativo en Leasing', 'Instalaciones en Leasing', 'Equipos en Leasing', 'Depreciación Acumulada', 'Total'] encabezado ['2017-06-30', '2016-12-31'] ≠ supuesto ['2017-06-30', '2016-06-30']; total no hallado en EERR
+REVISAR TVN 2017-09-30 p37 pdftotext-layout 2 cols ['Terrenos en Leasing', 'Edificio Corporativo en Leasing', 'Instalaciones en Leasing', 'Equipos en Leasing', 'Depreciación Acumulada', 'Total'] encabezado ['2017-09-30', '2016-12-31'] ≠ supuesto ['2017-09-30', '2016-09-30']; total no hallado en EERR
+OK TVN 2017-12-31 p65 pdftotext-layout 2 cols ['Remuneraciones', 'Depreciación', 'Otros costo de ventas', 'Totales'] 
+OK TVN 2018-03-31 p64 pdftotext-layout 2 cols ['Remuneraciones', 'Depreciación', 'Otros costo de ventas', 'Totales'] 
+OK TVN 2018-06-30 p67 pdfplumber 4 cols ['Remuneraciones', 'Depreciación', 'Otros costo de ventas', 'Totales'] 
+OK TVN 2018-09-30 p64 pdfplumber 4 cols ['Remuneraciones', 'Depreciación', 'Otros costo de ventas', 'Totales'] 
+OK TVN 2018-12-31 p68 pdfplumber 2 cols ['Remuneraciones', 'Depreciación', 'Otros costo de ventas', 'Totales'] 
+OK TVN 2019-03-31 p62 pdfplumber 2 cols ['Remuneraciones', 'Depreciación', 'Otros costo de ventas', 'Totales'] 
+OK TVN 2019-06-30 p64 pdfplumber 4 cols ['Remuneraciones', 'Depreciación', 'Otros costo de ventas', 'Totales'] 
+OK TVN 2019-09-30 p56 pdfplumber 4 cols ['Remuneraciones', 'Depreciación', 'Otros costos de venta', 'Total'] 
+OK TVN 2019-12-31 p55 pdftotext-layout 2 cols ['Remunera ci ones', 'Depreci a ci ón', 'Otros costos de venta', 'Totales'] 
+OK TVN 2020-03-31 p53 pdfplumber 2 cols ['Remuneraciones', 'Depreciación', 'Otros costos de venta', 'Totales'] 
+OK TVN 2020-06-30 p59 pdfplumber 4 cols ['Remuneraciones', 'Depreciación', 'Otros costos de venta', 'Totales'] 
+OK TVN 2020-09-30 p55 pdfplumber 4 cols ['Remuneraciones', 'Depreciación', 'Otros costos de venta', 'Totales'] 
+OK TVN 2020-12-31 p57 pdftotext-layout 2 cols ['Remunera ci ones', 'Depreci a ci ón', 'Otros costos de venta', 'Totales'] 
+OK TVN 2021-03-31 p53 pdfplumber 2 cols ['Remuneraciones', 'Depreciación', 'Otros costos de venta', 'Totales'] 
+OK TVN 2021-06-30 p57 pdfplumber 4 cols ['Remuneraciones', 'Depreciación', 'Otros costos de venta', 'Totales'] 
+OK TVN 2021-09-30 p54 pdfplumber 4 cols ['Remuneraciones', 'Depreciación', 'Otros costos de venta', 'Totales'] 
+OK TVN 2021-12-31 p57 pdftotext-layout 2 cols ['Remunera ci ones', 'Depreci a ci ón', 'Servi ci os', 'Costos de exhbición', 'Totales'] 
+OK TVN 2022-03-31 p51 pdfplumber 2 cols ['Remuneraciones', 'Depreciación', 'Servicios', 'Costos de exhbición', 'Totales'] 
+OK TVN 2022-06-30 p56 pdfplumber 4 cols ['Remuneraciones', 'Depreciación', 'Servicios', 'Costos de exhbición', 'Totales'] 
+OK TVN 2022-09-30 p52 pdfplumber 4 cols ['Remuneraciones', 'Depreciación', 'Servicios', 'Costos de exhbición', 'Totales'] 
+OK TVN 2022-12-31 p56 pdftotext-layout 2 cols ['Remunera ci ones', 'Depreci a ci ón', 'Servi ci os', 'Costos de exhbición', 'Totales'] 
+OK TVN 2023-03-31 p52 pdfplumber 2 cols ['Remuneraciones', 'Depreciación', 'Servicios', 'Costos de exhbición', 'Totales'] 
+OK TVN 2023-06-30 p52 pdftotext-raw 4 cols ['!Remuneraciones!', '!Depreciación!', '!Servicios!', '!Costos!de!exhbición!', '!Totales!'] 
+OK TVN 2023-09-30 p49 pdfplumber 4 cols ['Remuneraciones', 'Depreciación', 'Servicios', 'Costos de exhbición', 'Totales'] 
+OK TVN 2023-12-31 p54 ocr 2 cols ['Remuneraciones', 'Depreciación', 'Servicios', 'Costos de exhbición', 'Totales'] 
+OK TVN 2024-03-31 p46 pdfplumber 2 cols ['Remuneraciones', 'Depreciación', 'Servicios', 'Costos de exhbición', 'Totales'] 
+OK TVN 2024-06-30 p47 pdftotext-raw 4 cols ['Remuneraciones', 'Depreciación', 'Servicios', 'Costos de exhibición', 'Totales'] 
+OK TVN 2024-09-30 p45 ocr 4 cols ['Remuneraciones', 'Depreciación', 'Servicios', 'Costos de exhibición', 'Totales'] 
+OK TVN 2024-12-31 p50 pdfplumber 2 cols ['Remuneraciones', 'Depreciación', 'Servicios', 'Costos de producción y exhibición', 'Totales'] 
+OK TVN 2025-03-31 p45 pdftotext-layout 2 cols ['Remuneraciones', 'Depreciación', 'Servicios', 'Costos de producción y exhibición', 'Total es'] 
+OK TVN 2025-06-30 p50 pdfplumber 4 cols ['Remuneraciones', 'Depreciación', 'Servicios', 'Costos de producción y exhibición', 'Totales'] 
+OK TVN 2025-09-30 p48 pdftotext-raw 4 cols ['Remuneraciones', 'Depreciación', 'Servicios', 'Costos de producción y exhibición', 'Totales'] 
+OK TVN 2025-12-31 p54 ocr 2 cols ['Remuneraciones', 'Depreciación', 'Servicios', 'Costo de Exhibición', 'Otros Costos de producción', 'Totales'] 
+OK TVN 2026-03-31 p49 pdftotext-layout 2 cols ['Remuneraciones', 'Depreciación', 'Servicios', 'Costo de Exhibición', 'Otros Costos de producción', 'Total es'] 
+OK TVN 2026-06-30 p52 pdftotext-raw 4 cols ['Remuneraciones', 'Depreciación', 'Amortización', 'Servicios', 'Costo de Exhibición', 'Otros Costos de producción', 'Totales'] 
+Counter({'OK': 141, 'REVISION': 35, 'REVISAR': 17})

@@ -333,3 +333,10 @@ Herramientas: pdftotext/pdftoppm (poppler), pdfplumber, Tesseract en `C:\Program
 **Corrección (30-sep-2026).** La sección 3.3 dice que la AAM mide inversión bruta: sus informes indican «No incluye Comisión Agencia e IVA», es decir, inversión neta. La diferencia con los ingresos de los canales viene del perímetro (la AAM cubre todos los canales de TV abierta y solo TV abierta; la publicidad de los canales incluye digital, radio/cable y comisión TV paga). Controles externos en `src/07_controles_externos.py`: SEP 31/31 coincidencias para TVN; AAM 2024–2025 como contexto (104,7% y 105,4%).
 
 **Publicación (30-sep-2026).** Repositorio público https://github.com/cbuzeta/ingresos-tv-chile (todos los derechos reservados, ver `LICENSE`). La visualización se publica en GitHub Pages: https://cbuzeta.github.io/ingresos-tv-chile/ (rama `main`, carpeta `/docs`). Para actualizarla: correr `src/06_exportar.py` (regenera `docs/index.html`), hacer commit y `git push`; Pages se reconstruye solo. Si no se reconstruye, forzar con `gh api -X POST repos/cbuzeta/ingresos-tv-chile/pages/builds`.
+
+**Ampliación (1-oct-2026).**
+- Utilidades: `src/04d_extraer_resultados.py` lee el estado de resultados con tres controles (identidades y ingresos = nota). 157 de 187 EEFF.
+- Costo de ventas: `src/04c_extraer_costos.py` + `src/05b_mapear_costos.py`, siete categorías aprobadas (`mapeo/costos_mapeo.csv`); el total debe igualar el costo de ventas del estado de resultados del mismo EEFF.
+- TVN 2010–2016 desde la ficha de la CMF (junio y diciembre 2011–2016). Publicidad TVN: 95,4% en 2010, 60,1% en 2025.
+- Corrección: La Red dic-2019 compara con 9M-2018 (encabezado «30.09.2018»); las fechas con punto ahora se leen. La Red no tiene FY2018 desglosado y el agregado de seis canales no tiene 2018.
+- Audiencias (rating) y comparadores de Reino Unido/Europa: pendientes por decisión del 30-sep (anuarios CNTV descargados en data/externos/cntv/).

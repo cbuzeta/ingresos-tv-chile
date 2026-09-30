@@ -675,10 +675,10 @@ La Red,2017-12-31,data/raw/pdf/La Red/29082/articles-29082_recurso_1.pdf,anual,2
 La Red,2017-12-31,data/raw/pdf/La Red/29082/articles-29082_recurso_1.pdf,anual,2017-12-31,1,Ingresos de operación - canje ],12230
 La Red,2017-12-31,data/raw/pdf/La Red/29082/articles-29082_recurso_1.pdf,anual,2017-12-31,2,Otros ingresos de operación (*),191300
 La Red,2017-12-31,data/raw/pdf/La Red/29082/articles-29082_recurso_1.pdf,anual,2017-12-31,3,Totales,6365932
-La Red,2019-12-31,data/raw/pdf/La Red/28528/articles-28528_recurso_1.pdf,anual,2018-12-31,0,Ingresos de operación,3649007
-La Red,2019-12-31,data/raw/pdf/La Red/28528/articles-28528_recurso_1.pdf,anual,2018-12-31,1,Ingresos de operación - canje,18989
-La Red,2019-12-31,data/raw/pdf/La Red/28528/articles-28528_recurso_1.pdf,anual,2018-12-31,2,Otros ingresos de operación (*),158909
-La Red,2019-12-31,data/raw/pdf/La Red/28528/articles-28528_recurso_1.pdf,anual,2018-12-31,3,Totales,3826905
+La Red,2019-12-31,data/raw/pdf/La Red/28528/articles-28528_recurso_1.pdf,acumulado9m,2018-09-30,0,Ingresos de operación,3649007
+La Red,2019-12-31,data/raw/pdf/La Red/28528/articles-28528_recurso_1.pdf,acumulado9m,2018-09-30,1,Ingresos de operación - canje,18989
+La Red,2019-12-31,data/raw/pdf/La Red/28528/articles-28528_recurso_1.pdf,acumulado9m,2018-09-30,2,Otros ingresos de operación (*),158909
+La Red,2019-12-31,data/raw/pdf/La Red/28528/articles-28528_recurso_1.pdf,acumulado9m,2018-09-30,3,Totales,3826905
 La Red,2019-12-31,data/raw/pdf/La Red/28528/articles-28528_recurso_1.pdf,anual,2019-12-31,0,Ingresos de operación,3929475
 La Red,2019-12-31,data/raw/pdf/La Red/28528/articles-28528_recurso_1.pdf,anual,2019-12-31,1,Ingresos de operación - canje,26138
 La Red,2019-12-31,data/raw/pdf/La Red/28528/articles-28528_recurso_1.pdf,anual,2019-12-31,2,Otros ingresos de operación (*),255810
@@ -1607,6 +1607,114 @@ TV+,2026-06-30,data/raw/pdf/TV+/113712/2026090594782-2.pdf,trimestre,2026-06-30,
 TV+,2026-06-30,data/raw/pdf/TV+/113712/2026090594782-2.pdf,trimestre,2026-06-30,1,Arriendo infomerciales,229910
 TV+,2026-06-30,data/raw/pdf/TV+/113712/2026090594782-2.pdf,trimestre,2026-06-30,2,Otros negocios,125798
 TV+,2026-06-30,data/raw/pdf/TV+/113712/2026090594782-2.pdf,trimestre,2026-06-30,3,"Total, ingresos ordinarios",709258
+TVN,2011-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2011-06/Estados-Financieros-TVN-2011-06.pdf,semestre,2010-06-30,0,Ingresos por Publicidad,34183119
+TVN,2011-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2011-06/Estados-Financieros-TVN-2011-06.pdf,semestre,2010-06-30,1,Otros Ingresos,1823840
+TVN,2011-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2011-06/Estados-Financieros-TVN-2011-06.pdf,semestre,2010-06-30,2,Total,36006959
+TVN,2011-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2011-06/Estados-Financieros-TVN-2011-06.pdf,semestre,2011-06-30,0,Ingresos por Publicidad,34428764
+TVN,2011-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2011-06/Estados-Financieros-TVN-2011-06.pdf,semestre,2011-06-30,1,Otros Ingresos,1903508
+TVN,2011-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2011-06/Estados-Financieros-TVN-2011-06.pdf,semestre,2011-06-30,2,Total,36332272
+TVN,2011-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2011-06/Estados-Financieros-TVN-2011-06.pdf,trimestre,2010-06-30,0,Ingresos por Publicidad,21622102
+TVN,2011-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2011-06/Estados-Financieros-TVN-2011-06.pdf,trimestre,2010-06-30,1,Otros Ingresos,956348
+TVN,2011-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2011-06/Estados-Financieros-TVN-2011-06.pdf,trimestre,2010-06-30,2,Total,22578450
+TVN,2011-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2011-06/Estados-Financieros-TVN-2011-06.pdf,trimestre,2011-06-30,0,Ingresos por Publicidad,19224541
+TVN,2011-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2011-06/Estados-Financieros-TVN-2011-06.pdf,trimestre,2011-06-30,1,Otros Ingresos,988492
+TVN,2011-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2011-06/Estados-Financieros-TVN-2011-06.pdf,trimestre,2011-06-30,2,Total,20213033
+TVN,2011-12-31,data/raw/pdf/TVN/Estados-Financieros-TVN-2011-12/Estados-Financieros-TVN-2011-12.pdf,anual,2010-12-31,0,Ingresos por Publicidad,77362620
+TVN,2011-12-31,data/raw/pdf/TVN/Estados-Financieros-TVN-2011-12/Estados-Financieros-TVN-2011-12.pdf,anual,2010-12-31,1,Otros Ingresos,3763962
+TVN,2011-12-31,data/raw/pdf/TVN/Estados-Financieros-TVN-2011-12/Estados-Financieros-TVN-2011-12.pdf,anual,2010-12-31,2,Total,81126582
+TVN,2011-12-31,data/raw/pdf/TVN/Estados-Financieros-TVN-2011-12/Estados-Financieros-TVN-2011-12.pdf,anual,2011-12-31,0,Ingresos por Publicidad,76266571
+TVN,2011-12-31,data/raw/pdf/TVN/Estados-Financieros-TVN-2011-12/Estados-Financieros-TVN-2011-12.pdf,anual,2011-12-31,1,Otros Ingresos,3980039
+TVN,2011-12-31,data/raw/pdf/TVN/Estados-Financieros-TVN-2011-12/Estados-Financieros-TVN-2011-12.pdf,anual,2011-12-31,2,Total,80246610
+TVN,2011-12-31,data/raw/pdf/TVN/Estados-Financieros-TVN-2011-12/Estados-Financieros-TVN-2011-12.pdf,trimestre,2010-12-31,0,Ingresos por Publicidad,22160194
+TVN,2011-12-31,data/raw/pdf/TVN/Estados-Financieros-TVN-2011-12/Estados-Financieros-TVN-2011-12.pdf,trimestre,2010-12-31,1,Otros Ingresos,820118
+TVN,2011-12-31,data/raw/pdf/TVN/Estados-Financieros-TVN-2011-12/Estados-Financieros-TVN-2011-12.pdf,trimestre,2010-12-31,2,Total,22980312
+TVN,2011-12-31,data/raw/pdf/TVN/Estados-Financieros-TVN-2011-12/Estados-Financieros-TVN-2011-12.pdf,trimestre,2011-12-31,0,Ingresos por Publicidad,22118166
+TVN,2011-12-31,data/raw/pdf/TVN/Estados-Financieros-TVN-2011-12/Estados-Financieros-TVN-2011-12.pdf,trimestre,2011-12-31,1,Otros Ingresos,1053884
+TVN,2011-12-31,data/raw/pdf/TVN/Estados-Financieros-TVN-2011-12/Estados-Financieros-TVN-2011-12.pdf,trimestre,2011-12-31,2,Total,23172050
+TVN,2012-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2012-06/Estados-Financieros-TVN-2012-06.pdf,semestre,2011-06-30,0,Ingresos por Publicidad en televisión abierta e Internet,34019176
+TVN,2012-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2012-06/Estados-Financieros-TVN-2012-06.pdf,semestre,2011-06-30,1,Otros Ingresos,2313096
+TVN,2012-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2012-06/Estados-Financieros-TVN-2012-06.pdf,semestre,2011-06-30,2,Total,36332272
+TVN,2012-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2012-06/Estados-Financieros-TVN-2012-06.pdf,semestre,2012-06-30,0,Ingresos por Publicidad en televisión abierta e Internet,31130985
+TVN,2012-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2012-06/Estados-Financieros-TVN-2012-06.pdf,semestre,2012-06-30,1,Otros Ingresos,2342257
+TVN,2012-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2012-06/Estados-Financieros-TVN-2012-06.pdf,semestre,2012-06-30,2,Total,33473242
+TVN,2012-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2012-06/Estados-Financieros-TVN-2012-06.pdf,trimestre,2011-06-30,0,Ingresos por Publicidad en televisión abierta e Internet,19004082
+TVN,2012-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2012-06/Estados-Financieros-TVN-2012-06.pdf,trimestre,2011-06-30,1,Otros Ingresos,1208951
+TVN,2012-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2012-06/Estados-Financieros-TVN-2012-06.pdf,trimestre,2011-06-30,2,Total,20213033
+TVN,2012-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2012-06/Estados-Financieros-TVN-2012-06.pdf,trimestre,2012-06-30,0,Ingresos por Publicidad en televisión abierta e Internet,18162484
+TVN,2012-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2012-06/Estados-Financieros-TVN-2012-06.pdf,trimestre,2012-06-30,1,Otros Ingresos,1210177
+TVN,2012-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2012-06/Estados-Financieros-TVN-2012-06.pdf,trimestre,2012-06-30,2,Total,19372661
+TVN,2012-12-31,data/raw/pdf/TVN/Estados-Financieros-TVN-2012-12/Estados-Financieros-TVN-2012-12.pdf,anual,2011-12-31,0,Ingresos por Publicidad en televisión abierta e internet,75424588
+TVN,2012-12-31,data/raw/pdf/TVN/Estados-Financieros-TVN-2012-12/Estados-Financieros-TVN-2012-12.pdf,anual,2011-12-31,1,Otros Ingresos,4822022
+TVN,2012-12-31,data/raw/pdf/TVN/Estados-Financieros-TVN-2012-12/Estados-Financieros-TVN-2012-12.pdf,anual,2011-12-31,2,Total,80246610
+TVN,2012-12-31,data/raw/pdf/TVN/Estados-Financieros-TVN-2012-12/Estados-Financieros-TVN-2012-12.pdf,anual,2012-12-31,0,Ingresos por Publicidad en televisión abierta e internet,72464626
+TVN,2012-12-31,data/raw/pdf/TVN/Estados-Financieros-TVN-2012-12/Estados-Financieros-TVN-2012-12.pdf,anual,2012-12-31,1,Otros Ingresos,4967518
+TVN,2012-12-31,data/raw/pdf/TVN/Estados-Financieros-TVN-2012-12/Estados-Financieros-TVN-2012-12.pdf,anual,2012-12-31,2,Total,77432144
+TVN,2012-12-31,data/raw/pdf/TVN/Estados-Financieros-TVN-2012-12/Estados-Financieros-TVN-2012-12.pdf,trimestre,2011-12-31,0,Ingresos por Publicidad en televisión abierta e internet,21884309
+TVN,2012-12-31,data/raw/pdf/TVN/Estados-Financieros-TVN-2012-12/Estados-Financieros-TVN-2012-12.pdf,trimestre,2011-12-31,1,Otros Ingresos,1287741
+TVN,2012-12-31,data/raw/pdf/TVN/Estados-Financieros-TVN-2012-12/Estados-Financieros-TVN-2012-12.pdf,trimestre,2011-12-31,2,Total,23172050
+TVN,2012-12-31,data/raw/pdf/TVN/Estados-Financieros-TVN-2012-12/Estados-Financieros-TVN-2012-12.pdf,trimestre,2012-12-31,0,Ingresos por Publicidad en televisión abierta e internet,22194665
+TVN,2012-12-31,data/raw/pdf/TVN/Estados-Financieros-TVN-2012-12/Estados-Financieros-TVN-2012-12.pdf,trimestre,2012-12-31,1,Otros Ingresos,1198379
+TVN,2012-12-31,data/raw/pdf/TVN/Estados-Financieros-TVN-2012-12/Estados-Financieros-TVN-2012-12.pdf,trimestre,2012-12-31,2,Total,23393044
+TVN,2013-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2013-06/Estados-Financieros-TVN-2013-06.pdf,semestre,2012-06-30,0,Ingresos por Publicidad en televisión abierta e internet,31130985
+TVN,2013-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2013-06/Estados-Financieros-TVN-2013-06.pdf,semestre,2012-06-30,1,Otros Ingresos,2342257
+TVN,2013-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2013-06/Estados-Financieros-TVN-2013-06.pdf,semestre,2012-06-30,2,Total,33473242
+TVN,2013-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2013-06/Estados-Financieros-TVN-2013-06.pdf,semestre,2013-06-30,0,Ingresos por Publicidad en televisión abierta e internet,32907925
+TVN,2013-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2013-06/Estados-Financieros-TVN-2013-06.pdf,semestre,2013-06-30,1,Otros Ingresos,3038060
+TVN,2013-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2013-06/Estados-Financieros-TVN-2013-06.pdf,semestre,2013-06-30,2,Total,35945985
+TVN,2013-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2013-06/Estados-Financieros-TVN-2013-06.pdf,trimestre,2012-06-30,0,Ingresos por Publicidad en televisión abierta e internet,18162483
+TVN,2013-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2013-06/Estados-Financieros-TVN-2013-06.pdf,trimestre,2012-06-30,1,Otros Ingresos,1210178
+TVN,2013-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2013-06/Estados-Financieros-TVN-2013-06.pdf,trimestre,2012-06-30,2,Total,19372661
+TVN,2013-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2013-06/Estados-Financieros-TVN-2013-06.pdf,trimestre,2013-06-30,0,Ingresos por Publicidad en televisión abierta e internet,18249485
+TVN,2013-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2013-06/Estados-Financieros-TVN-2013-06.pdf,trimestre,2013-06-30,1,Otros Ingresos,1796160
+TVN,2013-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2013-06/Estados-Financieros-TVN-2013-06.pdf,trimestre,2013-06-30,2,Total,20045645
+TVN,2013-12-31,data/raw/pdf/TVN/Estados-Financieros-TVN-2013-12/Estados-Financieros-TVN-2013-12.pdf,anual,2012-12-31,0,Ingresos por Publicidad en televisión abierta e internet,72464626
+TVN,2013-12-31,data/raw/pdf/TVN/Estados-Financieros-TVN-2013-12/Estados-Financieros-TVN-2013-12.pdf,anual,2012-12-31,1,Otros Ingresos,4967518
+TVN,2013-12-31,data/raw/pdf/TVN/Estados-Financieros-TVN-2013-12/Estados-Financieros-TVN-2013-12.pdf,anual,2012-12-31,2,Total,77432144
+TVN,2013-12-31,data/raw/pdf/TVN/Estados-Financieros-TVN-2013-12/Estados-Financieros-TVN-2013-12.pdf,anual,2013-12-31,0,Ingresos por Publicidad en televisión abierta e internet,71441095
+TVN,2013-12-31,data/raw/pdf/TVN/Estados-Financieros-TVN-2013-12/Estados-Financieros-TVN-2013-12.pdf,anual,2013-12-31,1,Otros Ingresos,7329221
+TVN,2013-12-31,data/raw/pdf/TVN/Estados-Financieros-TVN-2013-12/Estados-Financieros-TVN-2013-12.pdf,anual,2013-12-31,2,Total,78770316
+TVN,2014-12-31,data/raw/pdf/TVN/Estados-Financieros-TVN-2014-12/Estados-Financieros-TVN-2014-12.pdf,anual,2013-12-31,0,Ingresos por Publicidad en televisión abierta e internet,71441095
+TVN,2014-12-31,data/raw/pdf/TVN/Estados-Financieros-TVN-2014-12/Estados-Financieros-TVN-2014-12.pdf,anual,2013-12-31,1,Otros Ingresos,7329221
+TVN,2014-12-31,data/raw/pdf/TVN/Estados-Financieros-TVN-2014-12/Estados-Financieros-TVN-2014-12.pdf,anual,2013-12-31,2,Totales,78770316
+TVN,2014-12-31,data/raw/pdf/TVN/Estados-Financieros-TVN-2014-12/Estados-Financieros-TVN-2014-12.pdf,anual,2014-12-31,0,Ingresos por Publicidad en televisión abierta e internet,67042108
+TVN,2014-12-31,data/raw/pdf/TVN/Estados-Financieros-TVN-2014-12/Estados-Financieros-TVN-2014-12.pdf,anual,2014-12-31,1,Otros Ingresos,8819559
+TVN,2014-12-31,data/raw/pdf/TVN/Estados-Financieros-TVN-2014-12/Estados-Financieros-TVN-2014-12.pdf,anual,2014-12-31,2,Totales,75861667
+TVN,2015-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2015-06/Estados-Financieros-TVN-2015-06.pdf,semestre,2014-06-30,0,Ingresos por Publicidad en televisión abierta e internet,37130230
+TVN,2015-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2015-06/Estados-Financieros-TVN-2015-06.pdf,semestre,2014-06-30,1,Otros Ingresos,3832738
+TVN,2015-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2015-06/Estados-Financieros-TVN-2015-06.pdf,semestre,2014-06-30,2,Totales,40962968
+TVN,2015-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2015-06/Estados-Financieros-TVN-2015-06.pdf,semestre,2015-06-30,0,Ingresos por Publicidad en televisión abierta e internet,18826502
+TVN,2015-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2015-06/Estados-Financieros-TVN-2015-06.pdf,semestre,2015-06-30,1,Otros Ingresos,4338036
+TVN,2015-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2015-06/Estados-Financieros-TVN-2015-06.pdf,semestre,2015-06-30,2,Totales,23164538
+TVN,2015-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2015-06/Estados-Financieros-TVN-2015-06.pdf,trimestre,2014-06-30,0,Ingresos por Publicidad en televisión abierta e internet,21315601
+TVN,2015-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2015-06/Estados-Financieros-TVN-2015-06.pdf,trimestre,2014-06-30,1,Otros Ingresos,2138865
+TVN,2015-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2015-06/Estados-Financieros-TVN-2015-06.pdf,trimestre,2014-06-30,2,Totales,23454466
+TVN,2015-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2015-06/Estados-Financieros-TVN-2015-06.pdf,trimestre,2015-06-30,0,Ingresos por Publicidad en televisión abierta e internet,11015984
+TVN,2015-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2015-06/Estados-Financieros-TVN-2015-06.pdf,trimestre,2015-06-30,1,Otros Ingresos,2784268
+TVN,2015-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2015-06/Estados-Financieros-TVN-2015-06.pdf,trimestre,2015-06-30,2,Totales,13800252
+TVN,2015-12-31,data/raw/pdf/TVN/Estados-Financieros-TVN-2015-12/Estados-Financieros-TVN-2015-12.pdf,anual,2014-12-31,0,Ingresos por Publicidad en televisión abierta e internet,67042108
+TVN,2015-12-31,data/raw/pdf/TVN/Estados-Financieros-TVN-2015-12/Estados-Financieros-TVN-2015-12.pdf,anual,2014-12-31,1,Otros Ingresos,8819559
+TVN,2015-12-31,data/raw/pdf/TVN/Estados-Financieros-TVN-2015-12/Estados-Financieros-TVN-2015-12.pdf,anual,2014-12-31,2,Total,75861667
+TVN,2015-12-31,data/raw/pdf/TVN/Estados-Financieros-TVN-2015-12/Estados-Financieros-TVN-2015-12.pdf,anual,2015-12-31,0,Ingresos por Publicidad en televisión abierta e internet,39307836
+TVN,2015-12-31,data/raw/pdf/TVN/Estados-Financieros-TVN-2015-12/Estados-Financieros-TVN-2015-12.pdf,anual,2015-12-31,1,Otros Ingresos,10397240
+TVN,2015-12-31,data/raw/pdf/TVN/Estados-Financieros-TVN-2015-12/Estados-Financieros-TVN-2015-12.pdf,anual,2015-12-31,2,Total,49705076
+TVN,2016-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2016-06/Estados-Financieros-TVN-2016-06.pdf,semestre,2015-06-30,0,Ingresos por Publicidad en televisión abierta e internet,18826502
+TVN,2016-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2016-06/Estados-Financieros-TVN-2016-06.pdf,semestre,2015-06-30,1,Otros Ingresos,4338036
+TVN,2016-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2016-06/Estados-Financieros-TVN-2016-06.pdf,semestre,2015-06-30,2,Total,23164538
+TVN,2016-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2016-06/Estados-Financieros-TVN-2016-06.pdf,semestre,2016-06-30,0,Ingresos por Publicidad en televisión abierta e internet,15294656
+TVN,2016-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2016-06/Estados-Financieros-TVN-2016-06.pdf,semestre,2016-06-30,1,Otros Ingresos,5232590
+TVN,2016-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2016-06/Estados-Financieros-TVN-2016-06.pdf,semestre,2016-06-30,2,Total,20527246
+TVN,2016-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2016-06/Estados-Financieros-TVN-2016-06.pdf,trimestre,2015-06-30,0,Ingresos por Publicidad en televisión abierta e internet,11015984
+TVN,2016-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2016-06/Estados-Financieros-TVN-2016-06.pdf,trimestre,2015-06-30,1,Otros Ingresos,2784268
+TVN,2016-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2016-06/Estados-Financieros-TVN-2016-06.pdf,trimestre,2015-06-30,2,Total,13800252
+TVN,2016-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2016-06/Estados-Financieros-TVN-2016-06.pdf,trimestre,2016-06-30,0,Ingresos por Publicidad en televisión abierta e internet,8777271
+TVN,2016-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2016-06/Estados-Financieros-TVN-2016-06.pdf,trimestre,2016-06-30,1,Otros Ingresos,2451821
+TVN,2016-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2016-06/Estados-Financieros-TVN-2016-06.pdf,trimestre,2016-06-30,2,Total,11229092
+TVN,2016-12-31,data/raw/pdf/TVN/Estados-Financieros-TVN-2016-12/Estados-Financieros-TVN-2016-12.pdf,anual,2015-12-31,0,Ingresos por Publicidad en televisión abierta e internet,39307836
+TVN,2016-12-31,data/raw/pdf/TVN/Estados-Financieros-TVN-2016-12/Estados-Financieros-TVN-2016-12.pdf,anual,2015-12-31,1,Otros Ingresos,10397240
+TVN,2016-12-31,data/raw/pdf/TVN/Estados-Financieros-TVN-2016-12/Estados-Financieros-TVN-2016-12.pdf,anual,2015-12-31,2,Totales,49705076
+TVN,2016-12-31,data/raw/pdf/TVN/Estados-Financieros-TVN-2016-12/Estados-Financieros-TVN-2016-12.pdf,anual,2016-12-31,0,Ingresos por Publicidad en televisión abierta e internet,37867428
+TVN,2016-12-31,data/raw/pdf/TVN/Estados-Financieros-TVN-2016-12/Estados-Financieros-TVN-2016-12.pdf,anual,2016-12-31,1,Otros Ingresos,10914562
+TVN,2016-12-31,data/raw/pdf/TVN/Estados-Financieros-TVN-2016-12/Estados-Financieros-TVN-2016-12.pdf,anual,2016-12-31,2,Totales,48781990
 TVN,2017-03-31,data/raw/pdf/TVN/fecu_mar_2017_libro/fecu_mar_2017_libro.pdf,trimestre,2016-03-31,0,Ingresos por Publicidad en televisión abierta e internet,6517385
 TVN,2017-03-31,data/raw/pdf/TVN/fecu_mar_2017_libro/fecu_mar_2017_libro.pdf,trimestre,2016-03-31,1,Otros Ingresos,2780769
 TVN,2017-03-31,data/raw/pdf/TVN/fecu_mar_2017_libro/fecu_mar_2017_libro.pdf,trimestre,2016-03-31,2,Total,9298154

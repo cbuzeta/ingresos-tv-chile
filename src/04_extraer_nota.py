@@ -35,7 +35,9 @@ ENCABEZADO_NOTA = r"(ingresos? (de|por) actividades ordinarias|ingresos ordinari
 SALIDA_LINEAS, SALIDA_LOG = "lineas_extraidas.csv", "extraccion_log.csv"
 AMT = re.compile(r"(?<![\d/\-])\(?-?\d{1,3}(?:\.\d{3})+\)?(?![\d/\-])|(?<![\w\d/\-.,])\(?\d{1,3}\)?(?![\w\d/\-.,%])"
                  r"|(?<=\s)-(?=\s|$)")
-FECHA = re.compile(r"(\d{2})[-/](\d{2})[-/](\d{4})")
+# fechas de encabezado: 31-12-2019, 31/12/2019 o 31.12.2019 (La Red, TVN). Con puntos también se leen, porque el
+# encabezado puede decir otra cosa que la supuesta: La Red dic-2019 compara con 30.09.2018, no con 31.12.2018.
+FECHA = re.compile(r"(\d{2})[-/.](\d{2})[-/.](\d{4})")
 
 
 def amount(tok):
@@ -397,6 +399,8 @@ def col_desde_fechas(ini, fin, fecha_cierre):
     meses = mf - mi + 1
     tipo = {12: "anual", 9: "acumulado9m", 6: "semestre", 3: "trimestre"}[meses]
     rol = "actual" if int(fin[:4]) == int(fecha_cierre[:4]) else "comparativo"
+    # el cierre es siempre fin de trimestre; se normaliza por si el encabezado trae una errata (TVN: "30.12.2018")
+    fin = f"{fin[:4]}-{mf:02d}-{ {3: 31, 6: 30, 9: 30, 12: 31}[mf]:02d}"
     return {"tipo_periodo": tipo, "rol": rol, "inicio": ini, "fin": fin}
 
 

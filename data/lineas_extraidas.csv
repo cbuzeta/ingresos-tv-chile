@@ -676,13 +676,13 @@ La Red,2017-12-31,data/raw/pdf/La Red/29082/articles-29082_recurso_1.pdf,anual,c
 La Red,2017-12-31,data/raw/pdf/La Red/29082/articles-29082_recurso_1.pdf,anual,actual,2017-01-01,2017-12-31,3,True,Totales,6365932,42,ocr,OK
 La Red,2017-12-31,data/raw/pdf/La Red/29082/articles-29082_recurso_1.pdf,anual,comparativo,2016-01-01,2016-12-31,3,True,Totales,6728067,42,ocr,OK
 La Red,2019-12-31,data/raw/pdf/La Red/28528/articles-28528_recurso_1.pdf,anual,actual,2019-01-01,2019-12-31,0,False,Ingresos de operación,3929475,43,ocr400,OK
-La Red,2019-12-31,data/raw/pdf/La Red/28528/articles-28528_recurso_1.pdf,anual,comparativo,2018-01-01,2018-12-31,0,False,Ingresos de operación,3649007,43,ocr400,OK
+La Red,2019-12-31,data/raw/pdf/La Red/28528/articles-28528_recurso_1.pdf,acumulado9m,comparativo,2018-01-01,2018-09-30,0,False,Ingresos de operación,3649007,43,ocr400,OK
 La Red,2019-12-31,data/raw/pdf/La Red/28528/articles-28528_recurso_1.pdf,anual,actual,2019-01-01,2019-12-31,1,False,Ingresos de operación - canje,26138,43,ocr400,OK
-La Red,2019-12-31,data/raw/pdf/La Red/28528/articles-28528_recurso_1.pdf,anual,comparativo,2018-01-01,2018-12-31,1,False,Ingresos de operación - canje,18989,43,ocr400,OK
+La Red,2019-12-31,data/raw/pdf/La Red/28528/articles-28528_recurso_1.pdf,acumulado9m,comparativo,2018-01-01,2018-09-30,1,False,Ingresos de operación - canje,18989,43,ocr400,OK
 La Red,2019-12-31,data/raw/pdf/La Red/28528/articles-28528_recurso_1.pdf,anual,actual,2019-01-01,2019-12-31,2,False,Otros ingresos de operación (*),255810,43,ocr400,OK
-La Red,2019-12-31,data/raw/pdf/La Red/28528/articles-28528_recurso_1.pdf,anual,comparativo,2018-01-01,2018-12-31,2,False,Otros ingresos de operación (*),158909,43,ocr400,OK
+La Red,2019-12-31,data/raw/pdf/La Red/28528/articles-28528_recurso_1.pdf,acumulado9m,comparativo,2018-01-01,2018-09-30,2,False,Otros ingresos de operación (*),158909,43,ocr400,OK
 La Red,2019-12-31,data/raw/pdf/La Red/28528/articles-28528_recurso_1.pdf,anual,actual,2019-01-01,2019-12-31,3,True,Totales,4211423,43,ocr400,OK
-La Red,2019-12-31,data/raw/pdf/La Red/28528/articles-28528_recurso_1.pdf,anual,comparativo,2018-01-01,2018-12-31,3,True,Totales,3826905,43,ocr400,OK
+La Red,2019-12-31,data/raw/pdf/La Red/28528/articles-28528_recurso_1.pdf,acumulado9m,comparativo,2018-01-01,2018-09-30,3,True,Totales,3826905,43,ocr400,OK
 La Red,2020-03-31,data/raw/pdf/La Red/29050/2020050177661_2.pdf,trimestre,actual,2020-01-01,2020-03-31,0,False,Ingresos de operación,772484,37,ocr,OK
 La Red,2020-03-31,data/raw/pdf/La Red/29050/2020050177661_2.pdf,trimestre,comparativo,2019-01-01,2019-03-31,0,False,Ingresos de operación,991405,37,ocr,OK
 La Red,2020-03-31,data/raw/pdf/La Red/29050/2020050177661_2.pdf,trimestre,actual,2020-01-01,2020-03-31,1,False,Ingresos de operación - canje,13100,37,ocr,OK
@@ -715,14 +715,14 @@ La Red,2020-12-31,data/raw/pdf/La Red/47351/2021030120869_1.pdf,anual,actual,202
 La Red,2020-12-31,data/raw/pdf/La Red/47351/2021030120869_1.pdf,anual,comparativo,2019-01-01,2019-12-31,2,False,Otros ingresos de operación (*),255810,38,pdfplumber,OK
 La Red,2020-12-31,data/raw/pdf/La Red/47351/2021030120869_1.pdf,anual,actual,2020-01-01,2020-12-31,3,True,Totales,4038531,38,pdfplumber,OK
 La Red,2020-12-31,data/raw/pdf/La Red/47351/2021030120869_1.pdf,anual,comparativo,2019-01-01,2019-12-31,3,True,Totales,4211423,38,pdfplumber,OK
-La Red,2021-03-31,data/raw/pdf/La Red/47715/2021050210171_2.pdf,trimestre,actual,2021-01-01,2021-03-31,0,False,Ingresos de operación,697637,36,pdfplumber,OK
-La Red,2021-03-31,data/raw/pdf/La Red/47715/2021050210171_2.pdf,trimestre,comparativo,2020-01-01,2020-03-31,0,False,Ingresos de operación,772484,36,pdfplumber,OK
-La Red,2021-03-31,data/raw/pdf/La Red/47715/2021050210171_2.pdf,trimestre,actual,2021-01-01,2021-03-31,1,False,Ingresos de operación - canje,25615,36,pdfplumber,OK
-La Red,2021-03-31,data/raw/pdf/La Red/47715/2021050210171_2.pdf,trimestre,comparativo,2020-01-01,2020-03-31,1,False,Ingresos de operación - canje,13100,36,pdfplumber,OK
-La Red,2021-03-31,data/raw/pdf/La Red/47715/2021050210171_2.pdf,trimestre,actual,2021-01-01,2021-03-31,2,False,Otros ingresos de operación (*),89280,36,pdfplumber,OK
-La Red,2021-03-31,data/raw/pdf/La Red/47715/2021050210171_2.pdf,trimestre,comparativo,2020-01-01,2020-03-31,2,False,Otros ingresos de operación (*),97924,36,pdfplumber,OK
-La Red,2021-03-31,data/raw/pdf/La Red/47715/2021050210171_2.pdf,trimestre,actual,2021-01-01,2021-03-31,3,True,Totales,812532,36,pdfplumber,OK
-La Red,2021-03-31,data/raw/pdf/La Red/47715/2021050210171_2.pdf,trimestre,comparativo,2020-01-01,2020-03-31,3,True,Totales,883508,36,pdfplumber,OK
+La Red,2021-03-31,data/raw/pdf/La Red/47715/2021050210171_2.pdf,trimestre,actual,2021-01-01,2021-03-31,0,False,Ingresos de operación,697637,36,pdfplumber,REVISAR
+La Red,2021-03-31,data/raw/pdf/La Red/47715/2021050210171_2.pdf,trimestre,comparativo,2020-01-01,2020-03-31,0,False,Ingresos de operación,772484,36,pdfplumber,REVISAR
+La Red,2021-03-31,data/raw/pdf/La Red/47715/2021050210171_2.pdf,trimestre,actual,2021-01-01,2021-03-31,1,False,Ingresos de operación - canje,25615,36,pdfplumber,REVISAR
+La Red,2021-03-31,data/raw/pdf/La Red/47715/2021050210171_2.pdf,trimestre,comparativo,2020-01-01,2020-03-31,1,False,Ingresos de operación - canje,13100,36,pdfplumber,REVISAR
+La Red,2021-03-31,data/raw/pdf/La Red/47715/2021050210171_2.pdf,trimestre,actual,2021-01-01,2021-03-31,2,False,Otros ingresos de operación (*),89280,36,pdfplumber,REVISAR
+La Red,2021-03-31,data/raw/pdf/La Red/47715/2021050210171_2.pdf,trimestre,comparativo,2020-01-01,2020-03-31,2,False,Otros ingresos de operación (*),97924,36,pdfplumber,REVISAR
+La Red,2021-03-31,data/raw/pdf/La Red/47715/2021050210171_2.pdf,trimestre,actual,2021-01-01,2021-03-31,3,True,Totales,812532,36,pdfplumber,REVISAR
+La Red,2021-03-31,data/raw/pdf/La Red/47715/2021050210171_2.pdf,trimestre,comparativo,2020-01-01,2020-03-31,3,True,Totales,883508,36,pdfplumber,REVISAR
 La Red,2021-06-30,data/raw/pdf/La Red/49398/2021090375853_2.pdf,semestre,actual,2021-01-01,2021-06-30,0,False,Ingresos de operación,1818135,38,pdfplumber,OK
 La Red,2021-06-30,data/raw/pdf/La Red/49398/2021090375853_2.pdf,semestre,comparativo,2020-01-01,2020-06-30,0,False,Ingresos de operación,1432535,38,pdfplumber,OK
 La Red,2021-06-30,data/raw/pdf/La Red/49398/2021090375853_2.pdf,semestre,actual,2021-01-01,2021-06-30,1,False,Ingresos de operación - canje,45698,38,pdfplumber,OK
@@ -877,12 +877,12 @@ La Red,2026-03-31,data/raw/pdf/La Red/113718/2026080530731-2.pdf,trimestre,actua
 La Red,2026-03-31,data/raw/pdf/La Red/113718/2026080530731-2.pdf,trimestre,comparativo,2025-01-01,2025-03-31,1,False,Otros ingresos de operación (*),47247,37,pdfplumber,OK
 La Red,2026-03-31,data/raw/pdf/La Red/113718/2026080530731-2.pdf,trimestre,actual,2026-01-01,2026-03-31,2,True,Totales,159104,37,pdfplumber,OK
 La Red,2026-03-31,data/raw/pdf/La Red/113718/2026080530731-2.pdf,trimestre,comparativo,2025-01-01,2025-03-31,2,True,Totales,311712,37,pdfplumber,OK
-La Red,2026-06-30,data/raw/pdf/La Red/113715/2026090587585-2.pdf,semestre,actual,2026-01-01,2026-06-30,0,False,Ingresos de operación,235922,41,pdfplumber,OK
-La Red,2026-06-30,data/raw/pdf/La Red/113715/2026090587585-2.pdf,semestre,comparativo,2025-01-01,2025-06-30,0,False,Ingresos de operación,418192,41,pdfplumber,OK
-La Red,2026-06-30,data/raw/pdf/La Red/113715/2026090587585-2.pdf,semestre,actual,2026-01-01,2026-06-30,1,False,Otros ingresos de operación (*),98735,41,pdfplumber,OK
-La Red,2026-06-30,data/raw/pdf/La Red/113715/2026090587585-2.pdf,semestre,comparativo,2025-01-01,2025-06-30,1,False,Otros ingresos de operación (*),159904,41,pdfplumber,OK
-La Red,2026-06-30,data/raw/pdf/La Red/113715/2026090587585-2.pdf,semestre,actual,2026-01-01,2026-06-30,2,True,Totales,334657,41,pdfplumber,OK
-La Red,2026-06-30,data/raw/pdf/La Red/113715/2026090587585-2.pdf,semestre,comparativo,2025-01-01,2025-06-30,2,True,Totales,578096,41,pdfplumber,OK
+La Red,2026-06-30,data/raw/pdf/La Red/113715/2026090587585-2.pdf,semestre,actual,2026-01-01,2026-06-30,0,False,Ingresos de operación,235922,41,pdfplumber,REVISAR
+La Red,2026-06-30,data/raw/pdf/La Red/113715/2026090587585-2.pdf,semestre,comparativo,2025-01-01,2025-06-30,0,False,Ingresos de operación,418192,41,pdfplumber,REVISAR
+La Red,2026-06-30,data/raw/pdf/La Red/113715/2026090587585-2.pdf,semestre,actual,2026-01-01,2026-06-30,1,False,Otros ingresos de operación (*),98735,41,pdfplumber,REVISAR
+La Red,2026-06-30,data/raw/pdf/La Red/113715/2026090587585-2.pdf,semestre,comparativo,2025-01-01,2025-06-30,1,False,Otros ingresos de operación (*),159904,41,pdfplumber,REVISAR
+La Red,2026-06-30,data/raw/pdf/La Red/113715/2026090587585-2.pdf,semestre,actual,2026-01-01,2026-06-30,2,True,Totales,334657,41,pdfplumber,REVISAR
+La Red,2026-06-30,data/raw/pdf/La Red/113715/2026090587585-2.pdf,semestre,comparativo,2025-01-01,2025-06-30,2,True,Totales,578096,41,pdfplumber,REVISAR
 Mega,2017-12-31,data/raw/pdf/Mega/29085/articles-29085_recurso_1.pdf,anual,actual,2017-01-01,2017-12-31,0,False,Ingresos por publicidad de Televisión e Internet,90277490,41,ocr400,OK
 Mega,2017-12-31,data/raw/pdf/Mega/29085/articles-29085_recurso_1.pdf,anual,comparativo,2016-01-01,2016-12-31,0,False,Ingresos por publicidad de Televisión e Internet,90781529,41,ocr400,OK
 Mega,2017-12-31,data/raw/pdf/Mega/29085/articles-29085_recurso_1.pdf,anual,actual,2017-01-01,2017-12-31,1,False,Ingresos por otros negocios,7042030,41,ocr400,OK
@@ -1369,24 +1369,24 @@ TV+,2021-12-31,data/raw/pdf/TV+/50696/Fecu.pdf,anual,actual,2021-01-01,2021-12-3
 TV+,2021-12-31,data/raw/pdf/TV+/50696/Fecu.pdf,anual,comparativo,2020-01-01,2020-12-31,5,False,Serviciodeadministración,37362,37,pdfplumber,OK
 TV+,2021-12-31,data/raw/pdf/TV+/50696/Fecu.pdf,anual,actual,2021-01-01,2021-12-31,6,True,Totalingresosordinarios,5549515,37,pdfplumber,OK
 TV+,2021-12-31,data/raw/pdf/TV+/50696/Fecu.pdf,anual,comparativo,2020-01-01,2020-12-31,6,True,Totalingresosordinarios,4462207,37,pdfplumber,OK
-TV+,2022-03-31,data/raw/pdf/TV+/51269/Fecu Marzo 2022.pdf,trimestre,actual,2022-01-01,2022-03-31,0,False,Ventas de VTR,43892,33,pdftotext-raw,OK
-TV+,2022-03-31,data/raw/pdf/TV+/51269/Fecu Marzo 2022.pdf,trimestre,comparativo,2021-01-01,2021-03-31,0,False,Ventas de VTR,50437,33,pdftotext-raw,OK
-TV+,2022-03-31,data/raw/pdf/TV+/51269/Fecu Marzo 2022.pdf,trimestre,actual,2022-01-01,2022-03-31,1,False,Ventas de publicidad,823574,33,pdftotext-raw,OK
-TV+,2022-03-31,data/raw/pdf/TV+/51269/Fecu Marzo 2022.pdf,trimestre,comparativo,2021-01-01,2021-03-31,1,False,Ventas de publicidad,719901,33,pdftotext-raw,OK
-TV+,2022-03-31,data/raw/pdf/TV+/51269/Fecu Marzo 2022.pdf,trimestre,actual,2022-01-01,2022-03-31,2,False,Venta infomerciales,210000,33,pdftotext-raw,OK
-TV+,2022-03-31,data/raw/pdf/TV+/51269/Fecu Marzo 2022.pdf,trimestre,comparativo,2021-01-01,2021-03-31,2,False,Venta infomerciales,210000,33,pdftotext-raw,OK
-TV+,2022-03-31,data/raw/pdf/TV+/51269/Fecu Marzo 2022.pdf,trimestre,actual,2022-01-01,2022-03-31,3,False,Espacio de transmisión,65870,33,pdftotext-raw,OK
-TV+,2022-03-31,data/raw/pdf/TV+/51269/Fecu Marzo 2022.pdf,trimestre,comparativo,2021-01-01,2021-03-31,3,False,Espacio de transmisión,11000,33,pdftotext-raw,OK
-TV+,2022-03-31,data/raw/pdf/TV+/51269/Fecu Marzo 2022.pdf,trimestre,actual,2022-01-01,2022-03-31,4,False,Otros negocios,14916,33,pdftotext-raw,OK
-TV+,2022-03-31,data/raw/pdf/TV+/51269/Fecu Marzo 2022.pdf,trimestre,comparativo,2021-01-01,2021-03-31,4,False,Otros negocios,10840,33,pdftotext-raw,OK
-TV+,2022-03-31,data/raw/pdf/TV+/51269/Fecu Marzo 2022.pdf,trimestre,actual,2022-01-01,2022-03-31,5,False,Arriendo de estudios,0,33,pdftotext-raw,OK
-TV+,2022-03-31,data/raw/pdf/TV+/51269/Fecu Marzo 2022.pdf,trimestre,comparativo,2021-01-01,2021-03-31,5,False,Arriendo de estudios,21705,33,pdftotext-raw,OK
-TV+,2022-03-31,data/raw/pdf/TV+/51269/Fecu Marzo 2022.pdf,trimestre,actual,2022-01-01,2022-03-31,6,False,Servicio de administración,0,33,pdftotext-raw,OK
-TV+,2022-03-31,data/raw/pdf/TV+/51269/Fecu Marzo 2022.pdf,trimestre,comparativo,2021-01-01,2021-03-31,6,False,Servicio de administración,3010,33,pdftotext-raw,OK
-TV+,2022-03-31,data/raw/pdf/TV+/51269/Fecu Marzo 2022.pdf,trimestre,actual,2022-01-01,2022-03-31,7,False,Venta canje,23916,33,pdftotext-raw,OK
-TV+,2022-03-31,data/raw/pdf/TV+/51269/Fecu Marzo 2022.pdf,trimestre,comparativo,2021-01-01,2021-03-31,7,False,Venta canje,8200,33,pdftotext-raw,OK
-TV+,2022-03-31,data/raw/pdf/TV+/51269/Fecu Marzo 2022.pdf,trimestre,actual,2022-01-01,2022-03-31,8,True,Total ingresos ordinarios,1182169,33,pdftotext-raw,OK
-TV+,2022-03-31,data/raw/pdf/TV+/51269/Fecu Marzo 2022.pdf,trimestre,comparativo,2021-01-01,2021-03-31,8,True,Total ingresos ordinarios,1035093,33,pdftotext-raw,OK
+TV+,2022-03-31,data/raw/pdf/TV+/51269/Fecu Marzo 2022.pdf,trimestre,actual,2022-01-01,2022-03-31,0,False,Ventas de VTR,43892,33,pdfplumber,OK
+TV+,2022-03-31,data/raw/pdf/TV+/51269/Fecu Marzo 2022.pdf,trimestre,comparativo,2021-01-01,2021-03-31,0,False,Ventas de VTR,50437,33,pdfplumber,OK
+TV+,2022-03-31,data/raw/pdf/TV+/51269/Fecu Marzo 2022.pdf,trimestre,actual,2022-01-01,2022-03-31,1,False,Ventas de publicidad,823574,33,pdfplumber,OK
+TV+,2022-03-31,data/raw/pdf/TV+/51269/Fecu Marzo 2022.pdf,trimestre,comparativo,2021-01-01,2021-03-31,1,False,Ventas de publicidad,719901,33,pdfplumber,OK
+TV+,2022-03-31,data/raw/pdf/TV+/51269/Fecu Marzo 2022.pdf,trimestre,actual,2022-01-01,2022-03-31,2,False,Venta infomerciales,210000,33,pdfplumber,OK
+TV+,2022-03-31,data/raw/pdf/TV+/51269/Fecu Marzo 2022.pdf,trimestre,comparativo,2021-01-01,2021-03-31,2,False,Venta infomerciales,210000,33,pdfplumber,OK
+TV+,2022-03-31,data/raw/pdf/TV+/51269/Fecu Marzo 2022.pdf,trimestre,actual,2022-01-01,2022-03-31,3,False,Espacio de transmisión,65870,33,pdfplumber,OK
+TV+,2022-03-31,data/raw/pdf/TV+/51269/Fecu Marzo 2022.pdf,trimestre,comparativo,2021-01-01,2021-03-31,3,False,Espacio de transmisión,11000,33,pdfplumber,OK
+TV+,2022-03-31,data/raw/pdf/TV+/51269/Fecu Marzo 2022.pdf,trimestre,actual,2022-01-01,2022-03-31,4,False,Otros negocios,14916,33,pdfplumber,OK
+TV+,2022-03-31,data/raw/pdf/TV+/51269/Fecu Marzo 2022.pdf,trimestre,comparativo,2021-01-01,2021-03-31,4,False,Otros negocios,10840,33,pdfplumber,OK
+TV+,2022-03-31,data/raw/pdf/TV+/51269/Fecu Marzo 2022.pdf,trimestre,actual,2022-01-01,2022-03-31,5,False,Arriendo de estudios,0,33,pdfplumber,OK
+TV+,2022-03-31,data/raw/pdf/TV+/51269/Fecu Marzo 2022.pdf,trimestre,comparativo,2021-01-01,2021-03-31,5,False,Arriendo de estudios,21705,33,pdfplumber,OK
+TV+,2022-03-31,data/raw/pdf/TV+/51269/Fecu Marzo 2022.pdf,trimestre,actual,2022-01-01,2022-03-31,6,False,Servicio de administración,0,33,pdfplumber,OK
+TV+,2022-03-31,data/raw/pdf/TV+/51269/Fecu Marzo 2022.pdf,trimestre,comparativo,2021-01-01,2021-03-31,6,False,Servicio de administración,3010,33,pdfplumber,OK
+TV+,2022-03-31,data/raw/pdf/TV+/51269/Fecu Marzo 2022.pdf,trimestre,actual,2022-01-01,2022-03-31,7,False,Venta canje,23916,33,pdfplumber,OK
+TV+,2022-03-31,data/raw/pdf/TV+/51269/Fecu Marzo 2022.pdf,trimestre,comparativo,2021-01-01,2021-03-31,7,False,Venta canje,8200,33,pdfplumber,OK
+TV+,2022-03-31,data/raw/pdf/TV+/51269/Fecu Marzo 2022.pdf,trimestre,actual,2022-01-01,2022-03-31,8,True,Total ingresos ordinarios,1182169,33,pdfplumber,OK
+TV+,2022-03-31,data/raw/pdf/TV+/51269/Fecu Marzo 2022.pdf,trimestre,comparativo,2021-01-01,2021-03-31,8,True,Total ingresos ordinarios,1035093,33,pdfplumber,OK
 TV+,2022-06-30,data/raw/pdf/TV+/53289/2022090352724_2.pdf,semestre,actual,2022-01-01,2022-06-30,0,False,Ventas de publicidad,2110744,36,pdfplumber,OK
 TV+,2022-06-30,data/raw/pdf/TV+/53289/2022090352724_2.pdf,semestre,comparativo,2021-01-01,2021-06-30,0,False,Ventas de publicidad,1760241,36,pdfplumber,OK
 TV+,2022-06-30,data/raw/pdf/TV+/53289/2022090352724_2.pdf,trimestre,actual,2022-04-01,2022-06-30,0,False,Ventas de publicidad,1217316,36,pdfplumber,OK
@@ -1437,20 +1437,20 @@ TV+,2022-12-31,data/raw/pdf/TV+/68980/2023030131118_2.pdf,anual,actual,2022-01-0
 TV+,2022-12-31,data/raw/pdf/TV+/68980/2023030131118_2.pdf,anual,comparativo,2021-01-01,2021-12-31,4,False,Arriendo de estudios,32056,39,pdfplumber,OK
 TV+,2022-12-31,data/raw/pdf/TV+/68980/2023030131118_2.pdf,anual,actual,2022-01-01,2022-12-31,5,True,Total ingresos ordinarios,5662312,39,pdfplumber,OK
 TV+,2022-12-31,data/raw/pdf/TV+/68980/2023030131118_2.pdf,anual,comparativo,2021-01-01,2021-12-31,5,True,Total ingresos ordinarios,5549515,39,pdfplumber,OK
-TV+,2023-03-31,data/raw/pdf/TV+/70649/2023050230846_2.pdf,trimestre,actual,2023-01-01,2023-03-31,0,False,Ventas de VTR,3178,34,ocr,OK
-TV+,2023-03-31,data/raw/pdf/TV+/70649/2023050230846_2.pdf,trimestre,comparativo,2022-01-01,2022-03-31,0,False,Ventas de VTR,43892,34,ocr,OK
-TV+,2023-03-31,data/raw/pdf/TV+/70649/2023050230846_2.pdf,trimestre,actual,2023-01-01,2023-03-31,1,False,Venta publicidad,725639,34,ocr,OK
-TV+,2023-03-31,data/raw/pdf/TV+/70649/2023050230846_2.pdf,trimestre,comparativo,2022-01-01,2022-03-31,1,False,Venta publicidad,823574,34,ocr,OK
-TV+,2023-03-31,data/raw/pdf/TV+/70649/2023050230846_2.pdf,trimestre,actual,2023-01-01,2023-03-31,2,False,Venta de infomerciales,222600,34,ocr,OK
-TV+,2023-03-31,data/raw/pdf/TV+/70649/2023050230846_2.pdf,trimestre,comparativo,2022-01-01,2022-03-31,2,False,Venta de infomerciales,210000,34,ocr,OK
-TV+,2023-03-31,data/raw/pdf/TV+/70649/2023050230846_2.pdf,trimestre,actual,2023-01-01,2023-03-31,3,False,Espacio de transmisión,66385,34,ocr,OK
-TV+,2023-03-31,data/raw/pdf/TV+/70649/2023050230846_2.pdf,trimestre,comparativo,2022-01-01,2022-03-31,3,False,Espacio de transmisión,65870,34,ocr,OK
-TV+,2023-03-31,data/raw/pdf/TV+/70649/2023050230846_2.pdf,trimestre,actual,2023-01-01,2023-03-31,4,False,Otros negocios,47532,34,ocr,OK
-TV+,2023-03-31,data/raw/pdf/TV+/70649/2023050230846_2.pdf,trimestre,comparativo,2022-01-01,2022-03-31,4,False,Otros negocios,14916,34,ocr,OK
-TV+,2023-03-31,data/raw/pdf/TV+/70649/2023050230846_2.pdf,trimestre,actual,2023-01-01,2023-03-31,5,False,Venta de canje,38610,34,ocr,OK
-TV+,2023-03-31,data/raw/pdf/TV+/70649/2023050230846_2.pdf,trimestre,comparativo,2022-01-01,2022-03-31,5,False,Venta de canje,23916,34,ocr,OK
-TV+,2023-03-31,data/raw/pdf/TV+/70649/2023050230846_2.pdf,trimestre,actual,2023-01-01,2023-03-31,6,True,Total ingresos ordinarios,1103944,34,ocr,OK
-TV+,2023-03-31,data/raw/pdf/TV+/70649/2023050230846_2.pdf,trimestre,comparativo,2022-01-01,2022-03-31,6,True,Total ingresos ordinarios,1182169,34,ocr,OK
+TV+,2023-03-31,data/raw/pdf/TV+/70649/2023050230846_2.pdf,trimestre,actual,2023-01-01,2023-03-31,0,False,Ventas de VTR,3178,34,pdfplumber,OK
+TV+,2023-03-31,data/raw/pdf/TV+/70649/2023050230846_2.pdf,trimestre,comparativo,2022-01-01,2022-03-31,0,False,Ventas de VTR,43892,34,pdfplumber,OK
+TV+,2023-03-31,data/raw/pdf/TV+/70649/2023050230846_2.pdf,trimestre,actual,2023-01-01,2023-03-31,1,False,Venta publicidad,725639,34,pdfplumber,OK
+TV+,2023-03-31,data/raw/pdf/TV+/70649/2023050230846_2.pdf,trimestre,comparativo,2022-01-01,2022-03-31,1,False,Venta publicidad,823574,34,pdfplumber,OK
+TV+,2023-03-31,data/raw/pdf/TV+/70649/2023050230846_2.pdf,trimestre,actual,2023-01-01,2023-03-31,2,False,Venta de infomerciales,222600,34,pdfplumber,OK
+TV+,2023-03-31,data/raw/pdf/TV+/70649/2023050230846_2.pdf,trimestre,comparativo,2022-01-01,2022-03-31,2,False,Venta de infomerciales,210000,34,pdfplumber,OK
+TV+,2023-03-31,data/raw/pdf/TV+/70649/2023050230846_2.pdf,trimestre,actual,2023-01-01,2023-03-31,3,False,Espacio de transmisión,66385,34,pdfplumber,OK
+TV+,2023-03-31,data/raw/pdf/TV+/70649/2023050230846_2.pdf,trimestre,comparativo,2022-01-01,2022-03-31,3,False,Espacio de transmisión,65870,34,pdfplumber,OK
+TV+,2023-03-31,data/raw/pdf/TV+/70649/2023050230846_2.pdf,trimestre,actual,2023-01-01,2023-03-31,4,False,Otros negocios,47532,34,pdfplumber,OK
+TV+,2023-03-31,data/raw/pdf/TV+/70649/2023050230846_2.pdf,trimestre,comparativo,2022-01-01,2022-03-31,4,False,Otros negocios,14916,34,pdfplumber,OK
+TV+,2023-03-31,data/raw/pdf/TV+/70649/2023050230846_2.pdf,trimestre,actual,2023-01-01,2023-03-31,5,False,Venta de canje,38610,34,pdfplumber,OK
+TV+,2023-03-31,data/raw/pdf/TV+/70649/2023050230846_2.pdf,trimestre,comparativo,2022-01-01,2022-03-31,5,False,Venta de canje,23916,34,pdfplumber,OK
+TV+,2023-03-31,data/raw/pdf/TV+/70649/2023050230846_2.pdf,trimestre,actual,2023-01-01,2023-03-31,6,True,Total ingresos ordinarios,1103944,34,pdfplumber,OK
+TV+,2023-03-31,data/raw/pdf/TV+/70649/2023050230846_2.pdf,trimestre,comparativo,2022-01-01,2022-03-31,6,True,Total ingresos ordinarios,1182169,34,pdfplumber,OK
 TV+,2023-06-30,data/raw/pdf/TV+/73704/2023090382166-0 FECU JUNIO 2023.pdf,semestre,actual,2023-01-01,2023-06-30,0,False,Ventas de publicidad,1549682,37,pdfplumber,OK
 TV+,2023-06-30,data/raw/pdf/TV+/73704/2023090382166-0 FECU JUNIO 2023.pdf,semestre,comparativo,2022-01-01,2022-06-30,0,False,Ventas de publicidad,2110744,37,pdfplumber,OK
 TV+,2023-06-30,data/raw/pdf/TV+/73704/2023090382166-0 FECU JUNIO 2023.pdf,trimestre,actual,2023-04-01,2023-06-30,0,False,Ventas de publicidad,827954,37,pdfplumber,OK
@@ -1607,6 +1607,114 @@ TV+,2026-06-30,data/raw/pdf/TV+/113712/2026090594782-2.pdf,semestre,actual,2026-
 TV+,2026-06-30,data/raw/pdf/TV+/113712/2026090594782-2.pdf,semestre,comparativo,2025-01-01,2025-06-30,3,True,"Total, ingresos ordinarios",1726601,40,pdfplumber,OK
 TV+,2026-06-30,data/raw/pdf/TV+/113712/2026090594782-2.pdf,trimestre,actual,2026-04-01,2026-06-30,3,True,"Total, ingresos ordinarios",709258,40,pdfplumber,OK
 TV+,2026-06-30,data/raw/pdf/TV+/113712/2026090594782-2.pdf,trimestre,comparativo,2025-04-01,2025-06-30,3,True,"Total, ingresos ordinarios",888973,40,pdfplumber,OK
+TVN,2011-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2011-06/Estados-Financieros-TVN-2011-06.pdf,semestre,actual,2011-01-01,2011-06-30,0,False,Ingresos por Publicidad,34428764,83,pdfplumber,OK
+TVN,2011-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2011-06/Estados-Financieros-TVN-2011-06.pdf,semestre,comparativo,2010-01-01,2010-06-30,0,False,Ingresos por Publicidad,34183119,83,pdfplumber,OK
+TVN,2011-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2011-06/Estados-Financieros-TVN-2011-06.pdf,trimestre,actual,2011-04-01,2011-06-30,0,False,Ingresos por Publicidad,19224541,83,pdfplumber,OK
+TVN,2011-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2011-06/Estados-Financieros-TVN-2011-06.pdf,trimestre,comparativo,2010-04-01,2010-06-30,0,False,Ingresos por Publicidad,21622102,83,pdfplumber,OK
+TVN,2011-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2011-06/Estados-Financieros-TVN-2011-06.pdf,semestre,actual,2011-01-01,2011-06-30,1,False,Otros Ingresos,1903508,83,pdfplumber,OK
+TVN,2011-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2011-06/Estados-Financieros-TVN-2011-06.pdf,semestre,comparativo,2010-01-01,2010-06-30,1,False,Otros Ingresos,1823840,83,pdfplumber,OK
+TVN,2011-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2011-06/Estados-Financieros-TVN-2011-06.pdf,trimestre,actual,2011-04-01,2011-06-30,1,False,Otros Ingresos,988492,83,pdfplumber,OK
+TVN,2011-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2011-06/Estados-Financieros-TVN-2011-06.pdf,trimestre,comparativo,2010-04-01,2010-06-30,1,False,Otros Ingresos,956348,83,pdfplumber,OK
+TVN,2011-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2011-06/Estados-Financieros-TVN-2011-06.pdf,semestre,actual,2011-01-01,2011-06-30,2,True,Total,36332272,83,pdfplumber,OK
+TVN,2011-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2011-06/Estados-Financieros-TVN-2011-06.pdf,semestre,comparativo,2010-01-01,2010-06-30,2,True,Total,36006959,83,pdfplumber,OK
+TVN,2011-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2011-06/Estados-Financieros-TVN-2011-06.pdf,trimestre,actual,2011-04-01,2011-06-30,2,True,Total,20213033,83,pdfplumber,OK
+TVN,2011-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2011-06/Estados-Financieros-TVN-2011-06.pdf,trimestre,comparativo,2010-04-01,2010-06-30,2,True,Total,22578450,83,pdfplumber,OK
+TVN,2011-12-31,data/raw/pdf/TVN/Estados-Financieros-TVN-2011-12/Estados-Financieros-TVN-2011-12.pdf,anual,actual,2011-01-01,2011-12-31,0,False,Ingresos por Publicidad,76266571,70,pdfplumber,OK
+TVN,2011-12-31,data/raw/pdf/TVN/Estados-Financieros-TVN-2011-12/Estados-Financieros-TVN-2011-12.pdf,anual,comparativo,2010-01-01,2010-12-31,0,False,Ingresos por Publicidad,77362620,70,pdfplumber,OK
+TVN,2011-12-31,data/raw/pdf/TVN/Estados-Financieros-TVN-2011-12/Estados-Financieros-TVN-2011-12.pdf,trimestre,actual,2011-10-01,2011-12-31,0,False,Ingresos por Publicidad,22118166,70,pdfplumber,OK
+TVN,2011-12-31,data/raw/pdf/TVN/Estados-Financieros-TVN-2011-12/Estados-Financieros-TVN-2011-12.pdf,trimestre,comparativo,2010-10-01,2010-12-31,0,False,Ingresos por Publicidad,22160194,70,pdfplumber,OK
+TVN,2011-12-31,data/raw/pdf/TVN/Estados-Financieros-TVN-2011-12/Estados-Financieros-TVN-2011-12.pdf,anual,actual,2011-01-01,2011-12-31,1,False,Otros Ingresos,3980039,70,pdfplumber,OK
+TVN,2011-12-31,data/raw/pdf/TVN/Estados-Financieros-TVN-2011-12/Estados-Financieros-TVN-2011-12.pdf,anual,comparativo,2010-01-01,2010-12-31,1,False,Otros Ingresos,3763962,70,pdfplumber,OK
+TVN,2011-12-31,data/raw/pdf/TVN/Estados-Financieros-TVN-2011-12/Estados-Financieros-TVN-2011-12.pdf,trimestre,actual,2011-10-01,2011-12-31,1,False,Otros Ingresos,1053884,70,pdfplumber,OK
+TVN,2011-12-31,data/raw/pdf/TVN/Estados-Financieros-TVN-2011-12/Estados-Financieros-TVN-2011-12.pdf,trimestre,comparativo,2010-10-01,2010-12-31,1,False,Otros Ingresos,820118,70,pdfplumber,OK
+TVN,2011-12-31,data/raw/pdf/TVN/Estados-Financieros-TVN-2011-12/Estados-Financieros-TVN-2011-12.pdf,anual,actual,2011-01-01,2011-12-31,2,True,Total,80246610,70,pdfplumber,OK
+TVN,2011-12-31,data/raw/pdf/TVN/Estados-Financieros-TVN-2011-12/Estados-Financieros-TVN-2011-12.pdf,anual,comparativo,2010-01-01,2010-12-31,2,True,Total,81126582,70,pdfplumber,OK
+TVN,2011-12-31,data/raw/pdf/TVN/Estados-Financieros-TVN-2011-12/Estados-Financieros-TVN-2011-12.pdf,trimestre,actual,2011-10-01,2011-12-31,2,True,Total,23172050,70,pdfplumber,OK
+TVN,2011-12-31,data/raw/pdf/TVN/Estados-Financieros-TVN-2011-12/Estados-Financieros-TVN-2011-12.pdf,trimestre,comparativo,2010-10-01,2010-12-31,2,True,Total,22980312,70,pdfplumber,OK
+TVN,2012-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2012-06/Estados-Financieros-TVN-2012-06.pdf,semestre,actual,2012-01-01,2012-06-30,0,False,Ingresos por Publicidad en televisión abierta e Internet,31130985,68,pdfplumber,OK
+TVN,2012-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2012-06/Estados-Financieros-TVN-2012-06.pdf,semestre,comparativo,2011-01-01,2011-06-30,0,False,Ingresos por Publicidad en televisión abierta e Internet,34019176,68,pdfplumber,OK
+TVN,2012-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2012-06/Estados-Financieros-TVN-2012-06.pdf,trimestre,actual,2012-04-01,2012-06-30,0,False,Ingresos por Publicidad en televisión abierta e Internet,18162484,68,pdfplumber,OK
+TVN,2012-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2012-06/Estados-Financieros-TVN-2012-06.pdf,trimestre,comparativo,2011-04-01,2011-06-30,0,False,Ingresos por Publicidad en televisión abierta e Internet,19004082,68,pdfplumber,OK
+TVN,2012-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2012-06/Estados-Financieros-TVN-2012-06.pdf,semestre,actual,2012-01-01,2012-06-30,1,False,Otros Ingresos,2342257,68,pdfplumber,OK
+TVN,2012-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2012-06/Estados-Financieros-TVN-2012-06.pdf,semestre,comparativo,2011-01-01,2011-06-30,1,False,Otros Ingresos,2313096,68,pdfplumber,OK
+TVN,2012-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2012-06/Estados-Financieros-TVN-2012-06.pdf,trimestre,actual,2012-04-01,2012-06-30,1,False,Otros Ingresos,1210177,68,pdfplumber,OK
+TVN,2012-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2012-06/Estados-Financieros-TVN-2012-06.pdf,trimestre,comparativo,2011-04-01,2011-06-30,1,False,Otros Ingresos,1208951,68,pdfplumber,OK
+TVN,2012-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2012-06/Estados-Financieros-TVN-2012-06.pdf,semestre,actual,2012-01-01,2012-06-30,2,True,Total,33473242,68,pdfplumber,OK
+TVN,2012-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2012-06/Estados-Financieros-TVN-2012-06.pdf,semestre,comparativo,2011-01-01,2011-06-30,2,True,Total,36332272,68,pdfplumber,OK
+TVN,2012-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2012-06/Estados-Financieros-TVN-2012-06.pdf,trimestre,actual,2012-04-01,2012-06-30,2,True,Total,19372661,68,pdfplumber,OK
+TVN,2012-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2012-06/Estados-Financieros-TVN-2012-06.pdf,trimestre,comparativo,2011-04-01,2011-06-30,2,True,Total,20213033,68,pdfplumber,OK
+TVN,2012-12-31,data/raw/pdf/TVN/Estados-Financieros-TVN-2012-12/Estados-Financieros-TVN-2012-12.pdf,anual,actual,2012-01-01,2012-12-31,0,False,Ingresos por Publicidad en televisión abierta e internet,72464626,74,pdfplumber,OK
+TVN,2012-12-31,data/raw/pdf/TVN/Estados-Financieros-TVN-2012-12/Estados-Financieros-TVN-2012-12.pdf,anual,comparativo,2011-01-01,2011-12-31,0,False,Ingresos por Publicidad en televisión abierta e internet,75424588,74,pdfplumber,OK
+TVN,2012-12-31,data/raw/pdf/TVN/Estados-Financieros-TVN-2012-12/Estados-Financieros-TVN-2012-12.pdf,trimestre,actual,2012-10-01,2012-12-31,0,False,Ingresos por Publicidad en televisión abierta e internet,22194665,74,pdfplumber,OK
+TVN,2012-12-31,data/raw/pdf/TVN/Estados-Financieros-TVN-2012-12/Estados-Financieros-TVN-2012-12.pdf,trimestre,comparativo,2011-10-01,2011-12-31,0,False,Ingresos por Publicidad en televisión abierta e internet,21884309,74,pdfplumber,OK
+TVN,2012-12-31,data/raw/pdf/TVN/Estados-Financieros-TVN-2012-12/Estados-Financieros-TVN-2012-12.pdf,anual,actual,2012-01-01,2012-12-31,1,False,Otros Ingresos,4967518,74,pdfplumber,OK
+TVN,2012-12-31,data/raw/pdf/TVN/Estados-Financieros-TVN-2012-12/Estados-Financieros-TVN-2012-12.pdf,anual,comparativo,2011-01-01,2011-12-31,1,False,Otros Ingresos,4822022,74,pdfplumber,OK
+TVN,2012-12-31,data/raw/pdf/TVN/Estados-Financieros-TVN-2012-12/Estados-Financieros-TVN-2012-12.pdf,trimestre,actual,2012-10-01,2012-12-31,1,False,Otros Ingresos,1198379,74,pdfplumber,OK
+TVN,2012-12-31,data/raw/pdf/TVN/Estados-Financieros-TVN-2012-12/Estados-Financieros-TVN-2012-12.pdf,trimestre,comparativo,2011-10-01,2011-12-31,1,False,Otros Ingresos,1287741,74,pdfplumber,OK
+TVN,2012-12-31,data/raw/pdf/TVN/Estados-Financieros-TVN-2012-12/Estados-Financieros-TVN-2012-12.pdf,anual,actual,2012-01-01,2012-12-31,2,True,Total,77432144,74,pdfplumber,OK
+TVN,2012-12-31,data/raw/pdf/TVN/Estados-Financieros-TVN-2012-12/Estados-Financieros-TVN-2012-12.pdf,anual,comparativo,2011-01-01,2011-12-31,2,True,Total,80246610,74,pdfplumber,OK
+TVN,2012-12-31,data/raw/pdf/TVN/Estados-Financieros-TVN-2012-12/Estados-Financieros-TVN-2012-12.pdf,trimestre,actual,2012-10-01,2012-12-31,2,True,Total,23393044,74,pdfplumber,OK
+TVN,2012-12-31,data/raw/pdf/TVN/Estados-Financieros-TVN-2012-12/Estados-Financieros-TVN-2012-12.pdf,trimestre,comparativo,2011-10-01,2011-12-31,2,True,Total,23172050,74,pdfplumber,OK
+TVN,2013-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2013-06/Estados-Financieros-TVN-2013-06.pdf,semestre,actual,2013-01-01,2013-06-30,0,False,Ingresos por Publicidad en televisión abierta e internet,32907925,73,pdfplumber,REVISAR
+TVN,2013-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2013-06/Estados-Financieros-TVN-2013-06.pdf,semestre,comparativo,2012-01-01,2012-06-30,0,False,Ingresos por Publicidad en televisión abierta e internet,31130985,73,pdfplumber,REVISAR
+TVN,2013-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2013-06/Estados-Financieros-TVN-2013-06.pdf,trimestre,actual,2013-04-01,2013-06-30,0,False,Ingresos por Publicidad en televisión abierta e internet,18249485,73,pdfplumber,REVISAR
+TVN,2013-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2013-06/Estados-Financieros-TVN-2013-06.pdf,trimestre,comparativo,2012-04-01,2012-06-30,0,False,Ingresos por Publicidad en televisión abierta e internet,18162483,73,pdfplumber,REVISAR
+TVN,2013-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2013-06/Estados-Financieros-TVN-2013-06.pdf,semestre,actual,2013-01-01,2013-06-30,1,False,Otros Ingresos,3038060,73,pdfplumber,REVISAR
+TVN,2013-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2013-06/Estados-Financieros-TVN-2013-06.pdf,semestre,comparativo,2012-01-01,2012-06-30,1,False,Otros Ingresos,2342257,73,pdfplumber,REVISAR
+TVN,2013-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2013-06/Estados-Financieros-TVN-2013-06.pdf,trimestre,actual,2013-04-01,2013-06-30,1,False,Otros Ingresos,1796160,73,pdfplumber,REVISAR
+TVN,2013-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2013-06/Estados-Financieros-TVN-2013-06.pdf,trimestre,comparativo,2012-04-01,2012-06-30,1,False,Otros Ingresos,1210178,73,pdfplumber,REVISAR
+TVN,2013-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2013-06/Estados-Financieros-TVN-2013-06.pdf,semestre,actual,2013-01-01,2013-06-30,2,True,Total,35945985,73,pdfplumber,REVISAR
+TVN,2013-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2013-06/Estados-Financieros-TVN-2013-06.pdf,semestre,comparativo,2012-01-01,2012-06-30,2,True,Total,33473242,73,pdfplumber,REVISAR
+TVN,2013-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2013-06/Estados-Financieros-TVN-2013-06.pdf,trimestre,actual,2013-04-01,2013-06-30,2,True,Total,20045645,73,pdfplumber,REVISAR
+TVN,2013-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2013-06/Estados-Financieros-TVN-2013-06.pdf,trimestre,comparativo,2012-04-01,2012-06-30,2,True,Total,19372661,73,pdfplumber,REVISAR
+TVN,2013-12-31,data/raw/pdf/TVN/Estados-Financieros-TVN-2013-12/Estados-Financieros-TVN-2013-12.pdf,anual,actual,2013-01-01,2013-12-31,0,False,Ingresos por Publicidad en televisión abierta e internet,71441095,74,pdfplumber,OK
+TVN,2013-12-31,data/raw/pdf/TVN/Estados-Financieros-TVN-2013-12/Estados-Financieros-TVN-2013-12.pdf,anual,comparativo,2012-01-01,2012-12-31,0,False,Ingresos por Publicidad en televisión abierta e internet,72464626,74,pdfplumber,OK
+TVN,2013-12-31,data/raw/pdf/TVN/Estados-Financieros-TVN-2013-12/Estados-Financieros-TVN-2013-12.pdf,anual,actual,2013-01-01,2013-12-31,1,False,Otros Ingresos,7329221,74,pdfplumber,OK
+TVN,2013-12-31,data/raw/pdf/TVN/Estados-Financieros-TVN-2013-12/Estados-Financieros-TVN-2013-12.pdf,anual,comparativo,2012-01-01,2012-12-31,1,False,Otros Ingresos,4967518,74,pdfplumber,OK
+TVN,2013-12-31,data/raw/pdf/TVN/Estados-Financieros-TVN-2013-12/Estados-Financieros-TVN-2013-12.pdf,anual,actual,2013-01-01,2013-12-31,2,True,Total,78770316,74,pdfplumber,OK
+TVN,2013-12-31,data/raw/pdf/TVN/Estados-Financieros-TVN-2013-12/Estados-Financieros-TVN-2013-12.pdf,anual,comparativo,2012-01-01,2012-12-31,2,True,Total,77432144,74,pdfplumber,OK
+TVN,2014-12-31,data/raw/pdf/TVN/Estados-Financieros-TVN-2014-12/Estados-Financieros-TVN-2014-12.pdf,anual,actual,2014-01-01,2014-12-31,0,False,Ingresos por Publicidad en televisión abierta e internet,67042108,79,pdfplumber,OK
+TVN,2014-12-31,data/raw/pdf/TVN/Estados-Financieros-TVN-2014-12/Estados-Financieros-TVN-2014-12.pdf,anual,comparativo,2013-01-01,2013-12-31,0,False,Ingresos por Publicidad en televisión abierta e internet,71441095,79,pdfplumber,OK
+TVN,2014-12-31,data/raw/pdf/TVN/Estados-Financieros-TVN-2014-12/Estados-Financieros-TVN-2014-12.pdf,anual,actual,2014-01-01,2014-12-31,1,False,Otros Ingresos,8819559,79,pdfplumber,OK
+TVN,2014-12-31,data/raw/pdf/TVN/Estados-Financieros-TVN-2014-12/Estados-Financieros-TVN-2014-12.pdf,anual,comparativo,2013-01-01,2013-12-31,1,False,Otros Ingresos,7329221,79,pdfplumber,OK
+TVN,2014-12-31,data/raw/pdf/TVN/Estados-Financieros-TVN-2014-12/Estados-Financieros-TVN-2014-12.pdf,anual,actual,2014-01-01,2014-12-31,2,True,Totales,75861667,79,pdfplumber,OK
+TVN,2014-12-31,data/raw/pdf/TVN/Estados-Financieros-TVN-2014-12/Estados-Financieros-TVN-2014-12.pdf,anual,comparativo,2013-01-01,2013-12-31,2,True,Totales,78770316,79,pdfplumber,OK
+TVN,2015-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2015-06/Estados-Financieros-TVN-2015-06.pdf,semestre,actual,2015-01-01,2015-06-30,0,False,Ingresos por Publicidad en televisión abierta e internet,18826502,79,ocr400,REVISAR
+TVN,2015-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2015-06/Estados-Financieros-TVN-2015-06.pdf,semestre,comparativo,2014-01-01,2014-06-30,0,False,Ingresos por Publicidad en televisión abierta e internet,37130230,79,ocr400,REVISAR
+TVN,2015-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2015-06/Estados-Financieros-TVN-2015-06.pdf,trimestre,actual,2015-04-01,2015-06-30,0,False,Ingresos por Publicidad en televisión abierta e internet,11015984,79,ocr400,REVISAR
+TVN,2015-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2015-06/Estados-Financieros-TVN-2015-06.pdf,trimestre,comparativo,2014-04-01,2014-06-30,0,False,Ingresos por Publicidad en televisión abierta e internet,21315601,79,ocr400,REVISAR
+TVN,2015-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2015-06/Estados-Financieros-TVN-2015-06.pdf,semestre,actual,2015-01-01,2015-06-30,1,False,Otros Ingresos,4338036,79,ocr400,REVISAR
+TVN,2015-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2015-06/Estados-Financieros-TVN-2015-06.pdf,semestre,comparativo,2014-01-01,2014-06-30,1,False,Otros Ingresos,3832738,79,ocr400,REVISAR
+TVN,2015-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2015-06/Estados-Financieros-TVN-2015-06.pdf,trimestre,actual,2015-04-01,2015-06-30,1,False,Otros Ingresos,2784268,79,ocr400,REVISAR
+TVN,2015-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2015-06/Estados-Financieros-TVN-2015-06.pdf,trimestre,comparativo,2014-04-01,2014-06-30,1,False,Otros Ingresos,2138865,79,ocr400,REVISAR
+TVN,2015-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2015-06/Estados-Financieros-TVN-2015-06.pdf,semestre,actual,2015-01-01,2015-06-30,2,True,Totales,23164538,79,ocr400,REVISAR
+TVN,2015-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2015-06/Estados-Financieros-TVN-2015-06.pdf,semestre,comparativo,2014-01-01,2014-06-30,2,True,Totales,40962968,79,ocr400,REVISAR
+TVN,2015-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2015-06/Estados-Financieros-TVN-2015-06.pdf,trimestre,actual,2015-04-01,2015-06-30,2,True,Totales,13800252,79,ocr400,REVISAR
+TVN,2015-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2015-06/Estados-Financieros-TVN-2015-06.pdf,trimestre,comparativo,2014-04-01,2014-06-30,2,True,Totales,23454466,79,ocr400,REVISAR
+TVN,2015-12-31,data/raw/pdf/TVN/Estados-Financieros-TVN-2015-12/Estados-Financieros-TVN-2015-12.pdf,anual,actual,2015-01-01,2015-12-31,0,False,Ingresos por Publicidad en televisión abierta e internet,39307836,69,pdfplumber,OK
+TVN,2015-12-31,data/raw/pdf/TVN/Estados-Financieros-TVN-2015-12/Estados-Financieros-TVN-2015-12.pdf,anual,comparativo,2014-01-01,2014-12-31,0,False,Ingresos por Publicidad en televisión abierta e internet,67042108,69,pdfplumber,OK
+TVN,2015-12-31,data/raw/pdf/TVN/Estados-Financieros-TVN-2015-12/Estados-Financieros-TVN-2015-12.pdf,anual,actual,2015-01-01,2015-12-31,1,False,Otros Ingresos,10397240,69,pdfplumber,OK
+TVN,2015-12-31,data/raw/pdf/TVN/Estados-Financieros-TVN-2015-12/Estados-Financieros-TVN-2015-12.pdf,anual,comparativo,2014-01-01,2014-12-31,1,False,Otros Ingresos,8819559,69,pdfplumber,OK
+TVN,2015-12-31,data/raw/pdf/TVN/Estados-Financieros-TVN-2015-12/Estados-Financieros-TVN-2015-12.pdf,anual,actual,2015-01-01,2015-12-31,2,True,Total,49705076,69,pdfplumber,OK
+TVN,2015-12-31,data/raw/pdf/TVN/Estados-Financieros-TVN-2015-12/Estados-Financieros-TVN-2015-12.pdf,anual,comparativo,2014-01-01,2014-12-31,2,True,Total,75861667,69,pdfplumber,OK
+TVN,2016-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2016-06/Estados-Financieros-TVN-2016-06.pdf,semestre,actual,2016-01-01,2016-06-30,0,False,Ingresos por Publicidad en televisión abierta e internet,15294656,64,pdfplumber,OK
+TVN,2016-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2016-06/Estados-Financieros-TVN-2016-06.pdf,semestre,comparativo,2015-01-01,2015-06-30,0,False,Ingresos por Publicidad en televisión abierta e internet,18826502,64,pdfplumber,OK
+TVN,2016-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2016-06/Estados-Financieros-TVN-2016-06.pdf,trimestre,actual,2016-04-01,2016-06-30,0,False,Ingresos por Publicidad en televisión abierta e internet,8777271,64,pdfplumber,OK
+TVN,2016-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2016-06/Estados-Financieros-TVN-2016-06.pdf,trimestre,comparativo,2015-04-01,2015-06-30,0,False,Ingresos por Publicidad en televisión abierta e internet,11015984,64,pdfplumber,OK
+TVN,2016-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2016-06/Estados-Financieros-TVN-2016-06.pdf,semestre,actual,2016-01-01,2016-06-30,1,False,Otros Ingresos,5232590,64,pdfplumber,OK
+TVN,2016-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2016-06/Estados-Financieros-TVN-2016-06.pdf,semestre,comparativo,2015-01-01,2015-06-30,1,False,Otros Ingresos,4338036,64,pdfplumber,OK
+TVN,2016-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2016-06/Estados-Financieros-TVN-2016-06.pdf,trimestre,actual,2016-04-01,2016-06-30,1,False,Otros Ingresos,2451821,64,pdfplumber,OK
+TVN,2016-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2016-06/Estados-Financieros-TVN-2016-06.pdf,trimestre,comparativo,2015-04-01,2015-06-30,1,False,Otros Ingresos,2784268,64,pdfplumber,OK
+TVN,2016-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2016-06/Estados-Financieros-TVN-2016-06.pdf,semestre,actual,2016-01-01,2016-06-30,2,True,Total,20527246,64,pdfplumber,OK
+TVN,2016-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2016-06/Estados-Financieros-TVN-2016-06.pdf,semestre,comparativo,2015-01-01,2015-06-30,2,True,Total,23164538,64,pdfplumber,OK
+TVN,2016-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2016-06/Estados-Financieros-TVN-2016-06.pdf,trimestre,actual,2016-04-01,2016-06-30,2,True,Total,11229092,64,pdfplumber,OK
+TVN,2016-06-30,data/raw/pdf/TVN/Estados-Financieros-TVN-2016-06/Estados-Financieros-TVN-2016-06.pdf,trimestre,comparativo,2015-04-01,2015-06-30,2,True,Total,13800252,64,pdfplumber,OK
+TVN,2016-12-31,data/raw/pdf/TVN/Estados-Financieros-TVN-2016-12/Estados-Financieros-TVN-2016-12.pdf,anual,actual,2016-01-01,2016-12-31,0,False,Ingresos por Publicidad en televisión abierta e internet,37867428,65,pdftotext-layout,OK
+TVN,2016-12-31,data/raw/pdf/TVN/Estados-Financieros-TVN-2016-12/Estados-Financieros-TVN-2016-12.pdf,anual,comparativo,2015-01-01,2015-12-31,0,False,Ingresos por Publicidad en televisión abierta e internet,39307836,65,pdftotext-layout,OK
+TVN,2016-12-31,data/raw/pdf/TVN/Estados-Financieros-TVN-2016-12/Estados-Financieros-TVN-2016-12.pdf,anual,actual,2016-01-01,2016-12-31,1,False,Otros Ingresos,10914562,65,pdftotext-layout,OK
+TVN,2016-12-31,data/raw/pdf/TVN/Estados-Financieros-TVN-2016-12/Estados-Financieros-TVN-2016-12.pdf,anual,comparativo,2015-01-01,2015-12-31,1,False,Otros Ingresos,10397240,65,pdftotext-layout,OK
+TVN,2016-12-31,data/raw/pdf/TVN/Estados-Financieros-TVN-2016-12/Estados-Financieros-TVN-2016-12.pdf,anual,actual,2016-01-01,2016-12-31,2,True,Totales,48781990,65,pdftotext-layout,OK
+TVN,2016-12-31,data/raw/pdf/TVN/Estados-Financieros-TVN-2016-12/Estados-Financieros-TVN-2016-12.pdf,anual,comparativo,2015-01-01,2015-12-31,2,True,Totales,49705076,65,pdftotext-layout,OK
 TVN,2017-03-31,data/raw/pdf/TVN/fecu_mar_2017_libro/fecu_mar_2017_libro.pdf,trimestre,actual,2017-01-01,2017-03-31,0,False,Ingresos por Publicidad en televisión abierta e internet,8868483,61,pdfplumber,OK
 TVN,2017-03-31,data/raw/pdf/TVN/fecu_mar_2017_libro/fecu_mar_2017_libro.pdf,trimestre,comparativo,2016-01-01,2016-03-31,0,False,Ingresos por Publicidad en televisión abierta e internet,6517385,61,pdfplumber,OK
 TVN,2017-03-31,data/raw/pdf/TVN/fecu_mar_2017_libro/fecu_mar_2017_libro.pdf,trimestre,actual,2017-01-01,2017-03-31,1,False,Otros Ingresos,2479232,61,pdfplumber,OK

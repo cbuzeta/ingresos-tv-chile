@@ -91,7 +91,10 @@ def test_serie_anual_completa(agregados):
     for c in CANALES:
         anios = set(agregados[(agregados.canal == c) & (agregados.tipo_periodo == "anual")].periodo)
         desde = 2017 if c == "TV+" else 2016
-        assert {f"FY{a}" for a in range(desde, 2026)} <= anios, c
+        esperados = {f"FY{a}" for a in range(desde, 2026)}
+        if c == "La Red":  # el EEFF dic-2019 compara con 9M-2018 (30.09.2018), no con el año 2018: sin FY2018
+            esperados.discard("FY2018")
+        assert esperados <= anios, c
 
 
 def test_controles_externos_sep():
@@ -100,3 +103,28 @@ def test_controles_externos_sep():
     sep = c[c.fuente == "SEP"]
     assert len(sep) > 0
     assert (sep.estado == "coincide").all(), sep[sep.estado != "coincide"]
+
+
+def test_resultados_identidades():
+    """Estado de resultados: ingresos + costo = ganancia bruta; antes de impuestos + impuesto = resultado (±M$2)."""
+    r = pd.read_csv(ROOT / "data" / "resultados.csv")
+    assert ((r.ingresos + r.costo_ventas - r.ganancia_bruta).abs() <= 2).all()
+    assert ((r.antes_impuestos + r.impuesto - r.resultado).abs() <= 2).all()
+
+
+def test_ingresos_del_estado_de_resultados_igual_a_la_nota(agregados):
+    a = agregados[agregados.ingresos.notna()]
+    assert len(a) > 0
+    assert ((a.ingresos - a.total).abs() <= 2).all(), a.loc[(a.ingresos - a.total).abs() > 2, ["canal", "periodo"]]
+
+
+def test_costos_suman_el_costo_de_ventas(agregados):
+    """Las categorías de costo suman el costo de ventas del estado de resultados, cuando se tienen ambos."""
+    cst = [c for c in agregados if c.startswith("cst_")]
+    # años y primeros semestres: ahí la última versión de costos y de resultados sale del mismo EEFF. En trimestres
+    # puede venir de EEFF distintos si uno reexpresó el trimestre; dentro de cada EEFF el cuadre lo exige 05b.
+    a = agregados[agregados.tipo_periodo.isin(["anual", "semestre"]) & agregados.costo_ventas.notna()
+                  & agregados[cst].notna().all(axis=1) & (agregados[cst].sum(axis=1) > 0)]
+    assert len(a) > 0
+    dif = (a[cst].sum(axis=1) - a.costo_ventas.abs()).abs()
+    assert (dif <= 2).all(), a.loc[dif > 2, ["canal", "periodo"]]

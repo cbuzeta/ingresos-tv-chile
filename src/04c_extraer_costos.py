@@ -25,7 +25,7 @@ x.NOTA_HEAD = re.compile(r"^\s*(?:nota|note)?\s*n?[°º]?\s*\d{1,2}[\.\-–:)\s]
                          r"|^\s*[a-z]\)\s*(" + x.HEAD.pattern + ")")
 x.RE_OK = (r"costo|produc|remunerac|derecho|material|elenco|depreciac|amortiz|servicio|program|exhib|personal|"
            r"pelicul|licenc|transmis|operac|señal|senal|contenido|mantenc|agencia|bonificac")
-x.RE_NO = r"^ingres|ingresos (de|por)|ganancia|margen|utilidad|resultado|administracion|deuda|largo plazo|pasivo|cobros|pagos|flujo"
+x.RE_NO = r"^ingres|ingresos (de|por)|ganancia|margen|utilidad|resultado|administra|deuda|largo plazo|pasivo|cobros|pagos|flujo|leasing|terrenos|edificio|acumulada|discontinu"
 x.ENCABEZADO_NOTA = r"(costos? de (la )?(ventas?|explotacion|actividades ordinarias)|conceptos?)( \(.\))?"
 x.SALIDA_LINEAS, x.SALIDA_LOG = "costos_extraidos.csv", "costos_log.csv"
 

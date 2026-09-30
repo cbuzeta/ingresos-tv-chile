@@ -1,0 +1,13 @@
+OK TVN 2011-06-30 p83 pdfplumber 4 cols ['Ingresos por Publicidad', 'Otros Ingresos', 'Total'] 
+REVISAR TVN 2011-12-31 p70 pdfplumber 4 cols ['Ingresos por Publicidad', 'Otros Ingresos', 'Total'] n° de columnas inesperado (4) para cierre 2011-12-31; columnas no interpretables
+OK TVN 2012-06-30 p68 pdfplumber 4 cols ['Ingresos por Publicidad en televisión abierta e Internet', 'Otros Ingresos', 'Total'] 
+REVISAR TVN 2012-12-31 p74 pdfplumber 4 cols ['Ingresos por Publicidad en televisión abierta e internet', 'Otros Ingresos', 'Total'] n° de columnas inesperado (4) para cierre 2012-12-31; columnas no interpretables
+REVISAR TVN 2013-06-30 p73 pdfplumber 4 cols ['Ingresos por Publicidad en televisión abierta e internet', 'Otros Ingresos', 'Total'] total no hallado en EERR
+OK TVN 2013-12-31 p74 pdfplumber 2 cols ['Ingresos por Publicidad en televisión abierta e internet', 'Otros Ingresos', 'Total'] 
+REVISION TVN 2014-06-30
+OK TVN 2014-12-31 p79 pdfplumber 2 cols ['Ingresos por Publicidad en televisión abierta e internet', 'Otros Ingresos', 'Totales'] 
+REVISAR TVN 2015-06-30 p79 ocr400 4 cols ['Ingresos por Publicidad en televisión abierta e internet', 'Otros Ingresos', 'Totales'] total no hallado en EERR
+OK TVN 2015-12-31 p69 pdfplumber 2 cols ['Ingresos por Publicidad en televisión abierta e internet', 'Otros Ingresos', 'Total'] 
+OK TVN 2016-06-30 p64 pdfplumber 4 cols ['Ingresos por Publicidad en televisión abierta e internet', 'Otros Ingresos', 'Total'] 
+OK TVN 2016-12-31 p65 pdftotext-layout 2 cols ['Ingresos por Publicidad en televisión abierta e internet', 'Otros Ingresos', 'Totales'] 
+Counter({'OK': 7, 'REVISAR': 4, 'REVISION': 1})

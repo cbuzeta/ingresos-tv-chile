@@ -20,6 +20,9 @@ SAL = ROOT / "salidas"
 BASE_IPC = 2025  # CLAUDE.md 6.4: año base por definir; provisional
 
 CANALES = ["TVN", "Canal 13", "Mega", "Chilevisión", "La Red", "TV+"]
+RESULTADOS = ["ingresos", "costo_ventas", "ganancia_bruta", "gastos_admin", "antes_impuestos", "impuesto", "resultado"]
+COSTOS = ["Contenidos y producción", "Personal", "Depreciación y amortización", "Comercialización de audiencias",
+          "Técnica y transmisión", "Canje", "Otros costos"]
 AGREGADOS = {"4 grandes": CANALES[:4], "6 canales CMF": CANALES}
 # Niveles 3 y 4 (anidados en el Nivel 2), en el orden de apilamiento de la visualización
 NIVEL3 = ["Publicidad TV y digital", "Publicidad en otros medios", "Arriendo de pantalla", "Contenidos y señales",
@@ -146,6 +149,22 @@ def main():
                                                 ).reset_index()
     agg = agg.merge(info, on=["canal", "periodo"])
 
+    # utilidades (paso 4d) y costo de ventas por categoría (paso 4c), versión más reciente de cada período
+    r = pd.read_csv(ROOT / "data" / "resultados_serie.csv")
+    r = r[r.version_principal][["canal", "periodo"] + RESULTADOS]
+    agg = agg.merge(r, on=["canal", "periodo"], how="left")
+    cm = pd.read_csv(ROOT / "data" / "costos_mapeados.csv")
+    cm = cm[cm.version_principal]
+    cm = cm.assign(monto=cm.monto.abs())
+    cp = cm.pivot_table(index=["canal", "periodo"], columns="categoria", values="monto", aggfunc="sum").reset_index()
+    cp = cp.rename(columns={c: "cst_" + slug(c) for c in COSTOS})
+    for c in COSTOS:
+        if "cst_" + slug(c) not in cp:
+            cp["cst_" + slug(c)] = 0
+    # costos en positivo: unos canales los informan entre paréntesis (negativos) y otros, como TVN, en positivo
+    cp[[f"cst_{slug(c)}" for c in COSTOS]] = cp[[f"cst_{slug(c)}" for c in COSTOS]].fillna(0).abs()
+    agg = agg.merge(cp, on=["canal", "periodo"], how="left")
+
     # H2 = año - H1, por agregado (solo si existen ambos en la serie principal)
     num = [c for c in agg.columns if c not in keys + ["documento", "fecha_documento", "reclasificado", "origen_cifra"]]
     h2 = []
@@ -158,7 +177,8 @@ def main():
                  "fecha_documento": fy.fecha_documento.iloc[0], "reclasificado": bool(fy.reclasificado.iloc[0] or h1.reclasificado.iloc[0]),
                  "origen_cifra": "derivado (anual − H1)"}
             for c in num:
-                r[c] = int(fy[c].iloc[0]) - int(h1[c].iloc[0])
+                a_, b_ = fy[c].iloc[0], h1[c].iloc[0]
+                r[c] = None if pd.isna(a_) or pd.isna(b_) else int(a_) - int(b_)
             h2.append(r)
     agg = pd.concat([agg, pd.DataFrame(h2)], ignore_index=True)
     neg = agg[(agg[num] < 0).any(axis=1)]
@@ -177,7 +197,7 @@ def main():
                  "documento": "suma de " + ", ".join(grupo), "fecha_documento": g.fecha_documento.max(),
                  "reclasificado": bool(g.reclasificado.any()), "origen_cifra": "agregado"}
             for c in num:
-                r[c] = int(g[c].sum())
+                r[c] = None if g[c].isna().any() else int(g[c].sum())  # el agregado exige el dato de todos
             ind.append(r)
     agg = pd.concat([agg, pd.DataFrame(ind)], ignore_index=True)
 
@@ -217,6 +237,12 @@ def main():
             for m in ("piso", "punto", "techo"):
                 napoli[f"%{c}_{m}"] = (100 * napoli[f"{c}_{m}"] / napoli["total"]).round(1)
         napoli.to_excel(xw, sheet_name="Napoli", index=False)
+        res = anual[["canal", "periodo", "total"] + RESULTADOS].copy()
+        res["margen_bruto_%"] = (100 * res.ganancia_bruta / res.ingresos).round(1)
+        res["margen_neto_%"] = (100 * res.resultado / res.ingresos).round(1)
+        res.to_excel(xw, sheet_name="Resultados_anual", index=False)
+        anual[["canal", "periodo"] + [f"cst_{slug(c)}" for c in COSTOS]].to_excel(xw, sheet_name="Costos_anual", index=False)
+        pd.read_csv(ROOT / "mapeo" / "costos_mapeo.csv").to_excel(xw, sheet_name="mapeo_costos", index=False)
         agg.to_excel(xw, sheet_name="agregados", index=False)
         y.to_excel(xw, sheet_name="lineas", index=False)
         pd.read_csv(ROOT / "mapeo" / "lineas_mapeo.csv").to_excel(xw, sheet_name="mapeo", index=False)

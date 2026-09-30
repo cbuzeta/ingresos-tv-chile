@@ -12,7 +12,7 @@ Investigador responsable: Cristian Buzeta (Universidad de los Andes, Chile).
 
 | Canal | Sociedad informante | Período |
 |---|---|---|
-| TVN | Televisión Nacional de Chile | 2016–2026, trimestral |
+| TVN | Televisión Nacional de Chile | 2010–2026 (trimestral desde 2017) |
 | Canal 13 | Canal 13 SpA | 2016–2026 (trimestral desde 2020) |
 | Mega | Megamedia S.A., consolidado (Red Televisiva Megavisión hasta 2019) | 2016–2026 (trimestral desde 2020) |
 | Chilevisión | Red de Televisión Chilevisión S.A. | 2016–2026 (trimestral desde 2020) |
@@ -55,7 +55,10 @@ python src/01_inventario.py    # inventario y descompresión
 python src/03_identificar.py   # identifica el PDF de EEFF en cada paquete
 python src/04_extraer_nota.py  # extrae la nota de ingresos (OCR para los escaneados)
 python src/04b_mega_geografia.py  # Mega: ventas nacionales / al extranjero (nota 7 b)
+python src/04c_extraer_costos.py   # nota de costo de ventas
+python src/04d_extraer_resultados.py  # estado de resultados (utilidades)
 python src/05_mapear.py        # aplica el mapeo; se detiene si hay líneas nuevas sin clasificar
+python src/05b_mapear_costos.py  # clasifica costos y arma la serie de resultados
 python src/validar_semilla.py  # debe dar 48/48
 python src/06_exportar.py      # salidas/ y viz/
 ```

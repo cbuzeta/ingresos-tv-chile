@@ -9,6 +9,7 @@ En Nivel 4, «Contenidos y señales» se divide además en nacional / extranjero
 | Línea en la nota | Nivel 1 | Nivel 2 | Nivel 3 | Nivel 4 | Justificación | Decisión |
 |---|---|---|---|---|---|---|
 | Otros ingresos | Otros ingresos | Otros ingresos operacionales | Otros ingresos | Otros sin desglose | 'Principalmente venta de señal internacional a operadores de TV pago' (Contenidos) y 'otros servicios derivados de la actividad televisiva' (puede incluir publicidad digital de 24horas.cl/tvn.cl y servicios a terceros). Código principal = Contenidos. | Piloto validado (CLAUDE.md 5.4), 2026-09-29 |
+| Ingresos por Publicidad | Publicidad | Publicidad | Publicidad TV y digital | Publicidad TV + digital (sin desglose) | Rótulo TVN 2010–2011, sin medio; como la línea única de C13 hasta 2018. | Aprobado por C. Buzeta 2026-09-30, 2026-09-30 |
 | Ingresos por Publicidad en televisión abierta e internet | Publicidad | Publicidad | Publicidad TV y digital | Publicidad TV + digital (sin desglose) | Rótulo 2016–mar-2018; incluye internet. | Aprobado por C. Buzeta 2026-09-30, 2026-09-30 |
 | Ingresos por publicidad en televisión abierta | Publicidad | Publicidad | Publicidad TV y digital | Publicidad TV abierta | Publicidad en señal abierta. | Piloto validado (CLAUDE.md 5.4), 2026-09-29 |
 | Subvención NTV | Otros ingresos | Transferencias del Estado | Transferencias del Estado | Transferencias del Estado | Transferencia del Estado (Ley 19.132 art. 37) para financiar la señal NTV; ni audiencias ni contenidos. | Piloto validado (CLAUDE.md 5.4), 2026-09-29 |

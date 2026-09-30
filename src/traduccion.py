@@ -22,11 +22,15 @@ NOMBRES = {
     "Contenidos y señales (extranjero)": "Content and signals (foreign)",
     "Contenidos y señales (sin desglose geográfico)": "Content and signals (no geographic breakdown)",
     "Eventos": "Events", "Arriendos y servicios": "Rentals and services", "Otros sin desglose": "Other (not broken down)",
+    "Contenidos y producción": "Content and production", "Personal": "Staff",
+    "Depreciación y amortización": "Depreciation and amortization",
+    "Comercialización de audiencias": "Selling audiences (commissions, measurement)",
+    "Técnica y transmisión": "Technical and transmission", "Canje": "Barter", "Otros costos": "Other costs",
 }
 
 FRASES = [
     # encabezado
-    ("TV abierta · Chile · 2016–2026 · EEFF CMF", "Free-to-air TV · Chile · 2016–2026 · CMF financial statements"),
+    ("TV abierta · Chile · 2010–2026 · EEFF CMF", "Free-to-air TV · Chile · 2010–2026 · CMF financial statements"),
     ("<title>Audiencias en venta</title>", "<title>Audiences for sale</title>"),
     ("<h1>Audiencias en venta</h1>", "<h1>Audiences for sale</h1>"),
     ("Qué parte de los ingresos de la TV abierta chilena viene de vender audiencias a los anunciantes y qué parte de vender contenidos. "
@@ -57,8 +61,8 @@ FRASES = [
     ("Participación de la venta de audiencias", "Share of revenue from selling audiences"),
     ('"aria-label": "Participación en el tiempo"', '"aria-label": "Share over time"'),
     ('"Publicidad sobre ingresos de actividades ordinarias."', '"Advertising as a share of operating revenue."'),
-    ('" Industria = suma de los seis canales, desde 2017. Círculo hueco = período reclasificado entre EEFF."',
-     '" Industry = sum of the six channels, from 2017. Hollow circle = period reclassified between filings."'),
+    ('" Industria = suma de los seis canales desde 2017 (sin 2018: La Red no tiene ese año completo). TVN desde 2010. Círculo hueco = período reclasificado entre EEFF."',
+     '" Industry = sum of the six channels from 2017 (no 2018: La Red lacks that full year). TVN from 2010. Hollow circle = period reclassified between filings."'),
     ("Referencia Napoli", "Napoli reference"),
     (">Comparador actual</span>", ">Current comparator</span>"),
     ("<li>Rombo: comparador actual. EE.UU. 2022, estaciones locales de TV: publicidad over-the-air (US$20,5 mil millones, Pew/BIA) sobre publicidad más derechos de retransmisión (US$14,5 mil millones, proyección de Kagan). Aproximado; excluye la publicidad digital de las estaciones.</li>",
@@ -95,6 +99,22 @@ FRASES = [
      "Includes channels whose figures for this period were reclassified between filings; the latest version of each is used."),
     ("Reclasificado: los EEFF de ${rc.fecha_cierre.join(\", \")} informan este período con distinta composición. Se muestra la versión más reciente.",
      "Reclassified: the filings dated ${rc.fecha_cierre.join(\", \")} report this period with a different composition. The latest version is shown."),
+    # publicidad y rentabilidad; costos
+    ("<h2 id=\"t-rent\">Publicidad y rentabilidad</h2>", "<h2 id=\"t-rent\">Advertising and profitability</h2>"),
+    ("Cada punto es un canal en un año: participación de la publicidad en los ingresos (eje horizontal) y resultado del ejercicio sobre ingresos (eje vertical), según el estado de resultados de cada EEFF. Los puntos fuera de escala se dibujan en el borde con un triángulo.",
+     "Each point is one channel in one year: advertising as a share of revenue (horizontal) and net result over revenue (vertical), from each filing's statement of results. Points outside the scale are drawn at the edge as triangles."),
+    ('"aria-label": "Publicidad y margen neto por canal y año"', '"aria-label": "Advertising share and net margin by channel and year"'),
+    ('"Publicidad / ingresos →"', '"Advertising / revenue →"'),
+    ('"↑ Resultado / ingresos"', '"↑ Net result / revenue"'),
+    ("<tr><td>Publicidad / ingresos</td>", "<tr><td>Advertising / revenue</td>"),
+    ("<tr><td>Resultado del ejercicio</td>", "<tr><td>Net result</td>"),
+    ("<tr><td>Margen neto</td>", "<tr><td>Net margin</td>"),
+    ("<tr><td>Margen bruto</td>", "<tr><td>Gross margin</td>"),
+    ('<div class="doc">Montos en M$ nominales</div>', '<div class="doc">Amounts in nominal M$</div>'),
+    ("<h2 id=\"t-cst\">Composición del costo de ventas</h2>", "<h2 id=\"t-cst\">Cost of sales composition</h2>"),
+    ("Porcentaje del costo de ventas anual, según la nota de costos de cada EEFF. La Red no publica esa nota; los canales la informan con distinto detalle.",
+     "Share of annual cost of sales, from each filing's cost note. La Red does not publish that note; channels report it in different detail."),
+    ('"aria-label": "Costo de ventas de " + ent', '"aria-label": "Cost of sales of " + tr(ent)'),
     # tabla y notas
     ("Tabla de datos de la vista actual", "Data table for the current view"),
     ("<th>Período</th>", "<th>Period</th>"),
@@ -140,6 +160,7 @@ def a_ingles(html):
     visible = re.sub(r"//[^\n]*|/\*.*?\*/", "", out, flags=re.S)
     visible = re.sub(r'k: "[^"]*"|l: "[^"]*"|"[^"]*_[^"]*"', "", visible)  # claves y etiquetas (se traducen con tr)
     visible = re.sub(r"const TR = \{.*?\};", "", visible, flags=re.S)
+    visible = re.sub(r"\.\w+", "", visible)  # nombres de campos en el código (r.ingresos), no texto visible
     visible = re.sub(r'=== "[^"]*"|"(Publicidad|Otros ingresos|Otros operacionales|Otros ingresos operacionales)"', "", visible)
     restos = sorted({w for w in RESTOS if w in visible})
     if restos:

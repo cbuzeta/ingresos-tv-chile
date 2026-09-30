@@ -61,7 +61,7 @@ OK La Red 2020-03-31 p37 ocr 2 cols ['Ingresos de operación', 'Ingresos de oper
 OK La Red 2020-06-30 p40 ocr400 2 cols ['Ingresos de operación', 'Ingresos de operación - canje', 'Otros ingresos de operación (*)', 'Totales'] 
 OK La Red 2020-09-30 p37 pdfplumber 2 cols ['Ingresos de operación', 'Ingresos de operación - canje', 'Otros ingresos de operación (*)', 'Totales'] 
 OK La Red 2020-12-31 p38 pdfplumber 2 cols ['Ingresos de operación', 'Ingresos de operación - canje', 'Otros ingresos de operación (*)', 'Totales'] 
-OK La Red 2021-03-31 p36 pdfplumber 2 cols ['Ingresos de operación', 'Ingresos de operación - canje', 'Otros ingresos de operación (*)', 'Totales'] 
+REVISAR La Red 2021-03-31 p36 pdfplumber 2 cols ['Ingresos de operación', 'Ingresos de operación - canje', 'Otros ingresos de operación (*)', 'Totales'] fechas de encabezado no interpretables ['2021-01-01', '2020-01-01', '2021-03-31', '2021-03-31']
 OK La Red 2021-06-30 p38 pdfplumber 2 cols ['Ingresos de operación', 'Ingresos de operación - canje', 'Otros ingresos de operación (*)', 'Totales'] 
 OK La Red 2021-09-30 p36 pdfplumber 2 cols ['Ingresos de operación', 'Ingresos de operación - canje', 'Otros ingresos de operación (*)', 'Totales'] 
 OK La Red 2021-12-31 p38 ocr 2 cols ['Ingresos de operación', 'Ingresos de operación - canje', 'Otros ingresos de operación (*)', 'Totales'] 
@@ -82,7 +82,7 @@ OK La Red 2025-06-30 p40 pdfplumber 2 cols ['Ingresos de operación', 'Otros ing
 OK La Red 2025-09-30 p37 pdfplumber 2 cols ['Ingresos de operación', 'Ingresos de operación - canje', 'Otros ingresos de operación (*)', 'Totales'] 
 OK La Red 2025-12-31 p40 pdfplumber 2 cols ['Ingresos de operación', 'Ingresos de operación - canje', 'Otros ingresos de operación (*)', 'Totales'] 
 OK La Red 2026-03-31 p37 pdfplumber 2 cols ['Ingresos de operación', 'Otros ingresos de operación (*)', 'Totales'] 
-OK La Red 2026-06-30 p41 pdfplumber 2 cols ['Ingresos de operación', 'Otros ingresos de operación (*)', 'Totales'] 
+REVISAR La Red 2026-06-30 p41 pdfplumber 2 cols ['Ingresos de operación', 'Otros ingresos de operación (*)', 'Totales'] encabezado ['2026-01-01', '2025-01-01'] ≠ supuesto ['2026-06-30', '2025-06-30']
 OK Mega 2017-12-31 p41 ocr400 2 cols ['Ingresos por publicidad de Televisión e Internet', 'Ingresos por otros negocios', 'Ingresos radiales y otros', 'Total'] 
 OK Mega 2019-12-31 p40 pdfplumber 2 cols ['Ingresos por publicidad de televisión e internet', 'Ingresos por otros negocios', 'Ingresos propios de filiales', 'Ingreso total'] 
 OK Mega 2020-03-31 p37 pdfplumber 2 cols ['Ingresos por publicidad de televisión e internet', 'Ingresos por otros negocios', 'Ingresos propios de filiales', 'Ingreso total'] 
@@ -112,7 +112,7 @@ OK Mega 2025-09-30 p37 pdfplumber 4 cols ['Ingresos por publicidad de televisió
 OK Mega 2025-12-31 p39 pdfplumber 2 cols ['Ingresos por publicidad de televisión e internet (1)', 'Ingresos por ventas en plataformas y contenidos (2)', 'Ingresos por publicidad radial y cable (3)', 'Ingreso total'] 
 OK Mega 2026-03-31 p37 pdfplumber 2 cols ['Ingresos por publicidad de televisión e internet (1)', 'Ingresos por ventas en plataformas y contenidos (2)', 'Ingresos por publicidad radial y cable (3)', 'Ingreso total'] 
 OK Mega 2026-06-30 p39 pdfplumber 4 cols ['Ingresos por publicidad de televisión e internet (1)', 'Ingresos por ventas en plataformas y contenidos (2)', 'Ingresos por publicidad radial y cable (3)', 'Ingreso total'] 
-REVISION TV+ 2017-12-31
+OK TV+ 2017-12-31 p37 ocr 1 cols ['Ventas Televisión', 'Total ingresos ordinarios'] 
 OK TV+ 2019-12-31 p38 pdfplumber 2 cols ['Ventas de publicidad', 'Venta infomerciales', 'Espacio de transmisión', 'Otros negocios', 'Arriendo de estudios', 'Servicio de administración', 'Total ingresos ordinarios'] 
 OK TV+ 2020-03-31 p35 pdfplumber 2 cols ['Ventas de publicidad', 'Ventas de infomerciales', 'Espacio de transmisión', 'Otros negocios', 'Servicios de administración', 'Total ingresos ordinarios'] 
 OK TV+ 2020-06-30 p38 pdfplumber 4 cols ['Ventas de publicidad', 'Venta de infomerciales', 'Espacio de transmisión', 'Otros negocios', 'Arriendo de estudios', 'Total'] 
@@ -122,14 +122,15 @@ OK TV+ 2021-03-31 p34 pdfplumber-columnas 2 cols ['Venta canje VTR', 'Ventas de 
 OK TV+ 2021-06-30 p37 pdfplumber 4 cols ['Ventas de publicidad', 'Venta infomerciales', 'Espacio de transmisión', 'Otros negocios', 'Arriendo de estudios', 'Total ingresos ordinarios'] 
 OK TV+ 2021-09-30 p32 pdfplumber 2 cols ['Ventas de TV', 'Ventas de infomerciales', 'Espacio de transmisión', 'Otros negocios', 'Arriendo de estudios', 'Cuentas canje', 'Total ingresos ordinarios'] 
 OK TV+ 2021-12-31 p37 pdfplumber 2 cols ['Ventasdepublicidad', 'Ventainfomerciales', 'Espaciodetransmisión', 'Otrosnegocios', 'Arriendodeestudios', 'Serviciodeadministración', 'Totalingresosordinarios'] 
-OK TV+ 2022-03-31 p33 pdftotext-raw 2 cols ['Ventas de VTR', 'Ventas de publicidad', 'Venta infomerciales', 'Espacio de transmisión', 'Otros negocios', 'Arriendo de estudios', 'Servicio de administración', 'Venta canje', 'Total ingresos ordinarios'] descuadre de redondeo en la fuente (total - suma = [1, 0])
+OK TV+ 2022-03-31 p33 pdfplumber 2 cols ['Ventas de VTR', 'Ventas de publicidad', 'Venta infomerciales', 'Espacio de transmisión', 'Otros negocios', 'Arriendo de estudios', 'Servicio de administración', 'Venta canje', 'Total ingresos ordinarios'] descuadre de redondeo en la fuente (total - suma = [1, 0])
 OK TV+ 2022-06-30 p36 pdfplumber 4 cols ['Ventas de publicidad', 'Arriendoinfomerciales', 'Espacio de transmisión', 'Otros negocios', 'Arriendo de estudios', 'Total,ingresos ordinarios'] 
 OK TV+ 2022-09-30 p32 pdfplumber 2 cols ['Ventas de TV', 'Arriendo infomerciales', 'Espacio de transmisión', 'Otros negocios', 'Arriendo de estudios', 'Cuentas canjes', 'Total, ingresos ordinarios'] 
 OK TV+ 2022-12-31 p39 pdfplumber 2 cols ['Ventas de publicidad', 'Venta infomerciales', 'Espacio de transmisión', 'Otros negocios', 'Arriendo de estudios', 'Total ingresos ordinarios'] 
-OK TV+ 2023-03-31 p34 ocr 2 cols ['Ventas de VTR', 'Venta publicidad', 'Venta de infomerciales', 'Espacio de transmisión', 'Otros negocios', 'Venta de canje', 'Total ingresos ordinarios'] descuadre de redondeo en la fuente (total - suma = [0, 1])
+OK TV+ 2023-03-31 p34 pdfplumber 2 cols ['Ventas de VTR', 'Venta publicidad', 'Venta de infomerciales', 'Espacio de transmisión', 'Otros negocios', 'Venta de canje', 'Total ingresos ordinarios'] descuadre de redondeo en la fuente (total - suma = [0, 1])
 OK TV+ 2023-06-30 p37 pdfplumber 4 cols ['Ventas de publicidad', 'Arriendo infomerciales', 'Espacio de transmisión', 'Otros negocios', 'Venta canje', 'Total, ingresos ordinarios'] 
 OK TV+ 2023-09-30 p32 pdfplumber 2 cols ['Ventas de TV', 'Arriendo infomerciales', 'Espacios de transmisión', 'Otros negocios', 'Arriendo de estudios', 'Cuentas canjes', 'Total ingresos ordinarios'] 
 OK TV+ 2023-12-31 p37 pdfplumber 2 cols ['Ventas de publicidad', 'Arriendo espacio de transmisión', 'Otros negocios', 'Arriendo de estudios', 'Total ingresos ordinarios'] 
+OK TV+ 2024-03-31 p34 pdfplumber 2 cols ['Venta de publicidad', 'Espacio de transmisión', 'Otros negocios', 'Total ingresos ordinarios'] 
 OK TV+ 2024-06-30 p35 pdfplumber 4 cols ['Ventas de publicidad', 'Arriendo infomerciales', 'Espacio de transmisión', 'Otros negocios', 'Total, ingresos ordinarios'] 
 OK TV+ 2024-09-30 p34 pdfplumber 2 cols ['Venta de publicidad', 'Espacio de transmisión', 'Otros negocios', 'Total ingresos ordinarios'] 
 OK TV+ 2024-12-31 p38 pdfplumber 2 cols ['Ventas de publicidad', 'Arriendo espacio de transmisión', 'Otros negocios', 'Total ingresos ordinarios'] 
@@ -139,6 +140,18 @@ OK TV+ 2025-09-30 p34 pdfplumber 2 cols ['Venta de publicidad', 'Espacio de tran
 OK TV+ 2025-12-31 p38 pdfplumber 2 cols ['Ventas de publicidad', 'Arriendo espacio de transmisión', 'Otros negocios', 'Total ingresos ordinarios'] 
 OK TV+ 2026-03-31 p34 pdfplumber 2 cols ['Ventas de publicidad', 'Arriendo espacio de transmisión', 'Otros negocios', 'Total ingresos ordinarios'] 
 OK TV+ 2026-06-30 p40 pdfplumber 4 cols ['Ventas de publicidad', 'Arriendo infomerciales', 'Otros negocios', 'Total, ingresos ordinarios'] 
+OK TVN 2011-06-30 p83 pdfplumber 4 cols ['Ingresos por Publicidad', 'Otros Ingresos', 'Total'] 
+OK TVN 2011-12-31 p70 pdfplumber 4 cols ['Ingresos por Publicidad', 'Otros Ingresos', 'Total'] 
+OK TVN 2012-06-30 p68 pdfplumber 4 cols ['Ingresos por Publicidad en televisión abierta e Internet', 'Otros Ingresos', 'Total'] 
+OK TVN 2012-12-31 p74 pdfplumber 4 cols ['Ingresos por Publicidad en televisión abierta e internet', 'Otros Ingresos', 'Total'] 
+REVISAR TVN 2013-06-30 p73 pdfplumber 4 cols ['Ingresos por Publicidad en televisión abierta e internet', 'Otros Ingresos', 'Total'] total no hallado en EERR
+OK TVN 2013-12-31 p74 pdfplumber 2 cols ['Ingresos por Publicidad en televisión abierta e internet', 'Otros Ingresos', 'Total'] 
+REVISION TVN 2014-06-30
+OK TVN 2014-12-31 p79 pdfplumber 2 cols ['Ingresos por Publicidad en televisión abierta e internet', 'Otros Ingresos', 'Totales'] 
+REVISAR TVN 2015-06-30 p79 ocr400 4 cols ['Ingresos por Publicidad en televisión abierta e internet', 'Otros Ingresos', 'Totales'] total no hallado en EERR
+OK TVN 2015-12-31 p69 pdfplumber 2 cols ['Ingresos por Publicidad en televisión abierta e internet', 'Otros Ingresos', 'Total'] 
+OK TVN 2016-06-30 p64 pdfplumber 4 cols ['Ingresos por Publicidad en televisión abierta e internet', 'Otros Ingresos', 'Total'] 
+OK TVN 2016-12-31 p65 pdftotext-layout 2 cols ['Ingresos por Publicidad en televisión abierta e internet', 'Otros Ingresos', 'Totales'] 
 OK TVN 2017-03-31 p61 pdfplumber 2 cols ['Ingresos por Publicidad en televisión abierta e internet', 'Otros Ingresos', 'Total'] 
 OK TVN 2017-06-30 p64 pdfplumber 4 cols ['Ingresos por Publicidad en televisión abierta e internet', 'Otros Ingresos(*)', 'Total'] 
 OK TVN 2017-09-30 p64 pdfplumber 4 cols ['Ingresos por Publicidad en televisión abierta e internet', 'Otros Ingresos(*)', 'Totales'] 
@@ -177,4 +190,4 @@ OK TVN 2025-09-30 p48 pdftotext-layout 4 cols ['Ingresos por publicidad en telev
 OK TVN 2025-12-31 p54 ocr 2 cols ['Ingresos por publicidad en televisión abierta', 'Otros ingresos', 'Totales'] 
 OK TVN 2026-03-31 p49 pdftotext-layout 2 cols ['Ingresos por publicidad en televisión abierta', 'Otros ingresos', 'Total es'] 
 OK TVN 2026-06-30 p52 pdftotext-layout 4 cols ['Ingresos por publicidad en televisión abierta', 'Otros ingresos (1)', 'Subvencion NTV (2)', 'Total es'] 
-Counter({'OK': 176, 'REVISION': 3, 'REVISAR': 1})
+Counter({'OK': 185, 'REVISAR': 5, 'REVISION': 3})

@@ -1,0 +1,74 @@
+canal,clave,linea_original,categoria,justificacion,fuente_decision,fecha
+Canal 13,costosdemantencionestecnicas,Costos de Mantenciones Técnicas (a),Técnica y transmisión,"Mantención técnica, red de transmisión, arriendo de estudios y sitios, concesiones.",Aprobado por C. Buzeta 2026-09-30,2026-09-30
+Canal 13,costosdepublicidad,Costos de Publicidad,Contenidos y producción,"C13: costo de la programación exhibida (≈86% del costo de ventas); decisión explícita, el rótulo es ambiguo.",Aprobado por C. Buzeta 2026-09-30,2026-09-30
+Canal 13,costosdepublicidadexhibida,Costos de Publicidad Exhibida,Contenidos y producción,"C13: costo de la programación exhibida (≈86% del costo de ventas); decisión explícita, el rótulo es ambiguo.",Aprobado por C. Buzeta 2026-09-30,2026-09-30
+Canal 13,costosmantencionestecnicas,Costos mantenciones técnicas(a),Técnica y transmisión,"Mantención técnica, red de transmisión, arriendo de estudios y sitios, concesiones.",Aprobado por C. Buzeta 2026-09-30,2026-09-30
+Canal 13,costosmantenciontecnicas,CostosMantención Técnicas (a),Técnica y transmisión,"Mantención técnica, red de transmisión, arriendo de estudios y sitios, concesiones.",Aprobado por C. Buzeta 2026-09-30,2026-09-30
+Canal 13,costosporbonificacionagencia,Costos por Bonificación Agencia,Comercialización de audiencias,"Costo de vender audiencias: comisiones y bonificaciones de agencia, medición y verificación publicitaria.",Aprobado por C. Buzeta 2026-09-30,2026-09-30
+Canal 13,otroscostosdeexplotacion,Otros costos de explotación,Otros costos,Sin desglose o no clasificable en las demás categorías.,Aprobado por C. Buzeta 2026-09-30,2026-09-30
+Chilevisión,costoelenco,Costo elenco,Contenidos y producción,"Costo de hacer o comprar contenidos (producción, elenco, material fílmico, derechos, exhibición).",Aprobado por C. Buzeta 2026-09-30,2026-09-30
+Chilevisión,elenco,Elenco,Contenidos y producción,"Costo de hacer o comprar contenidos (producción, elenco, material fílmico, derechos, exhibición).",Aprobado por C. Buzeta 2026-09-30,2026-09-30
+Chilevisión,materialfilmicoyproducciones,Material fílmico y producciones,Contenidos y producción,"Costo de hacer o comprar contenidos (producción, elenco, material fílmico, derechos, exhibición).",Aprobado por C. Buzeta 2026-09-30,2026-09-30
+Chilevisión,materialfilmicoyproduccionesprovisionadas,Material fílmico y producciones provisionadas,Contenidos y producción,"Costo de hacer o comprar contenidos (producción, elenco, material fílmico, derechos, exhibición).",Aprobado por C. Buzeta 2026-09-30,2026-09-30
+Chilevisión,otroscostosdeproduccion,Otros costos de producción (1),Contenidos y producción,"Costo de hacer o comprar contenidos (producción, elenco, material fílmico, derechos, exhibición).",Aprobado por C. Buzeta 2026-09-30,2026-09-30
+Chilevisión,produccionnacionalexterna,Producción nacional externa,Contenidos y producción,"Costo de hacer o comprar contenidos (producción, elenco, material fílmico, derechos, exhibición).",Aprobado por C. Buzeta 2026-09-30,2026-09-30
+Chilevisión,produccionnacionalpropia,Producción nacional propia,Contenidos y producción,"Costo de hacer o comprar contenidos (producción, elenco, material fílmico, derechos, exhibición).",Aprobado por C. Buzeta 2026-09-30,2026-09-30
+Chilevisión,provisionadas,provisionadas,Contenidos y producción,"Costo de hacer o comprar contenidos (producción, elenco, material fílmico, derechos, exhibición).",Aprobado por C. Buzeta 2026-09-30,2026-09-30
+Mega,costodeproduccionyotros,Costo de producción y otros,Contenidos y producción,"Costo de hacer o comprar contenidos (producción, elenco, material fílmico, derechos, exhibición).",Aprobado por C. Buzeta 2026-09-30,2026-09-30
+Mega,costosdeproduccionyotros,Costos de producción y otros,Contenidos y producción,"Costo de hacer o comprar contenidos (producción, elenco, material fílmico, derechos, exhibición).",Aprobado por C. Buzeta 2026-09-30,2026-09-30
+Mega,depreciacion,Depreciación,Depreciación y amortización,Depreciación y amortización de activos fijos incluida en el costo de ventas.,Aprobado por C. Buzeta 2026-09-30,2026-09-30
+Mega,depreciaciones,Depreciaciones,Depreciación y amortización,Depreciación y amortización de activos fijos incluida en el costo de ventas.,Aprobado por C. Buzeta 2026-09-30,2026-09-30
+Mega,gastosdelpersonal,Gastos del personal,Personal,Remuneraciones informadas como línea propia del costo de ventas.,Aprobado por C. Buzeta 2026-09-30,2026-09-30
+Mega,otroscostos,Otros costos,Otros costos,Sin desglose o no clasificable en las demás categorías.,Aprobado por C. Buzeta 2026-09-30,2026-09-30
+TV+,amortizacionderechomaterial,Amortización derecho material,Contenidos y producción,"Costo de hacer o comprar contenidos (producción, elenco, material fílmico, derechos, exhibición).",Aprobado por C. Buzeta 2026-09-30,2026-09-30
+TV+,amortizacionderechomaterialyconcesiones,Amortización derecho material y concesiones,Contenidos y producción,"Costo de hacer o comprar contenidos (producción, elenco, material fílmico, derechos, exhibición).",Aprobado por C. Buzeta 2026-09-30,2026-09-30
+TV+,arriendodeestudiosysitiodetransmision,Arriendo de estudios y sitio de transmisión,Técnica y transmisión,"Mantención técnica, red de transmisión, arriendo de estudios y sitios, concesiones.",Aprobado por C. Buzeta 2026-09-30,2026-09-30
+TV+,arriendodeestudiosysitiosdetransmision,Arriendo de estudios y sitios de transmisión,Técnica y transmisión,"Mantención técnica, red de transmisión, arriendo de estudios y sitios, concesiones.",Aprobado por C. Buzeta 2026-09-30,2026-09-30
+TV+,arriendosdeestudiosysitiosdetransmision,Arriendos de estudios y sitios de transmisión,Técnica y transmisión,"Mantención técnica, red de transmisión, arriendo de estudios y sitios, concesiones.",Aprobado por C. Buzeta 2026-09-30,2026-09-30
+TV+,comisionagencia,Comisión Agencia,Comercialización de audiencias,"Costo de vender audiencias: comisiones y bonificaciones de agencia, medición y verificación publicitaria.",Aprobado por C. Buzeta 2026-09-30,2026-09-30
+TV+,comisiondeagencia,Comisión de agencia,Comercialización de audiencias,"Costo de vender audiencias: comisiones y bonificaciones de agencia, medición y verificación publicitaria.",Aprobado por C. Buzeta 2026-09-30,2026-09-30
+TV+,concesionesderadiodifusion,Concesiones de radiodifusión,Técnica y transmisión,"Mantención técnica, red de transmisión, arriendo de estudios y sitios, concesiones.",Aprobado por C. Buzeta 2026-09-30,2026-09-30
+TV+,costopublisher,Costo Publisher,Comercialización de audiencias,"Costo de vender audiencias: comisiones y bonificaciones de agencia, medición y verificación publicitaria.",Aprobado por C. Buzeta 2026-09-30,2026-09-30
+TV+,depreciacion,Depreciación,Depreciación y amortización,Depreciación y amortización de activos fijos incluida en el costo de ventas.,Aprobado por C. Buzeta 2026-09-30,2026-09-30
+TV+,"depreciaciondepropiedad,plantasyequipos","Depreciación de propiedad, plantas y equipos",Depreciación y amortización,Depreciación y amortización de activos fijos incluida en el costo de ventas.,Aprobado por C. Buzeta 2026-09-30,2026-09-30
+TV+,"depreciaciondepropiedad,plantayequipos","Depreciación de propiedad, planta y equipos",Depreciación y amortización,Depreciación y amortización de activos fijos incluida en el costo de ventas.,Aprobado por C. Buzeta 2026-09-30,2026-09-30
+TV+,depreciaciondepropiedadplantayequipos,Depreciación de propiedad planta y equipos,Depreciación y amortización,Depreciación y amortización de activos fijos incluida en el costo de ventas.,Aprobado por C. Buzeta 2026-09-30,2026-09-30
+TV+,derechodematerialimportado,Derecho de material importado,Contenidos y producción,"Costo de hacer o comprar contenidos (producción, elenco, material fílmico, derechos, exhibición).",Aprobado por C. Buzeta 2026-09-30,2026-09-30
+TV+,derechomaterialimportado,Derecho Material Importado,Contenidos y producción,"Costo de hacer o comprar contenidos (producción, elenco, material fílmico, derechos, exhibición).",Aprobado por C. Buzeta 2026-09-30,2026-09-30
+TV+,derechosdematerialimportado,Derechos de material importado,Contenidos y producción,"Costo de hacer o comprar contenidos (producción, elenco, material fílmico, derechos, exhibición).",Aprobado por C. Buzeta 2026-09-30,2026-09-30
+TV+,derechosmaterialimportado,Derechos Material Importado,Contenidos y producción,"Costo de hacer o comprar contenidos (producción, elenco, material fílmico, derechos, exhibición).",Aprobado por C. Buzeta 2026-09-30,2026-09-30
+TV+,derechosvarios,Derechos varios,Contenidos y producción,"Costo de hacer o comprar contenidos (producción, elenco, material fílmico, derechos, exhibición).",Aprobado por C. Buzeta 2026-09-30,2026-09-30
+TV+,gastocanje,Gasto canje,Canje,Costo de la publicidad pagada en especie (canje).,Aprobado por C. Buzeta 2026-09-30,2026-09-30
+TV+,gastoscanje,Gastos canje,Canje,Costo de la publicidad pagada en especie (canje).,Aprobado por C. Buzeta 2026-09-30,2026-09-30
+TV+,gastoscanjeporvtr,Gastos canje por VTR,Canje,Costo de la publicidad pagada en especie (canje).,Aprobado por C. Buzeta 2026-09-30,2026-09-30
+TV+,gastoscanjevtr,Gastos canje VTR,Canje,Costo de la publicidad pagada en especie (canje).,Aprobado por C. Buzeta 2026-09-30,2026-09-30
+TV+,gastoscomunes,Gastos comunes,Otros costos,Sin desglose o no clasificable en las demás categorías.,Aprobado por C. Buzeta 2026-09-30,2026-09-30
+TV+,gastosgenerales,Gastos generales,Otros costos,Sin desglose o no clasificable en las demás categorías.,Aprobado por C. Buzeta 2026-09-30,2026-09-30
+TV+,gastosoperaciones,Gastos Operaciones,Otros costos,Sin desglose o no clasificable en las demás categorías.,Aprobado por C. Buzeta 2026-09-30,2026-09-30
+TV+,honorarioyasesorias,Honorario y asesorías,Otros costos,Sin desglose o no clasificable en las demás categorías.,Aprobado por C. Buzeta 2026-09-30,2026-09-30
+TV+,materialimportado,Material importado (*),Contenidos y producción,"Costo de hacer o comprar contenidos (producción, elenco, material fílmico, derechos, exhibición).",Aprobado por C. Buzeta 2026-09-30,2026-09-30
+TV+,materialnacional,Material nacional (**),Contenidos y producción,"Costo de hacer o comprar contenidos (producción, elenco, material fílmico, derechos, exhibición).",Aprobado por C. Buzeta 2026-09-30,2026-09-30
+TV+,medicionpublicitaria,Medición Publicitaria,Comercialización de audiencias,"Costo de vender audiencias: comisiones y bonificaciones de agencia, medición y verificación publicitaria.",Aprobado por C. Buzeta 2026-09-30,2026-09-30
+TV+,otroscostos,Otros costos,Otros costos,Sin desglose o no clasificable en las demás categorías.,Aprobado por C. Buzeta 2026-09-30,2026-09-30
+TV+,otroscostosoperacionales,Otros costos operacionales,Otros costos,Sin desglose o no clasificable en las demás categorías.,Aprobado por C. Buzeta 2026-09-30,2026-09-30
+TV+,plataformasdigitales,Plataformas digitales,Otros costos,Sin desglose o no clasificable en las demás categorías.,Aprobado por C. Buzeta 2026-09-30,2026-09-30
+TV+,producciondeprogramas,Producción de programas,Contenidos y producción,"Costo de hacer o comprar contenidos (producción, elenco, material fílmico, derechos, exhibición).",Aprobado por C. Buzeta 2026-09-30,2026-09-30
+TV+,produccionesdeprogramas,Producciones de Programas,Contenidos y producción,"Costo de hacer o comprar contenidos (producción, elenco, material fílmico, derechos, exhibición).",Aprobado por C. Buzeta 2026-09-30,2026-09-30
+TV+,remuneraciondelpersonal,Remuneración del personal,Personal,Remuneraciones informadas como línea propia del costo de ventas.,Aprobado por C. Buzeta 2026-09-30,2026-09-30
+TV+,remuneraciondelpersonaloperativo,Remuneración del personal operativo,Personal,Remuneraciones informadas como línea propia del costo de ventas.,Aprobado por C. Buzeta 2026-09-30,2026-09-30
+TV+,remuneracionesdelpersonal,Remuneraciones del personal,Personal,Remuneraciones informadas como línea propia del costo de ventas.,Aprobado por C. Buzeta 2026-09-30,2026-09-30
+TV+,remuneracionespersonaloperativo,Remuneraciones Personal Operativo,Personal,Remuneraciones informadas como línea propia del costo de ventas.,Aprobado por C. Buzeta 2026-09-30,2026-09-30
+TV+,remuneracionpersonaloperativo,Remuneración personal operativo,Personal,Remuneraciones informadas como línea propia del costo de ventas.,Aprobado por C. Buzeta 2026-09-30,2026-09-30
+TV+,serviciosdered,Servicios de red,Técnica y transmisión,"Mantención técnica, red de transmisión, arriendo de estudios y sitios, concesiones.",Aprobado por C. Buzeta 2026-09-30,2026-09-30
+TV+,servicioverificacion,Servicio verificación,Comercialización de audiencias,"Costo de vender audiencias: comisiones y bonificaciones de agencia, medición y verificación publicitaria.",Aprobado por C. Buzeta 2026-09-30,2026-09-30
+TVN,amortizacion,Amortización,Depreciación y amortización,Depreciación y amortización de activos fijos incluida en el costo de ventas.,Aprobado por C. Buzeta 2026-09-30,2026-09-30
+TVN,costodeexhibicion,Costo de Exhibición,Contenidos y producción,"Costo de hacer o comprar contenidos (producción, elenco, material fílmico, derechos, exhibición).",Aprobado por C. Buzeta 2026-09-30,2026-09-30
+TVN,costosdeexhbicion,Costos de exhbición,Contenidos y producción,"Costo de hacer o comprar contenidos (producción, elenco, material fílmico, derechos, exhibición).",Aprobado por C. Buzeta 2026-09-30,2026-09-30
+TVN,costosdeexhibicion,Costos de exhibición,Contenidos y producción,"Costo de hacer o comprar contenidos (producción, elenco, material fílmico, derechos, exhibición).",Aprobado por C. Buzeta 2026-09-30,2026-09-30
+TVN,costosdeproduccionyexhibicion,Costos de producción y exhibición,Contenidos y producción,"Costo de hacer o comprar contenidos (producción, elenco, material fílmico, derechos, exhibición).",Aprobado por C. Buzeta 2026-09-30,2026-09-30
+TVN,depreciacion,Depreciación,Depreciación y amortización,Depreciación y amortización de activos fijos incluida en el costo de ventas.,Aprobado por C. Buzeta 2026-09-30,2026-09-30
+TVN,otroscostodeventas,Otros costo de ventas,Otros costos,Sin desglose o no clasificable en las demás categorías.,Aprobado por C. Buzeta 2026-09-30,2026-09-30
+TVN,otroscostosdeproduccion,Otros Costos de producción,Contenidos y producción,"Costo de hacer o comprar contenidos (producción, elenco, material fílmico, derechos, exhibición).",Aprobado por C. Buzeta 2026-09-30,2026-09-30
+TVN,otroscostosdeventa,Otros costos de venta,Otros costos,Sin desglose o no clasificable en las demás categorías.,Aprobado por C. Buzeta 2026-09-30,2026-09-30
+TVN,remuneraciones,Remuneraciones,Personal,Remuneraciones informadas como línea propia del costo de ventas.,Aprobado por C. Buzeta 2026-09-30,2026-09-30
+TVN,servicios,Servi ci os,Otros costos,Sin desglose o no clasificable en las demás categorías.,Aprobado por C. Buzeta 2026-09-30,2026-09-30
