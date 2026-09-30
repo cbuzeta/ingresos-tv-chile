@@ -60,6 +60,7 @@ p { margin: 0; max-width: 68ch; }
 header { display: grid; gap: 10px; }
 header .lede { color: var(--ink-2); font-size: 16px; }
 .src { font: 12px/1.5 var(--f-data); color: var(--muted); }
+.src a { color: var(--accent); text-underline-offset: 2px; }
 
 /* conmutadores */
 .console { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--paper);
@@ -132,7 +133,7 @@ table.data td { font-family: var(--f-data); font-variant-numeric: tabular-nums; 
     <span class="eyebrow">TV abierta · Chile · 2016–2026 · EEFF CMF</span>
     <h1>Audiencias en venta</h1>
     <p class="lede">Qué parte de los ingresos de la TV abierta chilena viene de vender audiencias a los anunciantes y qué parte de vender contenidos. Seis canales que informan a la CMF (TVN, Canal 13, Mega, Chilevisión, La Red y TV+), leídos desde la nota «Ingresos de actividades ordinarias» de cada estado financiero. Marco: Napoli (2003), <i>Audience Economics</i>, tabla 1.1.</p>
-    <p class="src" id="gen"></p>
+    <p class="src"><span id="gen"></span> · <a href="https://github.com/cbuzeta/ingresos-tv-chile">Código, datos y método</a></p>
   </header>
 
   <div class="console" role="toolbar" aria-label="Opciones de visualización">

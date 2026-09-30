@@ -193,6 +193,18 @@ def main():
     if plantilla.exists():
         html = plantilla.read_text(encoding="utf-8").replace("/*__DATA__*/null", json.dumps(data, ensure_ascii=False))
         (ROOT / "viz" / "ingresos_tv.html").write_text(html, encoding="utf-8")
+        # GitHub Pages (https://cbuzeta.github.io/ingresos-tv-chile): la misma página como documento HTML completo
+        (ROOT / "docs").mkdir(exist_ok=True)
+        corte = html.index("</style>") + len("</style>")  # título, fuentes y estilos van al <head>
+        cabeza, cuerpo = html[:corte], html[corte:]
+        pagina = ("<!doctype html>\n<html lang=\"es\">\n<head>\n<meta charset=\"utf-8\">\n"
+                  "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1, viewport-fit=cover\">\n"
+                  "<meta name=\"description\" content=\"Ingresos de la TV abierta chilena 2016-2026: venta de audiencias "
+                  "y de contenidos según las notas de los estados financieros (marco Napoli 2003).\">\n"
+                  "<style>[hidden]{display:none!important} img{max-width:100%}</style>\n"
+                  + cabeza + "\n</head>\n<body>\n" + cuerpo + "\n</body>\n</html>\n")
+        (ROOT / "docs" / "index.html").write_text(pagina, encoding="utf-8")
+        (ROOT / "docs" / ".nojekyll").write_text("", encoding="utf-8")
     print(f"{len(agg)} filas agregadas ({len(h2)} H2 derivados); planilla y viz_data.json en salidas/")
 
 
