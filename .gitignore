@@ -1,0 +1,13 @@
+# Originales descargados de la CMF / TVN (se identifican por hash en data/manifest.csv)
+data/Canal 13/
+data/Megamedia/
+data/Chilevisión/
+data/TVN/
+data/La Red/
+data/TV Mas/
+data/raw/
+data/cache_texto/
+tools/tessdata/
+__pycache__/
+~$*
+tools/node/

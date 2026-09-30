@@ -1,0 +1,49 @@
+canal,periodo,fecha_cierre,linea_original,monto_miles_clp,monto_base,lineas_base,origen,ok
+Canal 13,FY2024,2024-12-31,Ingresos de Publicidad Pantalla abierta,57302601,57302601,Ingresos de Publicidad Pantalla abierta,extraccion,True
+Canal 13,FY2024,2024-12-31,Ingresos de Publicidad Otras plataformas,2642229,2642229,Ingresos de Publicidad Otras plataformas,extraccion,True
+Canal 13,FY2024,2024-12-31,Otros ingresos de explotación,18965459,18965459,Otros ingresos de explotación (a),extraccion,True
+Canal 13,FY2025,2025-12-31,Ingresos de Publicidad Pantalla abierta,59951329,59951329,Ingresos de Publicidad Pantalla abierta,extraccion,True
+Canal 13,FY2025,2025-12-31,Ingresos de Publicidad Otras plataformas,2617226,2617226,Ingresos de Publicidad Otras plataformas,extraccion,True
+Canal 13,FY2025,2025-12-31,Otros ingresos de explotación,18980969,18980969,Otros ingresos de explotación(a),extraccion,True
+Canal 13,H1 2025,2026-06-30,Ingresos de Publicidad Pantalla abierta,26859101,26859101,Ingresos de Publicidad Pantalla abierta,extraccion,True
+Canal 13,H1 2025,2026-06-30,Ingresos de Publicidad Otras plataformas,1269184,1269184,Ingresos de PublicidadOtras plataformas,extraccion,True
+Canal 13,H1 2025,2026-06-30,Otros ingresos de explotación,9035090,9035090,Otros ingresos de explotación(a),extraccion,True
+Canal 13,H1 2026,2026-06-30,Ingresos de Publicidad Pantalla abierta,26162497,26162497,Ingresos de Publicidad Pantalla abierta,extraccion,True
+Canal 13,H1 2026,2026-06-30,Ingresos de Publicidad Otras plataformas,1044544,1044544,Ingresos de PublicidadOtras plataformas,extraccion,True
+Canal 13,H1 2026,2026-06-30,Otros ingresos de explotación,11182930,11182930,Otros ingresos de explotación(a),extraccion,True
+Mega,FY2024,2025-12-31,Ingresos por publicidad de televisión e internet,70257656,70257656,Ingresos por publicidad de televisión e internet (1),extraccion,True
+Mega,FY2024,2025-12-31,Ingresos por ventas en plataformas y contenidos,25014746,25014746,Ingresos por ventas en plataformas y contenidos (2),extraccion,True
+Mega,FY2024,2025-12-31,Ingresos por publicidad radial y cable,7647449,7647449,Ingresos por publicidad radial y cable (3),extraccion,True
+Mega,FY2025,2025-12-31,Ingresos por publicidad de televisión e internet,75154259,75154259,Ingresos por publicidad de televisión e internet (1),extraccion,True
+Mega,FY2025,2025-12-31,Ingresos por ventas en plataformas y contenidos,22126761,22126761,Ingresos por ventas en plataformas y contenidos (2),extraccion,True
+Mega,FY2025,2025-12-31,Ingresos por publicidad radial y cable,7559044,7559044,Ingresos por publicidad radial y cable (3),extraccion,True
+Chilevisión,FY2024,2025-12-31,Ingresos por publicidad,66752603,66752603,Ingresos por publicidad (1),extraccion,True
+Chilevisión,FY2024,2025-12-31,Ingresos nuevos negocios,6564923,6564923,Ingresos nuevos negocios (2),extraccion,True
+Chilevisión,FY2025,2025-12-31,Ingresos por publicidad,64981856,64981856,Ingresos por publicidad (1),extraccion,True
+Chilevisión,FY2025,2025-12-31,Ingresos nuevos negocios,7516324,7516324,Ingresos nuevos negocios (2),extraccion,True
+TVN,FY2024,2024-12-31,Ingresos por publicidad en televisión abierta,29763217,29763217,Ingresos por publicidad en televisión abierta,extraccion,True
+TVN,FY2024,2024-12-31,Otros ingresos,17086817,17086817,Otros ingresos,extraccion,True
+TVN,FY2025,2025-12-31,Ingresos por publicidad en televisión abierta,28787675,28787675,Ingresos por publicidad en televisión abierta,manual,True
+TVN,FY2025,2025-12-31,Otros ingresos,17127723,17127723,Otros ingresos,manual,True
+TVN,FY2025,2025-12-31,Subvención NTV,2000000,2000000,Subvención NTV,manual,True
+TVN,H1 2025,2026-06-30,Ingresos por publicidad en televisión abierta,14095458,14095458,Ingresos por publicidad en televisión abierta,extraccion,True
+TVN,H1 2025,2026-06-30,Otros ingresos,8141775,8141775,Otros ingresos (1),extraccion,True
+TVN,H1 2025,2026-06-30,Subvención NTV,2000000,2000000,Subvencion NTV (2),extraccion,True
+TVN,H1 2026,2026-06-30,Ingresos por publicidad en televisión abierta,12596474,12596474,Ingresos por publicidad en televisión abierta,extraccion,True
+TVN,H1 2026,2026-06-30,Otros ingresos,7990951,7990951,Otros ingresos (1),extraccion,True
+TVN,H1 2026,2026-06-30,Subvención NTV,1703714,1703714,Subvencion NTV (2),extraccion,True
+Mega,H1 2025,2026-06-30,Ingresos por publicidad de televisión e internet,36244158,36244158,Ingresos por publicidad de televisión e internet (1),extraccion,True
+Mega,H1 2025,2026-06-30,Ingresos por ventas en plataformas y contenidos,14954549,14954549,Ingresos por ventas en plataformas y contenidos (2),extraccion,True
+Mega,H1 2025,2026-06-30,Ingresos por publicidad radial y cable,3350704,3350704,Ingresos por publicidad radial y cable (3),extraccion,True
+Mega,Q1 2026,2026-03-31,Ingresos por publicidad de televisión e internet,22647735,22647735,Ingresos por publicidad de televisión e internet (1),extraccion,True
+Mega,Q1 2026,2026-03-31,Ingresos por ventas en plataformas y contenidos,5509634,5509634,Ingresos por ventas en plataformas y contenidos (2),extraccion,True
+Mega,Q1 2026,2026-03-31,Ingresos por publicidad radial y cable,2197367,2197367,Ingresos por publicidad radial y cable (3),extraccion,True
+Mega,H1 2026,2026-06-30,Ingresos por publicidad de televisión e internet,42107628,42107628,Ingresos por publicidad de televisión e internet (1),extraccion,True
+Mega,H1 2026,2026-06-30,Ingresos por ventas en plataformas y contenidos,10103933,10103933,Ingresos por ventas en plataformas y contenidos (2),extraccion,True
+Mega,H1 2026,2026-06-30,Ingresos por publicidad radial y cable,4223409,4223409,Ingresos por publicidad radial y cable (3),extraccion,True
+Chilevisión,H1 2025,2026-06-30,Ingresos por publicidad,33494199,33494199,Ingresos por publicidad (1),extraccion,True
+Chilevisión,H1 2025,2026-06-30,Ingresos nuevos negocios,1732348,1732348,Ingresos nuevos negocios (2),extraccion,True
+Chilevisión,Q1 2026,2026-03-31,Ingresos por publicidad,13733801,13733801,Ingresos por publicidad (1),extraccion,True
+Chilevisión,Q1 2026,2026-03-31,Ingresos nuevos negocios,1373833,1373833,Ingresos nuevos negocios (2),extraccion,True
+Chilevisión,H1 2026,2026-06-30,Ingresos por publicidad,32933666,32933666,Ingresos por publicidad (1),extraccion,True
+Chilevisión,H1 2026,2026-06-30,Ingresos nuevos negocios,3297691,3297691,Ingresos nuevos negocios (2),extraccion,True
