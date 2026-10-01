@@ -340,3 +340,5 @@ Herramientas: pdftotext/pdftoppm (poppler), pdfplumber, Tesseract en `C:\Program
 - TVN 2010–2016 desde la ficha de la CMF (junio y diciembre 2011–2016). Publicidad TVN: 95,4% en 2010, 60,1% en 2025.
 - Corrección: La Red dic-2019 compara con 9M-2018 (encabezado «30.09.2018»); las fechas con punto ahora se leen. La Red no tiene FY2018 desglosado y el agregado de seis canales no tiene 2018.
 - Audiencias (rating) y comparadores de Reino Unido/Europa: pendientes por decisión del 30-sep (anuarios CNTV descargados en data/externos/cntv/).
+
+**Fuentes manuales (1-oct-2026).** `revision/manual_resultados.csv` y `revision/manual_costos.csv`: Canal 13 dic-2019 (estado de resultados y nota 22, transcritos por C. Buzeta; cuadran por identidades) y TVN dic-2025 (ingresos, costo y pérdida del ejercicio desde el texto «b) Situación operacional», pp. 16–17; control «texto, sin identidad de impuesto»). Reemplazar TVN 2025 por la cifra de la tabla cuando llegue el EEFF de diciembre 2026.

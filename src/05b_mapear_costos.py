@@ -42,6 +42,10 @@ def main():
         man = pd.read_csv(man_f)
         for x in man.itertuples():
             assert abs(x.ingresos + x.costo_ventas - x.ganancia_bruta) <= 2, f"manual: identidad bruta {x.canal} {x.fin}"
+            if x.control == "texto, sin identidad de impuesto":
+                # cifras tomadas del texto del EEFF (TVN 2025): no traen antes de impuestos ni impuesto
+                assert pd.isna(x.antes_impuestos) and pd.isna(x.impuesto) and pd.notna(x.resultado), x
+                continue
             assert abs(x.antes_impuestos + x.impuesto - x.resultado_continuadas) <= 2, f"manual: identidad impuesto {x.canal} {x.fin}"
         k_man = ["documento", "tipo_periodo", "fin"]
         r = r.merge(man[k_man], on=k_man, how="left", indicator=True)

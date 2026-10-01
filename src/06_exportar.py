@@ -152,7 +152,7 @@ def main():
 
     # utilidades (paso 4d) y costo de ventas por categoría (paso 4c), versión más reciente de cada período
     r = pd.read_csv(ROOT / "data" / "resultados_serie.csv")
-    r = r[r.version_principal][["canal", "periodo"] + RESULTADOS]
+    r = r[r.version_principal][["canal", "periodo", "control"] + RESULTADOS].rename(columns={"control": "control_resultado"})
     agg = agg.merge(r, on=["canal", "periodo"], how="left")
     # años con estado de resultados pero sin desglose de ingresos (La Red 2018): se agregan sin composición,
     # para que la utilidad quede en los datos; la visualización solo usa filas con composición
@@ -179,7 +179,8 @@ def main():
     agg = agg.merge(cp, on=["canal", "periodo"], how="left")
 
     # H2 = año - H1, por agregado (solo si existen ambos en la serie principal)
-    num = [c for c in agg.columns if c not in keys + ["documento", "fecha_documento", "reclasificado", "origen_cifra"]]
+    num = [c for c in agg.columns if c not in keys + ["documento", "fecha_documento", "reclasificado", "origen_cifra",
+                                                         "control_resultado"]]
     h2 = []
     for (canal, anio), g in agg.assign(anio=agg.fin.str[:4]).groupby(["canal", "anio"]):
         fy = g[g.tipo_periodo == "anual"]
