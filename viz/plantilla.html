@@ -101,6 +101,7 @@ header .lede { color: var(--ink-2); font-size: 16px; }
 svg { display: block; width: 100%; height: auto; overflow: visible; }
 svg text { font-family: var(--f-data); font-size: 11px; fill: var(--muted); font-variant-numeric: tabular-nums; }
 svg .lbl { font-family: var(--f-body); font-size: 12px; font-weight: 600; fill: var(--ink-2); }
+svg .sd { font-size: 10px; fill: var(--muted); }
 .grid line { stroke: var(--rule); stroke-width: 1; }
 .base { stroke: var(--axis); stroke-width: 1; }
 .ref { stroke: var(--muted); stroke-width: 1.2; stroke-dasharray: 5 4; }
@@ -144,7 +145,7 @@ table.data td { font-family: var(--f-data); font-variant-numeric: tabular-nums; 
 <div class="wrap">
   <header>
     <div class="intro">
-    <span class="eyebrow">TV abierta · Chile · 2010–2026 · EEFF CMF</span>
+    <span class="eyebrow">TV abierta · Chile · 2016–2026 · EEFF CMF</span>
     <h1>Audiencias en venta</h1>
     <p class="lede">Qué parte de los ingresos de la TV abierta chilena viene de vender audiencias a los anunciantes y qué parte de vender contenidos. Seis canales que informan a la CMF (TVN, Canal 13, Mega, Chilevisión, La Red y TV+), leídos desde la nota «Ingresos de actividades ordinarias» de cada estado financiero. Marco: Napoli (2003), <i>Audience Economics</i>, tabla 1.1.</p>
     <p class="src"><span id="gen"></span> · <a href="https://github.com/cbuzeta/ingresos-tv-chile/blob/main/METODOLOGIA.md">Metodología</a> · <a href="https://github.com/cbuzeta/ingresos-tv-chile">Código y datos</a> · <a id="otro-idioma" href="en/">English</a></p>
@@ -226,6 +227,7 @@ table.data td { font-family: var(--f-data); font-variant-numeric: tabular-nums; 
       <li>C13: «Otros ingresos» incluye venta de activos en 2018 (M$6.430.098) y 2020 (M$13.771.539), según la nota.</li>
       <li>TVN 2025: la tabla del EEFF tiene fuente corrupta; cifras del piloto validado, coinciden con la lectura OCR.</li>
       <li>Los EEFF escaneados se leyeron con OCR y cuadran línea a línea con el total.</li>
+      <li>Ventana común 2016–2025. «s/d»: sin dato en los EEFF (Canal 13 y La Red 2018 en costos o resultados; TVN 2025 en resultados, llegará con el EEFF de diciembre 2026). TVN tiene además 2010–2015 en la planilla: su publicidad era el 95,4% de los ingresos en 2010.</li>
     </ul></section>
   </div>
 </div>
@@ -308,7 +310,7 @@ function xOf(r) {
 }
 function rows(ent) {
   const t = S.freq === "a" ? ["anual"] : ["semestre", "semestre2"];
-  return DATA.agregados.filter(r => r.canal === ent && t.includes(r.tipo_periodo) && +r.fin.slice(0, 4) >= X0).sort((a, b) => xOf(a) - xOf(b));
+  return DATA.agregados.filter(r => r.canal === ent && t.includes(r.tipo_periodo) && +r.fin.slice(0, 4) >= X0 && r.n1_publicidad != null).sort((a, b) => xOf(a) - xOf(b));
 }
 // M$ -> unidad del eje
 function conv(r, v) {
@@ -330,7 +332,7 @@ function share(r) {
 const reclas = (ent, per) => DATA.reclasificaciones.find(x => x.canal === ent && x.periodo === per);
 
 // ---------- ejes ----------
-let X0 = 2016;  // inicio del eje de tiempo; el gráfico comparativo lo adelanta a 2010 (historia de TVN)
+const X0 = 2016;  // ventana común de la visualización: 2016-2025 (más H1 2026); TVN 2010-2015 queda en los datos
 const X1 = () => S.freq === "a" ? 2026.15 : 2026.6;
 function scaleX(w, ml, mr) { return x => ml + (x - X0) / (X1() - X0) * (w - ml - mr); }
 function niceMax(v) { const s = [1, 1.5, 2, 2.5, 3, 4, 5, 6, 8, 10]; const e = Math.pow(10, Math.floor(Math.log10(v))); for (const m of s) if (m * e >= v) return m * e; return 10 * e; }
@@ -415,10 +417,6 @@ function reclasHtml(r) {
 
 // ---------- gráfico comparativo ----------
 function drawComp() {
-  X0 = 2010;
-  try { drawComp_(); } finally { X0 = 2016; }
-}
-function drawComp_() {
   const box = document.getElementById("comp"); box.innerHTML = "";
   const ents = [...CANALES, "6 canales CMF"];
   const w = Math.max(320, box.clientWidth), h = w < 520 ? 300 : 340, m = { t: 26, r: w < 520 ? 84 : 118, b: 28, l: 40 };
@@ -481,13 +479,22 @@ function drawComp_() {
   hit.addEventListener("mouseleave", () => { hair.setAttribute("visibility", "hidden"); hideTip(); });
 
   const que = "Publicidad sobre ingresos de actividades ordinarias.";
-  document.getElementById("s-comp").textContent = que + " Industria = suma de los seis canales desde 2017 (sin 2018: La Red no tiene ese año completo). TVN desde 2010. Círculo hueco = período reclasificado entre EEFF.";
+  document.getElementById("s-comp").textContent = que + " Industria = suma de los seis canales desde 2017 (sin 2018: La Red no tiene ese año completo). Círculo hueco = período reclasificado entre EEFF.";
   document.getElementById("lg-comp").innerHTML = ents.map(c => { const e = EST[c];
     return `<span><svg width="22" height="8" style="display:inline-block;vertical-align:1px;margin-right:6px;overflow:visible"><line x1="0" x2="22" y1="4" y2="4" stroke="${css(e.c)}" stroke-width="3" stroke-dasharray="${e.dash || "none"}"/></svg>${tr(e.nombre || c)}</span>`; }).join("")
     + `<span><i class="dash"></i>Referencia Napoli</span>`
     + (refPuntos.length ? `<span><svg width="14" height="14" viewBox="-7 -7 14 14"><path d="M0,-6L6,0L0,6L-6,0Z" fill="none" stroke="${css("--ink")}" stroke-width="2"/></svg>Comparador actual</span>` : "");
 }
 
+// marca «s/d» bajo los años de la ventana en que un canal no tiene dato (TV+ 2016 no existía: no se marca)
+function sinDato(svg, sx, sy, ent, rs, freq) {
+  if (freq !== "a" || ent === "4 grandes") return;
+  const hay = new Set(rs.map(r => +r.fin.slice(0, 4)));
+  for (let y = X0; y <= 2025; y++) {
+    if (hay.has(y) || ((ent === "TV+" || ent === "6 canales CMF") && y < 2017)) continue;
+    el("text", { x: sx(y + 0.5), y: sy(0) - 4, "text-anchor": "middle", class: "sd" }, svg).textContent = "s/d";
+  }
+}
 // ---------- paneles ----------
 function drawPanels() {
   const host = document.getElementById("panels"); host.innerHTML = "";
@@ -520,6 +527,7 @@ function drawPanels() {
         acc += v;
       }
     }
+    sinDato(svg, sx, sy, ent, rs, S.freq);
     eventos(svg, sx, m.t, h - m.b, e => e.canal === ent, m.t + 9);
     const hair = el("line", { class: "hair", y1: m.t, y2: h - m.b, visibility: "hidden" }, svg);
     const hit = el("rect", { x: m.l, y: m.t, width: w - m.l - m.r, height: h - m.t - m.b, fill: "transparent" }, svg);
@@ -587,7 +595,8 @@ function drawRent() {
   const box = document.getElementById("rent"); box.innerHTML = "";
   const w = Math.max(320, box.clientWidth), h = w < 520 ? 320 : 380, m = { t: 14, r: 16, b: 40, l: 48 };
   const ents = [...CANALES, "6 canales CMF"];
-  const pts = ents.flatMap(c => DATA.agregados.filter(r => r.canal === c && r.tipo_periodo === "anual" && r.resultado != null && r.ingresos)
+  const pts = ents.flatMap(c => DATA.agregados.filter(r => r.canal === c && r.tipo_periodo === "anual" && r.resultado != null && r.ingresos
+      && r.n1_publicidad != null && +r.fin.slice(0, 4) >= X0)
     .map(r => ({ c, r, x: val(r, "n1_publicidad") / val(r, "total"), y: r.resultado / r.ingresos })));
   const X0r = 0.4, X1r = 1, Y0 = -0.6, Y1 = 0.5;
   const sx = v => m.l + (v - X0r) / (X1r - X0r) * (w - m.l - m.r);
@@ -643,13 +652,14 @@ function drawCostos() {
   const host = document.getElementById("cst"); host.innerHTML = "";
   const guarda = S.freq; S.freq = "a";  // la composición de costos se muestra anual
   for (const ent of CANALES) {
-    const rs = DATA.agregados.filter(r => r.canal === ent && r.tipo_periodo === "anual" && COSTOS.some(c => r[c.k])).sort((a, b) => xOf(a) - xOf(b));
+    const rs = DATA.agregados.filter(r => r.canal === ent && r.tipo_periodo === "anual" && +r.fin.slice(0, 4) >= X0 && COSTOS.some(c => r[c.k])).sort((a, b) => xOf(a) - xOf(b));
     if (!rs.length) continue;
     const div = document.createElement("div"); div.className = "panel";
     div.innerHTML = `<h3>${esc(tr(ent))}</h3>`; host.appendChild(div);
     const w = Math.max(300, div.clientWidth || 520), h = 200, m = { t: 10, r: 8, b: 26, l: 44 };
     const svg = el("svg", { viewBox: `0 0 ${w} ${h}`, role: "img", "aria-label": "Costo de ventas de " + ent }, div);
     const { sx, sy } = axes(svg, w, h, m, 1, v => Math.round(v * 100) + "%");
+    sinDato(svg, sx, sy, ent, rs, "a");
     const ancho = (sx(X0 + 1) - sx(X0)) * 0.64;
     for (const r of rs) {
       const tot = COSTOS.reduce((a, c) => a + (r[c.k] || 0), 0), x = sx(xOf(r)) - ancho / 2;

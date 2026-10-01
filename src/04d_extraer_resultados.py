@@ -105,31 +105,82 @@ def _leer(lines, filas):
                 desde = i + 1
                 break
         else:
-            if campo != "gastos_admin":  # no todos los canales tienen la línea con ese nombre
+            # gastos de administración: no todos los canales la rotulan así. Ingresos e impuesto: el OCR de algunos
+            # EEFF escaneados pierde la línea; se resuelve con controles más estrictos en controlar().
+            if campo not in ("gastos_admin", "ingresos", "impuesto"):
                 return None
     return out
 
 
-def controlar(v, totales):
-    """Columnas válidas: [(indice_columna, periodo)] según las identidades y los totales de la nota."""
-    k = len(v["ingresos"])
+def controlar(v, totales, fecha_cierre):
+    """Columnas válidas: [(indice_columna, periodo, control)] según las identidades y los totales de la nota.
+
+    control = "completo" si pasan los tres controles. Casos acotados, siempre con al menos dos controles:
+    - "ingresos derivados": el OCR perdió la línea; ingresos = ganancia bruta − costo, y debe igualar el total de la nota.
+    - "impuesto no leído": el OCR perdió la línea; se exige ingresos + costo = ganancia bruta y el total de la nota.
+    - "sin total de nota": columna comparativa anual de un EEFF de diciembre cuyo período no está en la nota de ingresos
+      (La Red dic-2019 compara con 9M-2018 en la nota, pero con el año 2018 en el estado de resultados); se exigen las
+      dos identidades completas y que la otra columna sí coincida con la nota.
+    """
+    k = len(v["costo_ventas"])
+    flags = []
+    if "ingresos" not in v:
+        if len(v["ganancia_bruta"]) != k:
+            return None, "distinto número de columnas entre filas"
+        v["ingresos"] = [b - c for b, c in zip(v["ganancia_bruta"], v["costo_ventas"])]
+        flags.append("ingresos derivados")
+    if "impuesto" not in v:
+        flags.append("impuesto no leído")
     for c in v:  # una fila de puros guiones ("- - -") vale cero en todas las columnas, aunque falte un guion
         if len(v[c]) < k and all(n == 0 for n in v[c]):
             v[c] = [0] * k
     if any(len(v[c]) != k for c in v):
         return None, "distinto número de columnas entre filas"
+    if "ingresos derivados" in flags and "impuesto no leído" in flags:
+        return None, "faltan ingresos e impuesto: controles insuficientes"
+    if "impuesto no leído" in flags and all(a_ == r_ for a_, r_ in zip(v["antes_impuestos"], v["resultado"])):
+        # sin impuesto y con resultado idéntico a «antes de impuestos» en todas las columnas: probablemente se leyó
+        # dos veces la misma línea (TVN jun-2019 informa un impuesto de M$2.151.450)
+        return None, "resultado igual a antes de impuestos en todas las columnas sin línea de impuesto"
     cols = []
     for c in range(k):
         if abs(v["ingresos"][c] + v["costo_ventas"][c] - v["ganancia_bruta"][c]) > 2:
             return None, f"ingresos + costo ≠ ganancia bruta (col {c})"
-        if abs(v["antes_impuestos"][c] + v["impuesto"][c] - v["resultado"][c]) > 2:
+        if "impuesto" in v and abs(v["antes_impuestos"][c] + v["impuesto"][c] - v["resultado"][c]) > 2:
             return None, f"antes de impuestos + impuesto ≠ resultado (col {c})"
+        if "impuesto" not in v:
+            # sin la línea de impuesto, el resultado debe ser una versión plausible después de impuestos del resultado
+            # antes de impuestos: mismo signo y entre 0,3 y 1,7 veces (descarta, p. ej., la ganancia por acción)
+            a_, r_ = v["antes_impuestos"][c], v["resultado"][c]
+            if a_ != r_ and not (a_ != 0 and 0.3 <= r_ / a_ <= 1.7):
+                return None, f"resultado {r_} no plausible frente a antes de impuestos {a_} (impuesto no leído)"
+        if v["ingresos"][c] == 0:  # p. ej. TV+ 2016: la sociedad aún no operaba
+            continue
         # ±M$2: la nota y el estado de resultados a veces difieren en un peso por redondeo de la fuente
         per = next((totales[t] for t in totales if abs(t - v["ingresos"][c]) <= 2), None)
+        control = ", ".join(flags) or "completo"
         if per is None:
-            return None, f"ingresos {v['ingresos'][c]} no coinciden con la nota de ingresos"
-        cols.append((c, per))
+            otra = cols[0] if cols else None
+            if (fecha_cierre[5:7] == "12" and k == 2 and c == 1 and not flags and otra
+                    and otra[1][0] == "anual" and otra[1][2] == "actual"):
+                a = int(fecha_cierre[:4]) - 1
+                per, control = ("anual", f"{a}-12-31", "comparativo"), "sin total de nota"
+            else:
+                return None, f"ingresos {v['ingresos'][c]} no coinciden con la nota de ingresos"
+        cols.append((c, per, control))
     return cols, ""
+
+
+def paginas_candidatas(pdf, npag, ya):
+    """Otras páginas que parecen un estado de resultados (cuando la del paso 4 no sirve)."""
+    out = []
+    for q in range(1, min(npag, 30) + 1):
+        if q == ya:
+            continue
+        t = norm(x.pagina(pdf, q)[0])
+        if "resultado" in t and re.search(r"costos? de (ventas?|explotacion)", t) and re.search(r"ganancia|perdida|resultado del", t):
+            out.append(q)
+    return out[:4]
 
 
 def main(solo=None):
@@ -148,19 +199,24 @@ def main(solo=None):
         totales = {int(m): (tp, fin, rol) for m, tp, fin, rol in zip(t.monto, t.tipo_periodo, t.fin, t.rol)}
         motivo = "no se encontraron las líneas del estado de resultados"
         npag = int(paginas.get(r.documento, p))
-        for nombre, lines in fuentes(pdf, p, npag):
-            v = leer(lines)
-            if not v:
-                continue
-            cols, motivo = controlar(v, totales)
-            if not cols:
-                continue
-            for c, (tp, fin, rol) in cols:
-                filas.append({"canal": r.canal, "fecha_cierre": r.fecha_cierre, "documento": r.documento, "pagina": p,
-                              "fuente_texto": nombre, "tipo_periodo": tp, "fin": fin, "rol": rol,
-                              **{campo: (v[campo][c] if campo in v else None) for campo, _ in FILAS}})
-            break
-        else:
+        hecho = False
+        for q in [p] + paginas_candidatas(pdf, npag, p):
+            for nombre, lines in fuentes(pdf, q, npag):
+                v = leer(lines)
+                if not v:
+                    continue
+                cols, motivo = controlar(v, totales, r.fecha_cierre)
+                if not cols:
+                    continue
+                for c, (tp, fin, rol), control in cols:
+                    filas.append({"canal": r.canal, "fecha_cierre": r.fecha_cierre, "documento": r.documento, "pagina": q,
+                                  "fuente_texto": nombre, "tipo_periodo": tp, "fin": fin, "rol": rol, "control": control,
+                                  **{campo: (v[campo][c] if campo in v else None) for campo, _ in FILAS}})
+                hecho = True
+                break
+            if hecho:
+                break
+        if not hecho:
             revision.append({"canal": r.canal, "fecha_cierre": r.fecha_cierre, "documento": r.documento,
                              "pagina": p, "motivo": motivo})
     pd.DataFrame(filas).to_csv(ROOT / "data" / "resultados.csv", index=False, encoding="utf-8")

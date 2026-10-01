@@ -83,8 +83,8 @@ data/raw/pdf/Canal 13/113709/2026090594155-0.pdf,2026-06-30,semestre,2026-06-30,
 data/raw/pdf/Canal 13/113709/2026090594155-0.pdf,2026-06-30,semestre,2025-06-30,-31531429,-31531429.0,coincide
 data/raw/pdf/Canal 13/113709/2026090594155-0.pdf,2026-06-30,trimestre,2026-06-30,-20698796,-20698796.0,coincide
 data/raw/pdf/Canal 13/113709/2026090594155-0.pdf,2026-06-30,trimestre,2025-06-30,-16423488,-16423488.0,coincide
-data/raw/pdf/Chilevisión/29083/articles-29083_recurso_1.pdf,2017-12-31,anual,2017-12-31,-43474590,,sin estado de resultados
-data/raw/pdf/Chilevisión/29083/articles-29083_recurso_1.pdf,2017-12-31,anual,2016-12-31,-45345789,,sin estado de resultados
+data/raw/pdf/Chilevisión/29083/articles-29083_recurso_1.pdf,2017-12-31,anual,2017-12-31,-43474590,-43474590.0,coincide
+data/raw/pdf/Chilevisión/29083/articles-29083_recurso_1.pdf,2017-12-31,anual,2016-12-31,-45345789,-45345789.0,coincide
 data/raw/pdf/Chilevisión/28710/2020040141840_2.pdf,2019-12-31,anual,2019-12-31,-37830173,-37830173.0,coincide
 data/raw/pdf/Chilevisión/28710/2020040141840_2.pdf,2019-12-31,anual,2018-12-31,-47458948,-47458948.0,coincide
 data/raw/pdf/Chilevisión/29052/2020050178104_2.pdf,2020-03-31,trimestre,2020-03-31,-8155324,-8155324.0,coincide
@@ -117,10 +117,10 @@ data/raw/pdf/Chilevisión/53290/2022090358208_3.pdf,2022-06-30,semestre,2022-06-
 data/raw/pdf/Chilevisión/53290/2022090358208_3.pdf,2022-06-30,semestre,2021-06-30,-17366355,-17366355.0,coincide
 data/raw/pdf/Chilevisión/53290/2022090358208_3.pdf,2022-06-30,trimestre,2022-06-30,-9633581,-9633581.0,coincide
 data/raw/pdf/Chilevisión/53290/2022090358208_3.pdf,2022-06-30,trimestre,2021-06-30,-9201960,-9201960.0,coincide
-data/raw/pdf/Chilevisión/57122/2022110453703_1.pdf,2022-09-30,acumulado9m,2022-09-30,-30881634,,sin estado de resultados
-data/raw/pdf/Chilevisión/57122/2022110453703_1.pdf,2022-09-30,acumulado9m,2021-09-30,-28411426,,sin estado de resultados
-data/raw/pdf/Chilevisión/57122/2022110453703_1.pdf,2022-09-30,trimestre,2022-09-30,-11582547,,sin estado de resultados
-data/raw/pdf/Chilevisión/57122/2022110453703_1.pdf,2022-09-30,trimestre,2021-09-30,-11045071,,sin estado de resultados
+data/raw/pdf/Chilevisión/57122/2022110453703_1.pdf,2022-09-30,acumulado9m,2022-09-30,-30881634,-30881634.0,coincide
+data/raw/pdf/Chilevisión/57122/2022110453703_1.pdf,2022-09-30,acumulado9m,2021-09-30,-28411426,-28411426.0,coincide
+data/raw/pdf/Chilevisión/57122/2022110453703_1.pdf,2022-09-30,trimestre,2022-09-30,-11582547,-11582547.0,coincide
+data/raw/pdf/Chilevisión/57122/2022110453703_1.pdf,2022-09-30,trimestre,2021-09-30,-11045071,-11045071.0,coincide
 data/raw/pdf/Chilevisión/68983/2023030138847_1.pdf,2022-12-31,anual,2022-12-31,-43478422,-43478422.0,coincide
 data/raw/pdf/Chilevisión/68983/2023030138847_1.pdf,2022-12-31,anual,2021-12-31,-44906663,-44906663.0,coincide
 data/raw/pdf/Chilevisión/70647/2023050232246_1.pdf,2023-03-31,trimestre,2023-03-31,-10003209,,sin estado de resultados
@@ -249,7 +249,7 @@ data/raw/pdf/Mega/113710/2026090594478-1.pdf,2026-06-30,semestre,2026-06-30,-481
 data/raw/pdf/Mega/113710/2026090594478-1.pdf,2026-06-30,semestre,2025-06-30,-43019918,,sin estado de resultados
 data/raw/pdf/Mega/113710/2026090594478-1.pdf,2026-06-30,trimestre,2026-06-30,-21539108,,sin estado de resultados
 data/raw/pdf/Mega/113710/2026090594478-1.pdf,2026-06-30,trimestre,2025-06-30,-17869417,,sin estado de resultados
-data/raw/pdf/TV+/29081/articles-29081_recurso_1.pdf,2017-12-31,anual,2017-12-31,1201594,,sin estado de resultados
+data/raw/pdf/TV+/29081/articles-29081_recurso_1.pdf,2017-12-31,anual,2017-12-31,1201594,-1201594.0,coincide
 data/raw/pdf/TV+/28568/archivo(2).pdf,2019-12-31,anual,2019-12-31,2893248,-2893248.0,coincide
 data/raw/pdf/TV+/28568/archivo(2).pdf,2019-12-31,anual,2018-12-31,2899477,-2899477.0,coincide
 data/raw/pdf/TV+/29825/4.pdf,2020-06-30,semestre,2020-06-30,1550151,,sin estado de resultados
@@ -322,8 +322,8 @@ data/raw/pdf/TVN/fecu_tvn_09_2018_libro/fecu_tvn_09_2018_libro.pdf,2018-09-30,ac
 data/raw/pdf/TVN/fecu_tvn_09_2018_libro/fecu_tvn_09_2018_libro.pdf,2018-09-30,acumulado9m,2017-09-30,36709645,-36709645.0,coincide
 data/raw/pdf/TVN/fecu_tvn_09_2018_libro/fecu_tvn_09_2018_libro.pdf,2018-09-30,trimestre,2018-09-30,10306672,-10306672.0,coincide
 data/raw/pdf/TVN/fecu_tvn_09_2018_libro/fecu_tvn_09_2018_libro.pdf,2018-09-30,trimestre,2017-09-30,11524230,-11524230.0,coincide
-data/raw/pdf/TVN/Fecu_tvn_dic_18_libro/Fecu_tvn_dic_18_libro.pdf,2018-12-31,anual,2018-12-31,46364469,,sin estado de resultados
-data/raw/pdf/TVN/Fecu_tvn_dic_18_libro/Fecu_tvn_dic_18_libro.pdf,2018-12-31,anual,2017-12-31,51690777,,sin estado de resultados
+data/raw/pdf/TVN/Fecu_tvn_dic_18_libro/Fecu_tvn_dic_18_libro.pdf,2018-12-31,anual,2018-12-31,46364469,-45339669.0,difiere
+data/raw/pdf/TVN/Fecu_tvn_dic_18_libro/Fecu_tvn_dic_18_libro.pdf,2018-12-31,anual,2017-12-31,51690777,-51690777.0,coincide
 data/raw/pdf/TVN/FECU_TVN_0319_LIBRO/FECU_TVN_0319_LIBRO.pdf,2019-03-31,trimestre,2019-03-31,13089896,-13089896.0,coincide
 data/raw/pdf/TVN/FECU_TVN_0319_LIBRO/FECU_TVN_0319_LIBRO.pdf,2019-03-31,trimestre,2018-03-31,11811315,-11811315.0,coincide
 data/raw/pdf/TVN/Libro_81689800-5-blce-06-2019/Libro_81689800-5-blce-06-2019.pdf,2019-06-30,semestre,2019-06-30,24786653,,sin estado de resultados

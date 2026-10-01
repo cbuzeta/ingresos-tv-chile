@@ -1,18 +1,13 @@
 canal,fecha_cierre,documento,pagina,motivo
 Canal 13,2019-12-31,data/raw/pdf/Canal 13/28617/archivo(3).pdf,9,distinto número de columnas entre filas
-Canal 13,2025-03-31,data/raw/pdf/Canal 13/95045/2025050380967_0.pdf,10,no se encontraron las líneas del estado de resultados
-Chilevisión,2017-12-31,data/raw/pdf/Chilevisión/29083/articles-29083_recurso_1.pdf,11,no se encontraron las líneas del estado de resultados
-Chilevisión,2022-09-30,data/raw/pdf/Chilevisión/57122/2022110453703_1.pdf,7,distinto número de columnas entre filas
+Canal 13,2025-03-31,data/raw/pdf/Canal 13/95045/2025050380967_0.pdf,10,distinto número de columnas entre filas
 Chilevisión,2023-03-31,data/raw/pdf/Chilevisión/70647/2023050232246_1.pdf,7,ingresos + costo ≠ ganancia bruta (col 1)
 Chilevisión,2023-06-30,data/raw/pdf/Chilevisión/73701/2023090394685-3 Estados Financieros 06.2023.pdf,9,distinto número de columnas entre filas
-La Red,2019-12-31,data/raw/pdf/La Red/28528/articles-28528_recurso_1.pdf,14,ingresos 5088103 no coinciden con la nota de ingresos
 La Red,2026-03-31,data/raw/pdf/La Red/113718/2026080530731-2.pdf,7,distinto número de columnas entre filas
-La Red,2026-06-30,data/raw/pdf/La Red/113715/2026090587585-2.pdf,10,no se encontraron las líneas del estado de resultados
-Mega,2017-12-31,data/raw/pdf/Mega/29085/articles-29085_recurso_1.pdf,11,no se encontraron las líneas del estado de resultados
+La Red,2026-06-30,data/raw/pdf/La Red/113715/2026090587585-2.pdf,10,resultado 305 no plausible frente a antes de impuestos -1439924 (impuesto no leído)
 Mega,2021-12-31,data/raw/pdf/Mega/50699/EEFF.pdf,11,no se encontraron las líneas del estado de resultados
 Mega,2026-03-31,data/raw/pdf/Mega/111125/2026050359100_1.pdf,9,distinto número de columnas entre filas
 Mega,2026-06-30,data/raw/pdf/Mega/113710/2026090594478-1.pdf,11,distinto número de columnas entre filas
-TV+,2017-12-31,data/raw/pdf/TV+/29081/articles-29081_recurso_1.pdf,3,no se encontraron las líneas del estado de resultados
 TV+,2020-03-31,data/raw/pdf/TV+/29053/2020050177519_0.pdf,5,antes de impuestos + impuesto ≠ resultado (col 0)
 TV+,2020-06-30,data/raw/pdf/TV+/29825/4.pdf,7,no se encontraron las líneas del estado de resultados
 TV+,2020-09-30,data/raw/pdf/TV+/38817/2020110477430_3.pdf,5,no se encontraron las líneas del estado de resultados
@@ -26,6 +21,6 @@ TV+,2023-09-30,data/raw/pdf/TV+/75787/2023110504810_1.pdf,5,no se encontraron la
 TV+,2024-09-30,data/raw/pdf/TV+/88272/2024110658811_2.pdf,5,ingresos + costo ≠ ganancia bruta (col 0)
 TV+,2025-03-31,data/raw/pdf/TV+/95053/2025050381488_2.pdf,5,antes de impuestos + impuesto ≠ resultado (col 1)
 TV+,2025-09-30,data/raw/pdf/TV+/101643/Estados financieros.pdf,5,no se encontraron las líneas del estado de resultados
-TVN,2019-06-30,data/raw/pdf/TVN/Libro_81689800-5-blce-06-2019/Libro_81689800-5-blce-06-2019.pdf,10,no se encontraron las líneas del estado de resultados
+TVN,2019-06-30,data/raw/pdf/TVN/Libro_81689800-5-blce-06-2019/Libro_81689800-5-blce-06-2019.pdf,10,resultado igual a antes de impuestos en todas las columnas sin línea de impuesto
 TVN,2023-12-31,data/raw/pdf/TVN/FECU-dic-2023/FECU-dic-2023.pdf,15,no se encontraron las líneas del estado de resultados
 TVN,2025-12-31,data/raw/pdf/TVN/Estados-Financieros-TVN-31-12-2025/Estados-Financieros-TVN-31-12-2025.pdf,17,no se encontraron las líneas del estado de resultados

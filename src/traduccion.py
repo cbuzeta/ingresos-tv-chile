@@ -30,7 +30,7 @@ NOMBRES = {
 
 FRASES = [
     # encabezado
-    ("TV abierta · Chile · 2010–2026 · EEFF CMF", "Free-to-air TV · Chile · 2010–2026 · CMF financial statements"),
+    ("TV abierta · Chile · 2016–2026 · EEFF CMF", "Free-to-air TV · Chile · 2016–2026 · CMF financial statements"),
     ("<title>Audiencias en venta</title>", "<title>Audiences for sale</title>"),
     ("<h1>Audiencias en venta</h1>", "<h1>Audiences for sale</h1>"),
     ("Qué parte de los ingresos de la TV abierta chilena viene de vender audiencias a los anunciantes y qué parte de vender contenidos. "
@@ -61,8 +61,8 @@ FRASES = [
     ("Participación de la venta de audiencias", "Share of revenue from selling audiences"),
     ('"aria-label": "Participación en el tiempo"', '"aria-label": "Share over time"'),
     ('"Publicidad sobre ingresos de actividades ordinarias."', '"Advertising as a share of operating revenue."'),
-    ('" Industria = suma de los seis canales desde 2017 (sin 2018: La Red no tiene ese año completo). TVN desde 2010. Círculo hueco = período reclasificado entre EEFF."',
-     '" Industry = sum of the six channels from 2017 (no 2018: La Red lacks that full year). TVN from 2010. Hollow circle = period reclassified between filings."'),
+    ('" Industria = suma de los seis canales desde 2017 (sin 2018: La Red no tiene ese año completo). Círculo hueco = período reclasificado entre EEFF."',
+     '" Industry = sum of the six channels from 2017 (no 2018: La Red lacks that full year). Hollow circle = period reclassified between filings."'),
     ("Referencia Napoli", "Napoli reference"),
     (">Comparador actual</span>", ">Current comparator</span>"),
     ("<li>Rombo: comparador actual. EE.UU. 2022, estaciones locales de TV: publicidad over-the-air (US$20,5 mil millones, Pew/BIA) sobre publicidad más derechos de retransmisión (US$14,5 mil millones, proyección de Kagan). Aproximado; excluye la publicidad digital de las estaciones.</li>",
@@ -115,6 +115,10 @@ FRASES = [
     ("Porcentaje del costo de ventas anual, según la nota de costos de cada EEFF. La Red no publica esa nota; los canales la informan con distinto detalle.",
      "Share of annual cost of sales, from each filing's cost note. La Red does not publish that note; channels report it in different detail."),
     ('"aria-label": "Costo de ventas de " + ent', '"aria-label": "Cost of sales of " + tr(ent)'),
+    ("<li>Ventana común 2016–2025. «s/d»: sin dato en los EEFF (Canal 13 y La Red 2018 en costos o resultados; TVN 2025 en resultados, llegará con el EEFF de diciembre 2026). TVN tiene además 2010–2015 en la planilla: su publicidad era el 95,4% de los ingresos en 2010.</li>",
+     "<li>Common window 2016–2025. “s/d”: no data in the filings (Canal 13 and La Red 2018 in costs or results; TVN 2025 results, due with the December 2026 filing). TVN also has 2010–2015 in the workbook: advertising was 95.4% of its revenue in 2010.</li>"),
+    ("// marca «s/d» bajo los años de la ventana en que un canal no tiene dato (TV+ 2016 no existía: no se marca)",
+     "// marks “s/d” (no data) under window years without data (TV+ did not exist in 2016: not marked)"),
     # tabla y notas
     ("Tabla de datos de la vista actual", "Data table for the current view"),
     ("<th>Período</th>", "<th>Period</th>"),

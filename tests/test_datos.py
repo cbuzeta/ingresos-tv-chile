@@ -21,6 +21,12 @@ def agregados():
 
 
 @pytest.fixture(scope="module")
+def con_composicion(agregados):
+    """Filas con desglose de ingresos (se excluyen años que solo tienen estado de resultados, como La Red 2018)."""
+    return agregados[agregados.n1_publicidad.notna()]
+
+
+@pytest.fixture(scope="module")
 def lineas():
     return pd.read_csv(ROOT / "data" / "lineas_mapeadas.csv")
 
@@ -48,15 +54,16 @@ def test_extraccion_igual_a_referencia():
 
 
 @pytest.mark.parametrize("nivel", ["n1", "n2", "n3", "n4"])
-def test_cada_nivel_suma_el_total(agregados, nivel):
-    cols = [c for c in agregados if c.startswith(nivel + "_")]
+def test_cada_nivel_suma_el_total(con_composicion, nivel):
+    a = con_composicion
+    cols = [c for c in a if c.startswith(nivel + "_")]
     assert cols
-    dif = agregados[cols].sum(axis=1) - agregados["total"]
-    assert (dif == 0).all(), agregados.loc[dif != 0, ["canal", "periodo"]]
+    dif = a[cols].sum(axis=1) - a["total"]
+    assert (dif == 0).all(), a.loc[dif != 0, ["canal", "periodo"]]
 
 
-def test_niveles_anidados(agregados):
-    a = agregados
+def test_niveles_anidados(con_composicion):
+    a = con_composicion
     assert (a.n1_publicidad == a.n2_publicidad).all()
     assert (a.n3_publicidad_tv_y_digital + a.n3_publicidad_en_otros_medios == a.n2_publicidad).all()
     assert (a.n3_transferencias_del_estado == a.n2_transferencias).all()
@@ -109,7 +116,9 @@ def test_resultados_identidades():
     """Estado de resultados: ingresos + costo = ganancia bruta; antes de impuestos + impuesto = resultado (±M$2)."""
     r = pd.read_csv(ROOT / "data" / "resultados.csv")
     assert ((r.ingresos + r.costo_ventas - r.ganancia_bruta).abs() <= 2).all()
-    assert ((r.antes_impuestos + r.impuesto - r.resultado).abs() <= 2).all()
+    con_impuesto = r[r.impuesto.notna()]  # «impuesto no leído»: el OCR perdió la línea (ver 04d, controles acotados)
+    assert ((con_impuesto.antes_impuestos + con_impuesto.impuesto - con_impuesto.resultado).abs() <= 2).all()
+    assert set(r.control) <= {"completo", "ingresos derivados", "impuesto no leído", "sin total de nota"}
 
 
 def test_ingresos_del_estado_de_resultados_igual_a_la_nota(agregados):

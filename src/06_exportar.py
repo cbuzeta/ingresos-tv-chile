@@ -153,6 +153,18 @@ def main():
     r = pd.read_csv(ROOT / "data" / "resultados_serie.csv")
     r = r[r.version_principal][["canal", "periodo"] + RESULTADOS]
     agg = agg.merge(r, on=["canal", "periodo"], how="left")
+    # años con estado de resultados pero sin desglose de ingresos (La Red 2018): se agregan sin composición,
+    # para que la utilidad quede en los datos; la visualización solo usa filas con composición
+    ya = set(zip(agg.canal, agg.periodo))
+    rs_ = pd.read_csv(ROOT / "data" / "resultados_serie.csv")
+    solo = rs_[rs_.version_principal & (rs_.tipo_periodo == "anual")
+               & ~rs_.apply(lambda x: (x.canal, x.periodo) in ya, axis=1)]
+    if len(solo):
+        solo = solo.assign(inicio=solo.fin.str[:4] + "-01-01")
+        extra = solo[["canal", "periodo", "tipo_periodo", "inicio", "fin", "documento", "fecha_cierre"] + RESULTADOS] \
+            .rename(columns={"fecha_cierre": "fecha_documento"})
+        extra = extra.assign(total=extra.ingresos, reclasificado=False, origen_cifra="solo estado de resultados")
+        agg = pd.concat([agg, extra], ignore_index=True)
     cm = pd.read_csv(ROOT / "data" / "costos_mapeados.csv")
     cm = cm[cm.version_principal]
     cm = cm.assign(monto=cm.monto.abs())
