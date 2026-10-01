@@ -35,6 +35,17 @@ def version_principal(df, claves):
 def main():
     # resultados (utilidades)
     r = pd.read_csv(ROOT / "data" / "resultados.csv")
+    # cifras transcritas a mano desde EEFF que no se leen bien (revision/manual_resultados.csv, con su fuente):
+    # reemplazan lo extraído del mismo documento y período, y deben cumplir las mismas identidades
+    man_f = ROOT / "revision" / "manual_resultados.csv"
+    if man_f.exists():
+        man = pd.read_csv(man_f)
+        for x in man.itertuples():
+            assert abs(x.ingresos + x.costo_ventas - x.ganancia_bruta) <= 2, f"manual: identidad bruta {x.canal} {x.fin}"
+            assert abs(x.antes_impuestos + x.impuesto - x.resultado_continuadas) <= 2, f"manual: identidad impuesto {x.canal} {x.fin}"
+        k_man = ["documento", "tipo_periodo", "fin"]
+        r = r.merge(man[k_man], on=k_man, how="left", indicator=True)
+        r = pd.concat([r[r._merge == "left_only"].drop(columns="_merge"), man.drop(columns="nota_fuente")], ignore_index=True)
     r = r.drop_duplicates(["canal", "fecha_cierre", "tipo_periodo", "fin"])  # copias duplicadas del EEFF
     r["periodo"] = r.apply(m.etiqueta, axis=1)
     r["version_principal"] = version_principal(r, ["canal", "periodo"])
@@ -45,6 +56,12 @@ def main():
     ok = set(log[log.estado.isin(["OK", "REVISAR"])].documento)
     c = pd.read_csv(ROOT / "data" / "costos_extraidos.csv")
     c = c[c.documento.isin(ok)].copy()
+    # notas de costos transcritas a mano (revision/manual_costos.csv, con su fuente): reemplazan lo extraído del mismo
+    # documento y pasan por el mismo control contra el estado de resultados
+    man_c = ROOT / "revision" / "manual_costos.csv"
+    if man_c.exists():
+        mc = pd.read_csv(man_c).drop(columns="nota_fuente")
+        c = pd.concat([c[~c.documento.isin(set(mc.documento))], mc], ignore_index=True)
     c["es_total"] = c.es_total.astype(str) == "True"
 
     # control contra el estado de resultados del mismo EEFF

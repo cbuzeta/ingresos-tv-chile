@@ -115,8 +115,8 @@ FRASES = [
     ("Porcentaje del costo de ventas anual, según la nota de costos de cada EEFF. La Red no publica esa nota; los canales la informan con distinto detalle.",
      "Share of annual cost of sales, from each filing's cost note. La Red does not publish that note; channels report it in different detail."),
     ('"aria-label": "Costo de ventas de " + ent', '"aria-label": "Cost of sales of " + tr(ent)'),
-    ("<li>Ventana común 2016–2025. «s/d»: sin dato en los EEFF (Canal 13 y La Red 2018 en costos o resultados; TVN 2025 en resultados, llegará con el EEFF de diciembre 2026). TVN tiene además 2010–2015 en la planilla: su publicidad era el 95,4% de los ingresos en 2010.</li>",
-     "<li>Common window 2016–2025. “s/d”: no data in the filings (Canal 13 and La Red 2018 in costs or results; TVN 2025 results, due with the December 2026 filing). TVN also has 2010–2015 in the workbook: advertising was 95.4% of its revenue in 2010.</li>"),
+    ("<li>Ventana común 2016–2025. «s/d»: sin dato en los EEFF (desglose de ingresos de La Red 2018; resultado de TVN 2025, que llegará con el EEFF de diciembre 2026). TVN tiene además 2010–2015 en la planilla: su publicidad era el 95,4% de los ingresos en 2010.</li>",
+     "<li>Common window 2016–2025. “s/d”: no data in the filings (La Red 2018 revenue breakdown; TVN 2025 results, due with the December 2026 filing). TVN also has 2010–2015 in the workbook: advertising was 95.4% of its revenue in 2010.</li>"),
     ("// marca «s/d» bajo los años de la ventana en que un canal no tiene dato (TV+ 2016 no existía: no se marca)",
      "// marks “s/d” (no data) under window years without data (TV+ did not exist in 2016: not marked)"),
     # tabla y notas

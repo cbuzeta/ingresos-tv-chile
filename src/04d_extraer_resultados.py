@@ -109,6 +109,19 @@ def _leer(lines, filas):
             # EEFF escaneados pierde la línea; se resuelve con controles más estrictos en controlar().
             if campo not in ("gastos_admin", "ingresos", "impuesto"):
                 return None
+    # Operaciones discontinuadas (C13 2019: venta de las radios): la primera línea de resultado después del impuesto es
+    # el resultado de operaciones continuadas; el resultado del ejercicio es la siguiente «Ganancia (pérdida)», después
+    # de la línea de discontinuadas. Se guardan ambos y se exige continuadas + discontinuadas = resultado.
+    for i in range(desde, min(desde + 8, len(parsed))):
+        lab, vals = parsed[i]
+        if "discontinu" in norm(lab) and vals:
+            for j in range(i + 1, min(i + 10, len(parsed))):
+                lab2, vals2 = parsed[j]
+                ln2 = norm(lab2).strip(" -:")
+                if re.match(r"^\(?(ganancia|perdida)", ln2) and "atribuible" not in ln2 and vals2:
+                    out["resultado_continuadas"], out["discontinuadas"], out["resultado"] = out["resultado"], vals, vals2
+                    break
+            break
     return out
 
 
@@ -146,12 +159,15 @@ def controlar(v, totales, fecha_cierre):
     for c in range(k):
         if abs(v["ingresos"][c] + v["costo_ventas"][c] - v["ganancia_bruta"][c]) > 2:
             return None, f"ingresos + costo ≠ ganancia bruta (col {c})"
-        if "impuesto" in v and abs(v["antes_impuestos"][c] + v["impuesto"][c] - v["resultado"][c]) > 2:
+        if "discontinuadas" in v and abs(v["resultado_continuadas"][c] + v["discontinuadas"][c] - v["resultado"][c]) > 2:
+            return None, f"continuadas + discontinuadas ≠ resultado (col {c})"
+        cont = v["resultado_continuadas"][c] if "discontinuadas" in v else v["resultado"][c]
+        if "impuesto" in v and abs(v["antes_impuestos"][c] + v["impuesto"][c] - cont) > 2:
             return None, f"antes de impuestos + impuesto ≠ resultado (col {c})"
         if "impuesto" not in v:
             # sin la línea de impuesto, el resultado debe ser una versión plausible después de impuestos del resultado
             # antes de impuestos: mismo signo y entre 0,3 y 1,7 veces (descarta, p. ej., la ganancia por acción)
-            a_, r_ = v["antes_impuestos"][c], v["resultado"][c]
+            a_, r_ = v["antes_impuestos"][c], cont
             if a_ != r_ and not (a_ != 0 and 0.3 <= r_ / a_ <= 1.7):
                 return None, f"resultado {r_} no plausible frente a antes de impuestos {a_} (impuesto no leído)"
         if v["ingresos"][c] == 0:  # p. ej. TV+ 2016: la sociedad aún no operaba
@@ -211,7 +227,9 @@ def main(solo=None):
                 for c, (tp, fin, rol), control in cols:
                     filas.append({"canal": r.canal, "fecha_cierre": r.fecha_cierre, "documento": r.documento, "pagina": q,
                                   "fuente_texto": nombre, "tipo_periodo": tp, "fin": fin, "rol": rol, "control": control,
-                                  **{campo: (v[campo][c] if campo in v else None) for campo, _ in FILAS}})
+                                  **{campo: (v[campo][c] if campo in v else None) for campo, _ in FILAS},
+                                  "resultado_continuadas": (v["resultado_continuadas"][c] if "discontinuadas" in v
+                                                            else v["resultado"][c])})
                 hecho = True
                 break
             if hecho:

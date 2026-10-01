@@ -117,7 +117,8 @@ def test_resultados_identidades():
     r = pd.read_csv(ROOT / "data" / "resultados.csv")
     assert ((r.ingresos + r.costo_ventas - r.ganancia_bruta).abs() <= 2).all()
     con_impuesto = r[r.impuesto.notna()]  # «impuesto no leído»: el OCR perdió la línea (ver 04d, controles acotados)
-    assert ((con_impuesto.antes_impuestos + con_impuesto.impuesto - con_impuesto.resultado).abs() <= 2).all()
+    # antes de impuestos + impuesto = resultado de operaciones continuadas (igual al resultado salvo C13 2019)
+    assert ((con_impuesto.antes_impuestos + con_impuesto.impuesto - con_impuesto.resultado_continuadas).abs() <= 2).all()
     assert set(r.control) <= {"completo", "ingresos derivados", "impuesto no leído", "sin total de nota"}
 
 

@@ -20,7 +20,8 @@ SAL = ROOT / "salidas"
 BASE_IPC = 2025  # CLAUDE.md 6.4: año base por definir; provisional
 
 CANALES = ["TVN", "Canal 13", "Mega", "Chilevisión", "La Red", "TV+"]
-RESULTADOS = ["ingresos", "costo_ventas", "ganancia_bruta", "gastos_admin", "antes_impuestos", "impuesto", "resultado"]
+RESULTADOS = ["ingresos", "costo_ventas", "ganancia_bruta", "gastos_admin", "antes_impuestos", "impuesto", "resultado",
+              "resultado_continuadas"]
 COSTOS = ["Contenidos y producción", "Personal", "Depreciación y amortización", "Comercialización de audiencias",
           "Técnica y transmisión", "Canje", "Otros costos"]
 AGREGADOS = {"4 grandes": CANALES[:4], "6 canales CMF": CANALES}
