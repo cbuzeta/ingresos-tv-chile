@@ -74,8 +74,11 @@ def main():
     ctl["estado"] = ctl.apply(lambda x: "sin estado de resultados" if pd.isna(x.costo_ventas)
                               else ("coincide" if abs(abs(x.monto) - abs(x.costo_ventas)) <= 2 else "difiere"), axis=1)
     ctl.to_csv(ROOT / "revision" / "costos_control.csv", index=False, encoding="utf-8")
-    malos = set(ctl[ctl.estado == "difiere"].documento)
-    c = c[~c.documento.isin(malos) & ~c.es_total].copy()
+    # se descartan solo las columnas (período) que no cuadran, no el EEFF completo: en un intermedio puede cuadrar
+    # el semestre y no el trimestre (TVN jun-2018)
+    malos = set(zip(ctl[ctl.estado == "difiere"].documento, ctl[ctl.estado == "difiere"].tipo_periodo,
+                    ctl[ctl.estado == "difiere"].fin))
+    c = c[~pd.Series([k in malos for k in zip(c.documento, c.tipo_periodo, c.fin)], index=c.index) & ~c.es_total].copy()
 
     c["clave"] = c.linea_original.map(clave)
     mp = pd.read_csv(ROOT / "mapeo" / "costos_mapeo.csv")
@@ -93,8 +96,8 @@ def main():
     print(f"Costos: {y[y.version_principal].groupby(['canal', 'periodo']).ngroups} canal-períodos; "
           f"control con estado de resultados: {ctl.estado.value_counts().to_dict()}")
     if malos:
-        print("  descartados por no coincidir con el costo de ventas:", sorted({d.split('/')[3] + ' ' + f
-                                                                              for d, f in zip(ctl.documento, ctl.fecha_cierre) if d in malos}))
+        print("  columnas descartadas por no coincidir con el costo de ventas:",
+              sorted({f"{d.split('/')[3]} {t} {f}" for d, t, f in malos}))
 
 
 if __name__ == "__main__":
